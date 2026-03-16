@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Workflow, Globe, MessageSquare, Phone, Users, Sparkles, Megaphone } from "lucide-react";
+import { Workflow, Globe, MessageSquare, Phone, Sparkles, Megaphone } from "lucide-react";
 
 const services = [
   {
     icon: Workflow,
-    title: "Workflow Automation",
-    description: "Eliminate repetitive tasks, auto-sync your tools, and put your operations on autopilot.",
+    title: "Workflow & Operations Automation",
+    description: "The backend brain of your business — CRM, scheduling, invoicing, follow-ups, SMS blasts, and pipeline management all running on autopilot.",
     href: "/services/workflow-automation",
     popular: true,
   },
@@ -28,12 +28,6 @@ const services = [
     title: "AI Voice & Receptionist",
     description: "Never miss a call again. AI picks up, qualifies leads, and books appointments.",
     href: "/services/ai-voice",
-  },
-  {
-    icon: Users,
-    title: "CRM & Pipeline Automation",
-    description: "Leads automatically tracked, nurtured, and followed up with — nothing falls through the cracks.",
-    href: "/services/crm-automation",
   },
   {
     icon: Megaphone,
@@ -61,10 +55,10 @@ const ServicesSection = () => {
           className="mx-auto max-w-2xl text-center"
         >
           <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-            Your Business. <span className="text-gradient">Supercharged.</span>
+            Two Ways to <span className="text-gradient">Level Up.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Every business is different. We don&apos;t sell cookie-cutter software — we listen to your problems and build the exact AI-powered solution you need.
+            Need more leads? We run your marketing. Need smoother operations? We automate your backend. Need both? That&apos;s where the magic happens.
           </p>
         </motion.div>
 

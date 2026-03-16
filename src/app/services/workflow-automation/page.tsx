@@ -10,115 +10,138 @@ import {
   Zap,
   RefreshCw,
   Calendar,
-  FileText,
   Mail,
   Database,
   ArrowRight,
   Clock,
   Shield,
   TrendingUp,
-  ShoppingCart,
   Users,
+  MessageSquare,
+  DollarSign,
+  Target,
+  Bell,
+  BarChart3,
+  Wrench,
+  Home,
 } from "lucide-react";
 import Link from "next/link";
 
 const features = [
   {
-    icon: Zap,
-    title: "Task Automation",
+    icon: Users,
+    title: "CRM & Pipeline Management",
     description:
-      "Identify and eliminate repetitive manual tasks that eat up hours of your day. From data entry to file management, we automate it all.",
-  },
-  {
-    icon: RefreshCw,
-    title: "App Integrations",
-    description:
-      "Connect your favorite tools — Zapier, Make, or fully custom integrations. Your apps finally talk to each other seamlessly.",
+      "Every lead from every source — website, ads, calls, referrals — automatically lands in your CRM, tagged, organized, and ready for follow-up.",
   },
   {
     icon: Calendar,
-    title: "Scheduling Automation",
+    title: "Job & Crew Scheduling",
     description:
-      "Automatically schedule appointments, send reminders, and manage your calendar without lifting a finger.",
+      "Automatically schedule jobs, assign crews, send confirmations, and handle reschedules. Your calendar runs itself.",
   },
   {
-    icon: FileText,
-    title: "Document Generation",
+    icon: Target,
+    title: "Lead Tracking & Nurturing",
     description:
-      "Auto-generate invoices, proposals, contracts, and reports from templates. Personalized and ready to send in seconds.",
+      "Know where every lead is in your pipeline. Automated follow-up sequences ensure no lead goes cold — ever.",
   },
   {
-    icon: Mail,
-    title: "Email Sequences",
+    icon: DollarSign,
+    title: "Invoicing & Payment Automation",
     description:
-      "Set up automated email workflows that nurture leads, onboard customers, and follow up — on autopilot.",
+      "Job complete? Invoice is generated, sent to the client, and logged in your books — automatically. Get paid faster with zero manual work.",
+  },
+  {
+    icon: MessageSquare,
+    title: "SMS/Text Blasts & Email Sequences",
+    description:
+      "Send appointment reminders, promotional blasts, review requests, and follow-up sequences on autopilot.",
   },
   {
     icon: Database,
-    title: "Data Sync Between Platforms",
+    title: "Tool Sync & Integrations",
     description:
-      "Keep your CRM, spreadsheets, accounting software, and other tools perfectly in sync. No more copy-pasting between apps.",
+      "Connect your CRM, calendar, accounting, scheduling, and communication tools so everything stays perfectly in sync.",
+  },
+  {
+    icon: Bell,
+    title: "Automated Follow-Ups & Reminders",
+    description:
+      "Never forget a callback, a quote follow-up, or a review request. Automated reminders keep your pipeline moving.",
+  },
+  {
+    icon: Mail,
+    title: "Email & Communication Automation",
+    description:
+      "Welcome emails, onboarding sequences, project updates, and review requests — all automated and personalized.",
+  },
+  {
+    icon: BarChart3,
+    title: "Reporting & Analytics",
+    description:
+      "Track conversion rates, revenue per lead source, response times, and team performance. Know exactly what&apos;s working.",
   },
 ];
 
 const steps = [
   {
     step: "01",
-    title: "Audit Your Workflows",
+    title: "Map Your Operations",
     description:
-      "We map out every repetitive task and manual process in your business to find the biggest time-wasters.",
+      "We audit every workflow, tool, and process in your business. We find the bottlenecks, the time-wasters, and the gaps where leads and revenue are leaking.",
   },
   {
     step: "02",
-    title: "Design the Automation",
+    title: "Design Your System",
     description:
-      "We architect a custom automation system tailored to your exact tools, processes, and goals.",
+      "We architect a custom automation and CRM system built around how your business actually works — your pipeline stages, your tools, your team.",
   },
   {
     step: "03",
-    title: "Build & Integrate",
+    title: "Build & Connect Everything",
     description:
-      "We build and connect everything — from simple Zapier flows to complex multi-step workflows with error handling.",
+      "We build your automations, set up your CRM, connect all your lead sources, and wire everything together into one smooth-running machine.",
   },
   {
     step: "04",
-    title: "Test & Launch",
+    title: "Launch & Optimize",
     description:
-      "Rigorous testing ensures everything works flawlessly before going live. Then we hand you the keys.",
+      "We test everything, train your team, and go live. Then we monitor, tweak, and optimize so it keeps getting better.",
   },
 ];
 
 const useCases = [
   {
-    icon: FileText,
-    title: "Auto-Sending Invoices",
+    icon: Wrench,
+    title: "Plumbing, HVAC & Electrical",
     description:
-      "When a job is marked complete, the invoice is generated, sent to the client, and logged in your accounting software — automatically.",
+      "Leads come in from Google, get auto-assigned to a tech, job is scheduled, customer gets a confirmation text, and the invoice sends when the job is done.",
+  },
+  {
+    icon: Home,
+    title: "Roofing, Painting & Pressure Washing",
+    description:
+      "Quote requests are captured, followed up automatically, and tracked through your pipeline. You see exactly which jobs are pending, scheduled, and complete.",
+  },
+  {
+    icon: Zap,
+    title: "Cleaning & Junk Removal",
+    description:
+      "Booking requests auto-populate your calendar, crews get dispatched, customers get reminders, and payment is collected — all without you touching a thing.",
   },
   {
     icon: RefreshCw,
-    title: "CRM + Calendar Sync",
+    title: "Landscaping & Epoxy Coatings",
     description:
-      "New leads from your website automatically appear in your CRM, get assigned to a rep, and a follow-up call is scheduled on their calendar.",
-  },
-  {
-    icon: Users,
-    title: "Automated Onboarding",
-    description:
-      "New client signs up? Welcome email, intake form, account setup, and team notification all fire instantly.",
-  },
-  {
-    icon: ShoppingCart,
-    title: "Inventory Alerts",
-    description:
-      "When stock drops below threshold, get notified, auto-reorder from suppliers, and update your storefront — zero manual checks.",
+      "Seasonal promos go out via SMS blast, leads are captured and nurtured, estimates are tracked, and recurring jobs are auto-scheduled.",
   },
 ];
 
 const benefits = [
-  { icon: Clock, text: "Save 10–20+ hours per week" },
-  { icon: Shield, text: "Eliminate human error" },
-  { icon: TrendingUp, text: "Scale without hiring" },
+  { icon: Clock, text: "Save 15–25+ hours per week" },
+  { icon: Shield, text: "No leads fall through the cracks" },
+  { icon: TrendingUp, text: "Scale without hiring office staff" },
 ];
 
 export default function WorkflowAutomationPage() {
@@ -155,8 +178,8 @@ export default function WorkflowAutomationPage() {
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
-            Put Your Business on{" "}
-            <span className="text-gradient">Autopilot</span>
+            The Backend Brain of{" "}
+            <span className="text-gradient">Your Business</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -164,9 +187,7 @@ export default function WorkflowAutomationPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            Stop wasting hours on repetitive tasks. We build custom workflow
-            automations that connect your tools, eliminate busywork, and let you
-            focus on what actually grows your business.
+            CRM, scheduling, invoicing, follow-ups, SMS blasts, pipeline management — we automate the entire operation so your business runs like a machine. You focus on the work. We handle the rest.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -176,7 +197,7 @@ export default function WorkflowAutomationPage() {
           >
             <a href="/#final-cta">
               <Button variant="hero" size="lg" className="px-8 py-6 text-base">
-                Automate Your Business
+                Automate Your Operations
               </Button>
             </a>
           </motion.div>
@@ -214,8 +235,7 @@ export default function WorkflowAutomationPage() {
               Everything We <span className="text-gradient">Automate</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              From simple task triggers to complex multi-step workflows, we build
-              automations that save you time and money.
+              From lead capture to invoicing, we wire together every piece of your operation into one smooth, automated system.
             </p>
           </motion.div>
 
@@ -297,11 +317,10 @@ export default function WorkflowAutomationPage() {
             className="mx-auto max-w-2xl text-center"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Real-World <span className="text-gradient">Use Cases</span>
+              Built for <span className="text-gradient">Home Service Businesses</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Here&apos;s how businesses like yours are using workflow automation
-              to save time and grow faster.
+              Here&apos;s how businesses like yours use workflow and operations automation to save time and grow faster.
             </p>
           </motion.div>
 
@@ -340,11 +359,10 @@ export default function WorkflowAutomationPage() {
             className="card-glass mx-auto max-w-3xl p-12 text-center"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Ready to <span className="text-gradient">Automate</span>?
+              Ready to Run on <span className="text-gradient">Autopilot</span>?
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Book a free strategy call and we&apos;ll show you exactly which
-              workflows we can automate to save you the most time and money.
+              Book a free strategy call and we&apos;ll map out exactly how to automate your operations — from lead capture to invoicing and everything in between.
             </p>
             <div className="mt-8">
               <a href="/#final-cta">

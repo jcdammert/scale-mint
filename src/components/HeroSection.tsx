@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { Zap, Clock, UserCheck } from "lucide-react";
 
 const stats = [
-  { icon: Clock, text: "Launched in Days, Not Months" },
+  { icon: Clock, text: "Up and Running in Days" },
   { icon: UserCheck, text: "Zero Tech Skills Needed" },
-  { icon: Zap, text: "Built Around Your Business" },
+  { icon: Zap, text: "Marketing + Automations" },
 ];
 
 const HeroSection = () => {
@@ -23,8 +23,8 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl lg:text-7xl"
         >
-          If You Can Think It,{" "}
-          <span className="text-gradient">We Can Build It.</span>
+          Modern Tech for{" "}
+          <span className="text-gradient">Home Service Businesses.</span>
         </motion.h1>
 
         <motion.p
@@ -33,7 +33,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
         >
-          We build custom AI systems and automations for local businesses — so you can stop drowning in busywork and focus on what actually grows your business. No tech skills required. Up and running in days, not months.
+          We bring AI, automation, and digital marketing to plumbers, roofers, HVAC techs, painters, cleaners, and every home service business in between. Get more leads with marketing, run smoother with automations — or both. No tech skills required.
         </motion.p>
 
         <motion.div

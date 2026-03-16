@@ -6,18 +6,18 @@ import { Clock, Unplug, TrendingUp } from "lucide-react";
 const problems = [
   {
     icon: Clock,
-    title: "You're buried in repetitive tasks",
-    description: "Scheduling, follow-ups, reminders, and paperwork eat your entire day.",
+    title: "You&apos;re buried in busywork",
+    description: "Scheduling, follow-ups, invoicing, texts, and paperwork eat your entire day. You know there&apos;s a better way — you just don&apos;t have time to figure it out.",
   },
   {
     icon: Unplug,
-    title: "Your tools don't talk to each other",
-    description: "You're copying info between apps, spreadsheets, and notebooks manually.",
+    title: "Your leads are slipping through the cracks",
+    description: "You&apos;re getting calls and messages but there&apos;s no system. No CRM, no follow-up sequence, no pipeline. Leads go cold and money walks out the door.",
   },
   {
     icon: TrendingUp,
-    title: "You know you should be scaling",
-    description: "But you're too stuck in the day-to-day to work ON the business instead of IN it.",
+    title: "You know you need to modernize",
+    description: "Other companies in your space are running ads, automating their backend, and scaling fast. You&apos;re ready to level up — you just need the right partner.",
   },
 ];
 
@@ -38,7 +38,7 @@ const ProblemSection = () => {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {problems.map((p, i) => (
             <motion.div
-              key={p.title}
+              key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

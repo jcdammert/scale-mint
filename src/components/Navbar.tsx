@@ -2,21 +2,20 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Workflow, Globe, MessageSquare, Phone, Users, Sparkles, Megaphone } from "lucide-react";
+import { Menu, X, ChevronDown, Workflow, Globe, MessageSquare, Phone, Sparkles, Megaphone } from "lucide-react";
 
 const serviceLinks = [
-  { label: "Workflow Automation", href: "/services/workflow-automation", icon: Workflow },
+  { label: "Workflow & Operations", href: "/services/workflow-automation", icon: Workflow },
   { label: "AI-Powered Websites", href: "/services/ai-websites", icon: Globe },
   { label: "Smart Assistants & Chatbots", href: "/services/smart-assistants", icon: MessageSquare },
   { label: "AI Voice & Receptionist", href: "/services/ai-voice", icon: Phone },
-  { label: "CRM & Pipeline Automation", href: "/services/crm-automation", icon: Users },
-  { label: "Custom AI Solutions", href: "/services/custom-ai", icon: Sparkles },
   { label: "Marketing", href: "/services/marketing", icon: Megaphone },
+  { label: "Custom AI Solutions", href: "/services/custom-ai", icon: Sparkles },
 ];
 
 const navLinks = [
   { label: "How It Works", href: "/#how-it-works" },
-  { label: "Pricing", href: "/#pricing" },
+  { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/#faq" },
 ];
 
