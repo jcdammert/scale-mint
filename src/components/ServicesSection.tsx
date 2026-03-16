@@ -1,40 +1,52 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Workflow, Globe, MessageSquare, Phone, Users, Sparkles } from "lucide-react";
+import { Workflow, Globe, MessageSquare, Phone, Users, Sparkles, Megaphone } from "lucide-react";
 
 const services = [
   {
     icon: Workflow,
     title: "Workflow Automation",
     description: "Eliminate repetitive tasks, auto-sync your tools, and put your operations on autopilot.",
+    href: "/services/workflow-automation",
     popular: true,
   },
   {
     icon: Globe,
     title: "AI-Powered Websites",
     description: "Fast, mobile-first sites that actually convert visitors into paying customers.",
+    href: "/services/ai-websites",
   },
   {
     icon: MessageSquare,
     title: "Smart Assistants & Chatbots",
     description: "AI that answers questions, captures leads, and handles customer inquiries 24/7.",
+    href: "/services/smart-assistants",
   },
   {
     icon: Phone,
     title: "AI Voice & Receptionist",
     description: "Never miss a call again. AI picks up, qualifies leads, and books appointments.",
+    href: "/services/ai-voice",
   },
   {
     icon: Users,
     title: "CRM & Pipeline Automation",
     description: "Leads automatically tracked, nurtured, and followed up with — nothing falls through the cracks.",
+    href: "/services/crm-automation",
+  },
+  {
+    icon: Megaphone,
+    title: "Marketing",
+    description: "Google LSA, Google My Business, Meta Ads, and Google Ads — full-service digital marketing to drive leads and grow revenue.",
+    href: "/services/marketing",
+    highlight: true,
   },
   {
     icon: Sparkles,
     title: "Custom AI Solutions",
-    description: "Have a wild idea? A unique problem? Tell us about it and we'll build it.",
-    highlight: true,
+    description: "Have a wild idea? A unique problem? Tell us about it and we&apos;ll build it.",
+    href: "/services/custom-ai",
   },
 ];
 
@@ -58,27 +70,31 @@ const ServicesSection = () => {
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
-            <motion.div
-              key={s.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
-              className={`card-glass relative p-8 transition-all duration-300 hover:border-primary/30 ${
-                s.highlight ? "border-primary/30 bg-primary/5" : ""
-              }`}
-            >
-              {s.popular && (
-                <span className="absolute top-4 right-4 rounded-full bg-primary/15 px-3 py-1 text-xs font-medium text-primary">
-                  Popular
+            <a key={s.title} href={s.href} className="block">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className={`card-glass relative h-full p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 ${
+                  s.highlight ? "border-primary/30 bg-primary/5" : ""
+                }`}
+              >
+                {s.popular && (
+                  <span className="absolute top-4 right-4 rounded-full bg-primary/15 px-3 py-1 text-xs font-medium text-primary">
+                    Popular
+                  </span>
+                )}
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                  <s.icon size={24} className="text-primary" />
+                </div>
+                <h3 className="mb-3 font-heading text-lg font-semibold text-foreground">{s.title}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{s.description}</p>
+                <span className="mt-4 inline-block text-sm font-medium text-primary">
+                  Learn more →
                 </span>
-              )}
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <s.icon size={24} className="text-primary" />
-              </div>
-              <h3 className="mb-3 font-heading text-lg font-semibold text-foreground">{s.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{s.description}</p>
-            </motion.div>
+              </motion.div>
+            </a>
           ))}
         </div>
       </div>
