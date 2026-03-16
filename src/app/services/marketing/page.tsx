@@ -204,7 +204,7 @@ export default function MarketingPage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
           >
-            <a href="/#final-cta">
+            <a href="/book">
               <Button variant="hero" size="lg" className="px-8 py-6 text-base">
                 Start Getting More Leads
               </Button>
@@ -728,7 +728,7 @@ export default function MarketingPage() {
               opportunities are.
             </p>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <a href="/#final-cta">
+              <a href="/book">
                 <Button
                   variant="cta"
                   size="lg"

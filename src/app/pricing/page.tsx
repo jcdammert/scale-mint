@@ -115,7 +115,7 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <a href="/#final-cta" className="mt-8 block">
+                <a href="/book" className="mt-8 block">
                   <Button
                     variant={tier.popular ? "hero" : "hero-outline"}
                     className="w-full"
@@ -156,7 +156,7 @@ export default function PricingPage() {
               Every home service business is different. Book a free strategy call and we&apos;ll build a plan around your goals — whether that&apos;s more leads, smoother operations, or both.
             </p>
             <div className="mt-8">
-              <a href="/#final-cta">
+              <a href="/book">
                 <Button variant="cta" size="lg" className="px-8 py-6 text-base">
                   Book a Free Strategy Call
                   <ArrowRight size={18} />

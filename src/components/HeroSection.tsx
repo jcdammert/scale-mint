@@ -42,7 +42,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
         >
-          <a href="#final-cta">
+          <a href="/book">
             <Button variant="hero" size="lg" className="text-base px-8 py-6">
               Book a Free Strategy Call
             </Button>

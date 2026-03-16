@@ -83,7 +83,7 @@ const PricingSection = () => {
                   </li>
                 ))}
               </ul>
-              <a href="#final-cta" className="mt-8 block">
+              <a href="/book" className="mt-8 block">
                 <Button
                   variant={tier.popular ? "hero" : "hero-outline"}
                   className="w-full"

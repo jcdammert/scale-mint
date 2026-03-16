@@ -26,10 +26,12 @@ const FinalCTASection = () => {
             Book a free strategy call — we&apos;ll map out exactly how AI and automation can free up your time and help you scale.
           </p>
           <div className="relative mt-10">
-            <Button variant="cta" size="lg" className="px-10 py-7 text-lg animate-glow-pulse">
-              Book Your Free Strategy Call
-              <ArrowRight size={20} />
-            </Button>
+            <a href="/book">
+              <Button variant="cta" size="lg" className="px-10 py-7 text-lg animate-glow-pulse">
+                Book Your Free Strategy Call
+                <ArrowRight size={20} />
+              </Button>
+            </a>
           </div>
         </motion.div>
       </div>

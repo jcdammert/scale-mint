@@ -87,7 +87,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:block">
-          <a href="/#final-cta">
+          <a href="/book">
             <Button variant="hero" size="sm">Book a Free Call</Button>
           </a>
         </div>
@@ -136,7 +136,7 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <a href="/#final-cta" onClick={() => setMobileOpen(false)}>
+          <a href="/book" onClick={() => setMobileOpen(false)}>
             <Button variant="hero" size="sm" className="mt-2 w-full">Book a Free Call</Button>
           </a>
         </div>
