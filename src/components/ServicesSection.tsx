@@ -5,11 +5,17 @@ import { Workflow, Globe, MessageSquare, Phone, Sparkles, Megaphone } from "luci
 
 const services = [
   {
+    icon: Megaphone,
+    title: "Marketing",
+    description: "Google LSA, Google My Business, Meta Ads, and Google Ads — full-service digital marketing to drive leads and grow revenue.",
+    href: "/services/marketing",
+    highlight: true,
+  },
+  {
     icon: Workflow,
     title: "Workflow & Operations Automation",
     description: "The backend brain of your business — CRM, scheduling, invoicing, follow-ups, SMS blasts, and pipeline management all running on autopilot.",
     href: "/services/workflow-automation",
-    popular: true,
   },
   {
     icon: Globe,
@@ -30,13 +36,6 @@ const services = [
     href: "/services/ai-voice",
   },
   {
-    icon: Megaphone,
-    title: "Marketing",
-    description: "Google LSA, Google My Business, Meta Ads, and Google Ads — full-service digital marketing to drive leads and grow revenue.",
-    href: "/services/marketing",
-    highlight: true,
-  },
-  {
     icon: Sparkles,
     title: "Custom AI Solutions",
     description: "Have a wild idea? A unique problem? Tell us about it and we'll build it.",
@@ -55,7 +54,7 @@ const ServicesSection = () => {
           className="mx-auto max-w-2xl text-center"
         >
           <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-            Two Ways to <span className="text-gradient">Level Up.</span>
+            Your Business, <span className="text-gradient">Fully Dialed In.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
             Need more leads? We run your marketing. Need smoother operations? We automate your backend. Need both? That&apos;s where the magic happens.
@@ -74,12 +73,7 @@ const ServicesSection = () => {
                   s.highlight ? "border-primary/30 bg-primary/5" : ""
                 }`}
               >
-                {s.popular && (
-                  <span className="absolute top-4 right-4 rounded-full bg-primary/15 px-3 py-1 text-xs font-medium text-primary">
-                    Popular
-                  </span>
-                )}
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+<div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                   <s.icon size={24} className="text-primary" />
                 </div>
                 <h3 className="mb-3 font-heading text-lg font-semibold text-foreground">{s.title}</h3>
