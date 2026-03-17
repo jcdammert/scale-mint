@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const steps = [
   {
@@ -21,11 +22,12 @@ const steps = [
 ];
 
 const HowItWorksSection = () => {
+  const isMobile = useIsMobile();
   return (
     <section id="how-it-works" className="section-padding">
       <div className="container mx-auto">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
@@ -41,7 +43,7 @@ const HowItWorksSection = () => {
           {steps.map((step, i) => (
             <motion.div
               key={step.num}
-              initial={{ opacity: 0, y: 30 }}
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}

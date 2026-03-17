@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const tiers = [
   {
@@ -39,11 +40,12 @@ const tiers = [
 ];
 
 const PricingSection = () => {
+  const isMobile = useIsMobile();
   return (
     <section id="pricing" className="section-padding">
       <div className="container mx-auto">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
@@ -55,7 +57,7 @@ const PricingSection = () => {
           {tiers.map((tier, i) => (
             <motion.div
               key={tier.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
@@ -96,7 +98,7 @@ const PricingSection = () => {
         </div>
 
         <motion.p
-          initial={{ opacity: 0 }}
+          initial={isMobile ? false : { opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="mt-10 text-center text-sm text-muted-foreground"

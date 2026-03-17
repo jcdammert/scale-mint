@@ -13,6 +13,7 @@ import {
   Handshake,
 } from "lucide-react";
 import Link from "next/link";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const differentiators = [
   {
@@ -42,6 +43,8 @@ const differentiators = [
 ];
 
 export default function WhyUsPage() {
+  const isMobile = useIsMobile();
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -62,7 +65,7 @@ export default function WhyUsPage() {
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
         <div className="container relative mx-auto px-4 text-center">
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
@@ -71,7 +74,7 @@ export default function WhyUsPage() {
             <span className="text-gradient">Your Shoes.</span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
@@ -85,7 +88,7 @@ export default function WhyUsPage() {
       <section className="pb-6 md:pb-10 px-4">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-10"
@@ -107,7 +110,7 @@ export default function WhyUsPage() {
       <section className="pb-6 md:pb-10 px-4">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-10"
@@ -130,7 +133,7 @@ export default function WhyUsPage() {
       <section className="pb-6 md:pb-10 px-4">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-10"
@@ -153,7 +156,7 @@ export default function WhyUsPage() {
       <section className="pb-6 md:pb-10 px-4">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
@@ -167,7 +170,7 @@ export default function WhyUsPage() {
             {differentiators.map((d, i) => (
               <motion.div
                 key={d.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
@@ -192,7 +195,7 @@ export default function WhyUsPage() {
       <section className="pb-6 md:pb-10 px-4">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-10"
@@ -215,7 +218,7 @@ export default function WhyUsPage() {
       <section className="pb-6 md:pb-10 px-4">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
@@ -228,11 +231,11 @@ export default function WhyUsPage() {
               {"Book a free call. No pitch, no pressure. We'll be straight with you."}
             </p>
             <div className="mt-8">
-              <a href="/book">
+              <a href="/book" className="block w-full sm:w-auto">
                 <Button
                   variant="cta"
                   size="lg"
-                  className="px-8 py-6 text-base"
+                  className="w-full sm:w-auto px-8 py-6 text-base"
                 >
                   Book a Free Strategy Call
                   <ArrowRight size={18} />

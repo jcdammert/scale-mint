@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import {
   Accordion,
   AccordionContent,
@@ -36,11 +37,12 @@ const faqs = [
 ];
 
 const FAQSection = () => {
+  const isMobile = useIsMobile();
   return (
     <section id="faq" className="section-padding">
       <div className="container mx-auto max-w-3xl">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
@@ -49,7 +51,7 @@ const FAQSection = () => {
         </motion.h2>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-12"

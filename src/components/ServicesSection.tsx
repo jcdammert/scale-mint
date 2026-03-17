@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Workflow, Globe, MessageSquare, Phone, Sparkles, Megaphone } from "lucide-react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const services = [
   {
@@ -44,11 +45,12 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const isMobile = useIsMobile();
   return (
     <section id="services" className="section-padding">
       <div className="container mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mx-auto max-w-2xl text-center"
@@ -65,7 +67,7 @@ const ServicesSection = () => {
           {services.map((s, i) => (
             <a key={s.title} href={s.href} className="block">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}

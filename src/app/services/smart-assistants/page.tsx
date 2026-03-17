@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import {
   MessageSquare,
   ArrowLeft,
@@ -117,6 +118,7 @@ const useCases = [
 ];
 
 export default function SmartAssistantsPage() {
+  const isMobile = useIsMobile();
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -137,7 +139,7 @@ export default function SmartAssistantsPage() {
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
         <div className="container relative mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10"
@@ -145,7 +147,7 @@ export default function SmartAssistantsPage() {
             <MessageSquare size={40} className="text-primary" />
           </motion.div>
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
@@ -154,7 +156,7 @@ export default function SmartAssistantsPage() {
             <span className="text-gradient">Never Sleeps</span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
@@ -164,20 +166,20 @@ export default function SmartAssistantsPage() {
             your customers use.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-10"
           >
-            <a href="/book">
-              <Button variant="hero" size="lg" className="px-8 py-6 text-base">
+            <a href="/book" className="block w-full sm:w-auto">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto px-8 py-6 text-base">
                 Get Your AI Assistant
               </Button>
             </a>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45 }}
             className="mt-8 md:mt-14 flex flex-wrap justify-center gap-4 md:gap-8"
@@ -203,7 +205,7 @@ export default function SmartAssistantsPage() {
       <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
@@ -221,7 +223,7 @@ export default function SmartAssistantsPage() {
             {features.map((f, i) => (
               <motion.div
                 key={f.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
@@ -243,10 +245,10 @@ export default function SmartAssistantsPage() {
       </section>
 
       {/* How It Works */}
-      <section className="section-padding bg-primary/[0.02]">
+      <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
@@ -261,7 +263,7 @@ export default function SmartAssistantsPage() {
             {steps.map((s, i) => (
               <motion.div
                 key={s.step}
-                initial={{ opacity: 0, y: 30 }}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
@@ -285,7 +287,7 @@ export default function SmartAssistantsPage() {
       <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
@@ -303,7 +305,7 @@ export default function SmartAssistantsPage() {
             {useCases.map((uc, i) => (
               <motion.div
                 key={uc.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
@@ -328,7 +330,7 @@ export default function SmartAssistantsPage() {
       <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
@@ -342,11 +344,11 @@ export default function SmartAssistantsPage() {
               you around the clock. Book a free strategy call to get started.
             </p>
             <div className="mt-8">
-              <a href="/book">
+              <a href="/book" className="block w-full sm:w-auto">
                 <Button
                   variant="cta"
                   size="lg"
-                  className="px-8 py-6 text-base"
+                  className="w-full sm:w-auto px-8 py-6 text-base"
                 >
                   Book a Free Strategy Call
                   <ArrowRight size={18} />

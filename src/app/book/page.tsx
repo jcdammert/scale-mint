@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 // TODO: Replace with actual GHL webhook URL
 const WEBHOOK_URL =
@@ -21,6 +22,7 @@ export default function BookPage() {
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const isMobile = useIsMobile();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -65,7 +67,7 @@ export default function BookPage() {
 
         <div className="container relative mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-2xl text-center"
@@ -81,7 +83,7 @@ export default function BookPage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-12 max-w-xl"

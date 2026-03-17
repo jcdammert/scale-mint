@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Zap, Clock, UserCheck } from "lucide-react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const stats = [
   { icon: Clock, text: "Up and Running in Days" },
@@ -11,6 +12,7 @@ const stats = [
 ];
 
 const HeroSection = () => {
+  const isMobile = useIsMobile();
   return (
     <section className="relative overflow-hidden pt-28 pb-14 md:pt-36 md:pb-24">
       {/* Background glow */}
@@ -18,7 +20,7 @@ const HeroSection = () => {
 
       <div className="container relative mx-auto px-4 text-center">
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={isMobile ? false : { opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl lg:text-7xl"
@@ -28,7 +30,7 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
@@ -37,25 +39,25 @@ const HeroSection = () => {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
         >
-          <a href="/book">
-            <Button variant="hero" size="lg" className="text-base px-8 py-6">
+          <a href="/book" className="block w-full sm:w-auto">
+            <Button variant="hero" size="lg" className="text-base px-8 py-6 w-full sm:w-auto">
               Book a Free Strategy Call
             </Button>
           </a>
-          <a href="#services">
-            <Button variant="hero-outline" size="lg" className="text-base px-8 py-6">
+          <a href="#services" className="block w-full sm:w-auto">
+            <Button variant="hero-outline" size="lg" className="text-base px-8 py-6 w-full sm:w-auto">
               See What We Build
             </Button>
           </a>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45 }}
           className="mt-14 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10"

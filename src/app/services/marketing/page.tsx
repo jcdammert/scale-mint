@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import {
   Megaphone,
   ArrowLeft,
@@ -152,6 +153,7 @@ const googleAdsIdealFor = [
 ];
 
 export default function MarketingPage() {
+  const isMobile = useIsMobile();
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -172,7 +174,7 @@ export default function MarketingPage() {
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
         <div className="container relative mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10"
@@ -180,7 +182,7 @@ export default function MarketingPage() {
             <Megaphone size={40} className="text-primary" />
           </motion.div>
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
@@ -189,7 +191,7 @@ export default function MarketingPage() {
             <span className="text-gradient">Real Revenue</span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
@@ -199,21 +201,21 @@ export default function MarketingPage() {
             machines that grow your revenue month over month.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
           >
-            <a href="/book">
-              <Button variant="hero" size="lg" className="px-8 py-6 text-base">
+            <a href="/book" className="block w-full sm:w-auto">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto px-8 py-6 text-base">
                 Start Getting More Leads
               </Button>
             </a>
-            <a href="#lsa-section">
+            <a href="#lsa-section" className="block w-full sm:w-auto">
               <Button
                 variant="hero-outline"
                 size="lg"
-                className="px-8 py-6 text-base"
+                className="w-full sm:w-auto px-8 py-6 text-base"
               >
                 Explore Our Services
               </Button>
@@ -221,7 +223,7 @@ export default function MarketingPage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45 }}
             className="mt-8 md:mt-14 flex flex-wrap justify-center gap-4 md:gap-8"
@@ -248,7 +250,7 @@ export default function MarketingPage() {
       <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
@@ -268,7 +270,7 @@ export default function MarketingPage() {
             {whyChooseUs.map((item, i) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
@@ -290,10 +292,10 @@ export default function MarketingPage() {
       </section>
 
       {/* ===== GOOGLE LOCAL SERVICE ADS ===== */}
-      <section id="lsa-section" className="section-padding bg-primary/[0.02]">
+      <section id="lsa-section" className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="grid gap-12 lg:grid-cols-2 lg:items-center"
@@ -369,7 +371,7 @@ export default function MarketingPage() {
       <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="grid gap-12 lg:grid-cols-2 lg:items-center"
@@ -441,10 +443,10 @@ export default function MarketingPage() {
       </section>
 
       {/* ===== META ADS ===== */}
-      <section className="section-padding bg-primary/[0.02]">
+      <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="grid gap-12 lg:grid-cols-2 lg:items-center"
@@ -521,7 +523,7 @@ export default function MarketingPage() {
       <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="grid gap-12 lg:grid-cols-2 lg:items-center"
@@ -599,10 +601,10 @@ export default function MarketingPage() {
       </section>
 
       {/* How It All Works Together */}
-      <section className="section-padding bg-primary/[0.02]">
+      <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
@@ -646,7 +648,7 @@ export default function MarketingPage() {
             ].map((s, i) => (
               <motion.div
                 key={s.step}
-                initial={{ opacity: 0, y: 30 }}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
@@ -670,7 +672,7 @@ export default function MarketingPage() {
       <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
@@ -690,7 +692,7 @@ export default function MarketingPage() {
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 30 }}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
@@ -712,7 +714,7 @@ export default function MarketingPage() {
       <section id="cta" className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
@@ -728,11 +730,11 @@ export default function MarketingPage() {
               opportunities are.
             </p>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <a href="/book">
+              <a href="/book" className="block w-full sm:w-auto">
                 <Button
                   variant="cta"
                   size="lg"
-                  className="px-8 py-6 text-base"
+                  className="w-full sm:w-auto px-8 py-6 text-base"
                 >
                   Book a Free Strategy Call
                   <ArrowRight size={18} />
