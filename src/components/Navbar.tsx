@@ -15,6 +15,7 @@ const serviceLinks = [
 
 const navLinks = [
   { label: "How It Works", href: "/how-it-works" },
+  { label: "Why Us", href: "/why-us" },
   { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/#faq" },
 ];
