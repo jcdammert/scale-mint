@@ -11,34 +11,54 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 const tiers = [
   {
     name: "Starter",
-    price: "$497",
+    tagline: "Get Found",
+    price: "$800",
+    description:
+      "For the guy with no website or a terrible one. Needs to look legit and start getting found on Google.",
     features: [
-      "One core automation or AI tool",
-      "Basic website",
-      "Email support",
+      "Full SEO website (5\u20137 pages, Next.js/Vercel)",
+      "GMB setup & optimization",
+      "Weekly posts \u2014 FB, IG, GMB (client sends photos, we write + schedule)",
+      "Contact form \u2192 GHL lead capture",
+      "Review request automation",
     ],
   },
   {
     name: "Growth",
-    price: "$997",
-    popular: true,
+    tagline: "Get Leads",
+    price: "$1,900",
+    description:
+      "For the guy already getting some work but wants consistent inbound leads from multiple channels.",
     features: [
-      "Up to 3 automations",
-      "AI assistant or chatbot",
-      "CRM setup",
-      "Priority support",
+      "Everything in Starter",
+      "GHL CRM + pipeline setup",
+      "Lead follow-up automation (text + email sequences)",
+      "Missed call text-back",
+      "AI chatbot on website",
+      "Local SEO city/service pages",
+      "Meta Ads setup + first campaign",
+      "LSA (Local Services Ads) setup",
+      "Citation building (Yelp, Angi, BBB, etc.)",
     ],
   },
   {
-    name: "Partner",
-    price: "$1,497",
+    name: "Dominate",
+    tagline: "Get Booked",
+    price: "$3,500",
+    description:
+      "For the guy who wants to be the #1 in his area and run a fully automated business operation.",
     features: [
-      "Unlimited builds & automations",
-      "AI receptionist",
-      "Custom integrations",
-      "Dedicated strategy calls",
-      "Everything included",
+      "Everything in Growth",
+      "Google Ads (PPC) setup + management",
+      "Contracts & e-signatures",
+      "Estimates & invoicing",
+      "Appointment booking automation",
+      "Worker scheduling & job management",
+      "Reactivation campaign (old leads)",
+      "Rank tracking + reporting",
     ],
+    subHeader: "Full GHL business OS build-out:",
+    subHeaderStartIndex: 2,
   },
 ];
 
@@ -70,7 +90,8 @@ export default function PricingPage() {
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
-            Simple, Transparent <span className="text-gradient">Pricing.</span>
+            Simple, Transparent{" "}
+            <span className="text-gradient">Pricing.</span>
           </motion.h1>
           <motion.p
             initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -78,7 +99,9 @@ export default function PricingPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            Pick the plan that fits your business. Marketing, automations, or both — every plan is tailored to help home service businesses grow.
+            Pick the package that fits your business. Marketing, automations, or
+            both — every package is tailored to help home service businesses
+            grow.
           </motion.p>
         </div>
       </section>
@@ -86,6 +109,17 @@ export default function PricingPage() {
       {/* Pricing Cards */}
       <section className="section-padding pt-0">
         <div className="container mx-auto">
+          {/* Scoping note */}
+          <motion.p
+            initial={isMobile ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mb-8 text-center text-sm text-muted-foreground"
+          >
+            All packages are scoped to your business. Book a free call to get a
+            custom quote.
+          </motion.p>
+
           <div className="grid gap-6 md:grid-cols-3">
             {tiers.map((tier, i) => (
               <motion.div
@@ -94,35 +128,56 @@ export default function PricingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`card-glass relative flex flex-col p-8 transition-all duration-300 ${
-                  tier.popular
-                    ? "border-primary/40 shadow-lg shadow-primary/10"
-                    : "hover:border-primary/20"
-                }`}
+                className="card-glass relative flex flex-col p-8 transition-all duration-300 hover:border-primary/20"
               >
-                {tier.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground">
-                    Most Popular
+                <div className="flex items-center gap-3">
+                  <h3 className="font-heading text-xl font-semibold text-foreground">
+                    {tier.name}
+                  </h3>
+                  <span className="rounded-full bg-primary/10 px-3 py-0.5 text-xs font-medium text-primary">
+                    {tier.tagline}
                   </span>
-                )}
-                <h3 className="font-heading text-xl font-semibold text-foreground">{tier.name}</h3>
-                <div className="mt-4 flex items-baseline gap-1">
-                  <span className="font-heading text-4xl font-bold text-foreground">{tier.price}</span>
-                  <span className="text-sm text-muted-foreground">/mo</span>
                 </div>
-                <ul className="mt-8 flex-1 space-y-4">
-                  {tier.features.map((f) => (
-                    <li key={f} className="flex items-start gap-3 text-sm text-muted-foreground">
-                      <Check size={16} className="mt-0.5 shrink-0 text-primary" />
-                      {f}
+                <div className="mt-4 flex items-baseline gap-1">
+                  <span className="text-sm text-muted-foreground">
+                    Starting at
+                  </span>
+                  <span className="ml-1 font-heading text-4xl font-bold text-foreground">
+                    {tier.price}
+                  </span>
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  {tier.description}
+                </p>
+                <ul className="mt-6 flex-1 space-y-3">
+                  {tier.features.map((f, fi) => (
+                    <li key={f}>
+                      {tier.subHeader &&
+                        tier.subHeaderStartIndex === fi && (
+                          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-primary/70">
+                            {tier.subHeader}
+                          </p>
+                        )}
+                      <div
+                        className={`flex items-start gap-3 text-sm text-muted-foreground ${
+                          tier.subHeader &&
+                          fi >= (tier.subHeaderStartIndex ?? 0) &&
+                          fi < (tier.subHeaderStartIndex ?? 0) + 6
+                            ? "pl-3"
+                            : ""
+                        }`}
+                      >
+                        <Check
+                          size={16}
+                          className="mt-0.5 shrink-0 text-primary"
+                        />
+                        {f}
+                      </div>
                     </li>
                   ))}
                 </ul>
                 <a href="/book" className="mt-8 block">
-                  <Button
-                    variant={tier.popular ? "hero" : "hero-outline"}
-                    className="w-full"
-                  >
+                  <Button variant="hero" className="w-full">
                     Get Started
                   </Button>
                 </a>
@@ -130,42 +185,35 @@ export default function PricingPage() {
             ))}
           </div>
 
+          {/* Monthly retainer note */}
           <motion.p
             initial={isMobile ? false : { opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="mt-10 text-center text-sm text-muted-foreground"
+            className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted-foreground"
           >
-            Not sure what you need? Book a free call and we&apos;ll recommend the right plan.
-            <br />
-            No contracts. 14-day money-back guarantee.
+            Every package includes a simple monthly retainer to keep your system
+            running, your hosting live, and our team in your corner — for a
+            fraction of what you&apos;d pay an in-house employee.
           </motion.p>
-        </div>
-      </section>
 
-      {/* CTA */}
-      <section className="section-padding pt-0">
-        <div className="container mx-auto">
+          {/* CTA Button */}
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
+            className="mt-8 flex justify-center"
           >
-            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Let&apos;s Find the Right <span className="text-gradient">Fit</span>
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              Every home service business is different. Book a free strategy call and we&apos;ll build a plan around your goals — whether that&apos;s more leads, smoother operations, or both.
-            </p>
-            <div className="mt-8">
-              <a href="/book" className="block w-full sm:w-auto">
-                <Button variant="cta" size="lg" className="w-full sm:w-auto px-8 py-6 text-base">
-                  Book a Free Strategy Call
-                  <ArrowRight size={18} />
-                </Button>
-              </a>
-            </div>
+            <a href="/book" className="block w-full sm:w-auto">
+              <Button
+                variant="cta"
+                size="lg"
+                className="w-full sm:w-auto px-8 py-6 text-base"
+              >
+                Book a Free Strategy Call
+                <ArrowRight size={18} />
+              </Button>
+            </a>
           </motion.div>
         </div>
       </section>
