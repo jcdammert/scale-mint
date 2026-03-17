@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
           <span className="text-gradient">Time Back.</span>
         </motion.h2>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 md:mt-14 grid gap-6 md:grid-cols-3">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}

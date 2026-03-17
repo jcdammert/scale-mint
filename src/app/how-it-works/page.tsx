@@ -137,7 +137,7 @@ export default function HowItWorksPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="card-glass mx-auto max-w-3xl p-12 text-center"
+            className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
               {"Ready to See If We're a "}

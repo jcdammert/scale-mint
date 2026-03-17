@@ -168,7 +168,7 @@ export default function MarketingPage() {
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden pt-8 pb-20 md:pb-32">
+      <section className="relative overflow-hidden pt-8 pb-10 md:pb-32">
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
         <div className="container relative mx-auto px-4 text-center">
           <motion.div
@@ -224,7 +224,7 @@ export default function MarketingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45 }}
-            className="mt-14 flex flex-wrap justify-center gap-8"
+            className="mt-8 md:mt-14 flex flex-wrap justify-center gap-4 md:gap-8"
           >
             {[
               { icon: DollarSign, text: "Transparent Pricing" },
@@ -264,7 +264,7 @@ export default function MarketingPage() {
             </p>
           </motion.div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 md:mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {whyChooseUs.map((item, i) => (
               <motion.div
                 key={item.title}
@@ -617,7 +617,7 @@ export default function MarketingPage() {
             </p>
           </motion.div>
 
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 md:mt-14 grid gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 step: "01",
@@ -715,7 +715,7 @@ export default function MarketingPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="card-glass mx-auto max-w-3xl p-12 text-center"
+            className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
               Ready to <span className="text-gradient">Grow</span>?

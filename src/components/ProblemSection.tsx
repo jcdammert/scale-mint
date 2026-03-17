@@ -35,7 +35,7 @@ const ProblemSection = () => {
           <span className="text-gradient">Do Admin Work.</span>
         </motion.h2>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 md:mt-14 grid gap-6 md:grid-cols-3">
           {problems.map((p, i) => (
             <motion.div
               key={i}

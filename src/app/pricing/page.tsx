@@ -58,7 +58,7 @@ export default function PricingPage() {
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden pt-8 pb-20 md:pb-32">
+      <section className="relative overflow-hidden pt-8 pb-10 md:pb-32">
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
         <div className="container relative mx-auto px-4 text-center">
           <motion.h1
@@ -147,7 +147,7 @@ export default function PricingPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="card-glass mx-auto max-w-3xl p-12 text-center"
+            className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
               Let&apos;s Find the Right <span className="text-gradient">Fit</span>
