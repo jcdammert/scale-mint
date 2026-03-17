@@ -23,8 +23,8 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl lg:text-7xl"
         >
-          Modern Tech for{" "}
-          <span className="text-gradient">Home Service Businesses.</span>
+          We Build the System That Gets You More Jobs and Runs Your Business on{" "}
+          <span className="text-gradient">Autopilot.</span>
         </motion.h1>
 
         <motion.p
@@ -33,7 +33,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
         >
-          We bring AI, automation, and digital marketing to plumbers, roofers, HVAC techs, painters, cleaners, and every home service business in between. Get more leads with marketing, run smoother with automations — or both. No tech skills required.
+          Websites, marketing, and automations — built by business owners who actually use this stuff. We build it, hand it over, and you run it. No tech skills needed.
         </motion.p>
 
         <motion.div

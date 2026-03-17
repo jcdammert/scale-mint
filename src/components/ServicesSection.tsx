@@ -39,7 +39,7 @@ const services = [
   {
     icon: Sparkles,
     title: "Custom AI Solutions",
-    description: "Have a wild idea? A unique problem? Tell us about it and we&apos;ll build it.",
+    description: "Have a wild idea? A unique problem? Tell us about it and we'll build it.",
     href: "/services/custom-ai",
   },
 ];

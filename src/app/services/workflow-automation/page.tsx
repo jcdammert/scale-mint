@@ -80,7 +80,7 @@ const features = [
     icon: BarChart3,
     title: "Reporting & Analytics",
     description:
-      "Track conversion rates, revenue per lead source, response times, and team performance. Know exactly what&apos;s working.",
+      "Track conversion rates, revenue per lead source, response times, and team performance. Know exactly what's working.",
   },
 ];
 

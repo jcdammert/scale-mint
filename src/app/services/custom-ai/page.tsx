@@ -41,7 +41,7 @@ const features = [
     icon: TrendingUp,
     title: "Predictive Analytics",
     description:
-      "Forecast demand, predict customer churn, estimate project timelines — AI looks at your historical data and tells you what&apos;s coming next.",
+      "Forecast demand, predict customer churn, estimate project timelines — AI looks at your historical data and tells you what's coming next.",
   },
   {
     icon: FileText,
@@ -68,7 +68,7 @@ const steps = [
     step: "01",
     title: "Share Your Vision",
     description:
-      "Tell us about your challenge or idea. No matter how wild or niche, we&apos;ll assess feasibility and map out a solution.",
+      "Tell us about your challenge or idea. No matter how wild or niche, we'll assess feasibility and map out a solution.",
   },
   {
     step: "02",

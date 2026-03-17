@@ -36,7 +36,7 @@ const features = [
     icon: PhoneForwarded,
     title: "Intelligent Call Routing",
     description:
-      "The AI understands the caller&apos;s intent and routes them to the right person or department. Urgent calls get escalated immediately.",
+      "The AI understands the caller's intent and routes them to the right person or department. Urgent calls get escalated immediately.",
   },
   {
     icon: FileText,
@@ -54,13 +54,13 @@ const features = [
     icon: UserCheck,
     title: "Lead Qualification",
     description:
-      "The AI asks qualifying questions before connecting the caller to your team. Know exactly who&apos;s calling and what they need before you pick up.",
+      "The AI asks qualifying questions before connecting the caller to your team. Know exactly who's calling and what they need before you pick up.",
   },
   {
     icon: Mic,
     title: "Custom Greeting & Voice",
     description:
-      "A branded greeting that sounds professional and matches your business personality. Callers won&apos;t know it&apos;s AI.",
+      "A branded greeting that sounds professional and matches your business personality. Callers won't know it's AI.",
   },
   {
     icon: BarChart3,
@@ -87,7 +87,7 @@ const steps = [
     step: "03",
     title: "Test & Refine",
     description:
-      "We run test calls, refine conversation flows, and optimize the AI&apos;s responses until they&apos;re perfect.",
+      "We run test calls, refine conversation flows, and optimize the AI's responses until they're perfect.",
   },
   {
     step: "04",

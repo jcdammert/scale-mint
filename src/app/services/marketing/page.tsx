@@ -29,7 +29,7 @@ const whyChooseUs = [
     icon: Target,
     title: "Data-Driven Strategy",
     description:
-      "Every campaign we run is backed by data. We don&apos;t guess — we analyze, test, and optimize based on real performance metrics.",
+      "Every campaign we run is backed by data. We don't guess — we analyze, test, and optimize based on real performance metrics.",
   },
   {
     icon: DollarSign,
@@ -41,7 +41,7 @@ const whyChooseUs = [
     icon: Zap,
     title: "AI-Enhanced Campaigns",
     description:
-      "We leverage AI tools for audience targeting, ad optimization, and performance prediction — giving you an edge competitors don&apos;t have.",
+      "We leverage AI tools for audience targeting, ad optimization, and performance prediction — giving you an edge competitors don't have.",
   },
   {
     icon: Users,
@@ -53,7 +53,7 @@ const whyChooseUs = [
     icon: Clock,
     title: "Fast Results",
     description:
-      "We don&apos;t believe in 6-month ramp-up periods. Our campaigns are structured to deliver leads from week one.",
+      "We don't believe in 6-month ramp-up periods. Our campaigns are structured to deliver leads from week one.",
   },
   {
     icon: TrendingUp,
@@ -635,13 +635,13 @@ export default function MarketingPage() {
                 step: "03",
                 title: "Optimize & Scale",
                 description:
-                  "We analyze performance weekly, kill what doesn&apos;t work, double down on what does, and continuously improve results.",
+                  "We analyze performance weekly, kill what doesn't work, double down on what does, and continuously improve results.",
               },
               {
                 step: "04",
                 title: "Report & Grow",
                 description:
-                  "Transparent weekly reports show exactly what&apos;s working. As results compound, we scale your winning campaigns.",
+                  "Transparent weekly reports show exactly what's working. As results compound, we scale your winning campaigns.",
               },
             ].map((s, i) => (
               <motion.div

@@ -106,13 +106,13 @@ const useCases = [
     icon: CalendarCheck,
     title: "Automated Appointment Scheduling",
     description:
-      "Visitors tell the bot when they&apos;re available, it checks your calendar, and books the appointment — all in a natural chat flow.",
+      "Visitors tell the bot when they're available, it checks your calendar, and books the appointment — all in a natural chat flow.",
   },
   {
     icon: ShoppingBag,
     title: "Product Recommendations",
     description:
-      "For e-commerce or service businesses, the AI recommends the right product or service based on the visitor&apos;s needs and preferences.",
+      "For e-commerce or service businesses, the AI recommends the right product or service based on the visitor's needs and preferences.",
   },
 ];
 
