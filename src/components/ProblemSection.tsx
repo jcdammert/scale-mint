@@ -6,18 +6,18 @@ import { Clock, Unplug, TrendingUp } from "lucide-react";
 const problems = [
   {
     icon: Clock,
-    title: "You&apos;re buried in busywork",
-    description: "Scheduling, follow-ups, invoicing, texts, and paperwork eat your entire day. You know there&apos;s a better way — you just don&apos;t have time to figure it out.",
+    title: "You're buried in busywork",
+    description: "Scheduling, follow-ups, invoicing, texts, and paperwork eat your entire day. You know there's a better way — you just don't have time to figure it out.",
   },
   {
     icon: Unplug,
     title: "Your leads are slipping through the cracks",
-    description: "You&apos;re getting calls and messages but there&apos;s no system. No CRM, no follow-up sequence, no pipeline. Leads go cold and money walks out the door.",
+    description: "You're getting calls and messages but there's no system. No CRM, no follow-up sequence, no pipeline. Leads go cold and money walks out the door.",
   },
   {
     icon: TrendingUp,
     title: "You know you need to modernize",
-    description: "Other companies in your space are running ads, automating their backend, and scaling fast. You&apos;re ready to level up — you just need the right partner.",
+    description: "Other companies in your space are running ads, automating their backend, and scaling fast. You're ready to level up — you just need the right partner.",
   },
 ];
 

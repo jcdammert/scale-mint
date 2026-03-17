@@ -12,7 +12,7 @@ const stats = [
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-32">
+    <section className="relative overflow-hidden pt-28 pb-14 md:pt-36 md:pb-24">
       {/* Background glow */}
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
 
