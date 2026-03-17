@@ -195,7 +195,7 @@ export default function WorkflowAutomationPage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
           >
-            <a href="/#final-cta">
+            <a href="/book">
               <Button variant="hero" size="lg" className="px-8 py-6 text-base">
                 Automate Your Operations
               </Button>
@@ -365,7 +365,7 @@ export default function WorkflowAutomationPage() {
               Book a free strategy call and we&apos;ll map out exactly how to automate your operations — from lead capture to invoicing and everything in between.
             </p>
             <div className="mt-8">
-              <a href="/#final-cta">
+              <a href="/book">
                 <Button
                   variant="cta"
                   size="lg"

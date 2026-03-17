@@ -170,7 +170,7 @@ export default function AIWebsitesPage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-10"
           >
-            <a href="/#final-cta">
+            <a href="/book">
               <Button variant="hero" size="lg" className="px-8 py-6 text-base">
                 Get Your AI-Powered Website
               </Button>
@@ -347,7 +347,7 @@ export default function AIWebsitesPage() {
               brings in customers. Book a free strategy call today.
             </p>
             <div className="mt-8">
-              <a href="/#final-cta">
+              <a href="/book">
                 <Button
                   variant="cta"
                   size="lg"

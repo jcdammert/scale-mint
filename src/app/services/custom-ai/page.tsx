@@ -170,7 +170,7 @@ export default function CustomAIPage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-10"
           >
-            <a href="/#final-cta">
+            <a href="/book">
               <Button variant="hero" size="lg" className="px-8 py-6 text-base">
                 Tell Us Your Idea
               </Button>
@@ -345,7 +345,7 @@ export default function CustomAIPage() {
               call to brainstorm.
             </p>
             <div className="mt-8">
-              <a href="/#final-cta">
+              <a href="/book">
                 <Button
                   variant="cta"
                   size="lg"
