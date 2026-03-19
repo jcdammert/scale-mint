@@ -35,7 +35,7 @@ export default function PricingPage() {
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden pt-8 pb-10 md:pb-20">
+      <section className="relative overflow-hidden pt-8 pb-6 md:pb-10">
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
         <div className="container relative mx-auto px-4 text-center">
           <motion.h1
@@ -59,7 +59,7 @@ export default function PricingPage() {
       </section>
 
       {/* ─── PRODUCT 1: WEBSITE DESIGN & BUILD ─── */}
-      <section className="section-padding pt-0">
+      <section className="px-4 pb-6 md:pb-10">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
@@ -131,13 +131,13 @@ export default function PricingPage() {
       </section>
 
       {/* ─── PRODUCT 2: MARKETING ─── */}
-      <section className="section-padding pt-0">
+      <section className="px-4 pb-6 md:pb-10">
         <div className="container mx-auto max-w-5xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-8 md:mb-10"
+            className="text-center mb-6 md:mb-8"
           >
             <div className="inline-flex items-center gap-3 mb-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
@@ -288,7 +288,7 @@ export default function PricingPage() {
       </section>
 
       {/* ─── PRODUCT 3: BUSINESS SOFTWARE ─── */}
-      <section className="section-padding pt-0">
+      <section className="px-4 pb-6 md:pb-10">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
@@ -376,7 +376,7 @@ export default function PricingPage() {
       </section>
 
       {/* ─── BUNDLE & SAVE ─── */}
-      <section className="section-padding pt-0">
+      <section className="px-4 pb-6 md:pb-10">
         <div className="container mx-auto max-w-3xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
@@ -384,7 +384,7 @@ export default function PricingPage() {
             viewport={{ once: true }}
             className="card-glass p-8 md:p-10 text-center border-primary/20"
           >
-            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+            <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
               <Sparkles size={28} className="text-primary" />
             </div>
             <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
@@ -399,7 +399,7 @@ export default function PricingPage() {
               Book a free call and we&apos;ll put together a custom package with
               bundled pricing for your business.
             </p>
-            <div className="mt-8">
+            <div className="mt-6">
               <a href="/book" className="block w-full sm:w-auto sm:inline-block">
                 <Button
                   variant="cta"
@@ -416,7 +416,7 @@ export default function PricingPage() {
       </section>
 
       {/* ─── BOTTOM NOTE + CTA ─── */}
-      <section className="section-padding pt-0 pb-12 md:pb-20">
+      <section className="px-4 pb-10 md:pb-16">
         <div className="container mx-auto max-w-2xl text-center">
           <motion.p
             initial={isMobile ? false : { opacity: 0 }}
