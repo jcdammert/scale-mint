@@ -23,17 +23,18 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const formData = new URLSearchParams();
+    formData.append("Timestamp", new Date().toISOString());
+    formData.append("Name", name);
+    formData.append("Company Name", companyName);
+    formData.append("Email", email);
+    formData.append("Phone", phone);
+    formData.append("Message", message);
+
     const webhookRes = await fetch(webhookUrl, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        Timestamp: new Date().toISOString(),
-        Name: name,
-        "Company Name": companyName,
-        Email: email,
-        Phone: phone,
-        Message: message,
-      }),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: formData.toString(),
     });
 
     if (!webhookRes.ok) {
