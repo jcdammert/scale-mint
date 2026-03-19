@@ -170,7 +170,7 @@ export default function MarketingPage() {
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden pt-8 pb-10 md:pb-32">
+      <section className="relative overflow-hidden pt-8 pb-10 md:pb-20">
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
         <div className="container relative mx-auto px-4 text-center">
           <motion.div
