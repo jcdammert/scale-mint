@@ -47,7 +47,7 @@ const services = [
 const ServicesSection = () => {
   const isMobile = useIsMobile();
   return (
-    <section id="services" className="section-padding">
+    <section id="services" className="px-4 py-6 md:py-12">
       <div className="container mx-auto">
         <motion.div
           initial={isMobile ? false : { opacity: 0, y: 20 }}
