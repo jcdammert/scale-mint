@@ -8,8 +8,6 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import {
   Workflow,
   ArrowLeft,
-  Zap,
-  RefreshCw,
   Calendar,
   Mail,
   Database,
@@ -23,8 +21,6 @@ import {
   Target,
   Bell,
   BarChart3,
-  Wrench,
-  Home,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -109,33 +105,6 @@ const steps = [
     title: "Launch & Optimize",
     description:
       "We test everything, train your team, and go live. Then we monitor, tweak, and optimize so it keeps getting better.",
-  },
-];
-
-const useCases = [
-  {
-    icon: Wrench,
-    title: "Plumbing, HVAC & Electrical",
-    description:
-      "Leads come in from Google, get auto-assigned to a tech, job is scheduled, customer gets a confirmation text, and the invoice sends when the job is done.",
-  },
-  {
-    icon: Home,
-    title: "Roofing, Painting & Pressure Washing",
-    description:
-      "Quote requests are captured, followed up automatically, and tracked through your pipeline. You see exactly which jobs are pending, scheduled, and complete.",
-  },
-  {
-    icon: Zap,
-    title: "Cleaning & Junk Removal",
-    description:
-      "Booking requests auto-populate your calendar, crews get dispatched, customers get reminders, and payment is collected — all without you touching a thing.",
-  },
-  {
-    icon: RefreshCw,
-    title: "Landscaping & Epoxy Coatings",
-    description:
-      "Seasonal promos go out via SMS blast, leads are captured and nurtured, estimates are tracked, and recurring jobs are auto-scheduled.",
   },
 ];
 
@@ -302,48 +271,6 @@ export default function WorkflowAutomationPage() {
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {s.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases */}
-      <section className="section-padding">
-        <div className="container mx-auto">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-center"
-          >
-            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Built for <span className="text-gradient">Home Service Businesses</span>
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              Here&apos;s how businesses like yours use workflow and operations automation to save time and grow faster.
-            </p>
-          </motion.div>
-
-          <div className="mt-8 md:mt-14 grid gap-6 sm:grid-cols-2">
-            {useCases.map((uc, i) => (
-              <motion.div
-                key={uc.title}
-                initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="card-glass p-8 transition-all duration-300 hover:border-primary/30"
-              >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                  <uc.icon size={20} className="text-primary" />
-                </div>
-                <h3 className="mb-2 font-heading text-lg font-semibold text-foreground">
-                  {uc.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {uc.description}
                 </p>
               </motion.div>
             ))}
