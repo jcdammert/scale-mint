@@ -277,7 +277,7 @@ export default function AIVoicePage() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
-                <div className="text-5xl font-bold text-primary/10 font-heading">
+                <div className="text-5xl font-bold text-primary/40 font-heading">
                   {s.step}
                 </div>
                 <h3 className="mt-2 font-heading text-lg font-semibold text-foreground">
