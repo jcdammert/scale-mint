@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Workflow, Globe, MessageSquare, Phone, Sparkles, Megaphone } from "lucide-react";
+import Image from "next/image";
 
 const serviceLinks = [
   { label: "Workflow & Operations", href: "/services/workflow-automation", icon: Workflow },
@@ -39,13 +40,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <a href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-            <span className="font-heading text-sm font-bold text-primary-foreground">SM</span>
-          </div>
-          <span className="font-heading text-xl font-bold text-foreground">
-            Scale<span className="text-gradient">Mint</span>
-          </span>
+        <a href="/" className="flex items-center">
+          <Image src="/logo.png" alt="ScaleMint" width={140} height={32} className="h-8 w-auto" priority />
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
