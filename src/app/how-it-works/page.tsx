@@ -73,7 +73,7 @@ export default function HowItWorksPage() {
       </div>
 
       {/* Hero */}
-      <section className="relative overflow-hidden pt-8 pb-14 md:pb-20">
+      <section className="relative overflow-hidden pt-8 pb-6 md:pb-10">
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
         <div className="container relative mx-auto px-4 text-center">
           <motion.h1
@@ -97,9 +97,9 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Steps */}
-      <section className="section-padding pt-0">
+      <section className="px-4 pb-6 md:pb-10">
         <div className="container mx-auto">
-          <div className="mx-auto max-w-3xl space-y-8">
+          <div className="mx-auto max-w-3xl space-y-5">
             {steps.map((s, i) => (
               <motion.div
                 key={s.step}
@@ -134,7 +134,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding pt-0">
+      <section className="px-4 pb-10 md:pb-16">
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
