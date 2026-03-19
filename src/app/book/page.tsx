@@ -9,14 +9,10 @@ import { CheckCircle, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
-// TODO: Replace with actual GHL webhook URL
-const WEBHOOK_URL =
-  "https://services.leadconnectorhq.com/hooks/REPLACE_WITH_YOUR_WEBHOOK_ID";
-
 export default function BookPage() {
   const [formData, setFormData] = useState({
-    full_name: "",
-    business_name: "",
+    name: "",
+    companyName: "",
     phone: "",
     email: "",
     message: "",
@@ -35,7 +31,7 @@ export default function BookPage() {
     setStatus("submitting");
 
     try {
-      const res = await fetch(WEBHOOK_URL, {
+      const res = await fetch("/api/submit-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -43,6 +39,7 @@ export default function BookPage() {
 
       if (!res.ok) throw new Error("Request failed");
       setStatus("success");
+      setFormData({ name: "", companyName: "", phone: "", email: "", message: "" });
     } catch {
       setStatus("error");
     }
@@ -92,27 +89,27 @@ export default function BookPage() {
               <div className="card-glass p-10 text-center">
                 <CheckCircle size={48} className="mx-auto text-primary" />
                 <h2 className="mt-6 font-heading text-2xl font-bold text-foreground">
-                  You&apos;re in!
+                  Thanks!
                 </h2>
                 <p className="mt-3 text-muted-foreground">
-                  We&apos;ll reach out within 24 hours to schedule your call.
+                  We&apos;ll be in touch within 24 hours.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="card-glass space-y-5 p-8">
                 <div>
                   <label
-                    htmlFor="full_name"
+                    htmlFor="name"
                     className="mb-1.5 block text-sm font-medium text-foreground"
                   >
                     Full Name
                   </label>
                   <input
-                    id="full_name"
-                    name="full_name"
+                    id="name"
+                    name="name"
                     type="text"
                     required
-                    value={formData.full_name}
+                    value={formData.name}
                     onChange={handleChange}
                     placeholder="John Smith"
                     className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
@@ -121,17 +118,17 @@ export default function BookPage() {
 
                 <div>
                   <label
-                    htmlFor="business_name"
+                    htmlFor="companyName"
                     className="mb-1.5 block text-sm font-medium text-foreground"
                   >
                     Business Name
                   </label>
                   <input
-                    id="business_name"
-                    name="business_name"
+                    id="companyName"
+                    name="companyName"
                     type="text"
                     required
-                    value={formData.business_name}
+                    value={formData.companyName}
                     onChange={handleChange}
                     placeholder="Smith's Plumbing LLC"
                     className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
