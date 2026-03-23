@@ -38,8 +38,8 @@ const PricingSection = () => {
     <section id="pricing" className="section-padding">
       <div className="container mx-auto">
         <motion.div
-          initial={isMobile ? undefined : { opacity: 0, y: 20 }}
-          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
+          whileInView={isMobile ? false : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mx-auto max-w-2xl text-center"
         >
@@ -57,8 +57,8 @@ const PricingSection = () => {
           {products.map((product, i) => (
             <motion.div
               key={product.name}
-              initial={isMobile ? undefined : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={isMobile ? false : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               className="card-glass relative flex flex-col p-8 transition-all duration-300 hover:border-primary/20"
@@ -90,8 +90,8 @@ const PricingSection = () => {
         </div>
 
         <motion.div
-          initial={isMobile ? undefined : { opacity: 0, y: 20 }}
-          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
+          whileInView={isMobile ? false : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-10 text-center"
         >

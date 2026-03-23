@@ -20,8 +20,8 @@ const HeroSection = () => {
 
       <div className="container relative mx-auto px-4 text-center">
         <motion.h1
-          initial={isMobile ? undefined : { opacity: 0, y: 30 }}
-          animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 30 }}
+          animate={isMobile ? false : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl lg:text-7xl"
         >
@@ -30,8 +30,8 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.p
-          initial={isMobile ? undefined : { opacity: 0, y: 20 }}
-          animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
+          animate={isMobile ? false : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
         >
@@ -39,8 +39,8 @@ const HeroSection = () => {
         </motion.p>
 
         <motion.div
-          initial={isMobile ? undefined : { opacity: 0, y: 20 }}
-          animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
+          animate={isMobile ? false : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
         >
@@ -57,8 +57,8 @@ const HeroSection = () => {
         </motion.div>
 
         <motion.div
-          initial={isMobile ? undefined : { opacity: 0, y: 20 }}
-          animate={isMobile ? undefined : { opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
+          animate={isMobile ? false : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45 }}
           className="mt-14 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10"
         >
