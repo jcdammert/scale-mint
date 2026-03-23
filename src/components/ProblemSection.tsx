@@ -29,7 +29,7 @@ const ProblemSection = () => {
       <div className="container mx-auto">
         <motion.h2
           initial={isMobile ? false : { opacity: 0, y: 20 }}
-          whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
@@ -42,7 +42,7 @@ const ProblemSection = () => {
             <motion.div
               key={i}
               initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               className="card-glass p-8 transition-all duration-300 hover:border-primary/30"

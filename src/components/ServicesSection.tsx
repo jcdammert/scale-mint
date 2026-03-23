@@ -51,7 +51,7 @@ const ServicesSection = () => {
       <div className="container mx-auto">
         <motion.div
           initial={isMobile ? false : { opacity: 0, y: 20 }}
-          whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mx-auto max-w-2xl text-center"
         >
@@ -68,7 +68,7 @@ const ServicesSection = () => {
             <a key={s.title} href={s.href} className="block">
               <motion.div
                 initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
                 className={`card-glass relative h-full p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 ${

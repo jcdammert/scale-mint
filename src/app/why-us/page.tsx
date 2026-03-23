@@ -66,7 +66,7 @@ export default function WhyUsPage() {
         <div className="container relative mx-auto px-4 text-center">
           <motion.h1
             initial={isMobile ? false : { opacity: 0, y: 30 }}
-            animate={isMobile ? false : { opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
@@ -75,7 +75,7 @@ export default function WhyUsPage() {
           </motion.h1>
           <motion.p
             initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={isMobile ? false : { opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
@@ -89,7 +89,7 @@ export default function WhyUsPage() {
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-10"
           >
@@ -111,7 +111,7 @@ export default function WhyUsPage() {
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-10"
           >
@@ -134,7 +134,7 @@ export default function WhyUsPage() {
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-10"
           >
@@ -157,7 +157,7 @@ export default function WhyUsPage() {
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
           >
@@ -171,7 +171,7 @@ export default function WhyUsPage() {
               <motion.div
                 key={d.title}
                 initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
                 className="card-glass p-8 transition-all duration-300 hover:border-primary/30"
@@ -196,7 +196,7 @@ export default function WhyUsPage() {
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-10"
           >
@@ -219,7 +219,7 @@ export default function WhyUsPage() {
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
           >

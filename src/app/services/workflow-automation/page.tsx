@@ -137,7 +137,7 @@ export default function WorkflowAutomationPage() {
         <div className="container relative mx-auto px-4 text-center">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={isMobile ? false : { opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10"
           >
@@ -145,7 +145,7 @@ export default function WorkflowAutomationPage() {
           </motion.div>
           <motion.h1
             initial={isMobile ? false : { opacity: 0, y: 30 }}
-            animate={isMobile ? false : { opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
@@ -154,7 +154,7 @@ export default function WorkflowAutomationPage() {
           </motion.h1>
           <motion.p
             initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={isMobile ? false : { opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
@@ -162,7 +162,7 @@ export default function WorkflowAutomationPage() {
           </motion.p>
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={isMobile ? false : { opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
           >
@@ -176,7 +176,7 @@ export default function WorkflowAutomationPage() {
           {/* Benefits Bar */}
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={isMobile ? false : { opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45 }}
             className="mt-8 md:mt-14 flex flex-wrap justify-center gap-4 md:gap-8"
           >
@@ -198,7 +198,7 @@ export default function WorkflowAutomationPage() {
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
           >
@@ -215,7 +215,7 @@ export default function WorkflowAutomationPage() {
               <motion.div
                 key={f.title}
                 initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
                 className="card-glass p-8 transition-all duration-300 hover:border-primary/30"
@@ -240,7 +240,7 @@ export default function WorkflowAutomationPage() {
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
           >
@@ -258,7 +258,7 @@ export default function WorkflowAutomationPage() {
               <motion.div
                 key={s.step}
                 initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className="relative"
@@ -283,7 +283,7 @@ export default function WorkflowAutomationPage() {
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
           >

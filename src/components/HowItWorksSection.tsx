@@ -28,7 +28,7 @@ const HowItWorksSection = () => {
       <div className="container mx-auto">
         <motion.h2
           initial={isMobile ? false : { opacity: 0, y: 20 }}
-          whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
@@ -44,7 +44,7 @@ const HowItWorksSection = () => {
             <motion.div
               key={step.num}
               initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
               className="relative flex flex-col items-center text-center"

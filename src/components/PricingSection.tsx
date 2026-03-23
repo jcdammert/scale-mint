@@ -39,7 +39,7 @@ const PricingSection = () => {
       <div className="container mx-auto">
         <motion.div
           initial={isMobile ? false : { opacity: 0, y: 20 }}
-          whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mx-auto max-w-2xl text-center"
         >
@@ -58,7 +58,7 @@ const PricingSection = () => {
             <motion.div
               key={product.name}
               initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               className="card-glass relative flex flex-col p-8 transition-all duration-300 hover:border-primary/20"
@@ -91,7 +91,7 @@ const PricingSection = () => {
 
         <motion.div
           initial={isMobile ? false : { opacity: 0, y: 20 }}
-          whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-10 text-center"
         >

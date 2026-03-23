@@ -40,7 +40,7 @@ export default function PricingPage() {
         <div className="container relative mx-auto px-4 text-center">
           <motion.h1
             initial={isMobile ? false : { opacity: 0, y: 30 }}
-            animate={isMobile ? false : { opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
@@ -48,7 +48,7 @@ export default function PricingPage() {
           </motion.h1>
           <motion.p
             initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={isMobile ? false : { opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
@@ -63,7 +63,7 @@ export default function PricingPage() {
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass overflow-hidden p-8 md:p-10 transition-all duration-300 hover:border-primary/20"
           >
@@ -135,7 +135,7 @@ export default function PricingPage() {
         <div className="container mx-auto max-w-5xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-6 md:mb-8"
           >
@@ -157,7 +157,7 @@ export default function PricingPage() {
             {/* Foundations Plan */}
             <motion.div
               initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0 }}
               className="card-glass relative flex flex-col p-8 transition-all duration-300 hover:border-primary/20"
@@ -221,7 +221,7 @@ export default function PricingPage() {
             {/* Growth Engine Plan */}
             <motion.div
               initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
               className="card-glass relative flex flex-col p-8 transition-all duration-300 border-primary/40 shadow-lg shadow-primary/10"
@@ -292,7 +292,7 @@ export default function PricingPage() {
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass overflow-hidden p-8 md:p-10 transition-all duration-300 hover:border-primary/20"
           >
@@ -380,7 +380,7 @@ export default function PricingPage() {
         <div className="container mx-auto max-w-3xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass p-8 md:p-10 text-center border-primary/20"
           >
@@ -420,7 +420,7 @@ export default function PricingPage() {
         <div className="container mx-auto max-w-2xl text-center">
           <motion.p
             initial={isMobile ? false : { opacity: 0 }}
-            whileInView={isMobile ? false : { opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="text-sm text-muted-foreground"
           >

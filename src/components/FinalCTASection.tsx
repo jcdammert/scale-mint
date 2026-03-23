@@ -12,7 +12,7 @@ const FinalCTASection = () => {
       <div className="container mx-auto">
         <motion.div
           initial={isMobile ? false : { opacity: 0, y: 30 }}
-          whileInView={isMobile ? false : { opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="relative overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 px-8 py-16 text-center md:px-16 md:py-24"
         >
