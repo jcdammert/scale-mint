@@ -29,7 +29,7 @@ const FinalCTASection = () => {
           </p>
           <div className="relative mt-10">
             <a href="/book" className="block w-full sm:w-auto">
-              <Button variant="cta" size="lg" className="px-10 py-7 text-lg animate-glow-pulse w-full sm:w-auto">
+              <Button variant="cta" size="lg" className="px-6 py-5 text-sm sm:px-10 sm:py-7 sm:text-lg animate-glow-pulse w-full sm:w-auto">
                 Book Your Free Strategy Call
                 <ArrowRight size={20} />
               </Button>

@@ -119,7 +119,7 @@ export default function PricingPage() {
                 <Button
                   variant="hero"
                   size="lg"
-                  className="w-full sm:w-auto px-8 py-6 text-base"
+                  className="w-full sm:w-auto px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
                 >
                   Get a Free Quote
                   <ArrowRight size={18} />
@@ -364,7 +364,7 @@ export default function PricingPage() {
                 <Button
                   variant="hero"
                   size="lg"
-                  className="w-full sm:w-auto px-8 py-6 text-base"
+                  className="w-full sm:w-auto px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
                 >
                   Book a Free Consultation
                   <ArrowRight size={18} />
@@ -404,7 +404,7 @@ export default function PricingPage() {
                 <Button
                   variant="cta"
                   size="lg"
-                  className="w-full sm:w-auto px-8 py-6 text-base"
+                  className="w-full sm:w-auto px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
                 >
                   Get a Custom Bundle Quote
                   <ArrowRight size={18} />
