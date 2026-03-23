@@ -77,8 +77,8 @@ export default function HowItWorksPage() {
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
         <div className="container relative mx-auto px-4 text-center">
           <motion.h1
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+            animate={isMobile ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
@@ -86,8 +86,8 @@ export default function HowItWorksPage() {
             <span className="text-gradient">Work</span>
           </motion.h1>
           <motion.p
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+            animate={isMobile ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
@@ -103,8 +103,8 @@ export default function HowItWorksPage() {
             {steps.map((s, i) => (
               <motion.div
                 key={s.step}
-                initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+                whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className="card-glass p-8 md:p-10 transition-all duration-300 hover:border-primary/30"
@@ -137,8 +137,8 @@ export default function HowItWorksPage() {
       <section className="px-4 pb-10 md:pb-16">
         <div className="container mx-auto">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
           >

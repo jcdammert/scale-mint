@@ -42,8 +42,8 @@ const FAQSection = () => {
     <section id="faq" className="section-padding">
       <div className="container mx-auto max-w-3xl">
         <motion.h2
-          initial={isMobile ? false : { opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
@@ -51,8 +51,8 @@ const FAQSection = () => {
         </motion.h2>
 
         <motion.div
-          initial={isMobile ? false : { opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-12"
         >

@@ -64,8 +64,8 @@ export default function BookPage() {
 
         <div className="container relative mx-auto px-4">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+            animate={isMobile ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-2xl text-center"
           >
@@ -80,8 +80,8 @@ export default function BookPage() {
           </motion.div>
 
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+            animate={isMobile ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-12 max-w-xl"
           >

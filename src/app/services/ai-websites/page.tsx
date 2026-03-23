@@ -140,16 +140,16 @@ export default function AIWebsitesPage() {
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
         <div className="container relative mx-auto px-4 text-center">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+            animate={isMobile ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10"
           >
             <Globe size={40} className="text-primary" />
           </motion.div>
           <motion.h1
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+            animate={isMobile ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
@@ -157,8 +157,8 @@ export default function AIWebsitesPage() {
             <span className="text-gradient">Convert</span>
           </motion.h1>
           <motion.p
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+            animate={isMobile ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
@@ -167,8 +167,8 @@ export default function AIWebsitesPage() {
             machine.
           </motion.p>
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+            animate={isMobile ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-10"
           >
@@ -180,8 +180,8 @@ export default function AIWebsitesPage() {
           </motion.div>
 
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+            animate={isMobile ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45 }}
             className="mt-8 md:mt-14 flex flex-wrap justify-center gap-4 md:gap-8"
           >
@@ -206,8 +206,8 @@ export default function AIWebsitesPage() {
       <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
           >
@@ -225,8 +225,8 @@ export default function AIWebsitesPage() {
             {features.map((f, i) => (
               <motion.div
                 key={f.title}
-                initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+                whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
                 className="card-glass p-8 transition-all duration-300 hover:border-primary/30"
@@ -250,8 +250,8 @@ export default function AIWebsitesPage() {
       <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
           >
@@ -268,8 +268,8 @@ export default function AIWebsitesPage() {
             {steps.map((s, i) => (
               <motion.div
                 key={s.step}
-                initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+                whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
@@ -292,8 +292,8 @@ export default function AIWebsitesPage() {
       <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center"
           >
@@ -310,8 +310,8 @@ export default function AIWebsitesPage() {
             {useCases.map((uc, i) => (
               <motion.div
                 key={uc.title}
-                initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+                whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className="card-glass p-8 transition-all duration-300 hover:border-primary/30"
@@ -335,8 +335,8 @@ export default function AIWebsitesPage() {
       <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
           >

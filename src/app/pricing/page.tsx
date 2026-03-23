@@ -39,16 +39,16 @@ export default function PricingPage() {
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
         <div className="container relative mx-auto px-4 text-center">
           <motion.h1
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+            animate={isMobile ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
             What We <span className="text-gradient">Offer.</span>
           </motion.h1>
           <motion.p
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+            animate={isMobile ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
@@ -62,8 +62,8 @@ export default function PricingPage() {
       <section className="px-4 pb-6 md:pb-10">
         <div className="container mx-auto max-w-4xl">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass overflow-hidden p-8 md:p-10 transition-all duration-300 hover:border-primary/20"
           >
@@ -134,8 +134,8 @@ export default function PricingPage() {
       <section className="px-4 pb-6 md:pb-10">
         <div className="container mx-auto max-w-5xl">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 20 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-6 md:mb-8"
           >
@@ -156,8 +156,8 @@ export default function PricingPage() {
           <div className="grid gap-6 md:grid-cols-2">
             {/* Foundations Plan */}
             <motion.div
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0 }}
               className="card-glass relative flex flex-col p-8 transition-all duration-300 hover:border-primary/20"
@@ -220,8 +220,8 @@ export default function PricingPage() {
 
             {/* Growth Engine Plan */}
             <motion.div
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
               className="card-glass relative flex flex-col p-8 transition-all duration-300 border-primary/40 shadow-lg shadow-primary/10"
@@ -291,8 +291,8 @@ export default function PricingPage() {
       <section className="px-4 pb-6 md:pb-10">
         <div className="container mx-auto max-w-4xl">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass overflow-hidden p-8 md:p-10 transition-all duration-300 hover:border-primary/20"
           >
@@ -379,8 +379,8 @@ export default function PricingPage() {
       <section className="px-4 pb-6 md:pb-10">
         <div className="container mx-auto max-w-3xl">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={isMobile ? undefined : { opacity: 0, y: 30 }}
+            whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="card-glass p-8 md:p-10 text-center border-primary/20"
           >
@@ -419,8 +419,8 @@ export default function PricingPage() {
       <section className="px-4 pb-10 md:pb-16">
         <div className="container mx-auto max-w-2xl text-center">
           <motion.p
-            initial={isMobile ? false : { opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={isMobile ? undefined : { opacity: 0 }}
+            whileInView={isMobile ? undefined : { opacity: 1 }}
             viewport={{ once: true }}
             className="text-sm text-muted-foreground"
           >
