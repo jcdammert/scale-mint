@@ -20,7 +20,7 @@ export default function PricingPage() {
   const isMobile = useIsMobile();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navbar />
 
       {/* Back Link */}

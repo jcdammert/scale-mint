@@ -46,7 +46,7 @@ export default function BookPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navbar />
 
       <div className="container mx-auto px-4 pt-28">
