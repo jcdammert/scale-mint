@@ -6,21 +6,21 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 
 const testimonials = [
   {
-    quote: "We were spending 3 hours a day on scheduling alone. Scale Mint automated the whole thing — now customers book themselves, get reminders, and we just show up and do the work.",
-    name: "Marcus R.",
-    business: "Owner, Premier Plumbing Co.",
+    quote: "We were losing jobs just from slow follow-up. Scale Mint set up the automations and now leads get a response right away without us doing anything. They also ran our Meta ads and we started getting consistent jobs coming in every week. It's made things a lot smoother.",
+    name: "Randy",
+    business: "Owner, Finesse Cleaning",
     rating: 5,
   },
   {
-    quote: "Our follow-up rate went from 30% to 95% overnight. The AI handles every lead, sends quotes, and follows up until they book. We doubled our monthly revenue in 60 days.",
-    name: "Sarah L.",
-    business: "Founder, Sparkle Clean Services",
+    quote: "Johann set up our CRM and follow-up system and it just runs. On top of that they handled our Google and Meta ads — we went from slow weeks to having steady work booked out. We don't miss leads anymore.",
+    name: "Juan Pablo G.",
+    business: "Owner, JS Sealers",
     rating: 5,
   },
   {
-    quote: "Patient intake used to be a nightmare — stacks of forms, manual data entry. Now it's all automated. Patients fill everything out before they walk in. My front desk team finally has time to breathe.",
-    name: "Dr. James K.",
-    business: "Bright Smile Dental",
+    quote: "Scale Mint set up an AI receptionist that texts leads back the second they call. I used to miss jobs because I couldn't answer while I was on a job site. Now the AI handles it, qualifies them, and I just show up to do the work. Saves me hours every week.",
+    name: "Patrick D.",
+    business: "Owner, Pressure Cleaning Champion",
     rating: 5,
   },
 ];
