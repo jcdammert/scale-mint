@@ -12,7 +12,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    quote: "Johann set up our CRM and follow-up system and it just runs. On top of that they handled our Google and Meta ads — we went from slow weeks to having steady work booked out. We don't miss leads anymore.",
+    quote: "Scale Mint set up our CRM and follow-up system and it just runs. On top of that they handled our Google and Meta ads — we went from slow weeks to having steady work booked out. We don't miss leads anymore.",
     name: "Juan Pablo G.",
     business: "Owner, JS Sealers",
     rating: 5,
