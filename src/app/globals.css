@@ -49,17 +49,23 @@
     @apply border-border;
   }
 
+  html {
+    background: hsl(var(--background));
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: var(--font-body);
+    background: transparent;
     position: relative;
   }
 
-  body::before {
+  body::after {
     content: '';
     position: fixed;
     inset: 0;
-    z-index: 0;
+    z-index: 9999;
     pointer-events: none;
     background-image:
       radial-gradient(1.2px 1.2px at 14% 11%, rgba(255,255,255,0.25) 50%, transparent 50%),
@@ -84,18 +90,11 @@
       radial-gradient(1px 1px at 38% 68%, rgba(255,255,255,0.14) 50%, transparent 50%);
   }
 
-  body > * {
-    position: relative;
-    z-index: 1;
-  }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
 }
 
 @layer utilities {
