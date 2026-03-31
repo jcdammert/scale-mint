@@ -41,7 +41,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <a href="/" className="flex items-center">
-          <Image src="/logo.png" alt="ScaleMint" width={375} height={132} className="h-10 w-auto" priority />
+          <Image src="/logo.png" alt="ScaleMint" width={1794} height={563} className="h-10 w-auto" priority />
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
