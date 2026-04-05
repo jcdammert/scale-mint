@@ -132,158 +132,69 @@ export default function PricingPage() {
 
       {/* ─── PRODUCT 2: MARKETING ─── */}
       <section className="px-4 pb-6 md:pb-10">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-4xl">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-6 md:mb-8"
+            className="card-glass overflow-hidden p-8 md:p-10 transition-all duration-300 hover:border-primary/20"
           >
-            <div className="inline-flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-4 mb-6">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                 <Megaphone size={24} className="text-primary" />
               </div>
-              <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-                Marketing
-              </h2>
+              <div>
+                <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
+                  Marketing
+                </h2>
+                <p className="text-sm text-muted-foreground mt-0.5">
+                  Get found online and drive consistent inbound leads
+                </p>
+              </div>
             </div>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Get found online and start generating consistent inbound leads.
-              Choose organic visibility or add paid ads for maximum growth.
-            </p>
+
+            <div className="grid gap-6 sm:grid-cols-3 mb-8">
+              {[
+                {
+                  name: "Meta Ads",
+                  desc: "Facebook & Instagram ad campaigns built and managed to bring in leads every week.",
+                },
+                {
+                  name: "Google Ads",
+                  desc: "Show up at the top of Google when people search for your service in your area.",
+                },
+                {
+                  name: "Google SEO & Citations",
+                  desc: "Rank organically on Google Maps and search through profile optimization and citation building.",
+                },
+              ].map((s) => (
+                <div key={s.name} className="rounded-lg bg-primary/5 p-5">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Check size={15} className="shrink-0 text-primary" />
+                    <h3 className="font-heading font-semibold text-foreground text-sm">
+                      {s.name}
+                    </h3>
+                  </div>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {s.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex justify-end">
+              <a href="/book" className="block w-full sm:w-auto">
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="w-full sm:w-auto px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
+                >
+                  Book a Free Consultation
+                  <ArrowRight size={18} />
+                </Button>
+              </a>
+            </div>
           </motion.div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {/* Foundations Plan */}
-            <motion.div
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0 }}
-              className="card-glass relative flex flex-col p-8 transition-all duration-300 hover:border-primary/20"
-            >
-              <div className="flex items-center gap-3 mb-1">
-                <h3 className="font-heading text-xl font-semibold text-foreground">
-                  Foundations
-                </h3>
-                <span className="rounded-full bg-primary/10 px-3 py-0.5 text-xs font-medium text-primary">
-                  Organic Visibility
-                </span>
-              </div>
-
-              <div className="mt-4 flex items-baseline gap-2">
-                <span className="text-sm text-muted-foreground">
-                  Starting at
-                </span>
-                <span className="font-heading text-4xl font-bold text-foreground">
-                  $250
-                </span>
-                <span className="text-sm text-muted-foreground">/mo</span>
-              </div>
-              <p className="mt-1 text-xs text-muted-foreground">
-                + one-time setup fee
-              </p>
-
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Best for businesses that want to get found on Google organically
-                and build a strong local presence.
-              </p>
-
-              <ul className="mt-6 flex-1 space-y-3">
-                {[
-                  "Google Business Profile optimization",
-                  "Weekly social media posting (FB, IG, GMB)",
-                  "Citation building (Yelp, Angi, BBB, etc.)",
-                  "Review request automation",
-                  "Local Services Ads setup",
-                  "Rank tracking",
-                ].map((f) => (
-                  <li
-                    key={f}
-                    className="flex items-start gap-3 text-sm text-muted-foreground"
-                  >
-                    <Check
-                      size={16}
-                      className="mt-0.5 shrink-0 text-primary"
-                    />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-
-              <a href="/book" className="mt-8 block">
-                <Button variant="hero-outline" className="w-full">
-                  Book a Free Consultation
-                </Button>
-              </a>
-            </motion.div>
-
-            {/* Growth Engine Plan */}
-            <motion.div
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="card-glass relative flex flex-col p-8 transition-all duration-300 border-primary/40 shadow-lg shadow-primary/10"
-            >
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground">
-                Most Popular
-              </span>
-
-              <div className="flex items-center gap-3 mb-1">
-                <h3 className="font-heading text-xl font-semibold text-foreground">
-                  Growth Engine
-                </h3>
-                <span className="rounded-full bg-primary/10 px-3 py-0.5 text-xs font-medium text-primary">
-                  Organic + Paid
-                </span>
-              </div>
-
-              <div className="mt-4 flex items-baseline gap-2">
-                <span className="text-sm text-muted-foreground">
-                  Starting at
-                </span>
-                <span className="font-heading text-4xl font-bold text-foreground">
-                  $400
-                </span>
-                <span className="text-sm text-muted-foreground">/mo</span>
-              </div>
-              <p className="mt-1 text-xs text-muted-foreground">
-                + one-time setup fee + ad management fee
-              </p>
-
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Best for businesses ready to invest in consistent inbound leads
-                from multiple channels.
-              </p>
-
-              <ul className="mt-6 flex-1 space-y-3">
-                {[
-                  "Everything in Foundations",
-                  "Meta Ads & Google Ads setup + management",
-                  "Advanced directory strategy",
-                  "Performance reporting & strategy calls",
-                ].map((f) => (
-                  <li
-                    key={f}
-                    className="flex items-start gap-3 text-sm text-muted-foreground"
-                  >
-                    <Check
-                      size={16}
-                      className="mt-0.5 shrink-0 text-primary"
-                    />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-
-              <a href="/book" className="mt-8 block">
-                <Button variant="hero" className="w-full">
-                  Book a Free Consultation
-                </Button>
-              </a>
-            </motion.div>
-          </div>
         </div>
       </section>
 
@@ -328,6 +239,10 @@ export default function PricingPage() {
                 "Missed call text-back",
                 "SMS & email campaigns",
                 "Review management",
+                "Google Business Profile optimization",
+                "Weekly social media posting (FB, IG, GMB)",
+                "Review request automation",
+                "LSA setup",
                 "Training included",
               ].map((f) => (
                 <div
@@ -352,7 +267,7 @@ export default function PricingPage() {
                     Starting at
                   </span>
                   <span className="font-heading text-4xl font-bold text-foreground">
-                    $150
+                    $350
                   </span>
                   <span className="text-sm text-muted-foreground">/mo</span>
                 </div>
