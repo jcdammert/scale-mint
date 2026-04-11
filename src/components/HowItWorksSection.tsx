@@ -6,18 +6,21 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 const steps = [
   {
     num: "01",
-    title: "Discovery Call",
-    description: "You tell us what's slowing you down. We map out exactly how to fix it.",
+    title: "We Talk",
+    description:
+      "Free strategy call. No pitch. We learn how your business runs and where things are breaking.",
   },
   {
     num: "02",
-    title: "We Build It Fast",
-    description: "Your custom AI system is designed, built, and tested in under 7 days.",
+    title: "We Build Your System",
+    description:
+      "We set up your entire Business OS — CRM, pipeline, automations, scheduling, everything — configured for your specific business. Done in 5–10 days.",
   },
   {
     num: "03",
-    title: "You Focus on Growth",
-    description: "The busywork runs itself while you focus on scaling, selling, and serving customers.",
+    title: "You Run Your Business",
+    description:
+      "You get your own dashboard, fully built out. We train you, hand it over, and stay in your corner with ongoing support every month.",
   },
 ];
 
@@ -32,7 +35,7 @@ const HowItWorksSection = () => {
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
-          From Idea to Live System{" "}
+          From Call to Live System{" "}
           <span className="text-gradient">in Days.</span>
         </motion.h2>
 
@@ -50,10 +53,16 @@ const HowItWorksSection = () => {
               className="relative flex flex-col items-center text-center"
             >
               <div className="relative z-10 mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-primary/30 bg-card">
-                <span className="font-heading text-2xl font-bold text-primary">{step.num}</span>
+                <span className="font-heading text-2xl font-bold text-primary">
+                  {step.num}
+                </span>
               </div>
-              <h3 className="mb-3 font-heading text-xl font-semibold text-foreground">{step.title}</h3>
-              <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+              <h3 className="mb-3 font-heading text-xl font-semibold text-foreground">
+                {step.title}
+              </h3>
+              <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
+                {step.description}
+              </p>
             </motion.div>
           ))}
         </div>

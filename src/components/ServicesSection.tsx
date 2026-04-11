@@ -1,46 +1,46 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Workflow, Globe, MessageSquare, Phone, Sparkles, Megaphone } from "lucide-react";
+import { Check, Megaphone, Globe, Sparkles, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
-const services = [
+const businessOSFeatures = [
+  "CRM & pipeline management",
+  "Invoicing & estimates",
+  "Appointment scheduling",
+  "Workflow automations",
+  "Contracts & e-signatures",
+  "Missed call text-back",
+  "SMS & email campaigns",
+  "Review management & automation",
+  "Google Business Profile optimization",
+  "Weekly social media posting (FB, IG, GMB)",
+  "AI chatbot for lead capture",
+  "Training included",
+];
+
+const addOns = [
   {
     icon: Megaphone,
     title: "Marketing",
-    description: "Google LSA, Google My Business, Meta Ads, and Google Ads — full-service digital marketing to drive leads and grow revenue.",
-    href: "/services/marketing",
-    highlight: true,
-  },
-  {
-    icon: Workflow,
-    title: "Workflow & Operations Automation",
-    description: "The backend brain of your business — CRM, scheduling, invoicing, follow-ups, SMS blasts, and pipeline management all running on autopilot.",
-    href: "/services/workflow-automation",
+    description:
+      "Meta Ads, Google PPC, SEO — drive leads directly into your system.",
+    note: "Custom quoted.",
   },
   {
     icon: Globe,
-    title: "AI-Powered Websites",
-    description: "Fast, mobile-first sites that actually convert visitors into paying customers.",
-    href: "/services/ai-websites",
-  },
-  {
-    icon: MessageSquare,
-    title: "Smart Assistants & Chatbots",
-    description: "AI that answers questions, captures leads, and handles customer inquiries 24/7.",
-    href: "/services/smart-assistants",
-  },
-  {
-    icon: Phone,
-    title: "AI Voice & Receptionist",
-    description: "Never miss a call again. AI picks up, qualifies leads, and books appointments.",
-    href: "/services/ai-voice",
+    title: "Custom Website",
+    description:
+      "Fast, SEO-optimized Next.js sites that feed leads straight into your CRM.",
+    note: "Custom quoted.",
   },
   {
     icon: Sparkles,
-    title: "Custom AI Solutions",
-    description: "Have a wild idea? A unique problem? Tell us about it and we'll build it.",
-    href: "/services/custom-ai",
+    title: "AI Employee",
+    description:
+      "AI voice receptionist, smart assistants, and chatbots that answer calls, qualify leads, and book appointments 24/7.",
+    note: "Custom quoted.",
   },
 ];
 
@@ -49,6 +49,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="px-4 py-6 md:py-12">
       <div className="container mx-auto">
+        {/* Section heading */}
         <motion.div
           initial={isMobile ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,35 +57,99 @@ const ServicesSection = () => {
           className="mx-auto max-w-2xl text-center"
         >
           <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-            Your Business, <span className="text-gradient">Fully Dialed In.</span>
+            Your Entire Business.{" "}
+            <span className="text-gradient">One Platform.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Need more leads? We run your marketing. Need smoother operations? We automate your backend. Need both? That&apos;s where the magic happens.
+            Everything you need to run your operation — leads, scheduling,
+            invoicing, follow-ups, reviews, and more — built into one system and
+            set up specifically for your business.
           </p>
         </motion.div>
 
-        <div className="mt-8 md:mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
-            <a key={s.title} href={s.href} className="block">
-              <motion.div
-                initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className={`card-glass relative h-full p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 ${
-                  s.highlight ? "border-primary/30 bg-primary/5" : ""
-                }`}
+        {/* Business OS Card */}
+        <motion.div
+          initial={isMobile ? false : { opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-8 md:mt-14 card-glass overflow-hidden p-8 md:p-10 max-w-4xl mx-auto transition-all duration-300 hover:border-primary/30 border-primary/20"
+        >
+          <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl mb-2">
+            Business OS
+          </h3>
+          <p className="text-sm text-muted-foreground mb-6">
+            The foundation every client starts with — full software platform +
+            done-for-you setup + ongoing support.
+          </p>
+
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 mb-8">
+            {businessOSFeatures.map((f) => (
+              <div
+                key={f}
+                className="flex items-start gap-3 text-sm text-muted-foreground"
               >
-<div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <s.icon size={24} className="text-primary" />
-                </div>
-                <h3 className="mb-3 font-heading text-lg font-semibold text-foreground">{s.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{s.description}</p>
-                <span className="mt-4 inline-block text-sm font-medium text-primary">
-                  Learn more →
-                </span>
-              </motion.div>
+                <Check size={16} className="mt-0.5 shrink-0 text-primary" />
+                {f}
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+            <p className="text-xs text-muted-foreground italic">
+              Replaces: Jobber, Housecall Pro, ServiceTitan, Calendly, DocuSign,
+              Mailchimp, and more.
+            </p>
+            <a href="/pricing" className="block w-full sm:w-auto sm:ml-auto">
+              <Button
+                variant="hero"
+                size="lg"
+                className="w-full sm:w-auto px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
+              >
+                See Plans & Pricing
+                <ArrowRight size={18} />
+              </Button>
             </a>
+          </div>
+        </motion.div>
+
+        {/* Add-ons */}
+        <motion.div
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-14 mx-auto max-w-2xl text-center"
+        >
+          <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
+            Ready to Pour Gas on It?{" "}
+            <span className="text-gradient">Add These to Your System.</span>
+          </h3>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Once your Business OS is live, these plug right in — because the
+            infrastructure is already there.
+          </p>
+        </motion.div>
+
+        <div className="mt-8 grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto">
+          {addOns.map((a, i) => (
+            <motion.div
+              key={a.title}
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className="card-glass p-6 transition-all duration-300 hover:border-primary/30"
+            >
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                <a.icon size={20} className="text-primary" />
+              </div>
+              <h4 className="mb-2 font-heading text-base font-semibold text-foreground">
+                {a.title}
+              </h4>
+              <p className="text-sm leading-relaxed text-muted-foreground mb-3">
+                {a.description}
+              </p>
+              <p className="text-xs font-medium text-primary">{a.note}</p>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -8,13 +8,56 @@ import {
   Check,
   ArrowLeft,
   ArrowRight,
-  Globe,
   Megaphone,
-  Settings,
+  Globe,
   Sparkles,
+  Rocket,
 } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
+
+const starterFeatures = [
+  "CRM & pipeline management",
+  "Invoicing & estimates",
+  "Appointment scheduling",
+  "Contracts & e-signatures",
+  "Missed call text-back",
+  "SMS & email campaigns",
+  "AI chatbot",
+  "Training & onboarding",
+  "Ongoing support",
+];
+
+const growthFeatures = [
+  "Everything in Starter",
+  "Workflow automations",
+  "Review management & automation",
+  "Google Business Profile optimization",
+  "Weekly social media posting (FB, IG, GMB)",
+  "LSA setup assistance",
+  "Priority support",
+];
+
+const addOns = [
+  {
+    icon: Megaphone,
+    title: "Marketing",
+    desc: "Meta Ads · Google PPC · SEO",
+    note: "Custom quoted per project",
+  },
+  {
+    icon: Globe,
+    title: "Custom Website",
+    desc: "Fast, SEO-optimized Next.js sites",
+    note: "Custom quoted per project",
+  },
+  {
+    icon: Sparkles,
+    title: "AI Employee",
+    desc: "AI voice receptionist, smart assistants, 24/7 lead qualification",
+    note: "Custom quoted per project",
+  },
+];
 
 export default function PricingPage() {
   const isMobile = useIsMobile();
@@ -44,7 +87,8 @@ export default function PricingPage() {
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
-            What We <span className="text-gradient">Offer.</span>
+            Simple Pricing. Real Software.{" "}
+            <span className="text-gradient">Done For You.</span>
           </motion.h1>
           <motion.p
             initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -52,267 +96,224 @@ export default function PricingPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            Three core products. Pick what you need, or bundle them together for
-            the best value. Every engagement starts with a free strategy call.
+            Two plans. One platform. Everything set up for your business — not a
+            DIY login and a knowledge base. Pick the plan that fits where you are
+            right now.
           </motion.p>
         </div>
       </section>
 
-      {/* ─── PRODUCT 1: WEBSITE DESIGN & BUILD ─── */}
+      {/* ─── PRICING CARDS ─── */}
       <section className="px-4 pb-6 md:pb-10">
-        <div className="container mx-auto max-w-4xl">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="card-glass overflow-hidden p-8 md:p-10 transition-all duration-300 hover:border-primary/20"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <Globe size={24} className="text-primary" />
-              </div>
-              <div>
-                <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-                  Website Design & Build
-                </h2>
-                <p className="text-sm text-muted-foreground mt-0.5">
-                  Your digital storefront — built to convert
-                </p>
-              </div>
-            </div>
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* Starter */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="card-glass relative flex flex-col p-8 transition-all duration-300 hover:border-primary/20"
+            >
+              <h3 className="font-heading text-xl font-semibold text-foreground">
+                Starter
+              </h3>
 
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Not a template. Not a DIY drag-and-drop site. We build custom,
-              SEO-optimized websites on modern infrastructure designed to make
-              your business look legit and turn visitors into leads. Fully
-              responsive, lightning fast, and built to rank.
-            </p>
-
-            <ul className="space-y-3 mb-8">
-              {[
-                "Custom SEO-optimized design — not a template",
-                "Built on modern infrastructure (Next.js/Vercel)",
-                "Fully responsive on every device",
-                "Lead capture built in from day one",
-                "Hosting included",
-              ].map((f) => (
-                <li
-                  key={f}
-                  className="flex items-start gap-3 text-sm text-muted-foreground"
-                >
-                  <Check size={16} className="mt-0.5 shrink-0 text-primary" />
-                  {f}
-                </li>
-              ))}
-            </ul>
-
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-              <div>
-                <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
-                  Investment
-                </p>
-                <p className="font-heading text-xl font-bold text-foreground">
-                  Custom quote per project
-                </p>
+              <div className="mt-4 flex items-baseline gap-2">
+                <span className="font-heading text-4xl font-bold text-foreground">
+                  $197
+                </span>
+                <span className="text-sm text-muted-foreground">/month</span>
               </div>
-              <a href="/book" className="block w-full sm:w-auto sm:ml-auto">
-                <Button
-                  variant="hero"
-                  size="lg"
-                  className="w-full sm:w-auto px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
-                >
-                  Get a Free Quote
-                  <ArrowRight size={18} />
+              <p className="mt-1 text-xs text-muted-foreground">
+                + one-time setup fee
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Everything you need to run your day-to-day operations from one
+                platform.
+              </p>
+
+              <ul className="mt-6 flex-1 space-y-3">
+                {starterFeatures.map((f) => (
+                  <li
+                    key={f}
+                    className="flex items-start gap-3 text-sm text-muted-foreground"
+                  >
+                    <Check
+                      size={16}
+                      className="mt-0.5 shrink-0 text-primary"
+                    />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+
+              <a href="/book" className="mt-8 block">
+                <Button variant="hero-outline" className="w-full">
+                  Book a Strategy Call
                 </Button>
               </a>
-            </div>
-          </motion.div>
+            </motion.div>
+
+            {/* Growth */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="card-glass relative flex flex-col p-8 transition-all duration-300 border-primary/40 shadow-lg shadow-primary/10"
+            >
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground">
+                Recommended
+              </span>
+
+              <h3 className="font-heading text-xl font-semibold text-foreground">
+                Growth
+              </h3>
+
+              <div className="mt-4 flex items-baseline gap-2">
+                <span className="font-heading text-4xl font-bold text-foreground">
+                  $347
+                </span>
+                <span className="text-sm text-muted-foreground">/month</span>
+              </div>
+              <p className="mt-1 text-xs text-muted-foreground">
+                + one-time setup fee
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Everything in Starter, plus advanced automations, AI tools, and
+                hands-on growth support.
+              </p>
+
+              {/* Promo badge */}
+              <div className="mt-4 flex items-center gap-2 rounded-lg bg-primary/10 border border-primary/20 px-4 py-2.5">
+                <Rocket size={16} className="text-primary shrink-0" />
+                <span className="text-xs font-semibold text-primary">
+                  FREE Custom Website with Growth Plan
+                </span>
+              </div>
+
+              <ul className="mt-6 flex-1 space-y-3">
+                {growthFeatures.map((f) => (
+                  <li
+                    key={f}
+                    className="flex items-start gap-3 text-sm text-muted-foreground"
+                  >
+                    <Check
+                      size={16}
+                      className="mt-0.5 shrink-0 text-primary"
+                    />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+
+              <a href="/book" className="mt-8 block">
+                <Button variant="hero" className="w-full">
+                  Book a Strategy Call
+                </Button>
+              </a>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* ─── PRODUCT 2: MARKETING ─── */}
-      <section className="px-4 pb-6 md:pb-10">
-        <div className="container mx-auto max-w-4xl">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="card-glass overflow-hidden p-8 md:p-10 transition-all duration-300 hover:border-primary/20"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <Megaphone size={24} className="text-primary" />
-              </div>
-              <div>
-                <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-                  Marketing
-                </h2>
-                <p className="text-sm text-muted-foreground mt-0.5">
-                  Get found online and drive consistent inbound leads
-                </p>
-              </div>
-            </div>
-
-            <div className="grid gap-6 sm:grid-cols-3 mb-8">
-              {[
-                {
-                  name: "Meta Ads",
-                  desc: "Facebook & Instagram ad campaigns built and managed to bring in leads every week.",
-                },
-                {
-                  name: "Google Ads",
-                  desc: "Show up at the top of Google when people search for your service in your area.",
-                },
-                {
-                  name: "Google SEO & Citations",
-                  desc: "Rank organically on Google Maps and search through profile optimization and citation building.",
-                },
-              ].map((s) => (
-                <div key={s.name} className="rounded-lg bg-primary/5 p-5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Check size={15} className="shrink-0 text-primary" />
-                    <h3 className="font-heading font-semibold text-foreground text-sm">
-                      {s.name}
-                    </h3>
-                  </div>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    {s.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex justify-end">
-              <a href="/book" className="block w-full sm:w-auto">
-                <Button
-                  variant="hero"
-                  size="lg"
-                  className="w-full sm:w-auto px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
-                >
-                  Book a Free Consultation
-                  <ArrowRight size={18} />
-                </Button>
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ─── PRODUCT 3: BUSINESS SOFTWARE ─── */}
-      <section className="px-4 pb-6 md:pb-10">
-        <div className="container mx-auto max-w-4xl">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="card-glass overflow-hidden p-8 md:p-10 transition-all duration-300 hover:border-primary/20"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                <Settings size={24} className="text-primary" />
-              </div>
-              <div>
-                <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-                  Business Software
-                </h2>
-                <p className="text-sm text-muted-foreground mt-0.5">
-                  Your all-in-one business operating system
-                </p>
-              </div>
-            </div>
-
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Stop paying for 5–10 separate tools. We build your entire business
-              backend on one platform — CRM, invoicing, scheduling, automations,
-              contracts, e-signatures, chatbot, missed call text-back, and more.
-              Training included so your team actually uses it.
-            </p>
-
-            <div className="grid gap-3 sm:grid-cols-2 mb-8">
-              {[
-                "CRM & pipeline management",
-                "Invoicing & estimates",
-                "Appointment scheduling",
-                "Workflow automations",
-                "Contracts & e-signatures",
-                "AI chatbot",
-                "Missed call text-back",
-                "SMS & email campaigns",
-                "Review management",
-                "Google Business Profile optimization",
-                "Weekly social media posting (FB, IG, GMB)",
-                "Review request automation",
-                "LSA setup",
-                "Training included",
-              ].map((f) => (
-                <div
-                  key={f}
-                  className="flex items-start gap-3 text-sm text-muted-foreground"
-                >
-                  <Check size={16} className="mt-0.5 shrink-0 text-primary" />
-                  {f}
-                </div>
-              ))}
-            </div>
-
-            <p className="text-xs text-muted-foreground mb-6 italic">
-              Replaces: Jobber, Housecall Pro, ServiceTitan, Calendly,
-              DocuSign, Mailchimp, and more.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-              <div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-sm text-muted-foreground">
-                    Starting at
-                  </span>
-                  <span className="font-heading text-4xl font-bold text-foreground">
-                    $350
-                  </span>
-                  <span className="text-sm text-muted-foreground">/mo</span>
-                </div>
-                <p className="text-xs text-muted-foreground mt-0.5">
-                  + one-time setup fee
-                </p>
-              </div>
-              <a href="/book" className="block w-full sm:w-auto sm:ml-auto">
-                <Button
-                  variant="hero"
-                  size="lg"
-                  className="w-full sm:w-auto px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
-                >
-                  Book a Free Consultation
-                  <ArrowRight size={18} />
-                </Button>
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ─── BUNDLE & SAVE ─── */}
+      {/* ─── SETUP FEE NOTE ─── */}
       <section className="px-4 pb-6 md:pb-10">
         <div className="container mx-auto max-w-3xl">
+          <motion.p
+            initial={isMobile ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-sm text-muted-foreground text-center"
+          >
+            Setup fees are quoted based on your business and what needs to be
+            built. Starter builds typically take 5–7 days. Growth builds take
+            7–10 days. You&apos;ll get your custom quote on the strategy call — no
+            surprises.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* ─── ADD-ONS ─── */}
+      <section className="px-4 pb-6 md:pb-10">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
+            <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
+              Plug In More{" "}
+              <span className="text-gradient">When You&apos;re Ready.</span>
+            </h2>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Already on the platform? These add-ons connect directly to your
+              Business OS.
+            </p>
+          </motion.div>
+
+          <div className="grid gap-6 sm:grid-cols-3">
+            {addOns.map((a, i) => (
+              <motion.div
+                key={a.title}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="card-glass p-6 text-center transition-all duration-300 hover:border-primary/20"
+              >
+                <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                  <a.icon size={20} className="text-primary" />
+                </div>
+                <h4 className="font-heading text-base font-semibold text-foreground mb-1">
+                  {a.title}
+                </h4>
+                <p className="text-xs text-muted-foreground mb-3">{a.desc}</p>
+                <p className="text-xs font-medium text-primary mb-4">
+                  {a.note}
+                </p>
+                <a href="/book">
+                  <Button variant="hero-outline" size="sm" className="w-full">
+                    Book a Call
+                  </Button>
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── REPLACES NOTE ─── */}
+      <section className="px-4 pb-6 md:pb-10">
+        <div className="container mx-auto max-w-3xl">
+          <motion.p
+            initial={isMobile ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-sm text-muted-foreground text-center italic"
+          >
+            Scale Mint replaces: Jobber, Housecall Pro, ServiceTitan, Calendly,
+            DocuSign, Mailchimp, Podium, Broadly, and more — all in one
+            platform, all set up for you.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* ─── BOTTOM CTA ─── */}
+      <section className="px-4 pb-10 md:pb-16">
+        <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="card-glass p-8 md:p-10 text-center border-primary/20"
+            className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
           >
-            <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-              <Sparkles size={28} className="text-primary" />
-            </div>
-            <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-              Bundle & <span className="text-gradient">Save</span>
-            </h2>
-            <p className="mt-4 text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              Need a website, marketing, and business software? Clients who
-              combine multiple services save on their setup investment. The more
-              you bundle, the more you save.
-            </p>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Book a free call and we&apos;ll put together a custom package with
-              bundled pricing for your business.
+            <p className="text-muted-foreground">
+              Not sure which plan is right? Book a free call and we&apos;ll walk
+              you through it — no pressure, no commitment.
             </p>
             <div className="mt-6">
               <a href="/book" className="block w-full sm:w-auto sm:inline-block">
@@ -321,28 +322,12 @@ export default function PricingPage() {
                   size="lg"
                   className="w-full sm:w-auto px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
                 >
-                  Get a Custom Bundle Quote
+                  Book a Free Strategy Call
                   <ArrowRight size={18} />
                 </Button>
               </a>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* ─── BOTTOM NOTE + CTA ─── */}
-      <section className="px-4 pb-10 md:pb-16">
-        <div className="container mx-auto max-w-2xl text-center">
-          <motion.p
-            initial={isMobile ? false : { opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-sm text-muted-foreground"
-          >
-            All pricing is scoped to your business. Setup fees are quoted per
-            project based on complexity. Book a free strategy call to get a
-            custom quote — no pressure, no commitment.
-          </motion.p>
         </div>
       </section>
 

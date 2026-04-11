@@ -11,28 +11,32 @@ import {
 
 const faqs = [
   {
-    q: "What kinds of things can you actually build?",
-    a: "Almost anything! From automated scheduling and follow-up systems to AI chatbots, voice receptionists, CRM workflows, custom dashboards, and more. If it can save you time or make you money, we can probably build it.",
+    q: "What exactly is the Business OS?",
+    a: "It's an all-in-one software platform built for local service businesses. It replaces your CRM, scheduling tool, invoicing software, email marketing, contracts, and more — all in one place. We set the whole thing up for your business, train you on it, and provide ongoing support. Think of it as getting the software AND the team to run it.",
+  },
+  {
+    q: "How is this different from Jobber, Housecall Pro, or ServiceTitan?",
+    a: "Those platforms give you the software and say \"figure it out.\" We give you the software AND we build it out for your business — your pipeline stages, your follow-up sequences, your invoice templates, your automations. Plus, you get ongoing support every month. It's like the difference between a gym membership and a gym membership with a personal trainer.",
   },
   {
     q: "How fast can I get up and running?",
-    a: "Most projects go from discovery call to live system in under 7 days. Simple automations can be live within 48 hours.",
+    a: "Most clients are fully live within 5–10 business days. We move fast because we've done this for multiple service businesses and know exactly what to build.",
   },
   {
     q: "Do I need any technical knowledge?",
-    a: "Absolutely not. We handle everything — design, build, setup, and training. You just tell us what's slowing you down.",
+    a: "None. We build everything, walk you through it on a recorded training call, and you can reach out anytime you have a question. If you can send a text message, you can use this system.",
   },
   {
-    q: "What if I already have a website or CRM?",
-    a: "No problem. We work with what you already have. We can integrate with your existing tools, enhance them, or replace them entirely — whatever makes the most sense.",
+    q: "What does the monthly fee cover?",
+    a: "The monthly fee covers your software platform, hosting, ongoing support, and access to our team. Think of it like paying for a part-time office manager — except it costs a fraction of what you'd pay an employee and the system works 24/7.",
+  },
+  {
+    q: "Can I add marketing or a website later?",
+    a: "Yes. Once your Business OS is live, adding marketing (Meta Ads, Google PPC, SEO) or a custom website is seamless because everything feeds into the same system. Most clients start with the OS and add marketing once they see how well the system captures and manages leads.",
   },
   {
     q: "Can I cancel anytime?",
-    a: "Yes. No long-term contracts. We also offer a 14-day money-back guarantee so you can try us risk-free.",
-  },
-  {
-    q: "What if I have a custom idea that's not listed?",
-    a: "That's our favorite kind of project. Book a free call and tell us about it — if we can build it, we will.",
+    a: "Yes. No long-term contracts. We keep clients because the system works, not because of a contract.",
   },
 ];
 

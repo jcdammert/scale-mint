@@ -2,13 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Zap, Clock, UserCheck } from "lucide-react";
+import { Clock, UserCheck, HeartHandshake } from "lucide-react";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 const stats = [
   { icon: Clock, text: "Up and Running in Days" },
-  { icon: UserCheck, text: "Zero Tech Skills Needed" },
-  { icon: Zap, text: "Marketing + Automations" },
+  { icon: UserCheck, text: "No Tech Skills Needed" },
+  { icon: HeartHandshake, text: "Software + Ongoing Support" },
 ];
 
 const HeroSection = () => {
@@ -25,8 +25,8 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl lg:text-7xl"
         >
-          We Build the System That Gets You More Jobs and Runs Your Business on{" "}
-          <span className="text-gradient">Autopilot.</span>
+          One Platform to Run Your Entire Business. We Set It Up. You Focus on the{" "}
+          <span className="text-gradient">Work.</span>
         </motion.h1>
 
         <motion.p
@@ -35,7 +35,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
         >
-          Websites, marketing, and automations — built by business owners who actually use this stuff. We build it, hand it over, and you run it. No tech skills needed.
+          Scale Mint is business software built for local service companies — CRM, scheduling, invoicing, follow-ups, and automations — all in one place. We don&apos;t just hand you a login. We build the whole system for your business, train you on it, and support you every month.
         </motion.p>
 
         <motion.div
@@ -49,9 +49,9 @@ const HeroSection = () => {
               Book a Free Strategy Call
             </Button>
           </a>
-          <a href="#services" className="block w-full sm:w-auto">
+          <a href="#how-it-works" className="block w-full sm:w-auto">
             <Button variant="hero-outline" size="lg" className="text-base px-8 py-6 w-full sm:w-auto">
-              See What We Build
+              See How It Works
             </Button>
           </a>
         </motion.div>

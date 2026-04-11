@@ -2,16 +2,14 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Workflow, Globe, MessageSquare, Phone, Sparkles, Megaphone } from "lucide-react";
+import { Menu, X, ChevronDown, Workflow, Globe, Phone, Megaphone } from "lucide-react";
 import Image from "next/image";
 
 const serviceLinks = [
-  { label: "Workflow & Operations", href: "/services/workflow-automation", icon: Workflow },
-  { label: "AI-Powered Websites", href: "/services/ai-websites", icon: Globe },
-  { label: "Smart Assistants & Chatbots", href: "/services/smart-assistants", icon: MessageSquare },
-  { label: "AI Voice & Receptionist", href: "/services/ai-voice", icon: Phone },
+  { label: "Business OS", href: "/#services", icon: Workflow },
   { label: "Marketing", href: "/services/marketing", icon: Megaphone },
-  { label: "Custom AI Solutions", href: "/services/custom-ai", icon: Sparkles },
+  { label: "Custom Websites", href: "/services/ai-websites", icon: Globe },
+  { label: "AI Employee", href: "/services/ai-voice", icon: Phone },
 ];
 
 const navLinks = [
@@ -51,7 +49,7 @@ const Navbar = () => {
               onClick={() => setServicesOpen(!servicesOpen)}
               className="flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              Services
+              Platform
               <ChevronDown size={14} className={`transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
 

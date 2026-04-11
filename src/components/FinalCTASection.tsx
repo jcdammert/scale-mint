@@ -20,12 +20,12 @@ const FinalCTASection = () => {
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
 
           <h2 className="relative font-heading text-3xl font-bold text-foreground md:text-5xl">
-            Tell Us What&apos;s Slowing You Down.
+            Stop Losing Leads.
             <br />
-            <span className="text-gradient">We&apos;ll Build the Fix.</span>
+            <span className="text-gradient">Start Running Your Business From One System.</span>
           </h2>
           <p className="relative mx-auto mt-6 max-w-xl text-muted-foreground">
-            Book a free strategy call — we&apos;ll map out exactly how AI and automation can free up your time and help you scale.
+            Book a free strategy call — we&apos;ll show you exactly how the Business OS works and build a plan for your business.
           </p>
           <div className="relative mt-10">
             <a href="/book" className="block w-full sm:w-auto">
