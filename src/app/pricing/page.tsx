@@ -17,25 +17,27 @@ import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 const starterFeatures = [
-  "CRM & pipeline management",
+  "CRM & sales pipeline",
+  "2-way text & email",
+  "Missed call text-back",
+  "Review request automation",
   "Invoicing & estimates",
   "Appointment scheduling",
   "Contracts & e-signatures",
-  "Missed call text-back",
-  "SMS & email campaigns",
-  "AI chatbot",
-  "Training & onboarding",
+  "Weekly social posts (FB, IG, Google)",
+  "Google Business Profile optimization (setup)",
+  "Training & onboarding call",
   "Ongoing support",
 ];
 
 const growthFeatures = [
   "Everything in Starter",
-  "Workflow automations",
-  "Review management & automation",
-  "Google Business Profile optimization",
-  "Weekly social media posting (FB, IG, GMB)",
-  "LSA setup assistance",
+  "Custom sales & follow-up automations",
+  "Lead nurturing sequences",
+  "Speed-to-lead workflows",
+  "Advanced pipeline automations",
   "Priority support",
+  "Unlock AI Employee add-on eligibility",
 ];
 
 const addOns = [
@@ -43,19 +45,19 @@ const addOns = [
     icon: Megaphone,
     title: "Marketing",
     desc: "Meta Ads · Google PPC · SEO",
-    note: "Custom quoted per project",
+    note: "Custom quoted",
   },
   {
     icon: Globe,
     title: "Custom Website",
-    desc: "Fast, SEO-optimized Next.js sites",
-    note: "Custom quoted per project",
+    desc: "SEO-optimized, built to convert",
+    note: "Custom quoted",
   },
   {
     icon: Sparkles,
     title: "AI Employee",
-    desc: "AI voice receptionist, smart assistants, 24/7 lead qualification",
-    note: "Custom quoted per project",
+    desc: "AI voice receptionist, chatbot, 24/7 lead qualification",
+    note: "Growth plan required. Custom quoted.",
   },
 ];
 
@@ -87,8 +89,8 @@ export default function PricingPage() {
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
-            Simple Pricing. Real Software.{" "}
-            <span className="text-gradient">Done For You.</span>
+            Two Plans. One Platform.{" "}
+            <span className="text-gradient">Built For You.</span>
           </motion.h1>
           <motion.p
             initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -96,9 +98,9 @@ export default function PricingPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            Two plans. One platform. Everything set up for your business — not a
-            DIY login and a knowledge base. Pick the plan that fits where you are
-            right now.
+            Pick where you are right now. Whether you just need to get organized
+            or you&apos;re ready to build a full growth engine — we set everything
+            up, train you, and stay in your corner.
           </motion.p>
         </div>
       </section>
@@ -117,6 +119,9 @@ export default function PricingPage() {
               <h3 className="font-heading text-xl font-semibold text-foreground">
                 Starter
               </h3>
+              <p className="mt-1 text-sm font-medium text-primary">
+                Get organized. Stop losing leads.
+              </p>
 
               <div className="mt-4 flex items-baseline gap-2">
                 <span className="font-heading text-4xl font-bold text-foreground">
@@ -129,8 +134,8 @@ export default function PricingPage() {
               </p>
 
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Everything you need to run your day-to-day operations from one
-                platform.
+                Everything you need to run your day-to-day and stop letting
+                opportunities slip through the cracks. We build it, you use it.
               </p>
 
               <ul className="mt-6 flex-1 space-y-3">
@@ -153,6 +158,11 @@ export default function PricingPage() {
                   Book a Strategy Call
                 </Button>
               </a>
+
+              <p className="mt-3 text-xs text-muted-foreground text-center">
+                Best for businesses doing under $7K/month or just getting their
+                systems in place.
+              </p>
             </motion.div>
 
             {/* Growth */}
@@ -170,6 +180,9 @@ export default function PricingPage() {
               <h3 className="font-heading text-xl font-semibold text-foreground">
                 Growth
               </h3>
+              <p className="mt-1 text-sm font-medium text-primary">
+                Build the full engine. Close more. Scale faster.
+              </p>
 
               <div className="mt-4 flex items-baseline gap-2">
                 <span className="font-heading text-4xl font-bold text-foreground">
@@ -182,15 +195,17 @@ export default function PricingPage() {
               </p>
 
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Everything in Starter, plus advanced automations, AI tools, and
-                hands-on growth support.
+                Everything in Starter, plus we dial in your entire sales process
+                with custom automations, lead nurturing, and a system built to
+                handle volume. This is the plan for business owners ready to grow
+                aggressively.
               </p>
 
               {/* Promo badge */}
               <div className="mt-4 flex items-center gap-2 rounded-lg bg-primary/10 border border-primary/20 px-4 py-2.5">
                 <Rocket size={16} className="text-primary shrink-0" />
                 <span className="text-xs font-semibold text-primary">
-                  FREE Custom Website with Growth Plan
+                  FREE Custom Website Included — Limited Time
                 </span>
               </div>
 
@@ -214,6 +229,11 @@ export default function PricingPage() {
                   Book a Strategy Call
                 </Button>
               </a>
+
+              <p className="mt-3 text-xs text-muted-foreground text-center">
+                Best for businesses ready to scale and want a system that closes
+                for them.
+              </p>
             </motion.div>
           </div>
         </div>
@@ -228,10 +248,10 @@ export default function PricingPage() {
             viewport={{ once: true }}
             className="text-sm text-muted-foreground text-center"
           >
-            Setup fees are quoted based on your business and what needs to be
-            built. Starter builds typically take 5–7 days. Growth builds take
-            7–10 days. You&apos;ll get your custom quote on the strategy call — no
-            surprises.
+            Setup fees are quoted on your strategy call based on what your
+            business needs. Starter builds take 5–7 days. Growth builds take
+            7–10 days. No surprises — you&apos;ll know exactly what it costs
+            before you commit.
           </motion.p>
         </div>
       </section>
@@ -250,8 +270,8 @@ export default function PricingPage() {
               <span className="text-gradient">When You&apos;re Ready.</span>
             </h2>
             <p className="mt-3 text-sm text-muted-foreground">
-              Already on the platform? These add-ons connect directly to your
-              Business OS.
+              Already on the platform? These connect directly to the system we
+              built.
             </p>
           </motion.div>
 
@@ -312,8 +332,8 @@ export default function PricingPage() {
             className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
           >
             <p className="text-muted-foreground">
-              Not sure which plan is right? Book a free call and we&apos;ll walk
-              you through it — no pressure, no commitment.
+              Not sure which plan fits? Book a free call — we&apos;ll walk you
+              through it. No pressure.
             </p>
             <div className="mt-6">
               <a href="/book" className="block w-full sm:w-auto sm:inline-block">

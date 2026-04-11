@@ -6,16 +6,15 @@ import { Clock, UserCheck, HeartHandshake } from "lucide-react";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 const stats = [
-  { icon: Clock, text: "Up and Running in Days" },
+  { icon: Clock, text: "Live in 5–10 Days" },
   { icon: UserCheck, text: "No Tech Skills Needed" },
-  { icon: HeartHandshake, text: "Software + Ongoing Support" },
+  { icon: HeartHandshake, text: "Platform + Done-For-You Support" },
 ];
 
 const HeroSection = () => {
   const isMobile = useIsMobile();
   return (
     <section className="relative overflow-hidden pt-28 pb-8 md:pt-36 md:pb-12">
-      {/* Background glow */}
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
 
       <div className="container relative mx-auto px-4 text-center">
@@ -25,8 +24,8 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl lg:text-7xl"
         >
-          One Platform to Run Your Entire Business. We Set It Up. You Focus on the{" "}
-          <span className="text-gradient">Work.</span>
+          We Build the Growth Engine That Gets You More Jobs and Makes Your Business{" "}
+          <span className="text-gradient">Impossible to Ignore.</span>
         </motion.h1>
 
         <motion.p
@@ -35,7 +34,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
         >
-          Scale Mint is business software built for local service companies — CRM, scheduling, invoicing, follow-ups, and automations — all in one place. We don&apos;t just hand you a login. We build the whole system for your business, train you on it, and support you every month.
+          Scale Mint builds your entire sales process, online presence, and follow-up system — all on one platform, all done for you. Stop losing leads. Start closing more jobs. Be ready to scale whenever you want.
         </motion.p>
 
         <motion.div

@@ -1,23 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, Megaphone, Globe, Sparkles, ArrowRight } from "lucide-react";
+import { Megaphone, Globe, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
-const businessOSFeatures = [
-  "CRM & pipeline management",
-  "Invoicing & estimates",
-  "Appointment scheduling",
-  "Workflow automations",
-  "Contracts & e-signatures",
-  "Missed call text-back",
-  "SMS & email campaigns",
-  "Review management & automation",
-  "Google Business Profile optimization",
-  "Weekly social media posting (FB, IG, GMB)",
-  "AI chatbot for lead capture",
-  "Training included",
+const pillars = [
+  {
+    num: "01",
+    title: "Your Sales Process, Fixed",
+    description:
+      "Leads come in. They get responded to instantly. They get followed up with automatically. You see every opportunity in your pipeline and nothing falls through the cracks. You close more of the leads you're already getting.",
+  },
+  {
+    num: "02",
+    title: "Your Online Presence, Built",
+    description:
+      "We post for you weekly on Google, Facebook, and Instagram. Your Google Business Profile is optimized. You have a real website that converts visitors into leads. When someone Googles your business, they see a company that looks legit and established.",
+  },
+  {
+    num: "03",
+    title: "Your Reputation, On Autopilot",
+    description:
+      "Review requests go out automatically after every job. Your reviews stack up on Google without you lifting a finger. More reviews = more trust = more calls.",
+  },
+  {
+    num: "04",
+    title: "Ready to Scale Whenever You Want",
+    description:
+      "When everything is dialed in — your sales process catches every lead, your presence is strong, your follow-up is automatic — that's when marketing actually works. Run Meta ads, Google ads, or SEO and watch the system handle the volume. Pour gas on the fire, not on the floor.",
+  },
 ];
 
 const addOns = [
@@ -25,22 +37,22 @@ const addOns = [
     icon: Megaphone,
     title: "Marketing",
     description:
-      "Meta Ads, Google PPC, SEO — drive leads directly into your system.",
+      "Meta Ads, Google PPC, SEO — leads flow straight into your pipeline.",
     note: "Custom quoted.",
   },
   {
     icon: Globe,
     title: "Custom Website",
     description:
-      "Fast, SEO-optimized Next.js sites that feed leads straight into your CRM.",
+      "Fast, SEO-optimized, built to convert — feeds leads directly into your system.",
     note: "Custom quoted.",
   },
   {
     icon: Sparkles,
     title: "AI Employee",
     description:
-      "AI voice receptionist, smart assistants, and chatbots that answer calls, qualify leads, and book appointments 24/7.",
-    note: "Custom quoted.",
+      "AI voice receptionist, smart chatbot, 24/7 lead qualification and booking.",
+    note: "Available with Growth plan. Custom quoted.",
   },
 ];
 
@@ -57,59 +69,55 @@ const ServicesSection = () => {
           className="mx-auto max-w-2xl text-center"
         >
           <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-            Your Entire Business.{" "}
-            <span className="text-gradient">One Platform.</span>
+            A Complete Growth System.{" "}
+            <span className="text-gradient">Not Just Another Tool.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Everything you need to run your operation — leads, scheduling,
-            invoicing, follow-ups, reviews, and more — built into one system and
-            set up specifically for your business.
+            We don&apos;t hand you a login and wish you luck. We build the entire engine — your sales process, your online presence, your follow-up system — all connected, all done for you, all on one platform.
           </p>
         </motion.div>
 
-        {/* Business OS Card */}
+        {/* 4 Pillars */}
+        <div className="mt-8 md:mt-14 grid gap-5 md:grid-cols-2 max-w-4xl mx-auto">
+          {pillars.map((p, i) => (
+            <motion.div
+              key={p.num}
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className="card-glass p-8 transition-all duration-300 hover:border-primary/30 relative overflow-hidden"
+            >
+              <span className="absolute top-4 right-5 font-heading text-5xl font-bold text-primary/10">
+                {p.num}
+              </span>
+              <h3 className="mb-3 font-heading text-lg font-semibold text-foreground relative">
+                {p.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-muted-foreground relative">
+                {p.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* See Plans CTA */}
         <motion.div
-          initial={isMobile ? false : { opacity: 0, y: 30 }}
+          initial={isMobile ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-8 md:mt-14 card-glass overflow-hidden p-8 md:p-10 max-w-4xl mx-auto transition-all duration-300 hover:border-primary/30 border-primary/20"
+          className="mt-8 text-center"
         >
-          <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl mb-2">
-            Business OS
-          </h3>
-          <p className="text-sm text-muted-foreground mb-6">
-            The foundation every client starts with — full software platform +
-            done-for-you setup + ongoing support.
-          </p>
-
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 mb-8">
-            {businessOSFeatures.map((f) => (
-              <div
-                key={f}
-                className="flex items-start gap-3 text-sm text-muted-foreground"
-              >
-                <Check size={16} className="mt-0.5 shrink-0 text-primary" />
-                {f}
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-            <p className="text-xs text-muted-foreground italic">
-              Replaces: Jobber, Housecall Pro, ServiceTitan, Calendly, DocuSign,
-              Mailchimp, and more.
-            </p>
-            <a href="/pricing" className="block w-full sm:w-auto sm:ml-auto">
-              <Button
-                variant="hero"
-                size="lg"
-                className="w-full sm:w-auto px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
-              >
-                See Plans & Pricing
-                <ArrowRight size={18} />
-              </Button>
-            </a>
-          </div>
+          <a href="/pricing">
+            <Button
+              variant="hero"
+              size="lg"
+              className="px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
+            >
+              See Plans & Pricing
+              <ArrowRight size={18} />
+            </Button>
+          </a>
         </motion.div>
 
         {/* Add-ons */}
@@ -120,12 +128,12 @@ const ServicesSection = () => {
           className="mt-14 mx-auto max-w-2xl text-center"
         >
           <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-            Ready to Pour Gas on It?{" "}
-            <span className="text-gradient">Add These to Your System.</span>
+            When You&apos;re Ready for More,{" "}
+            <span className="text-gradient">It Plugs Right In.</span>
           </h3>
           <p className="mt-3 text-sm text-muted-foreground">
-            Once your Business OS is live, these plug right in — because the
-            infrastructure is already there.
+            Your platform is the foundation. These add-ons connect directly to
+            the system we already built.
           </p>
         </motion.div>
 

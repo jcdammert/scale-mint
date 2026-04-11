@@ -11,9 +11,9 @@ import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Scale Mint — Business Software + Done-For-You Setup for Local Service Companies",
+  title: "Scale Mint — The Growth Platform for Local Service Businesses",
   description:
-    "Scale Mint is business software built for local service companies — CRM, scheduling, invoicing, follow-ups, and automations — all in one place. We build the whole system for your business, train you on it, and support you every month.",
+    "Scale Mint builds your entire sales process, online presence, and follow-up system — all on one platform, all done for you. Stop losing leads. Start closing more jobs.",
 };
 
 export default function Home() {

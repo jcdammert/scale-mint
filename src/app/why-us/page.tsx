@@ -8,7 +8,7 @@ import {
   ArrowLeft,
   ArrowRight,
   Wrench,
-  ShieldCheck,
+  Target,
   UserCheck,
   Handshake,
 } from "lucide-react";
@@ -20,25 +20,25 @@ const differentiators = [
     icon: Wrench,
     title: "We've done it ourselves",
     description:
-      "We run local service businesses. We built this system with our own money for our own companies before we ever offered it to anyone else.",
+      "We run local service businesses. We built this with our own money for our own companies before we ever offered it to anyone else.",
   },
   {
-    icon: ShieldCheck,
-    title: "You get software AND service",
+    icon: Target,
+    title: "We build growth systems, not feature lists",
     description:
-      "Not a DIY platform. Not an agency black box. A real system you can see and control, built and managed by a real team.",
+      "We don't sell you a CRM. We build your entire sales process, online presence, and follow-up engine — all connected on one platform.",
   },
   {
     icon: UserCheck,
     title: "You stay in control",
     description:
-      "We build everything, train you on it, and hand it over. You're never locked out of your own business.",
+      "We build everything, train you on it, and hand it over. You see every lead, every follow-up, every dollar. You're never in the dark.",
   },
   {
     icon: Handshake,
     title: "Built for the long term",
     description:
-      "We want to grow with you. Our pricing is fair, our contracts are month-to-month, and our goal is a partnership — not a transaction.",
+      "Month-to-month. No long contracts. Our goal is a partnership — not a transaction.",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function WhyUsPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            {"We're not a faceless agency or a SaaS company. We're business owners who built these systems for ourselves first."}
+            {"We're not a faceless agency or a SaaS company with a help desk. We're business owners who built this for ourselves first."}
           </motion.p>
         </div>
       </section>
@@ -100,7 +100,7 @@ export default function WhyUsPage() {
               {"My name is Johann Dammert. I started my first business at 15 and never stopped. I run multiple local service companies — window tinting, asphalt coatings, pressure washing, junk removal — and I know exactly what it feels like to have bills due and work drying up. Inconsistent jobs, slow months, and doing everything manually just to keep the lights on."}
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"I tried the CRMs. I tried hiring agencies. The CRMs were too complicated and I didn't have time to set them up. The agencies took my money and gave me excuses. So I built the solution myself — the software, the automations, the whole system — for my own businesses. Then I helped friends do the same. And I realized this is what every local service business owner needs: the system AND someone to actually set it up and run it right."}
+              {"I tried the CRMs. Too complicated, no time to set them up. I hired agencies. They took my money and gave me excuses. So I built the solution myself — the platform, the automations, the entire sales system — for my own businesses. Then I helped friends do the same. And I realized this is what every local service business owner needs: a real growth system AND someone to actually set it up and run it right."}
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
               {"That's why Scale Mint exists."}
@@ -109,7 +109,7 @@ export default function WhyUsPage() {
         </div>
       </section>
 
-      {/* Not Just Software, Not Just an Agency */}
+      {/* Not Just a Platform, Not Just an Agency */}
       <section className="pb-6 md:pb-10 px-4">
         <div className="container mx-auto">
           <motion.div
@@ -119,17 +119,17 @@ export default function WhyUsPage() {
             className="card-glass mx-auto max-w-3xl p-8 md:p-10"
           >
             <h2 className="mb-4 font-heading text-2xl font-bold text-foreground md:text-3xl">
-              {"We're Not Just Software. We're Not Just an "}
+              {"We're Not Just a Platform. We're Not Just an "}
               <span className="text-gradient">Agency.</span>
             </h2>
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"SaaS companies give you a login, a knowledge base, and a support ticket system. You're on your own to figure it out."}
+              {"SaaS companies give you a login, a knowledge base, and a support ticket. You're on your own to figure it out. Most people never do."}
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"Agencies do the work for you but you have no visibility, no control, and no system of your own. When you stop paying, everything disappears."}
+              {"Agencies do work for you but you have no visibility, no system of your own, and no control. When you stop paying, everything disappears."}
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"Scale Mint gives you both: the full software platform AND the team that builds, configures, and manages it for you. You own the system. You see everything. And we're in your corner making sure it actually works."}
+              {"Scale Mint gives you both. The full platform with every tool you need — AND the team that builds it, configures it, and manages it for you. You own the system. You see everything. And we're in your corner making sure it actually works."}
             </p>
           </motion.div>
         </div>
@@ -174,7 +174,7 @@ export default function WhyUsPage() {
         </div>
       </section>
 
-      {/* We Actually Care */}
+      {/* Long-Term Vision */}
       <section className="pb-6 md:pb-10 px-4">
         <div className="container mx-auto">
           <motion.div
@@ -188,10 +188,7 @@ export default function WhyUsPage() {
               <span className="text-gradient">Your Growth</span>
             </h2>
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"Our long-term goal isn't just to be your software provider — it's to become a true partner in the businesses we work with. The only way we get there is by delivering real results for real business owners."}
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"Every client we take on, we treat like a future partner. That means we're selective, we're honest, and we're invested in your success from day one."}
+              {"Our long-term goal isn't just to be your platform provider — it's to become a real partner in the businesses we work with. Every client we take on, we treat like a future partner. That means we're selective, we're honest, and we're invested in your success from day one."}
             </p>
           </motion.div>
         </div>

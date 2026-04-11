@@ -8,19 +8,19 @@ const steps = [
     num: "01",
     title: "We Talk",
     description:
-      "Free strategy call. No pitch. We learn how your business runs and where things are breaking.",
+      "Free strategy call. We learn how your business runs, where leads are falling through, and what needs to be built.",
   },
   {
     num: "02",
     title: "We Build Your System",
     description:
-      "We set up your entire Business OS — CRM, pipeline, automations, scheduling, everything — configured for your specific business. Done in 5–10 days.",
+      "We set up your entire platform — sales process, follow-up automations, online presence, everything — configured specifically for your business. Live in 5–10 days.",
   },
   {
     num: "03",
-    title: "You Run Your Business",
+    title: "You Focus on the Work",
     description:
-      "You get your own dashboard, fully built out. We train you, hand it over, and stay in your corner with ongoing support every month.",
+      "Your system runs. Leads get caught. Follow-ups happen automatically. You show up and do the job. When you're ready to grow, we turn up the volume.",
   },
 ];
 
@@ -40,7 +40,6 @@ const HowItWorksSection = () => {
         </motion.h2>
 
         <div className="relative mt-16 grid gap-8 md:grid-cols-3">
-          {/* Connecting line */}
           <div className="absolute top-10 left-[16.66%] right-[16.66%] hidden h-px bg-gradient-to-r from-primary/0 via-primary/40 to-primary/0 md:block" />
 
           {steps.map((step, i) => (

@@ -36,8 +36,8 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
-          Business Owners Who Got Their{" "}
-          <span className="text-gradient">Time Back.</span>
+          Business Owners Who Stopped{" "}
+          <span className="text-gradient">Losing Leads.</span>
         </motion.h2>
 
         <div className="mt-8 md:mt-14 grid gap-6 md:grid-cols-3">

@@ -1,27 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CreditCard, UserX, Wrench } from "lucide-react";
+import { PhoneOff, Search, TrendingDown } from "lucide-react";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 const problems = [
   {
-    icon: CreditCard,
-    title: "You're paying for tools you barely use",
+    icon: PhoneOff,
+    title: "You're losing jobs you should be closing",
     description:
-      "Jobber, Housecall Pro, Calendly, Mailchimp, DocuSign — five different logins, five different bills, and none of them talk to each other. You need one system that does it all.",
+      "Someone calls while you're on a job site. You forget to follow up. By the time you text back, they hired someone else. It's not that you're bad at sales — you just don't have a system doing it for you.",
   },
   {
-    icon: UserX,
-    title: "Leads are falling through the cracks",
+    icon: Search,
+    title: "People Google you and it doesn't look great",
     description:
-      "Someone calls while you're on a job. You forget to follow up. By the time you text back, they already hired someone else. You don't have a system catching those leads for you.",
+      "No reviews, no posts, outdated website or no website at all. You're losing credibility before anyone even calls. Word-of-mouth leads check you out online and bounce to someone who looks more legit.",
   },
   {
-    icon: Wrench,
-    title: "You know you need to modernize but don't have time to figure it out",
+    icon: TrendingDown,
+    title: "You've tried running ads but it didn't work",
     description:
-      "You've looked at CRMs. You've Googled \"best software for contractors.\" But you don't have 40 hours to learn a new platform. You need someone to just set it up and show you how it works.",
+      "You spent money on Facebook ads or Google ads and got leads, but there was no system to catch them, follow up, or close them. The ads weren't the problem — the backend was.",
   },
 ];
 
@@ -36,8 +36,7 @@ const ProblemSection = () => {
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
-          You Didn&apos;t Start a Business to{" "}
-          <span className="text-gradient">Fight With Software.</span>
+          Sound <span className="text-gradient">Familiar?</span>
         </motion.h2>
 
         <div className="mt-8 md:mt-14 grid gap-6 md:grid-cols-3">

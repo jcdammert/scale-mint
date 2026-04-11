@@ -11,32 +11,32 @@ import {
 
 const faqs = [
   {
-    q: "What exactly is the Business OS?",
-    a: "It's an all-in-one software platform built for local service businesses. It replaces your CRM, scheduling tool, invoicing software, email marketing, contracts, and more — all in one place. We set the whole thing up for your business, train you on it, and provide ongoing support. Think of it as getting the software AND the team to run it.",
+    q: "What exactly does Scale Mint build for me?",
+    a: "We build your complete growth system on one platform. That includes your sales pipeline, automated follow-up sequences, missed call text-back, review automation, weekly social media posts, and more. We set everything up for your specific business, train you on it, and support you every month. It's the platform AND the team behind it.",
   },
   {
-    q: "How is this different from Jobber, Housecall Pro, or ServiceTitan?",
-    a: "Those platforms give you the software and say \"figure it out.\" We give you the software AND we build it out for your business — your pipeline stages, your follow-up sequences, your invoice templates, your automations. Plus, you get ongoing support every month. It's like the difference between a gym membership and a gym membership with a personal trainer.",
+    q: "How is this different from Jobber or Housecall Pro?",
+    a: "Those tools give you a login and a help center. You're on your own to figure it out, set it up, and actually use it. We build the whole thing for you — your pipeline, your automations, your follow-up system — and we keep it running. Plus, our platform does way more than scheduling and invoicing. It's your entire sales engine and online presence in one place.",
+  },
+  {
+    q: "How is this different from hiring a marketing agency?",
+    a: "Agencies run ads and send you a report. When you stop paying, everything disappears. With Scale Mint, you own the system. You see every lead, every follow-up, every pipeline stage. And when you're ready to add marketing, it feeds directly into the platform we already built — so nothing leaks.",
   },
   {
     q: "How fast can I get up and running?",
-    a: "Most clients are fully live within 5–10 business days. We move fast because we've done this for multiple service businesses and know exactly what to build.",
+    a: "Most clients are fully live in 5–10 business days. We move fast because we've built this for multiple service businesses and know exactly what to set up.",
   },
   {
     q: "Do I need any technical knowledge?",
-    a: "None. We build everything, walk you through it on a recorded training call, and you can reach out anytime you have a question. If you can send a text message, you can use this system.",
+    a: "None. We build everything, walk you through it on a recorded training call, and you can reach out anytime. If you can send a text, you can use this.",
   },
   {
     q: "What does the monthly fee cover?",
-    a: "The monthly fee covers your software platform, hosting, ongoing support, and access to our team. Think of it like paying for a part-time office manager — except it costs a fraction of what you'd pay an employee and the system works 24/7.",
-  },
-  {
-    q: "Can I add marketing or a website later?",
-    a: "Yes. Once your Business OS is live, adding marketing (Meta Ads, Google PPC, SEO) or a custom website is seamless because everything feeds into the same system. Most clients start with the OS and add marketing once they see how well the system captures and manages leads.",
+    a: "Your platform, hosting, weekly social posts, ongoing support, and access to our team. Think of it like a part-time operations person — except at a fraction of the cost and the system works 24/7.",
   },
   {
     q: "Can I cancel anytime?",
-    a: "Yes. No long-term contracts. We keep clients because the system works, not because of a contract.",
+    a: "Yes. No long-term contracts. We keep clients because the system works, not because of fine print.",
   },
 ];
 

@@ -12,7 +12,7 @@ import {
   Hammer,
   MonitorPlay,
   HeartHandshake,
-  Dumbbell,
+  Flame,
 } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -23,35 +23,35 @@ const steps = [
     icon: PhoneCall,
     title: "We Get on a Call",
     description:
-      "Free strategy call. No pitch, no pressure. We learn how your business operates — how leads come in, how you schedule jobs, how you invoice, where things fall apart. We ask the right questions so nothing gets missed.",
+      "Free strategy call. No pitch, no pressure. We learn how your business actually runs — how leads come in, how you follow up, how you close, where things fall apart. We ask the right questions so we know exactly what to build.",
   },
   {
     step: "02",
     icon: Handshake,
     title: "We Make Sure It's a Fit",
     description:
-      "We're honest about this — we only work with business owners who are serious about growing. If you're not ready to invest in your operation or you're looking for a magic fix, we're probably not the right fit. But if you're ready to build something real, we want to work with you.",
+      "We only work with business owners who are serious about growing. If you're not ready to invest in your business or you want a magic fix overnight, we'll tell you upfront. But if you're ready to build something real — we want to work with you.",
   },
   {
     step: "03",
     icon: Hammer,
     title: "We Build Your Entire System",
     description:
-      "This is where the magic happens. We set up your Business OS inside the platform — your CRM, your pipeline stages, your automations, your invoice and estimate templates, your follow-up sequences, your review requests, your scheduling calendar — everything configured specifically for how your business runs. No templates. No shortcuts. This is YOUR system, built for YOU. Typical build time: 5–10 business days.",
+      "This is where it gets good. We set up your full platform — your sales pipeline, your follow-up automations, your review system, your social posting, your online presence — all configured specifically for how your business runs. No templates. No generic setup. This is YOUR system, built for YOUR business. Typical build time: 5–10 business days.",
   },
   {
     step: "04",
     icon: MonitorPlay,
-    title: "We Walk You Through Your Dashboard",
+    title: "We Walk You Through Everything",
     description:
-      "When it's done, we hop on a recorded training call and walk you through every single piece of your system. You'll see your dashboard, your pipeline, your calendar, your automations — and you'll know exactly how to use all of it. You're in full control.",
+      "When it's done, we hop on a recorded training call and walk you through every piece of your system. You'll see your dashboard, your pipeline, your automations, your calendar — and you'll know exactly how to use all of it. You're in full control.",
   },
   {
     step: "05",
     icon: HeartHandshake,
     title: "We Stay in Your Corner",
     description:
-      "The monthly fee isn't just for the software — it's for the team behind it. Think of it like having a part-time operations person on your team, except at a fraction of the cost. Something breaks? We fix it. Need a new automation? We build it. Want to add marketing or a website down the road? It plugs right into the system we already built. We're here for the long haul.",
+      "The monthly fee isn't just for the platform — it's for the team behind it. We post for you weekly, your automations keep running, and we're always available when you need something changed, added, or fixed. Want to add marketing or a website later? It plugs right into the system we already built. We're here for the long haul.",
   },
 ];
 
@@ -92,7 +92,7 @@ export default function HowItWorksPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            {"We don't hand you a login and wish you luck. We build your entire system, train you on it, and stay in your corner every month."}
+            {"We don't hand you a login and say good luck. We build your entire system, train you on it, and stay in your corner every month."}
           </motion.p>
         </div>
       </section>
@@ -134,7 +134,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Gym Analogy */}
+      {/* Why Most Marketing Doesn't Work Callout */}
       <section className="px-4 pb-6 md:pb-10">
         <div className="container mx-auto">
           <motion.div
@@ -144,17 +144,14 @@ export default function HowItWorksPage() {
             className="mx-auto max-w-3xl rounded-2xl border border-primary/20 bg-primary/5 p-8 md:p-10"
           >
             <div className="flex items-center gap-3 mb-4">
-              <Dumbbell size={24} className="text-primary" />
+              <Flame size={24} className="text-primary" />
               <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-                Software Without Support is Like a Gym Without a{" "}
-                <span className="text-gradient">Trainer.</span>
+                Why Most Marketing Doesn&apos;t Work for{" "}
+                <span className="text-gradient">Service Businesses.</span>
               </h2>
             </div>
-            <p className="text-sm leading-relaxed text-muted-foreground md:text-base mb-4">
-              Most business software gives you the tools and says &ldquo;good luck.&rdquo; That&apos;s like getting a gym membership with no plan, no coach, and no accountability. You&apos;ll use it for a week, get overwhelmed, and go back to doing things the old way.
-            </p>
             <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              Scale Mint is different. You get the gym — the full platform with every tool you need. But you also get the personal trainer — we build your workout plan, show you exactly what to do, and check in every month to make sure you&apos;re progressing. That&apos;s why our clients actually use their system, and why it actually makes them money.
+              Here&apos;s the truth: running ads when your backend isn&apos;t ready is like pouring gas on the floor. Leads come in, nobody follows up fast enough, there&apos;s no pipeline, no system — and the money is wasted. That&apos;s why we build the system FIRST. When your sales process is dialed, your online presence is strong, and your follow-up is automatic — THEN marketing works. Because the system catches every lead, nurtures them, and helps you close. That&apos;s the difference between spending money on ads and making money from ads.
             </p>
           </motion.div>
         </div>
