@@ -28,9 +28,9 @@ const steps = [
   {
     step: "02",
     icon: Handshake,
-    title: "We Make Sure It's a Fit",
+    title: "We Show You How It Works",
     description:
-      "We only work with business owners who are serious about growing. If you're not ready to invest in your business or you want a magic fix overnight, we'll tell you upfront. But if you're ready to build something real — we want to work with you.",
+      "We walk you through the platform, show you exactly how it fits your business, and you tell us if it makes sense. If there are gaps in your process — missed leads, no follow-up, weak online presence — we show you how we fix them. No pressure, just clarity.",
   },
   {
     step: "03",
