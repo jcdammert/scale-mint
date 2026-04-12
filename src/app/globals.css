@@ -61,6 +61,20 @@
     position: relative;
   }
 
+  /* ── Noise texture overlay ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+  }
+
+  /* ── Star field ── */
   body::after {
     content: '';
     position: fixed;
@@ -125,11 +139,9 @@
       1245px 789px 1px 0.5px rgba(255,255,255,0.35);
   }
 
-
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
   }
-
 }
 
 @layer utilities {
@@ -146,12 +158,164 @@
     box-shadow: var(--glow-primary-strong);
   }
 
+  /* ── Enhanced glassmorphism cards ── */
   .card-glass {
-    @apply bg-card border border-border rounded-xl;
-    backdrop-filter: blur(12px);
+    @apply rounded-xl;
+    background: hsl(230 12% 10% / 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-glass:hover {
+    border-color: hsl(148 95% 60% / 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 20px hsl(148 95% 60% / 0.05);
   }
 
   .section-padding {
     @apply py-8 md:py-14 px-4;
   }
+
+  /* ── Alternating section backgrounds ── */
+  .section-alt {
+    background-color: hsl(230 12% 7%);
+  }
+
+  .section-glow {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-glow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 120%;
+    background: radial-gradient(ellipse, hsl(148 95% 60% / 0.035), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   HERO GRADIENT MESH
+   ═══════════════════════════════════════════ */
+.hero-mesh {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-mesh .mesh-blob-1 {
+  position: absolute;
+  top: -30%;
+  left: -15%;
+  width: 70%;
+  height: 90%;
+  background: radial-gradient(ellipse, hsl(148 50% 25% / 0.15), transparent 70%);
+  border-radius: 50%;
+  animation: mesh1 8s ease-in-out infinite alternate;
+}
+
+.hero-mesh .mesh-blob-2 {
+  position: absolute;
+  bottom: -20%;
+  right: -15%;
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(ellipse, hsl(175 50% 20% / 0.12), transparent 70%);
+  border-radius: 50%;
+  animation: mesh2 10s ease-in-out infinite alternate;
+}
+
+.hero-mesh .mesh-blob-3 {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  height: 60%;
+  background: radial-gradient(ellipse, hsl(148 80% 50% / 0.08), transparent 70%);
+  border-radius: 50%;
+  animation: mesh3 12s ease-in-out infinite alternate;
+}
+
+@keyframes mesh1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(10%, 5%) scale(1.1); }
+}
+
+@keyframes mesh2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-8%, -5%) scale(1.15); }
+}
+
+@keyframes mesh3 {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.8; }
+  100% { transform: translate(5%, -8%) scale(1.05); opacity: 1; }
+}
+
+/* ═══════════════════════════════════════════
+   SHIMMER EFFECT (promo banner)
+   ═══════════════════════════════════════════ */
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(500%); }
+}
+
+/* ═══════════════════════════════════════════
+   GROWTH CARD GLOW
+   ═══════════════════════════════════════════ */
+.card-glow-green {
+  animation: card-glow 4s ease-in-out infinite;
+}
+
+@keyframes card-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(148 95% 60% / 0.1), 0 0 60px hsl(148 95% 60% / 0.05), 0 4px 24px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(148 95% 60% / 0.15), 0 0 80px hsl(148 95% 60% / 0.08), 0 4px 24px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* ═══════════════════════════════════════════
+   FOOTER GRADIENT BORDER
+   ═══════════════════════════════════════════ */
+.footer-gradient {
+  border-top: none !important;
+  position: relative;
+}
+
+.footer-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(148 95% 60% / 0.3), hsl(148 95% 60% / 0.1), transparent);
 }

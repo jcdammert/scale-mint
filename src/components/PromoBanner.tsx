@@ -14,7 +14,7 @@ const PromoBanner = () => {
           initial={isMobile ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl border border-primary/30 bg-primary/5 px-6 py-6 md:px-10 md:py-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6"
+          className="shimmer-effect rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 px-6 py-6 md:px-10 md:py-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6"
         >
           <Rocket size={28} className="text-primary shrink-0" />
           <p className="font-heading text-base md:text-lg font-semibold text-foreground text-center sm:text-left">

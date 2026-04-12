@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Clock, UserCheck, HeartHandshake } from "lucide-react";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import Particles from "@/components/Particles";
 
 const stats = [
-  { icon: Clock, text: "Live in 5–10 Days" },
+  { icon: Clock, text: "Live in 5\u201310 Days" },
   { icon: UserCheck, text: "No Tech Skills Needed" },
   { icon: HeartHandshake, text: "Platform + Done-For-You Support" },
 ];
@@ -15,9 +16,20 @@ const HeroSection = () => {
   const isMobile = useIsMobile();
   return (
     <section className="relative overflow-hidden pt-28 pb-8 md:pt-36 md:pb-12">
-      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
+      {/* Animated gradient mesh background */}
+      <div className="hero-mesh">
+        <div className="mesh-blob-1" />
+        <div className="mesh-blob-2" />
+        <div className="mesh-blob-3" />
+      </div>
 
-      <div className="container relative mx-auto px-4 text-center">
+      {/* Radial glow behind headline */}
+      <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[700px] rounded-full bg-primary/5 blur-[100px]" />
+
+      {/* Floating particles (desktop only) */}
+      <Particles />
+
+      <div className="container relative z-10 mx-auto px-4 text-center">
         <motion.h1
           initial={isMobile ? false : { opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

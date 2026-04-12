@@ -28,7 +28,7 @@ const testimonials = [
 const TestimonialsSection = () => {
   const isMobile = useIsMobile();
   return (
-    <section className="section-padding">
+    <section className="section-padding section-glow">
       <div className="container mx-auto">
         <motion.h2
           initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="card-glass p-8"
+              className="card-glass p-8 border-l-2 border-l-primary/30"
             >
               <div className="mb-4 flex gap-1">
                 {Array.from({ length: t.rating }).map((_, j) => (

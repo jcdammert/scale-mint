@@ -27,7 +27,7 @@ const steps = [
 const HowItWorksSection = () => {
   const isMobile = useIsMobile();
   return (
-    <section id="how-it-works" className="section-padding">
+    <section id="how-it-works" className="section-padding section-alt">
       <div className="container mx-auto">
         <motion.h2
           initial={isMobile ? false : { opacity: 0, y: 20 }}

@@ -43,7 +43,7 @@ const faqs = [
 const FAQSection = () => {
   const isMobile = useIsMobile();
   return (
-    <section id="faq" className="section-padding">
+    <section id="faq" className="section-padding section-alt">
       <div className="container mx-auto max-w-3xl">
         <motion.h2
           initial={isMobile ? false : { opacity: 0, y: 20 }}
