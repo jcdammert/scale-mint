@@ -19,12 +19,9 @@ import {
   MapPin,
   Share2,
   MessageSquarePlus,
-  BadgeCheck,
-  GraduationCap,
   Brain,
   Clock,
   Wrench,
-  DollarSign,
 } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -128,18 +125,6 @@ const features = [
     title: "Review Request Automation",
     description:
       "After every job, an automatic review request goes out. Your reviews stack up without you asking.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "LSA Setup",
-    description:
-      "We help you get set up on Google\u2019s Local Services Ads so you show up with the Google Guaranteed badge.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Training Included",
-    description:
-      "We walk you through everything on a recorded call. You\u2019ll know exactly how to use your system.",
   },
 ];
 
@@ -395,44 +380,6 @@ export default function BusinessSoftwarePage() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ─── PRICING ─── */}
-      <section className="section-padding section-alt">
-        <div className="container mx-auto">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="card-glass card-glow-green mx-auto max-w-2xl p-8 md:p-12 text-center border-primary/30"
-          >
-            <DollarSign size={32} className="mx-auto mb-4 text-primary" />
-            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Starting at{" "}
-              <span className="text-gradient">$350/mo</span>
-            </h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              + one-time setup fee (custom quoted based on complexity)
-            </p>
-            <p className="mt-4 text-muted-foreground">
-              No long-term contracts. Cancel anytime.
-            </p>
-            <div className="mt-8">
-              <a
-                href="/book"
-                className="block w-full sm:w-auto sm:inline-block"
-              >
-                <Button
-                  variant="hero"
-                  size="lg"
-                  className="w-full sm:w-auto px-8 py-6 text-base"
-                >
-                  Book a Free Strategy Call
-                </Button>
-              </a>
-            </div>
-          </motion.div>
         </div>
       </section>
 
