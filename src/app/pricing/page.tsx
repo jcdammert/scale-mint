@@ -297,25 +297,9 @@ export default function PricingPage() {
                 <h4 className="font-heading text-base font-semibold text-foreground mb-2">
                   {a.title}
                 </h4>
-                <p className="text-xs leading-relaxed text-muted-foreground mb-4 flex-1">
+                <p className="text-xs leading-relaxed text-muted-foreground flex-1">
                   {a.desc}
                 </p>
-                {a.note && (
-                  <p
-                    className={`text-[11px] font-medium mb-4 ${
-                      a.highlight
-                        ? "text-amber-400"
-                        : "text-primary/70"
-                    }`}
-                  >
-                    {a.note}
-                  </p>
-                )}
-                <a href="/book">
-                  <Button variant="hero-outline" size="sm" className="w-full">
-                    Book a Call
-                  </Button>
-                </a>
               </motion.div>
             ))}
           </div>
