@@ -45,22 +45,22 @@ const addOns = [
     icon: Megaphone,
     title: "Marketing",
     desc: "Meta Ads, Google PPC, and SEO — built and managed to drive leads straight into your pipeline. No leaky funnels. Every lead lands in your system and gets followed up with automatically.",
-    note: "Requires an active Scale Mint plan. Custom quoted.",
+    note: "",
     highlight: false,
   },
   {
     icon: Globe,
     title: "Custom Website",
     desc: "SEO-optimized, fast, built to convert visitors into leads — and every form submission goes directly into your CRM and triggers your follow-up automations. Not a template. Built on Next.js for speed and rankings.",
-    note: "Requires an active Scale Mint plan. Custom quoted.",
+    note: "",
     highlight: false,
   },
   {
     icon: Sparkles,
     title: "AI Employee",
     desc: "AI voice receptionist, smart chatbot, and 24/7 lead qualification. Answers calls, texts leads back, qualifies them, and books appointments — all while you're on a job site.",
-    note: "Requires Growth plan. Custom quoted.",
-    highlight: true,
+    note: "",
+    highlight: false,
   },
 ];
 
@@ -300,15 +300,17 @@ export default function PricingPage() {
                 <p className="text-xs leading-relaxed text-muted-foreground mb-4 flex-1">
                   {a.desc}
                 </p>
-                <p
-                  className={`text-[11px] font-medium mb-4 ${
-                    a.highlight
-                      ? "text-amber-400"
-                      : "text-primary/70"
-                  }`}
-                >
-                  {a.note}
-                </p>
+                {a.note && (
+                  <p
+                    className={`text-[11px] font-medium mb-4 ${
+                      a.highlight
+                        ? "text-amber-400"
+                        : "text-primary/70"
+                    }`}
+                  >
+                    {a.note}
+                  </p>
+                )}
                 <a href="/book">
                   <Button variant="hero-outline" size="sm" className="w-full">
                     Book a Call
@@ -317,22 +319,6 @@ export default function PricingPage() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ─── REPLACES NOTE ─── */}
-      <section className="px-4 pb-6 md:pb-10">
-        <div className="container mx-auto max-w-3xl">
-          <motion.p
-            initial={isMobile ? false : { opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-sm text-muted-foreground text-center italic"
-          >
-            Scale Mint replaces: Jobber, Housecall Pro, ServiceTitan, Calendly,
-            DocuSign, Mailchimp, Podium, Broadly, and more — all in one
-            platform, all set up for you.
-          </motion.p>
         </div>
       </section>
 
