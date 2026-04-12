@@ -44,20 +44,23 @@ const addOns = [
   {
     icon: Megaphone,
     title: "Marketing",
-    desc: "Meta Ads · Google PPC · SEO",
-    note: "Custom quoted",
+    desc: "Meta Ads, Google PPC, and SEO — built and managed to drive leads straight into your pipeline. No leaky funnels. Every lead lands in your system and gets followed up with automatically.",
+    note: "Requires an active Scale Mint plan. Custom quoted.",
+    highlight: false,
   },
   {
     icon: Globe,
     title: "Custom Website",
-    desc: "SEO-optimized, built to convert",
-    note: "Custom quoted",
+    desc: "SEO-optimized, fast, built to convert visitors into leads — and every form submission goes directly into your CRM and triggers your follow-up automations. Not a template. Built on Next.js for speed and rankings.",
+    note: "Requires an active Scale Mint plan. Custom quoted.",
+    highlight: false,
   },
   {
     icon: Sparkles,
     title: "AI Employee",
-    desc: "AI voice receptionist, chatbot, 24/7 lead qualification",
-    note: "Growth plan required. Custom quoted.",
+    desc: "AI voice receptionist, smart chatbot, and 24/7 lead qualification. Answers calls, texts leads back, qualifies them, and books appointments — all while you're on a job site.",
+    note: "Requires Growth plan. Custom quoted.",
+    highlight: true,
   },
 ];
 
@@ -263,15 +266,18 @@ export default function PricingPage() {
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-8"
+            className="text-center mb-10"
           >
             <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-              Plug In More{" "}
-              <span className="text-gradient">When You&apos;re Ready.</span>
+              Make Your System Work{" "}
+              <span className="text-gradient">Even Harder.</span>
             </h2>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Already on the platform? These connect directly to the system we
-              built.
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              These services are available exclusively to Scale Mint clients —
+              because they&apos;re built to plug directly into the platform we
+              already set up for you. Every lead, every campaign, every page
+              feeds into your system. That&apos;s why they work. Pricing is
+              custom quoted because every business is different.
             </p>
           </motion.div>
 
@@ -283,16 +289,24 @@ export default function PricingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="card-glass p-6 text-center transition-all duration-300 hover:border-primary/20"
+                className="card-glass flex flex-col p-6 text-center transition-all duration-300 hover:border-primary/20"
               >
                 <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
                   <a.icon size={20} className="text-primary" />
                 </div>
-                <h4 className="font-heading text-base font-semibold text-foreground mb-1">
+                <h4 className="font-heading text-base font-semibold text-foreground mb-2">
                   {a.title}
                 </h4>
-                <p className="text-xs text-muted-foreground mb-3">{a.desc}</p>
-                <p className="text-xs font-medium text-primary mb-4">
+                <p className="text-xs leading-relaxed text-muted-foreground mb-4 flex-1">
+                  {a.desc}
+                </p>
+                <p
+                  className={`text-[11px] font-medium mb-4 ${
+                    a.highlight
+                      ? "text-amber-400"
+                      : "text-primary/70"
+                  }`}
+                >
                   {a.note}
                 </p>
                 <a href="/book">
