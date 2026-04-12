@@ -13,7 +13,6 @@ import {
   MessageSquare,
   ClipboardList,
   Gauge,
-  BarChart3,
   Paintbrush,
   ArrowRight,
   Zap,
@@ -55,12 +54,6 @@ const features = [
     title: "Lightning-Fast Load Times",
     description:
       "Built with modern frameworks for sub-second load times. Fast sites rank better on Google and keep visitors from bouncing.",
-  },
-  {
-    icon: BarChart3,
-    title: "Analytics Dashboard",
-    description:
-      "Know exactly where your visitors come from, what they do on your site, and which pages convert best. Data-driven decisions made easy.",
   },
   {
     icon: Paintbrush,
