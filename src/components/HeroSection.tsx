@@ -36,7 +36,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl lg:text-7xl"
         >
-          We Build the Growth Engine That Gets You More Jobs and Makes Your Business{" "}
+          Make Your Business{" "}
           <span className="text-gradient">Impossible to Ignore.</span>
         </motion.h1>
 
@@ -46,7 +46,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
         >
-          Scale Mint builds your entire sales process, online presence, and follow-up system — all on one platform, all done for you. Stop losing leads. Start closing more jobs. Be ready to scale whenever you want.
+          Scale Mint builds your entire sales process, online presence, and follow-up system — all on one platform, all done for you. Stop losing leads. Start closing more jobs. When you&apos;re ready for more, just turn on the ads — the system&apos;s already built to handle the volume.
         </motion.p>
 
         <motion.div
