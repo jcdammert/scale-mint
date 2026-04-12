@@ -273,17 +273,13 @@ export default function PricingPage() {
               <span className="text-gradient">Even Harder.</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Most agencies will charge you thousands to run ads — but without
-              real systems behind them, half those leads slip through the
-              cracks. That&apos;s why these services are only available to
-              Scale Mint clients. We build the system first, then plug
-              marketing directly into it — so every lead gets captured,
-              followed up with, and closed. Our goal isn&apos;t to overcharge
-              you on marketing. We want as much of your budget as possible
-              going into the ads themselves — because the more jobs we help
-              you close, the more you grow with us. We provide the shovels.
-              You keep the gold. Pricing is custom quoted because every
-              business is different.
+              We build the system first, then plug marketing directly into
+              it — so every lead gets captured, followed up with, and closed.
+              Our goal isn&apos;t to overcharge you on marketing. We want as
+              much of your budget as possible going into the ads themselves —
+              because the more jobs we help you close, the more you grow with
+              us. We provide the shovels. You keep the gold. Pricing is
+              custom quoted because every business is different.
             </p>
           </motion.div>
 
