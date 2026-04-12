@@ -23,7 +23,7 @@ const steps = [
     icon: PhoneCall,
     title: "We Get on a Call",
     description:
-      "Free strategy call. No pitch, no pressure. We learn how your business actually runs — how leads come in, how you follow up, how you close, where things fall apart. We ask the right questions so we know exactly what to build.",
+      "Quick, easy call. You tell us a little about your business, any questions you have, any problems you want fixed, and anything that's eating up too much of your time. That's it — we listen, and figure out how we can help.",
   },
   {
     step: "02",
