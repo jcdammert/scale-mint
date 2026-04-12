@@ -6,7 +6,7 @@ import { Menu, X, ChevronDown, Workflow, Globe, Phone, Megaphone } from "lucide-
 import Image from "next/image";
 
 const serviceLinks = [
-  { label: "Business OS", href: "/#services", icon: Workflow },
+  { label: "Business OS", href: "/business-software", icon: Workflow },
   { label: "Marketing", href: "/services/marketing", icon: Megaphone },
   { label: "Custom Websites", href: "/services/ai-websites", icon: Globe },
   { label: "AI Employee", href: "/services/ai-voice", icon: Phone },
