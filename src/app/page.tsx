@@ -7,6 +7,7 @@ import PromoBanner from "@/components/PromoBanner";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
+import DemoSection from "@/components/DemoSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 
@@ -27,6 +28,7 @@ export default function Home() {
       <HowItWorksSection />
       <TestimonialsSection />
       <FAQSection />
+      <DemoSection />
       <FinalCTASection />
       <Footer />
     </div>
