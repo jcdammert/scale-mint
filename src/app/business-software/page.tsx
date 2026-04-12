@@ -128,20 +128,6 @@ const features = [
   },
 ];
 
-const replaces = [
-  "Jobber",
-  "Housecall Pro",
-  "ServiceTitan",
-  "Calendly",
-  "DocuSign",
-  "Mailchimp",
-  "Constant Contact",
-  "Podium",
-  "Yelp Ads",
-  "Hootsuite",
-  "& more",
-];
-
 const steps = [
   {
     num: "01",
@@ -302,41 +288,6 @@ export default function BusinessSoftwarePage() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ─── WHAT IT REPLACES ─── */}
-      <section className="section-padding section-glow section-alt">
-        <div className="container relative z-10 mx-auto">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mx-auto max-w-3xl text-center"
-          >
-            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              One Platform.{" "}
-              <span className="text-gradient">Replaces All of These.</span>
-            </h2>
-
-            <div className="mt-10 flex flex-wrap justify-center gap-3">
-              {replaces.map((name) => (
-                <span
-                  key={name}
-                  className="rounded-full border border-border bg-card/60 px-5 py-2.5 text-sm font-medium text-muted-foreground backdrop-blur-sm"
-                >
-                  {name}
-                </span>
-              ))}
-            </div>
-
-            <p className="mt-8 text-muted-foreground">
-              Instead of paying $500&ndash;$1,000+/mo for a patchwork of tools
-              that don&apos;t talk to each other, you get one connected system
-              starting at{" "}
-              <span className="font-semibold text-foreground">$350/mo</span>.
-            </p>
-          </motion.div>
         </div>
       </section>
 
