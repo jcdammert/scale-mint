@@ -56,7 +56,10 @@
   .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); animation: pulse 1.5s infinite; }
   .steps-track { display: flex; flex-direction: column; gap: 20px; width: 260px; }
   .step-card { background: var(--dark-card); border: 1px solid rgba(255,255,255,0.05); border-radius: 14px; padding: 18px; opacity: 0.25; transform: translateX(16px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+  .step-card { cursor: pointer; }
+  .step-card:hover { opacity: 0.7; }
   .step-card.active { opacity: 1; transform: translateX(0); border-color: rgba(0,229,160,0.25); box-shadow: 0 0 24px rgba(0,229,160,0.06); }
+  .step-card.active:hover { opacity: 1; }
   .step-card .step-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; color: var(--mint); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; }
   .step-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
   .step-card p { font-size: 12px; color: var(--text-dim); line-height: 1.4; font-weight: 300; }
@@ -134,9 +137,9 @@
     </div>
   </div>
   <div class="steps-track">
-    <div class="step-card active" id="step1"><div class="step-num">Step 01</div><h3>Lead Submits Form</h3><p>Customer fills out your website form requesting a quote.</p></div>
-    <div class="step-card" id="step2"><div class="step-num">Step 02</div><h3>AI Qualifies via Text</h3><p>Your AI assistant texts the lead, gets their address, and confirms what they need.</p></div>
-    <div class="step-card" id="step3"><div class="step-num">Step 03</div><h3>Owner Gets Texted</h3><p>You get a text with all the details — just open the app and send the quote.</p></div>
+    <div class="step-card active" id="step1" onclick="jumpToStep(1)"><div class="step-num">Step 01</div><h3>Lead Submits Form</h3><p>Customer fills out your website form requesting a quote.</p></div>
+    <div class="step-card" id="step2" onclick="jumpToStep(2)"><div class="step-num">Step 02</div><h3>AI Qualifies via Text</h3><p>Your AI assistant texts the lead, gets their address, and confirms what they need.</p></div>
+    <div class="step-card" id="step3" onclick="jumpToStep(3)"><div class="step-num">Step 03</div><h3>Owner Gets Texted</h3><p>You get a text with all the details — just open the app and send the quote.</p></div>
   </div>
 </div>
 <div class="controls">
@@ -162,6 +165,38 @@
     document.getElementById('step' + n).classList.add('active');
   }
   function scrollSmooth(c) { requestAnimationFrame(() => { c.scrollTo({ top: c.scrollHeight + 200, behavior: 'smooth' }); }); }
+  function jumpToStep(n) {
+    if (running) return;
+    showScene(n);
+    // Step 1: show completed form
+    if (n === 1) {
+      ['f-name','f-phone','f-email','f-service'].forEach(id => document.getElementById(id).classList.add('filled'));
+      document.getElementById('fv-name').textContent = 'Mike Johnson';
+      document.getElementById('fv-phone').textContent = '(561) 555-0847';
+      document.getElementById('fv-email').textContent = 'mike.j@email.com';
+      document.getElementById('fv-service').textContent = 'Roof & Driveway Wash';
+      const sub = document.getElementById('submitBtn');
+      sub.className = 'submit-btn sent'; sub.textContent = '✓ Submitted!';
+    }
+    // Step 2: show all messages
+    if (n === 2) {
+      hideMsg('m3');
+      ['m1','m2','m3b','m4'].forEach(id => { const el = document.getElementById(id); if (el) el.classList.add('show'); });
+      const ma = document.getElementById('messagesArea');
+      requestAnimationFrame(() => { ma.scrollTo({ top: ma.scrollHeight, behavior: 'auto' }); });
+    }
+    // Step 3: show owner notification + badge
+    if (n === 3) {
+      hideMsg('o1');
+      const el = document.getElementById('o1b'); if (el) el.classList.add('show');
+      document.getElementById('readyBadge').classList.add('show');
+      const oa = document.getElementById('ownerMsgArea');
+      requestAnimationFrame(() => { oa.scrollTo({ top: oa.scrollHeight, behavior: 'auto' }); });
+    }
+    // Update play button to show replay
+    const btn = document.getElementById('playBtn');
+    btn.disabled = false; btn.innerHTML = '<span>↻</span> Replay';
+  }
   async function revealMsg(id, container) { const el = document.getElementById(id); if (!el) return; el.classList.add('show'); await wait(80); scrollSmooth(container); }
   function hideMsg(id) { const el = document.getElementById(id); if (el) el.classList.remove('show'); }
   async function startDemo() {
