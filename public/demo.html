@@ -42,8 +42,8 @@
   .sms-contact-num { font-size: 10px; color: var(--text-dim); }
   .messages-area { flex: 1; display: flex; flex-direction: column; gap: 8px; overflow-y: auto; overflow-x: hidden; padding-right: 2px; scrollbar-width: none; -ms-overflow-style: none; }
   .messages-area::-webkit-scrollbar { display: none; }
-  .msg-spacer { flex-shrink: 0; min-height: 200px; }
-  .msg { max-width: 82%; padding: 0 14px; border-radius: 18px; font-size: 12.5px; line-height: 1.45; opacity: 0; max-height: 0; overflow: hidden; transition: opacity 0.4s ease 0.05s, max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease; flex-shrink: 0; }
+  .msg-spacer { flex-shrink: 0; min-height: 60px; }
+  .msg { max-width: 82%; padding: 0 14px; border-radius: 18px; font-size: 12px; line-height: 1.4; opacity: 0; max-height: 0; overflow: hidden; transition: opacity 0.4s ease 0.05s, max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease; flex-shrink: 0; }
   .msg.show { opacity: 1; max-height: 300px; padding: 10px 14px; }
   .msg.incoming { background: #1C2536; color: var(--text); align-self: flex-start; border-bottom-left-radius: 6px; }
   .msg.outgoing { background: var(--mint); color: #000; align-self: flex-end; border-bottom-right-radius: 6px; font-weight: 500; }
@@ -51,7 +51,7 @@
   .typing-dots span { width: 7px; height: 7px; border-radius: 50%; background: var(--text-dim); animation: dotBounce 1.4s infinite ease-in-out; }
   .typing-dots span:nth-child(2) { animation-delay: 0.16s; }
   .typing-dots span:nth-child(3) { animation-delay: 0.32s; }
-  .ready-badge { display: flex; align-items: center; justify-content: center; gap: 8px; background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.4); border-radius: 12px; padding: 11px; margin-top: 10px; font-weight: 700; font-size: 12px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; color: var(--mint); opacity: 0; transform: translateY(8px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s; flex-shrink: 0; }
+  .ready-badge { display: flex; align-items: center; justify-content: center; gap: 8px; background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.4); border-radius: 12px; padding: 9px; margin-top: 8px; font-weight: 700; font-size: 12px; font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; color: var(--mint); opacity: 0; transform: translateY(8px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s; flex-shrink: 0; }
   .ready-badge.show { opacity: 1; transform: translateY(0); }
   .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); animation: pulse 1.5s infinite; }
   .steps-track { display: flex; flex-direction: column; gap: 20px; width: 260px; }
