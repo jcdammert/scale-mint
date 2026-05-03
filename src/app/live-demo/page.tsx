@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Live Demo — Scale Mint",
@@ -9,14 +10,16 @@ export const metadata: Metadata = {
 export default function LiveDemoPage() {
   return (
     <div style={{ background: "#0A0F1C", minHeight: "100vh" }}>
+      <Navbar />
       <iframe
         src="/demo.html"
         title="Scale Mint AI Lead Automation Demo"
         style={{
           width: "100%",
-          height: "100vh",
+          height: "calc(100vh - 80px)",
           border: "none",
           display: "block",
+          marginTop: "80px",
         }}
       />
     </div>
