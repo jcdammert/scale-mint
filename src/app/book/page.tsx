@@ -70,12 +70,11 @@ export default function BookPage() {
             className="mx-auto max-w-2xl text-center"
           >
             <h1 className="font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl">
-              Let&apos;s Talk About{" "}
-              <span className="text-gradient">Your Business.</span>
+              Tell Us How the{" "}
+              <span className="text-gradient">Business Runs.</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground md:text-xl">
-              Tell us a little about your business and what&apos;s slowing you
-              down. We&apos;ll come to the call with ideas ready.
+              A few details about what you do and where the bottlenecks are. We come to the call ready with answers, not a pitch.
             </p>
           </motion.div>
 
@@ -89,10 +88,10 @@ export default function BookPage() {
               <div className="card-glass p-10 text-center">
                 <CheckCircle size={48} className="mx-auto text-primary" />
                 <h2 className="mt-6 font-heading text-2xl font-bold text-foreground">
-                  Thanks!
+                  Got it.
                 </h2>
                 <p className="mt-3 text-muted-foreground">
-                  We&apos;ll be in touch within 24 hours.
+                  We&apos;ll reach out within 24 hours to set up the call.
                 </p>
               </div>
             ) : (

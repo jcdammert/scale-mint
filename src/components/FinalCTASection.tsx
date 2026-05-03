@@ -22,11 +22,10 @@ const FinalCTASection = () => {
               <Play size={20} className="text-primary ml-0.5" />
             </div>
             <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-              See It <span className="text-gradient">In Action.</span>
+              See It <span className="text-gradient">Run Live.</span>
             </h3>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
-              Watch how our AI qualifies your leads and texts you when
-              they&apos;re ready — all on autopilot.
+              Walk through a real lead flow — missed call to text-back to booked job. No sign-up.
             </p>
             <div className="mt-6">
               <a href="/live-demo" className="block w-full sm:w-auto sm:inline-block">
@@ -53,13 +52,11 @@ const FinalCTASection = () => {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
 
             <h2 className="relative font-heading text-3xl font-bold text-foreground md:text-4xl lg:text-[2.6rem] leading-[1.1]">
-              Stop Losing Leads.
-              <br />
-              <span className="text-gradient">Start Closing More Jobs.</span>
+              Stop Losing Jobs to{" "}
+              <span className="text-gradient">Slow Follow-Up.</span>
             </h2>
             <p className="relative mx-auto mt-5 max-w-xl text-sm md:text-base text-muted-foreground">
-              Book a free strategy call — we&apos;ll show you exactly what your
-              system would look like and build a plan for your business.
+              Free 20-minute call. We map out what your system would look like, what it would cost, and whether it&apos;s a fit. No pitch.
             </p>
             <div className="relative mt-7">
               <a href="/book" className="block w-full sm:w-auto sm:inline-block">

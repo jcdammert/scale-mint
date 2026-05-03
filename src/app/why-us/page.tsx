@@ -20,27 +20,27 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 const differentiators = [
   {
     icon: Wrench,
-    title: "We've done it ourselves",
+    title: "We run service businesses ourselves.",
     description:
-      "We run local service businesses. We built this with our own money for our own companies before we ever offered it to anyone else.",
+      "We built this with our own money for our own crews before we offered it to anyone else. We know what missing a call costs because we've missed them.",
   },
   {
     icon: Target,
-    title: "We build growth systems, not feature lists",
+    title: "We build the system, not a feature list.",
     description:
-      "We don't sell you a CRM. We build your entire sales process, online presence, and follow-up engine — all connected on one platform.",
+      "We don't sell you a CRM and walk away. Pipeline, follow-up, online presence, reviews — built around how your business actually runs and connected on one platform.",
   },
   {
     icon: UserCheck,
-    title: "You stay in control",
+    title: "You own the system. You see everything.",
     description:
-      "We build everything, train you on it, and hand it over. You see every lead, every follow-up, every dollar. You're never in the dark.",
+      "We build it, configure it, and hand you the keys. Every lead, every follow-up, every pipeline stage stays in your account. The day you leave, you keep it all.",
   },
   {
     icon: Handshake,
-    title: "Built for the long term",
+    title: "Month-to-month. No long contracts.",
     description:
-      "Month-to-month. No long contracts. Our goal is a partnership — not a transaction.",
+      "Cancel anytime. We keep clients because the system works — not because of fine print.",
   },
 ];
 
@@ -99,8 +99,8 @@ export default function WhyUsPage() {
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl"
           >
-            {"We've Been in "}
-            <span className="text-gradient">Your Shoes.</span>
+            {"Built by Operators, "}
+            <span className="text-gradient">For Operators.</span>
           </motion.h1>
           <motion.p
             initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ export default function WhyUsPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
           >
-            {"We're not a faceless agency or a SaaS company with a help desk. We're business owners who built this for ourselves first."}
+            {"We're not an agency reading from a script and we're not a SaaS pointing you at a help desk. We run service businesses, and we built this for our own crews first."}
           </motion.p>
         </div>
       </section>
@@ -171,10 +171,10 @@ export default function WhyUsPage() {
 
               <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg relative">
                 <p className="first-letter:font-heading first-letter:text-5xl first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:mt-1">
-                  {"My name is Johann Dammert. I started my first business at 15 and never stopped. I run multiple local service companies — window tinting, asphalt coatings, pressure washing, junk removal — and I know exactly what it feels like to have bills due and work drying up. Inconsistent jobs, slow months, and doing everything manually just to keep the lights on."}
+                  {"My name is Johann Dammert. I started my first business at 15 and never stopped. I run multiple local service companies — window tinting, asphalt coatings, pressure washing, junk removal — and I know what it feels like to have bills due and the phone not ringing. Inconsistent jobs, slow months, and doing everything off your phone just to keep crews paid."}
                 </p>
                 <p>
-                  {"I tried the CRMs. Too complicated, no time to set them up. I hired agencies. They took my money and gave me excuses. So I built the solution myself — the platform, the automations, the entire sales system — for my own businesses. Then I helped friends do the same. And I realized this is what every local service business owner needs: a real growth system AND someone to actually set it up and run it right."}
+                  {"I tried the CRMs. Too complicated, no time to actually set them up. I hired agencies. They took the money and sent reports. So I built the system myself — the platform, the automations, the follow-up — for my own crews. Then I helped friends do the same. What every service operator actually needs is the system AND someone who'll set it up and run it right."}
                 </p>
                 <p className="text-foreground/90 font-medium">
                   {"That's why Scale Mint exists."}
@@ -226,7 +226,7 @@ export default function WhyUsPage() {
                 </span>
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                {"SaaS companies give you a login, a knowledge base, and a support ticket. You're on your own to figure it out. Most people never do."}
+                {"You get a login, a knowledge base, and a support ticket. You're on your own to set it up and actually use it. Most owners never do."}
               </p>
             </motion.div>
 
@@ -247,7 +247,7 @@ export default function WhyUsPage() {
                 </span>
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                {"Agencies do work for you but you have no visibility, no system of your own, and no control. When you stop paying, everything disappears."}
+                {"They run things for you, but you don't see what's happening, you don't own anything, and the day you stop paying, the leads stop too."}
               </p>
             </motion.div>
 
@@ -271,7 +271,7 @@ export default function WhyUsPage() {
                     </span>
                   </div>
                   <p className="text-sm leading-relaxed text-foreground/90">
-                    {"Scale Mint gives you both. The full platform with every tool you need — AND the team that builds it, configures it, and manages it for you. You own the system. You see everything. And we're in your corner making sure it actually works."}
+                    {"Both. The full platform on your account, plus the team that builds it, configures it, and adjusts it as your business changes. You see every lead and every follow-up. The system stays yours."}
                   </p>
                 </div>
               </div>
@@ -363,13 +363,13 @@ export default function WhyUsPage() {
             </div>
 
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl lg:text-5xl leading-[1.1] mb-10">
-              We Actually Care About{" "}
-              <span className="text-gradient">Your Growth</span>
+              We&apos;re in This{" "}
+              <span className="text-gradient">For the Long Run.</span>
             </h2>
 
             <div className="relative px-4 md:px-12">
               <p className="relative text-lg md:text-xl leading-relaxed text-foreground/90 italic font-light">
-                {"Our long-term goal isn't just to be your platform provider — it's to become a real partner in the businesses we work with. Every client we take on, we treat like a future partner. That means we're selective, we're honest, and we're invested in your success from day one."}
+                {"The goal isn't to be a vendor. It's to become someone you call before you make a big decision. That means we say no to clients who aren't a fit, we tell you what isn't working, and we stay close enough to actually know your business."}
               </p>
             </div>
           </motion.div>
@@ -417,7 +417,7 @@ export default function WhyUsPage() {
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed text-foreground/85 md:text-base">
-                  {"We don't work with everyone. We look for business owners who are serious about growth, willing to follow through, and ready to invest in building something real. If that's you, we want to work together."}
+                  {"Owners who are serious about growth, willing to actually use the system, and ready to invest in building something that lasts. If that's you, we want to work together."}
                 </p>
               </div>
             </motion.div>
@@ -439,7 +439,7 @@ export default function WhyUsPage() {
                 </span>
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-                {"If you're looking for a magic fix overnight, we're probably not the right fit — and we'll be upfront about that from the start."}
+                {"You want a magic fix in 30 days. The system works, but it's a real build — not a switch you flip. We'd rather tell you that up front than waste your money."}
               </p>
             </motion.div>
           </div>

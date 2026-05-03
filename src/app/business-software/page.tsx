@@ -28,75 +28,75 @@ import DualCTA from "@/components/DualCTA";
 const features = [
   {
     icon: Users,
-    title: "CRM & Pipeline Management",
+    title: "CRM & Pipeline",
     description:
-      "See every lead, every job, every follow-up in one place. Nothing falls through the cracks.",
+      "Every lead, every job, every follow-up in one view. You see exactly where each customer is in your sales process.",
   },
   {
     icon: FileText,
     title: "Invoicing & Estimates",
     description:
-      "Send professional invoices and estimates in seconds. Get paid faster.",
+      "Send estimates and invoices straight from the customer record. Track what's paid, what's pending, what's overdue.",
   },
   {
     icon: CalendarCheck,
     title: "Appointment Scheduling",
     description:
-      "Customers book directly on your calendar. No back-and-forth texting.",
+      "Customers book on your calendar by themselves. No phone tag, no double-bookings.",
   },
   {
     icon: Zap,
     title: "Workflow Automations",
     description:
-      "Follow-ups, reminders, review requests \u2014 all happen automatically without you lifting a finger.",
+      "Follow-ups, reminders, review requests, status updates \u2014 fire automatically based on what happens with the lead or job.",
   },
   {
     icon: PenTool,
     title: "Contracts & E-Signatures",
     description:
-      "Send contracts and get them signed digitally. No printing, no scanning.",
+      "Send contracts and get them signed from a phone. No printing, no scanning, no chasing paper.",
   },
   {
     icon: Bot,
     title: "AI Chatbot",
     description:
-      "A smart chatbot on your website that answers questions and captures leads 24/7.",
+      "Sits on your website and qualifies leads 24/7 \u2014 answers basic questions, books calls, and drops the lead into your CRM.",
   },
   {
     icon: PhoneOff,
     title: "Missed Call Text-Back",
     description:
-      "When you can\u2019t answer, an automatic text goes out so you never lose that lead.",
+      "When you can't pick up, an instant text goes out. The lead replies and lands in your inbox before they call the next guy.",
   },
   {
     icon: Mail,
     title: "SMS & Email Campaigns",
     description:
-      "Send promotions, updates, and follow-ups to your entire customer list in one click.",
+      "Send promos, seasonal blasts, or follow-up sequences to your customer list. Track opens and replies.",
   },
   {
     icon: Star,
     title: "Review Management",
     description:
-      "See all your Google reviews in one place. Respond easily. Build your reputation.",
+      "All your Google reviews in one place. Respond from the platform. See what's coming in week to week.",
   },
   {
     icon: MapPin,
-    title: "Google Business Profile Optimization",
+    title: "Google Business Profile",
     description:
-      "We optimize your GBP so you rank higher on Google Maps.",
+      "We build out your GBP so you rank in the local map pack \u2014 photos, services, posts, and citations included.",
   },
   {
     icon: Share2,
-    title: "Weekly Social Media Posting",
+    title: "Weekly Social Posting",
     description:
-      "We post for you on Facebook, Instagram, and Google Business every week.",
+      "We post on Facebook, Instagram, and your Google profile every week so your business looks active.",
   },
   {
     icon: MessageSquarePlus,
     title: "Review Request Automation",
     description:
-      "After every job, an automatic review request goes out. Your reviews stack up without you asking.",
+      "When a job is marked complete, a review request goes out by text. Reviews stack up without you asking.",
   },
 ];
 
@@ -105,19 +105,19 @@ const steps = [
     num: "01",
     title: "We learn how your business runs",
     description:
-      "Free strategy call to understand your workflow, services, and what you need.",
+      "20-minute call. Your services, your workflow, where leads come in, where they fall through.",
   },
   {
     num: "02",
-    title: "We build your entire system",
+    title: "We build the system",
     description:
-      "CRM, automations, templates, everything \u2014 configured for your specific business. Live in 5\u201310 days.",
+      "Pipeline, automations, templates, GBP \u2014 all configured around your business. Live in 5\u201310 business days.",
   },
   {
     num: "03",
     title: "We train you and hand it over",
     description:
-      "Recorded walkthrough call so you know exactly how everything works. You\u2019re in control.",
+      "Recorded walkthrough so you know how every piece works. The account is yours from day one.",
   },
 ];
 
@@ -149,8 +149,8 @@ export default function BusinessSoftwarePage() {
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
-            Your All-in-One Business{" "}
-            <span className="text-gradient">Operating System.</span>
+            Run Your Business{" "}
+            <span className="text-gradient">Off One Account.</span>
           </motion.h1>
           <motion.p
             initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -158,9 +158,7 @@ export default function BusinessSoftwarePage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            Stop running your business out of your head. We build your entire
-            business backend on one platform &mdash; CRM, invoicing, scheduling,
-            automations, contracts, and more. All connected. All done for you.
+            Stop running the business off your phone and a stack of texts. CRM, invoicing, scheduling, automations, contracts — built on one platform, configured for your crew, and managed for you.
           </motion.p>
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -197,12 +195,11 @@ export default function BusinessSoftwarePage() {
               Your Sales Pipeline
             </p>
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-              Track Every Customer.{" "}
-              <span className="text-gradient">No Lead Slips Through.</span>
+              Every Customer, Every Stage,{" "}
+              <span className="text-gradient">In One View.</span>
             </h2>
             <p className="mt-3 text-sm text-muted-foreground">
-              Every lead in one place — see exactly where each customer is in
-              your sales process, from first call to job booked.
+              Drag leads through stages. See exactly who needs a follow-up today and who&apos;s about to book. Nothing lives in your head.
             </p>
           </motion.div>
           <ScaleMintDashboard />
@@ -219,12 +216,11 @@ export default function BusinessSoftwarePage() {
             className="mx-auto max-w-2xl text-center"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Everything You Need to Run Your Business.{" "}
-              <span className="text-gradient">One Platform.</span>
+              Every Tool You Need.{" "}
+              <span className="text-gradient">Wired Together.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Every feature is set up for you and connected to everything else.
-              No patchwork. No manual work.
+              Set up by us, connected to every other piece. No patchwork of apps that don&apos;t talk to each other.
             </p>
           </motion.div>
 

@@ -22,30 +22,30 @@ const pillars = [
   {
     num: "01",
     icon: Zap,
-    title: "Your Sales Process, Fixed",
+    title: "Every Lead Answered. Every Lead Followed Up.",
     description:
-      "Leads come in. They get responded to instantly. They get followed up with automatically. You see every opportunity in your pipeline and nothing falls through the cracks. You close more of the leads you're already getting.",
+      "Inbound leads get a reply within a minute — text, email, or both. Missed calls fire an instant text-back. Every lead lands in a pipeline you can actually see, and a sequence keeps following up until they book or tell you no. You close more of the leads you already pay to get.",
   },
   {
     num: "02",
     icon: Search,
-    title: "Your Online Presence, Built",
+    title: "An Online Presence That Looks Like a Real Business.",
     description:
-      "We post for you weekly on Google, Facebook, and Instagram. Your Google Business Profile is optimized. You have a real website that converts visitors into leads. When someone Googles your business, they see a company that looks legit and established.",
+      "We post on your Google profile, Facebook, and Instagram every week. Your Business Profile gets fully built out. Your site is real and built to convert. When a homeowner Googles you after a referral, they see a company that looks established — not a phone number on a Facebook page.",
   },
   {
     num: "03",
     icon: Star,
-    title: "Your Reputation, On Autopilot",
+    title: "Reviews That Stack Up After Every Job.",
     description:
-      "Review requests go out automatically after every job. Your reviews stack up on Google without you lifting a finger. More reviews = more trust = more calls.",
+      "When a job is marked complete, a review request goes out by text. Most clients pick up 5–10 new Google reviews in the first 60 days. Higher review count means higher local rankings — and homeowners pick the company with more 5-stars before they ever call.",
   },
   {
     num: "04",
     icon: Rocket,
-    title: "Ready to Scale Whenever You Want",
+    title: "Add Ads When You're Ready. Not Before.",
     description:
-      "When everything is dialed in — your sales process catches every lead, your presence is strong, your follow-up is automatic — that's when marketing actually works. Run Meta ads, Google ads, or SEO and watch the system handle the volume. Pour gas on the fire, not on the floor.",
+      "Once the pipeline catches every lead and the follow-up runs without you, ads actually pay off. Plug in Meta, Google, or local SEO and the system absorbs the volume. We don't sell ads to businesses whose backend isn't ready — that's how operators waste money on traffic that never converts.",
   },
 ];
 
@@ -54,21 +54,21 @@ const addOns = [
     icon: Megaphone,
     title: "Marketing",
     description:
-      "Meta Ads, Google PPC, SEO — leads flow straight into your pipeline.",
+      "Meta, Google, and local SEO — managed end to end. Leads land in the pipeline we already built.",
     note: "Custom quoted.",
   },
   {
     icon: Globe,
     title: "Custom Website",
     description:
-      "Fast, SEO-optimized, built to convert — feeds leads directly into your system.",
+      "Built to rank and built to convert. Every form submission drops straight into your CRM and triggers follow-up.",
     note: "Custom quoted.",
   },
   {
     icon: Sparkles,
     title: "AI Employee",
     description:
-      "AI voice receptionist, smart chatbot, 24/7 lead qualification and booking.",
+      "Answers your phone, replies to texts, qualifies the lead, and books the job — even when you're on a roof at 7pm.",
     note: "Available with Growth plan. Custom quoted.",
   },
 ];
@@ -287,7 +287,7 @@ function Pillar4Visual() {
                 adsOn ? "text-primary" : "text-muted-foreground"
               }`}
             >
-              {adsOn ? "Live · spending $2.4k/wk" : "Paused · click to turn on"}
+              {adsOn ? "Running · $2.4k/wk" : "Paused · tap to turn on"}
             </div>
           </div>
         </div>
@@ -387,12 +387,11 @@ const ServicesSection = () => {
           className="mt-20 mx-auto max-w-2xl text-center"
         >
           <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-            When You&apos;re Ready for More,{" "}
-            <span className="text-gradient">It Plugs Right In.</span>
+            Add-Ons That Plug Into{" "}
+            <span className="text-gradient">the System.</span>
           </h3>
           <p className="mt-3 text-sm text-muted-foreground">
-            Your platform is the foundation. These add-ons connect directly to
-            the system we already built.
+            The platform is the foundation. When you&apos;re ready for more, these connect into the same system instead of running on the side.
           </p>
         </motion.div>
 

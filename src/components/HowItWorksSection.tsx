@@ -8,19 +8,19 @@ const steps = [
     num: "01",
     title: "We Talk",
     description:
-      "Free strategy call. We learn how your business runs, where leads are falling through, and what needs to be built.",
+      "Free 20-minute call. You tell us how the business runs day to day — where leads come in, where they fall through, what eats your time. We tell you straight if it's a fit.",
   },
   {
     num: "02",
-    title: "We Build Your System",
+    title: "We Build the System",
     description:
-      "We set up your entire platform — sales process, follow-up automations, online presence, everything — configured specifically for your business. Live in 5–10 days.",
+      "We configure the whole platform around how your crew actually operates — pipeline, follow-up sequences, website, GBP, social posting. You don't touch a setting. Live in 5–10 business days.",
   },
   {
     num: "03",
-    title: "You Focus on the Work",
+    title: "You Run the Jobs",
     description:
-      "Your system runs. Leads get caught. Follow-ups happen automatically. You show up and do the job. When you're ready to grow, we turn up the volume.",
+      "Leads get caught. Follow-ups go out. Reviews come in. You show up and do the work. When you're ready to add ads or scale crews, the system absorbs the volume.",
   },
 ];
 
@@ -35,8 +35,8 @@ const HowItWorksSection = () => {
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
-          From Call to Live System{" "}
-          <span className="text-gradient">in Days.</span>
+          From First Call to Live System{" "}
+          <span className="text-gradient">in 5–10 Days.</span>
         </motion.h2>
 
         <div className="relative mt-16 grid gap-8 md:grid-cols-3">

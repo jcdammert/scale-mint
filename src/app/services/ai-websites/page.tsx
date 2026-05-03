@@ -28,87 +28,87 @@ import Link from "next/link";
 const features = [
   {
     icon: Search,
-    title: "SEO-Optimized",
+    title: "Built to Rank",
     description:
-      "Built from the ground up with search engine optimization in mind. Rank higher on Google and get found by the customers who are actively looking for your services.",
+      "On-page SEO, schema markup, and local keywords baked in from the start. Built so a homeowner searching your service in your city actually finds you.",
   },
   {
     icon: Smartphone,
-    title: "Mobile Responsive",
+    title: "Mobile-First",
     description:
-      "Over 60% of web traffic is mobile. Your site will look stunning and function perfectly on every device, from phones to desktops.",
+      "Over 60% of homeowners are searching from their phone. The site looks sharp and converts on a small screen — not just a designer's monitor.",
   },
   {
     icon: MessageSquare,
     title: "AI Chat Widget",
     description:
-      "An intelligent chatbot embedded on your site that answers visitor questions, captures leads, and books appointments — even while you sleep.",
+      "A chatbot on the site that answers basic questions, qualifies the lead, and books a call. Drops the lead straight into your CRM.",
   },
   {
     icon: ClipboardList,
     title: "Lead Capture Forms",
     description:
-      "Strategically placed forms that convert visitors into leads. Connected directly to your CRM or email so you never miss an opportunity.",
+      "Forms that go where they get worked — your CRM. Every submission triggers your follow-up sequence so the lead doesn't sit in an inbox over the weekend.",
   },
   {
     icon: Gauge,
-    title: "Lightning-Fast Load Times",
+    title: "Sub-Second Load Times",
     description:
-      "Built with modern frameworks for sub-second load times. Fast sites rank better on Google and keep visitors from bouncing.",
+      "Built on Next.js so the site loads before a visitor decides to bounce. Faster sites rank higher and keep more leads on the page.",
   },
   {
     icon: Paintbrush,
     title: "Custom Design",
     description:
-      "No templates. No cookie-cutter layouts. Every site is designed from scratch to match your brand and stand out from competitors.",
+      "No templates, no cookie-cutter layouts. Designed for your brand and the homeowners you actually want to book.",
   },
 ];
 
 const steps = [
   {
     step: "01",
-    title: "Discovery & Strategy",
+    title: "Discovery",
     description:
-      "We learn about your business, your customers, and your goals. Then we create a site strategy designed to convert.",
+      "We learn the business, the services you want to lead with, and what kind of homeowner you want walking in. We tell you the strategy before we touch design.",
   },
   {
     step: "02",
-    title: "Design & Prototype",
+    title: "Design",
     description:
-      "We design a custom layout and visual direction. You see it before we build it and provide feedback.",
+      "Custom layout, visual direction, page structure. You sign off before we build a thing.",
   },
   {
     step: "03",
-    title: "Build & Optimize",
+    title: "Build",
     description:
-      "We build your site with clean code, blazing speed, and SEO baked in. Every element is optimized for conversions.",
+      "Clean code on Next.js. SEO and conversion structure baked in. Forms wired into your CRM. Analytics set up.",
   },
   {
     step: "04",
     title: "Launch & Support",
     description:
-      "We launch your site, set up analytics, and provide ongoing support to ensure everything runs smoothly.",
+      "Site goes live and we monitor it. You get support every month — content updates, page tweaks, new sections as the business changes.",
   },
 ];
 
 const useCases = [
   {
     icon: Briefcase,
-    title: "Service Business Landing Pages",
+    title: "Service Business Sites",
     description:
-      "Plumbers, electricians, cleaners, consultants — a high-converting page that turns Google searches into booked jobs.",
+      "Plumbers, electricians, roofers, pressure washing, HVAC — pages built around the services you want to push, ranked for the searches that book jobs.",
   },
   {
     icon: CalendarCheck,
     title: "Booking-Integrated Sites",
     description:
-      "Salons, clinics, coaches — sites with built-in scheduling so visitors can book an appointment in seconds.",
+      "Sites with scheduling baked in. Homeowners pick a time off your live calendar. The job lands in your CRM with the booking already confirmed.",
   },
   {
     icon: Camera,
-    title: "Portfolio Sites with Smart CTAs",
+    title: "Portfolio + Lead Capture",
     description:
-      "Photographers, designers, agencies — showcase your work beautifully while AI-driven CTAs guide visitors to inquire.",
+      "Showcase your past work — before/afters, photos, testimonials — and capture the lead in the same scroll. Built for trades where the work sells the work.",
   },
 ];
 
@@ -227,7 +227,7 @@ export default function AIWebsitesPage() {
               >
                 <Sparkles size={12} className="text-primary" />
                 <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-                  AI-Powered Websites
+                  Custom Websites for Home Service
                 </span>
               </motion.div>
 
@@ -237,8 +237,8 @@ export default function AIWebsitesPage() {
                 transition={{ duration: 0.7 }}
                 className="font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-5xl lg:text-6xl"
               >
-                Websites That Actually{" "}
-                <span className="text-gradient">Convert</span>
+                A Website That Actually{" "}
+                <span className="text-gradient">Books Jobs.</span>
               </motion.h1>
 
               <motion.p
@@ -247,9 +247,7 @@ export default function AIWebsitesPage() {
                 transition={{ duration: 0.7, delay: 0.15 }}
                 className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
               >
-                Fast, mobile-first, AI-powered websites designed to turn visitors
-                into paying customers. Not just a pretty site — a revenue-generating
-                machine.
+                Fast, built to rank, and wired into your CRM. Every form submission triggers your follow-up. Not a brochure — a piece of the system that actually closes leads.
               </motion.p>
 
               <motion.div
@@ -260,7 +258,7 @@ export default function AIWebsitesPage() {
               >
                 <a href="/book" className="block w-full sm:w-auto">
                   <Button variant="hero" size="lg" className="w-full sm:w-auto px-8 py-6 text-base">
-                    Get Your AI-Powered Website
+                    Book a Free Strategy Call
                   </Button>
                 </a>
               </motion.div>
@@ -275,8 +273,8 @@ export default function AIWebsitesPage() {
                 <div className="card-glass inline-flex flex-col items-start gap-3 px-5 py-4 sm:flex-row sm:items-center sm:gap-0 sm:px-2 sm:py-2">
                   {[
                     { icon: Zap, text: "Built in Days, Not Months" },
-                    { icon: Eye, text: "Designed to Convert" },
-                    { icon: MousePointerClick, text: "AI-Enhanced Engagement" },
+                    { icon: Eye, text: "Built to Rank & Convert" },
+                    { icon: MousePointerClick, text: "Wired Into Your CRM" },
                   ].map(({ icon: Icon, text }, i, arr) => (
                     <div key={text} className="flex items-center gap-2 px-3 py-1 sm:px-5 sm:py-2 relative">
                       <Icon size={15} className="text-primary shrink-0" />
@@ -315,12 +313,11 @@ export default function AIWebsitesPage() {
             className="mx-auto max-w-2xl text-center mb-8 md:mb-14"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              What Makes Our Sites{" "}
-              <span className="text-gradient">Different</span>
+              Engineered for Speed,{" "}
+              <span className="text-gradient">Rankings & Bookings.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Every website we build is engineered for speed, search rankings,
-              and conversions — not just aesthetics.
+              Every site is built around three jobs: load fast, rank in your city, and convert the visitor into a lead in your CRM.
             </p>
           </motion.div>
 
@@ -359,11 +356,10 @@ export default function AIWebsitesPage() {
             className="mx-auto max-w-2xl text-center mb-10 md:mb-16"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Our <span className="text-gradient">Process</span>
+              How We <span className="text-gradient">Build It.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              From concept to launch, we handle everything so you can focus on
-              running your business.
+              From first call to launch — same playbook every time. You stay in the loop, not stuck doing the work.
             </p>
           </motion.div>
 
@@ -407,11 +403,10 @@ export default function AIWebsitesPage() {
             className="mx-auto max-w-2xl text-center mb-10 md:mb-14"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Built For <span className="text-gradient">Your Industry</span>
+              Built For <span className="text-gradient">Your Trade.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              We&apos;ve built high-converting websites for businesses across
-              every industry.
+              We build sites for the trades that show up to homes — different services need different page structures, different keywords, different proof.
             </p>
           </motion.div>
 

@@ -7,21 +7,21 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 const stats = [
   {
     icon: Zap,
-    value: "3x",
-    label: "More leads contacted",
-    sub: "Every form, missed call, and inbound message gets a response in under 60 seconds.",
+    value: "78%",
+    label: "Buy from whoever responds first",
+    sub: "Most inbound leads go with the business that answers first. Slow follow-up loses jobs you already paid to get. (Source: Lead Connect)",
   },
   {
     icon: TrendingUp,
-    value: "47%",
-    label: "More jobs booked",
-    sub: "Same lead volume — better follow-up means more closes from the leads you already have.",
+    value: "100x",
+    label: "Higher qualify rate at 5 minutes",
+    sub: "Calling a new lead within 5 minutes is 100x more likely to qualify than calling at 30. (Source: Harvard Business Review)",
   },
   {
     icon: Clock,
-    value: "90d",
-    label: "Avg time to ROI",
-    sub: "Most clients see measurable return within 90 days of going live.",
+    value: "47 hrs",
+    label: "Industry-average response time",
+    sub: "Most home service businesses take 1–2 days to follow up. Scale Mint clients reply in under a minute, every time.",
   },
 ];
 
@@ -37,11 +37,11 @@ const HomeStats = () => {
           className="mx-auto max-w-2xl text-center mb-10"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-            Scale Mint Client Results
+            Industry Data
           </p>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-            More revenue.{" "}
-            <span className="text-gradient">Less manual work.</span>
+            Speed Decides Who{" "}
+            <span className="text-gradient">Books the Job.</span>
           </h2>
         </motion.div>
 

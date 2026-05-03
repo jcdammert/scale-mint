@@ -28,17 +28,17 @@ const DEFAULT_PRIMARY: CardConfig = {
   eyebrow: "Talk to us",
   title: "See how it works for your business.",
   description:
-    "Free 20-minute strategy call. We'll walk you through the sales process and show you how the whole system works — and see if it fits for your business.",
+    "Free 20-minute call. We walk through your sales process, show you how the system runs, and tell you straight if it fits.",
   cta: "Book a Free Strategy Call",
   href: "/book",
 };
 
 const DEFAULT_SECONDARY: CardConfig = {
   icon: Tag,
-  eyebrow: "Just looking?",
+  eyebrow: "Just looking",
   title: "See what it costs.",
   description:
-    "Transparent pricing for the platform plus done-for-you setup. No hidden fees, no surprises.",
+    "Plans, what's included, and what setup runs. No hidden fees.",
   cta: "See Pricing",
   href: "/pricing",
 };

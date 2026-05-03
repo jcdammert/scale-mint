@@ -8,8 +8,8 @@ import Particles from "@/components/Particles";
 
 const stats = [
   { icon: Clock, text: "Live in 5–10 Days" },
-  { icon: UserCheck, text: "No Tech Skills Needed" },
-  { icon: HeartHandshake, text: "Platform + Done-For-You Support" },
+  { icon: UserCheck, text: "No Tech Skills Required" },
+  { icon: HeartHandshake, text: "Platform + Done-For-You Setup" },
 ];
 
 const HeroSection = () => {
@@ -39,7 +39,7 @@ const HeroSection = () => {
         >
           <Sparkles size={12} className="text-primary" />
           <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-            The Growth Platform for Local Service Businesses
+            Built for Home Service Operators
           </span>
         </motion.div>
 
@@ -49,8 +49,8 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-5xl font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl"
         >
-          Make Your Business{" "}
-          <span className="text-gradient">Impossible to Ignore.</span>
+          The Sales System Your Business{" "}
+          <span className="text-gradient">Doesn&apos;t Have Yet.</span>
         </motion.h1>
 
         <motion.p
@@ -59,7 +59,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mx-auto mt-7 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg"
         >
-          Scale Mint builds your entire sales process, online presence, and follow-up system — all on one platform, all done for you. Stop losing leads. Start closing more jobs. When you&apos;re ready for more, just turn on the ads — the system&apos;s already built to handle the volume.
+          We install the pipeline, automations, and online presence that turn inbound leads into booked jobs — built and managed for how your crew actually runs. When you&apos;re ready to add ads, the system&apos;s already there to catch the volume.
         </motion.p>
 
         <motion.div

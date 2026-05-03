@@ -7,21 +7,21 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 const problems = [
   {
     icon: PhoneOff,
-    title: "You're losing jobs you should be closing",
+    title: "Leads are going cold while you're on the job.",
     description:
-      "Someone calls while you're on a job site. You forget to follow up. By the time you text back, they hired someone else. It's not that you're bad at sales — you just don't have a system doing it for you.",
+      "Someone calls while you're on a roof or under a sink. You forget to call back. By the time you do, they hired the next guy who answered. You don't have a sales problem — you have a follow-up problem.",
   },
   {
     icon: Search,
-    title: "People Google you and it doesn't look great",
+    title: "Homeowners Google you and aren't impressed.",
     description:
-      "No reviews, no posts, outdated website or no website at all. You're losing credibility before anyone even calls. Word-of-mouth leads check you out online and bounce to someone who looks more legit.",
+      "No recent reviews. No posts. An old website or no site at all. Even your word-of-mouth referrals look you up and bounce to a competitor who looks more legit.",
   },
   {
     icon: TrendingDown,
-    title: "You've tried running ads but it didn't work",
+    title: "You ran ads and the leads went nowhere.",
     description:
-      "You spent money on Facebook ads or Google ads and got leads, but there was no system to catch them, follow up, or close them. The ads weren't the problem — the backend was.",
+      "You spent on Meta or Google ads and got the leads. But no one followed up fast enough, nothing got tracked, and most of them ghosted. The ads weren't broken. The backend was.",
   },
 ];
 
@@ -36,7 +36,7 @@ const ProblemSection = () => {
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
-          Sound <span className="text-gradient">Familiar?</span>
+          Where the Money <span className="text-gradient">Quietly Leaks Out.</span>
         </motion.h2>
 
         <div className="mt-8 md:mt-14 grid gap-6 md:grid-cols-3">

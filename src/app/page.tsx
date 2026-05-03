@@ -11,9 +11,9 @@ import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Scale Mint — The Growth Platform for Local Service Businesses",
+  title: "Scale Mint — Sales & Follow-Up Systems for Home Service Businesses",
   description:
-    "Scale Mint builds your entire sales process, online presence, and follow-up system — all on one platform, all done for you. Stop losing leads. Start closing more jobs.",
+    "We install the platform and follow-up systems that turn missed calls into booked jobs. Pipeline, automations, online presence — all built and managed for you.",
 };
 
 export default function Home() {

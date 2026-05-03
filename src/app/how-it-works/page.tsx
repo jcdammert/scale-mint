@@ -31,35 +31,35 @@ const steps = [
     icon: PhoneCall,
     title: "We Get on a Call",
     description:
-      "Quick, easy call. You tell us a little about your business, any questions you have, any problems you want fixed, and anything that's eating up too much of your time. That's it — we listen, and figure out how we can help.",
+      "20 minutes. You walk us through how the business runs day to day — where leads come in, where they fall through, what's eating your time. We listen, ask questions, and tell you straight if we can help.",
   },
   {
     step: "02",
     icon: Handshake,
     title: "We Show You How It Works",
     description:
-      "We walk you through the platform, show you exactly how it fits your business, and you tell us if it makes sense. If there are gaps in your process — missed leads, no follow-up, weak online presence — we show you how we fix them. No pressure, just clarity.",
+      "We walk you through the platform with your business in mind. Where the gaps are — missed calls, dead pipelines, weak online presence — and how the system closes each one. No deck, no pitch. You decide if it fits.",
   },
   {
     step: "03",
     icon: Hammer,
-    title: "We Build Your Entire System",
+    title: "We Build the Whole System",
     description:
-      "This is where it gets good. We set up your full platform — your sales pipeline, your follow-up automations, your review system, your social posting, your online presence — all configured specifically for how your business runs. No templates. No generic setup. This is YOUR system, built for YOUR business. Typical build time: 5–10 business days.",
+      "Pipeline, follow-up sequences, review automation, social posting, GBP, your online presence — configured around how your crew actually runs. Not a template. Built and tested for your business. Live in 5–10 business days.",
   },
   {
     step: "04",
     icon: MonitorPlay,
     title: "We Walk You Through Everything",
     description:
-      "When it's done, we hop on a recorded training call and walk you through every piece of your system. You'll see your dashboard, your pipeline, your automations, your calendar — and you'll know exactly how to use all of it. You're in full control.",
+      "Recorded training call once it's live. Dashboard, pipeline, automations, calendar — every piece. You'll know how to use it without us. You're in control of your account from day one.",
   },
   {
     step: "05",
     icon: HeartHandshake,
     title: "We Stay in Your Corner",
     description:
-      "The monthly fee isn't just for the platform — it's for the team behind it. We post for you weekly, your automations keep running, and we're always available when you need something changed, added, or fixed. Want to add marketing or a website later? It plugs right into the system we already built. We're here for the long haul.",
+      "The monthly fee covers the platform and the team. We post for you weekly, the automations keep running, and we adjust things as your business changes. Want to add ads or a website later? It plugs into the system we already built — nothing rebuilt from scratch.",
   },
 ];
 
@@ -298,8 +298,8 @@ export default function HowItWorksPage() {
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
-            {"Here's Exactly How It "}
-            <span className="text-gradient">Works</span>
+            {"From First Call to "}
+            <span className="text-gradient">Live System.</span>
           </motion.h1>
           <motion.p
             initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -307,7 +307,7 @@ export default function HowItWorksPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            {"We don't hand you a login and say good luck. We build your entire system, train you on it, and stay in your corner every month."}
+            {"We don't hand you a login and say good luck. We build the system, configure it for your business, train you, and keep it running every month."}
           </motion.p>
         </div>
       </section>
@@ -442,7 +442,7 @@ export default function HowItWorksPage() {
                   <span className="text-gradient">Service Businesses.</span>
                 </h2>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  Here&apos;s the truth: running ads when your backend isn&apos;t ready is like pouring gas on the floor. Leads come in, nobody follows up fast enough, there&apos;s no pipeline, no system — and the money is wasted. That&apos;s why we build the system FIRST. When your sales process is dialed, your online presence is strong, and your follow-up is automatic — THEN marketing works. Because the system catches every lead, nurtures them, and helps you close. That&apos;s the difference between spending money on ads and making money from ads.
+                  Running ads before the backend is ready is how operators waste money. Leads come in, nobody follows up fast enough, there&apos;s no pipeline, and the spend disappears. That&apos;s why we build the system first. Once the pipeline catches every lead, the follow-up runs without you, and your online presence holds up to a Google search — that&apos;s when ads turn into booked jobs instead of a monthly invoice.
                 </p>
               </div>
             </div>

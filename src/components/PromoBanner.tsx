@@ -18,11 +18,11 @@ const PromoBanner = () => {
         >
           <Rocket size={28} className="text-primary shrink-0" />
           <p className="font-heading text-base md:text-lg font-semibold text-foreground text-center sm:text-left">
-            Limited Offer: Get a FREE Custom Website When You Sign Up for the Growth Plan.
+            Sign up for the Growth Plan and we&apos;ll build you a custom website. No extra charge.
           </p>
           <a href="/book" className="block w-full sm:w-auto sm:ml-auto shrink-0">
             <Button variant="hero" size="sm" className="w-full sm:w-auto">
-              Book a Call to Claim
+              Book a Call
             </Button>
           </a>
         </motion.div>

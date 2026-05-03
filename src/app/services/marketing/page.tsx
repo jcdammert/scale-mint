@@ -28,39 +28,39 @@ import { cn } from "@/lib/utils";
 const whyChooseUs = [
   {
     icon: Target,
-    title: "Data-Driven Strategy",
+    title: "Data, not guesses.",
     description:
-      "Every campaign we run is backed by data. We don't guess — we analyze, test, and optimize based on real performance metrics.",
+      "Every campaign decision comes off real numbers — what's converting, what's wasting spend, where the cost-per-lead is moving. We don't run on hunches.",
   },
   {
     icon: DollarSign,
-    title: "Transparent ROI Tracking",
+    title: "You see every dollar.",
     description:
-      "Know exactly where every dollar goes and what it brings back. Full visibility into your marketing spend and returns.",
+      "Full visibility into ad spend and what it brings back. No mystery line items, no inflated reporting. You know what each lead costs.",
   },
   {
     icon: Zap,
-    title: "AI-Enhanced Campaigns",
+    title: "Plugged into your CRM.",
     description:
-      "We leverage AI tools for audience targeting, ad optimization, and performance prediction — giving you an edge competitors don't have.",
+      "Leads from the ads land in your pipeline and trigger your follow-up — instead of getting emailed to you and forgotten.",
   },
   {
     icon: Users,
-    title: "Dedicated Account Management",
+    title: "A real person on your account.",
     description:
-      "A real person who knows your business inside and out. Weekly reports, strategy calls, and proactive optimization.",
+      "Not a queue of support tickets. The person running your ads knows your business and is reachable when something needs to change.",
   },
   {
     icon: Clock,
-    title: "Fast Results",
+    title: "Leads in week one.",
     description:
-      "We don't believe in 6-month ramp-up periods. Our campaigns are structured to deliver leads from week one.",
+      "We don't sell 6-month ramp-up plans. Campaigns are structured to start producing in the first week.",
   },
   {
     icon: TrendingUp,
-    title: "Continuous Optimization",
+    title: "Adjusted every week.",
     description:
-      "We never set and forget. Every week we analyze performance and make adjustments to improve your results.",
+      "We don't set and forget. Performance gets reviewed weekly and bids, audiences, or creative get changed when something isn't working.",
   },
 ];
 
@@ -207,7 +207,7 @@ export default function MarketingPage() {
           >
             <Sparkles size={12} className="text-primary" />
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-              Full-Service Digital Marketing
+              Marketing That Plugs Into the System
             </span>
           </motion.div>
 
@@ -217,8 +217,8 @@ export default function MarketingPage() {
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl"
           >
-            Marketing That Drives{" "}
-            <span className="text-gradient">Real Revenue</span>
+            Marketing That Pays{" "}
+            <span className="text-gradient">For Itself.</span>
           </motion.h1>
 
           <motion.p
@@ -227,9 +227,7 @@ export default function MarketingPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
           >
-            Full-service digital marketing powered by data, AI, and relentless
-            optimization. We don&apos;t just run ads — we build lead generation
-            machines that grow your revenue month over month.
+            Meta, Google, and local SEO — managed by us, plugged straight into the system that catches every lead and follows up automatically. The leads land where they get worked, not in some inbox you&apos;ll check Monday.
           </motion.p>
 
           <motion.div
@@ -240,12 +238,12 @@ export default function MarketingPage() {
           >
             <a href="/book" className="block w-full sm:w-auto">
               <Button variant="hero" size="lg" className="w-full sm:w-auto px-8 py-6 text-base">
-                Start Getting More Leads
+                Book a Free Strategy Call
               </Button>
             </a>
             <a href="#services" className="block w-full sm:w-auto">
               <Button variant="hero-outline" size="lg" className="w-full sm:w-auto px-8 py-6 text-base">
-                Explore Our Services
+                See What We Run
               </Button>
             </a>
           </motion.div>
@@ -260,8 +258,8 @@ export default function MarketingPage() {
             <div className="card-glass mx-auto inline-flex max-w-full flex-col items-center justify-center gap-3 px-5 py-4 sm:flex-row sm:gap-0 sm:px-2 sm:py-2">
               {[
                 { icon: DollarSign, text: "Transparent Pricing" },
-                { icon: TrendingUp, text: "Proven ROI" },
-                { icon: Shield, text: "No Long-Term Contracts" },
+                { icon: TrendingUp, text: "Plugged Into Your CRM" },
+                { icon: Shield, text: "Month-to-Month" },
                 { icon: BarChart3, text: "Weekly Reporting" },
               ].map(({ icon: Icon, text }, i, arr) => (
                 <div key={text} className="flex items-center gap-2 px-3 py-1 sm:px-5 sm:py-2 relative">
@@ -289,12 +287,11 @@ export default function MarketingPage() {
             className="mx-auto max-w-2xl text-center mb-8 md:mb-14"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Why Choose Us for{" "}
-              <span className="text-gradient">Marketing</span>
+              Why Operators Run Ads{" "}
+              <span className="text-gradient">With Us.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              We&apos;re not a generic agency. We combine AI technology with
-              hands-on expertise to deliver results that actually move the needle.
+              We&apos;re not a generic agency selling ad spend. We run the platform behind the ads — so the leads we generate actually get worked.
             </p>
           </motion.div>
 
@@ -440,12 +437,11 @@ export default function MarketingPage() {
             className="mx-auto max-w-2xl text-center mb-10 md:mb-16"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              How It All{" "}
-              <span className="text-gradient">Works Together</span>
+              How a Campaign{" "}
+              <span className="text-gradient">Actually Runs.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Each marketing channel amplifies the others. Here&apos;s how we
-              build your complete lead generation machine.
+              Same playbook every time. Audit, launch, adjust, scale.
             </p>
           </motion.div>
 
@@ -457,27 +453,27 @@ export default function MarketingPage() {
               {[
                 {
                   step: "01",
-                  title: "Strategy & Audit",
+                  title: "Audit",
                   description:
-                    "We analyze your market, competitors, and current marketing to build a custom strategy that maximizes your budget.",
+                    "We look at your market, your competitors, and what your current marketing is actually producing. We tell you where the gaps are before we spend a dollar.",
                 },
                 {
                   step: "02",
-                  title: "Launch Campaigns",
+                  title: "Launch",
                   description:
-                    "We set up and launch campaigns across the channels that make sense for your business — Google, Meta, or both.",
+                    "Campaigns go live on the channels that make sense for your business — Google, Meta, or both. Wired into your CRM from day one.",
                 },
                 {
                   step: "03",
-                  title: "Optimize & Scale",
+                  title: "Adjust",
                   description:
-                    "We analyze performance weekly, kill what doesn't work, double down on what does, and continuously improve results.",
+                    "Weekly review of what's converting and what isn't. Bids, audiences, and creative get changed when something stops performing.",
                 },
                 {
                   step: "04",
-                  title: "Report & Grow",
+                  title: "Scale",
                   description:
-                    "Transparent weekly reports show exactly what's working. As results compound, we scale your winning campaigns.",
+                    "Once a channel is producing reliably, we scale spend on it. The losers get cut. You see the numbers every week.",
                 },
               ].map((s, i) => (
                 <motion.div
@@ -514,8 +510,8 @@ export default function MarketingPage() {
             className="mx-auto max-w-2xl text-center mb-10 md:mb-14"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Results That{" "}
-              <span className="text-gradient">Speak for Themselves</span>
+              Numbers Operators{" "}
+              <span className="text-gradient">Actually Hit.</span>
             </h2>
           </motion.div>
 

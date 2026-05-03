@@ -18,8 +18,8 @@ const layers: Layer[] = [
     accent: "#4ade80",
     dimBg: "rgba(74,222,128,0.07)",
     border: "#1a5c2a",
-    pills: ["Meta ads", "Google PPC", "SEO", "GBP optimization"],
-    desc: "We run and manage your paid traffic — Meta, Google, and local SEO — so your phone rings consistently every week.",
+    pills: ["Meta ads", "Google PPC", "Local SEO", "GBP optimization"],
+    desc: "Paid traffic and local SEO — Meta, Google, and your Business Profile — managed end to end so the phone keeps ringing every week.",
   },
   {
     num: "02",
@@ -28,7 +28,7 @@ const layers: Layer[] = [
     dimBg: "rgba(52,211,153,0.07)",
     border: "#145c3a",
     pills: ["Instant text-back", "Missed call AI", "2-way SMS", "Email sequences"],
-    desc: "Every lead gets a response in under 60 seconds. Missed calls auto-text back. No lead slips through the cracks.",
+    desc: "Every inbound lead gets a reply within a minute. Missed calls fire an instant text-back. Nothing waits for you to grab your phone.",
   },
   {
     num: "03",
@@ -37,7 +37,7 @@ const layers: Layer[] = [
     dimBg: "rgba(34,211,238,0.07)",
     border: "#0e4a55",
     pills: ["CRM pipeline", "Estimates & invoices", "E-signatures", "Scheduling"],
-    desc: "Your full sales pipeline, automated. Send estimates, collect signatures, and book jobs without lifting a finger.",
+    desc: "Pipeline you can actually see. Estimates and invoices go out from the same system. Signatures come back. Jobs land on the calendar.",
   },
   {
     num: "04",
@@ -46,7 +46,7 @@ const layers: Layer[] = [
     dimBg: "rgba(163,230,53,0.07)",
     border: "#365214",
     pills: ["Auto review requests", "Social posting", "Referral system"],
-    desc: "After every job, a review request fires automatically. Your Google rating climbs. New leads trust you before they even call.",
+    desc: "When a job is marked complete, a review request goes out by text. Your Google rating climbs. New leads trust you before the first call.",
   },
 ];
 
@@ -179,7 +179,7 @@ export default function ScaleMintSystemStack() {
         }}
       >
         <p style={{ fontSize: 11, color: "hsl(148 30% 50%)", margin: 0, letterSpacing: "0.04em" }}>
-          Click any layer to learn more
+          Click any layer to see what it does
         </p>
       </div>
 

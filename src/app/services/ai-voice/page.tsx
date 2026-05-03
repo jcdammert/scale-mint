@@ -35,43 +35,43 @@ const features = [
     icon: Clock,
     title: "24/7 Call Answering",
     description:
-      "Your AI receptionist picks up every call, day or night. No voicemail black holes. No missed opportunities. Every caller gets a professional, helpful response.",
+      "The AI picks up every call, day or night. No more voicemail black holes. No more leads going to whoever answers their phone first.",
   },
   {
     icon: PhoneForwarded,
     title: "Intelligent Call Routing",
     description:
-      "The AI understands the caller's intent and routes them to the right person or department. Urgent calls get escalated immediately.",
+      "The AI figures out what the caller needs and routes them to the right person or queue. Emergency calls get escalated to you immediately.",
   },
   {
     icon: FileText,
     title: "Voicemail Transcription",
     description:
-      "Every voicemail is transcribed and sent to you as text — via email, SMS, or Slack. Read your messages instead of listening to them.",
+      "Every voicemail gets transcribed and dropped into your email, SMS, or Slack. Read messages between jobs instead of listening to them.",
   },
   {
     icon: CalendarCheck,
     title: "Appointment Scheduling",
     description:
-      "Callers can book appointments directly through the phone call. The AI checks your availability and confirms the booking in real-time.",
+      "The AI checks your calendar and books the appointment over the phone. Real-time confirmation. The customer hangs up with a job on the books.",
   },
   {
     icon: UserCheck,
     title: "Lead Qualification",
     description:
-      "The AI asks qualifying questions before connecting the caller to your team. Know exactly who's calling and what they need before you pick up.",
+      "Asks the qualifying questions before passing the call. You know who's on the line and what they need before you pick up.",
   },
   {
     icon: Mic,
     title: "Custom Greeting & Voice",
     description:
-      "A branded greeting that sounds professional and matches your business personality. Callers won't know it's AI.",
+      "A branded greeting in a voice you pick. It sounds like your front desk, not a robot. Most callers can't tell.",
   },
   {
     icon: BarChart3,
     title: "Call Analytics",
     description:
-      "Detailed insights on call volume, peak times, common questions, and conversion rates. Make data-driven decisions about your phone operations.",
+      "Call volume, peak hours, what people ask, what converts. Real numbers you can use to staff and price.",
   },
 ];
 
@@ -80,64 +80,64 @@ const conversationFeatures = [
     icon: Zap,
     title: "Instant Missed Call Text-Back",
     description:
-      "The moment someone calls and you miss it, they get an automatic text. Most leads book with whoever responds first — now that's always you.",
+      "The second a call goes unanswered, the lead gets a text. Most homeowners book with whoever replies first — now that's always you.",
   },
   {
     icon: MessageSquare,
     title: "2-Way AI SMS Conversations",
     description:
-      "The AI holds real conversations over text — answers questions, qualifies the lead, and books appointments without you lifting a finger.",
+      "The AI holds the conversation over text — answers questions, qualifies the lead, and books the job. You only step in when the lead is ready.",
   },
   {
     icon: RefreshCw,
     title: "Automated Follow-Up Sequences",
     description:
-      "If a lead goes cold, a multi-day text sequence fires automatically. Day 1, Day 3, Day 7 — keeping you top of mind until they're ready.",
+      "When a lead goes cold, a multi-day text sequence fires. Day 1, Day 3, Day 7 — until they book or tell you no.",
   },
   {
     icon: CalendarCheck,
     title: "Appointment Reminders",
     description:
-      "Automated reminder texts go out before every job. Fewer no-shows, fewer last-minute cancellations, more revenue on the books.",
+      "Reminder texts go out before every job. Fewer no-shows, fewer last-minute cancels, fewer windows where the truck shows up to an empty house.",
   },
   {
     icon: Star,
     title: "Post-Job Review Requests",
     description:
-      "After every completed job, a review request fires automatically. Your Google rating climbs without you ever asking manually.",
+      "When a job is marked complete, a review request goes out by text. Most clients pick up 5–10 new Google reviews in the first 60 days.",
   },
   {
     icon: TrendingUp,
     title: "Lead Nurture Campaigns",
     description:
-      "Not every lead is ready today. Automated sequences keep your business in front of them so when they're ready to buy, they call you.",
+      "Not every lead books today. A nurture sequence keeps you in front of them so when they're ready, you're the first name in their messages.",
   },
 ];
 
 const steps = [
   {
     step: "01",
-    title: "Configure Your AI Voice",
+    title: "Configure",
     description:
-      "We set up your custom greeting, call routing rules, and business hours. The AI learns your services, pricing, and FAQs.",
+      "We set up the greeting, routing rules, and hours. The AI gets trained on your services, pricing, and the questions you get asked all day.",
   },
   {
     step: "02",
-    title: "Connect Your Phone",
+    title: "Connect Your Number",
     description:
-      "We integrate with your existing phone number — no need to change it. Calls forward to the AI seamlessly.",
+      "We forward your existing business line to the AI — no number changes. Customers call the same number they always have.",
   },
   {
     step: "03",
-    title: "Test & Refine",
+    title: "Test & Tune",
     description:
-      "We run test calls, refine conversation flows, and optimize the AI's responses until they're perfect.",
+      "We run test calls, fix what sounds off, and adjust how the AI handles edge cases. You sign off before it goes live.",
   },
   {
     step: "04",
     title: "Go Live",
     description:
-      "Flip the switch and never miss a call again. We monitor performance and continuously improve.",
+      "Flip the switch. We monitor calls in the first week and tune anything that needs adjusting.",
   },
 ];
 
@@ -267,7 +267,7 @@ function SMSMockup() {
         {/* Booked badge */}
         <div className="mx-4 mb-4 flex items-center justify-center gap-2 rounded-lg bg-primary/5 border border-primary/15 py-2">
           <CalendarCheck size={13} className="text-primary" />
-          <span className="text-[11px] text-primary font-medium">Appointment booked · No human needed</span>
+          <span className="text-[11px] text-primary font-medium">Appointment booked · No human required</span>
         </div>
       </div>
 
@@ -405,8 +405,8 @@ export default function AIVoicePage() {
                 transition={{ duration: 0.7 }}
                 className="font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-5xl lg:text-6xl"
               >
-                Never Miss a Call{" "}
-                <span className="text-gradient">Again</span>
+                Your Phone, Answered{" "}
+                <span className="text-gradient">Every Time.</span>
               </motion.h1>
 
               <motion.p
@@ -415,9 +415,7 @@ export default function AIVoicePage() {
                 transition={{ duration: 0.7, delay: 0.15 }}
                 className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
               >
-                AI-powered voice agents and virtual receptionists that pick up every
-                call, qualify leads, book appointments, and route callers — 24 hours
-                a day, 7 days a week.
+                AI voice agents that pick up when you can&apos;t — qualify the lead, book the appointment, and route the call. 24 hours a day, 7 days a week. The customer thinks they&apos;re talking to your front desk.
               </motion.p>
 
               <motion.div
@@ -428,7 +426,7 @@ export default function AIVoicePage() {
               >
                 <a href="/book" className="block w-full sm:w-auto">
                   <Button variant="hero" size="lg" className="w-full sm:w-auto px-8 py-6 text-base">
-                    Get Your AI Receptionist
+                    Book a Free Strategy Call
                   </Button>
                 </a>
               </motion.div>
@@ -442,9 +440,9 @@ export default function AIVoicePage() {
               >
                 <div className="card-glass inline-flex flex-col items-start gap-3 px-5 py-4 sm:flex-row sm:items-center sm:gap-0 sm:px-2 sm:py-2">
                   {[
-                    { icon: PhoneCall, text: "Every Call Answered" },
-                    { icon: Shield, text: "Professional & Consistent" },
-                    { icon: TrendingUp, text: "More Booked Appointments" },
+                    { icon: PhoneCall, text: "Picks Up in Under 2s" },
+                    { icon: Shield, text: "Sounds Like Your Front Desk" },
+                    { icon: TrendingUp, text: "Books Jobs to Your Calendar" },
                   ].map(({ icon: Icon, text }, i, arr) => (
                     <div key={text} className="flex items-center gap-2 px-3 py-1 sm:px-5 sm:py-2 relative">
                       <Icon size={15} className="text-primary shrink-0" />
@@ -483,12 +481,11 @@ export default function AIVoicePage() {
             className="mx-auto max-w-2xl text-center mb-8 md:mb-12"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              What Your AI Voice Agent{" "}
-              <span className="text-gradient">Can Do</span>
+              What the Voice Agent{" "}
+              <span className="text-gradient">Actually Does.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              A full-featured virtual receptionist that handles calls like your
-              best employee.
+              A receptionist that handles calls like your best front-desk hire — except it works nights, weekends, and never asks for a raise.
             </p>
           </motion.div>
 
@@ -506,8 +503,8 @@ export default function AIVoicePage() {
             className="mx-auto max-w-2xl text-center mb-10 md:mb-16"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Getting Started Is{" "}
-              <span className="text-gradient">Simple</span>
+              How We Set It{" "}
+              <span className="text-gradient">Up.</span>
             </h2>
           </motion.div>
 
@@ -600,8 +597,8 @@ export default function AIVoicePage() {
                 transition={{ duration: 0.7 }}
                 className="font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-5xl"
               >
-                Text Every Lead.{" "}
-                <span className="text-gradient">Automatically.</span>
+                Every Lead Texted.{" "}
+                <span className="text-gradient">Without You.</span>
               </motion.h2>
 
               <motion.p
@@ -611,9 +608,7 @@ export default function AIVoicePage() {
                 transition={{ duration: 0.7, delay: 0.15 }}
                 className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
               >
-                While your AI voice agent handles inbound calls, your AI conversation
-                system follows up with every lead over SMS — instantly, automatically,
-                and at scale. No manual texting. No leads falling through the cracks.
+                The voice agent picks up the call. The conversation engine follows up by text — instantly, then on a sequence — until the lead books or tells you no. You stop being the bottleneck.
               </motion.p>
 
               <motion.div
@@ -644,11 +639,11 @@ export default function AIVoicePage() {
             className="mx-auto max-w-2xl text-center mb-8 md:mb-14"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Your AI Conversation{" "}
-              <span className="text-gradient">Engine</span>
+              Every Lead Texted{" "}
+              <span className="text-gradient">Without You.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Every lead gets a response. Every job gets a follow-up. All on autopilot.
+              Every lead gets a reply. Every job gets a follow-up. You don&apos;t have to remember a thing.
             </p>
           </motion.div>
 

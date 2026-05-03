@@ -96,8 +96,8 @@ export default function PricingPage() {
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
-            Two Plans. One Platform.{" "}
-            <span className="text-gradient">Built For You.</span>
+            Plain Pricing.{" "}
+            <span className="text-gradient">No Mystery.</span>
           </motion.h1>
           <motion.p
             initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -105,9 +105,7 @@ export default function PricingPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            Pick where you are right now. Whether you just need to get organized
-            or you&apos;re ready to build a full growth engine — we set everything
-            up, train you, and stay in your corner.
+            Two plans depending on where the business is right now. Either way, we set everything up, train you, and keep it running every month.
           </motion.p>
         </div>
       </section>
@@ -125,8 +123,8 @@ export default function PricingPage() {
               Choose Your Plan
             </p>
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-              Two Simple Plans.{" "}
-              <span className="text-gradient">No Surprises.</span>
+              Pick Where You Are{" "}
+              <span className="text-gradient">Right Now.</span>
             </h2>
           </motion.div>
           <div className="grid gap-6 md:grid-cols-2">
@@ -141,7 +139,7 @@ export default function PricingPage() {
                 Starter
               </h3>
               <p className="mt-1 text-sm font-medium text-primary">
-                Get organized. Stop losing leads.
+                Get the system in place. Stop losing leads.
               </p>
 
               <div className="mt-4 flex items-baseline gap-2">
@@ -155,8 +153,7 @@ export default function PricingPage() {
               </p>
 
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Everything you need to run your day-to-day and stop letting
-                opportunities slip through the cracks. We build it, you use it.
+                The platform you need to run day-to-day operations and catch every lead. We build it. You run it.
               </p>
 
               <ul className="mt-6 flex-1 space-y-3">
@@ -181,8 +178,7 @@ export default function PricingPage() {
               </a>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
-                Best for businesses doing under $7K/month or just getting their
-                systems in place.
+                Best for crews under $7K/month or owners getting their systems in place for the first time.
               </p>
             </motion.div>
 
@@ -202,7 +198,7 @@ export default function PricingPage() {
                 Growth
               </h3>
               <p className="mt-1 text-sm font-medium text-primary">
-                Build the full engine. Close more. Scale faster.
+                The full engine. Closes more, handles more volume.
               </p>
 
               <div className="mt-4 flex items-baseline gap-2">
@@ -216,10 +212,7 @@ export default function PricingPage() {
               </p>
 
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Everything in Starter, plus we dial in your entire sales process
-                with custom automations, lead nurturing, and a system built to
-                handle volume. This is the plan for business owners ready to grow
-                aggressively.
+                Everything in Starter, plus custom automations, lead nurture sequences, advanced pipeline workflows, and priority support. The plan for owners ready to push volume.
               </p>
 
               {/* Promo badge */}
@@ -252,8 +245,7 @@ export default function PricingPage() {
               </a>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
-                Best for businesses ready to scale and want a system that closes
-                for them.
+                Best for crews pushing for more volume and owners who want the system doing the closing work.
               </p>
             </motion.div>
           </div>
@@ -269,10 +261,7 @@ export default function PricingPage() {
             viewport={{ once: true }}
             className="text-sm text-muted-foreground text-center"
           >
-            Setup fees are quoted on your strategy call based on what your
-            business needs. Starter builds take 5–7 days. Growth builds take
-            7–10 days. No surprises — you&apos;ll know exactly what it costs
-            before you commit.
+            Setup fees are quoted on the call based on what your business actually needs. Starter builds run 5–7 days. Growth builds run 7–10 days. You&apos;ll know the exact cost before you commit.
           </motion.p>
         </div>
       </section>
@@ -295,17 +284,11 @@ export default function PricingPage() {
               Optional Add-Ons
             </p>
             <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-              Make Your System Work{" "}
-              <span className="text-gradient">Even Harder.</span>
+              Plug Into{" "}
+              <span className="text-gradient">the System.</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              We build the system first, then plug marketing directly into
-              it — so every lead gets captured, followed up with, and closed.
-              Our goal isn&apos;t to overcharge you on marketing. We want as
-              much of your budget as possible going into the ads themselves —
-              because the more jobs we help you close, the more you grow with
-              us. We provide the shovels. You keep the gold. Pricing is
-              custom quoted because every business is different.
+              We build the platform first, then plug ads, websites, and AI into it — so every lead gets captured, followed up with, and closed. We don&apos;t overcharge on marketing. As much of your budget as possible goes into the ads themselves, because the more jobs you close, the longer we work together. Pricing is custom-quoted because every business is different.
             </p>
           </motion.div>
 
@@ -351,7 +334,7 @@ export default function PricingPage() {
         primary={{
           title: "We'll walk you through it.",
           description:
-            "Free 20-minute call — we'll look at your business, recommend the right plan, and answer every question. No pressure, no pitch.",
+            "Free 20-minute call. We look at your business, recommend the right plan, and answer every question. No pressure, no pitch.",
         }}
       />
 
