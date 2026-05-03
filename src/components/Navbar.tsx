@@ -81,7 +81,15 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex md:items-center md:gap-3">
+          <a
+            href="https://app.scalemintsolutions.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Log in
+          </a>
           <a href="/book">
             <Button variant="hero" size="sm">Book a Free Call</Button>
           </a>
@@ -131,6 +139,15 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          <a
+            href="https://app.scalemintsolutions.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            onClick={() => setMobileOpen(false)}
+          >
+            Log in
+          </a>
           <a href="/book" onClick={() => setMobileOpen(false)}>
             <Button variant="hero" size="sm" className="mt-2 w-full">Book a Free Call</Button>
           </a>
