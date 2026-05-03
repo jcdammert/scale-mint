@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FlyingRocket from "@/components/FlyingRocket";
 
 export const metadata: Metadata = {
   title: "Scale Mint — Sales & Follow-Up Systems for Home Service Businesses",
@@ -26,7 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased"><div className="relative z-10">{children}</div></body>
+      <body className="antialiased">
+        <FlyingRocket />
+        <div className="relative z-10">{children}</div>
+      </body>
     </html>
   );
 }

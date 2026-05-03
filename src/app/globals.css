@@ -319,3 +319,96 @@
   height: 1px;
   background: linear-gradient(90deg, transparent, hsl(148 95% 60% / 0.3), hsl(148 95% 60% / 0.1), transparent);
 }
+
+/* ─── Flying rocket (background, every page) ─── */
+
+/* Parallax wrapper — translated by JS based on cursor position */
+.rocket-flight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(var(--rx, 0px), var(--ry, 0px));
+  transition: transform 0.05s linear;
+  will-change: transform;
+}
+
+/* The rocket + trail ride together along the keyframe path */
+.rocket-traveler {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  animation: rocket-fly 38s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  will-change: transform;
+}
+
+.rocket-flight .rocket-icon {
+  display: block;
+  position: relative;
+  z-index: 2;
+  color: hsl(148 95% 60%);
+  opacity: 0.5;
+  filter:
+    drop-shadow(0 0 6px hsl(148 95% 60% / 0.85))
+    drop-shadow(0 0 16px hsl(148 95% 60% / 0.45))
+    drop-shadow(0 0 32px hsl(148 95% 60% / 0.2));
+}
+
+/* Glow trail extending back from the rocket */
+.rocket-flight .rocket-trail {
+  position: absolute;
+  top: 13px;
+  right: 22px;
+  width: 90px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsl(148 95% 60% / 0.45) 55%,
+    hsl(148 95% 60% / 0.85)
+  );
+  filter: blur(3px);
+  opacity: 0.5;
+  animation: rocket-trail-fade 2.6s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Curved loop across the viewport with rotation along travel direction */
+@keyframes rocket-fly {
+  0% {
+    transform: translate(-12vw, 88vh) rotate(-45deg);
+  }
+  12% {
+    transform: translate(8vw, 70vh) rotate(-30deg);
+  }
+  25% {
+    transform: translate(28vw, 45vh) rotate(-15deg);
+  }
+  40% {
+    transform: translate(55vw, 22vh) rotate(10deg);
+  }
+  55% {
+    transform: translate(82vw, 15vh) rotate(45deg);
+  }
+  68% {
+    transform: translate(102vw, 38vh) rotate(95deg);
+  }
+  80% {
+    transform: translate(85vw, 78vh) rotate(160deg);
+  }
+  92% {
+    transform: translate(40vw, 102vh) rotate(210deg);
+  }
+  100% {
+    transform: translate(-12vw, 88vh) rotate(315deg);
+  }
+}
+
+@keyframes rocket-trail-fade {
+  0%, 100% { opacity: 0.6; transform: scaleX(1); }
+  50%      { opacity: 0.3; transform: scaleX(0.85); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rocket-flight { display: none; }
+}
