@@ -317,27 +317,8 @@ const ServicesSection = () => {
   return (
     <section id="services" className="px-4 py-10 md:py-20">
       <div className="container mx-auto">
-        {/* Section heading */}
-        <motion.div
-          initial={isMobile ? false : { opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mx-auto max-w-2xl text-center"
-        >
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-            What We Build For You
-          </p>
-          <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
-            A Complete Growth System.{" "}
-            <span className="text-gradient">Not Just Another Tool.</span>
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            We don&apos;t hand you a login and wish you luck. We build the entire engine — your sales process, your online presence, your follow-up system — all connected, all done for you, all on one platform.
-          </p>
-        </motion.div>
-
         {/* 4 Pillars — alternating zigzag */}
-        <div className="relative mt-14 md:mt-20 max-w-6xl mx-auto space-y-14 md:space-y-24">
+        <div className="relative max-w-6xl mx-auto space-y-14 md:space-y-24">
           {/* Vertical line on desktop */}
           <div className="pointer-events-none absolute left-1/2 top-0 bottom-0 hidden w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-primary/15 to-transparent md:block" />
 
