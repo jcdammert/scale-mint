@@ -99,9 +99,50 @@ export default function HowItWorksPage() {
       </section>
 
       {/* System Stack visualizer */}
-      <section className="px-4 pb-6 md:pb-10">
+      <section className="px-4 pt-2 pb-10 md:pb-16">
         <div className="container mx-auto max-w-4xl">
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-2xl text-center mb-8"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
+              The Scale Mint Growth Engine
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+              Four Layers.{" "}
+              <span className="text-gradient">One Connected System.</span>
+            </h2>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Every layer feeds into the next — and we build all of it for you.
+            </p>
+          </motion.div>
           <ScaleMintSystemStack />
+        </div>
+      </section>
+
+      {/* Section divider */}
+      <div className="container mx-auto px-4 max-w-4xl">
+        <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      </div>
+
+      {/* Steps intro */}
+      <section className="px-4 pt-10 md:pt-14 pb-2 text-center">
+        <div className="container mx-auto max-w-2xl">
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
+              Our 5-Step Process
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+              From First Call to{" "}
+              <span className="text-gradient">Live System.</span>
+            </h2>
+          </motion.div>
         </div>
       </section>
 

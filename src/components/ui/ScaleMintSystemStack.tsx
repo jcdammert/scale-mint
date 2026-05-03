@@ -158,54 +158,35 @@ export default function ScaleMintSystemStack() {
   return (
     <div
       style={{
-        background: "linear-gradient(160deg,#040c06 0%,#081410 60%,#040c06 100%)",
-        borderRadius: 20,
-        padding: "28px 24px",
-        overflow: "hidden",
+        background: "hsl(230 12% 10% / 0.6)",
+        borderRadius: 16,
+        padding: "20px 20px",
         position: "relative",
         fontFamily: "system-ui, sans-serif",
+        border: "1px solid rgba(255,255,255,0.07)",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
+        boxShadow: "0 4px 24px rgba(0,0,0,0.2)",
       }}
     >
-      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: "linear-gradient(90deg,transparent,#4ade8055,transparent)" }} />
-
       <div
         style={{
           textAlign: "center",
-          marginBottom: 22,
+          marginBottom: 16,
           opacity: visible ? 1 : 0,
           transform: visible ? "none" : "translateY(10px)",
           transition: "all 0.5s ease",
         }}
       >
-        <div style={{ fontSize: 10, letterSpacing: "0.14em", color: "#4ade80", fontWeight: 600, marginBottom: 8 }}>
-          THE SCALE MINT GROWTH ENGINE
-        </div>
-        <p style={{ fontSize: 20, fontWeight: 700, color: "#e8fdf0", margin: "0 0 6px" }}>
-          Every layer working for your business
+        <p style={{ fontSize: 11, color: "hsl(148 30% 50%)", margin: 0, letterSpacing: "0.04em" }}>
+          Click any layer to learn more
         </p>
-        <p style={{ fontSize: 12, color: "#2d6a3a", margin: 0 }}>Click any layer to learn more</p>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {layers.map((l, i) => (
           <LayerRow key={i} layer={l} idx={i} active={active} setActive={setActive} />
         ))}
-      </div>
-
-      <div
-        style={{
-          marginTop: 14,
-          padding: "10px 16px",
-          background: "rgba(255,255,255,0.02)",
-          borderRadius: 10,
-          border: "0.5px solid rgba(255,255,255,0.05)",
-          textAlign: "center",
-        }}
-      >
-        <span style={{ fontSize: 11, color: "#1f4a2a" }}>Powered by </span>
-        <span style={{ fontSize: 11, color: "#2d6a3a", fontWeight: 500 }}>
-          GoHighLevel · Stripe · Meta · Google · AI automation
-        </span>
       </div>
     </div>
   );
