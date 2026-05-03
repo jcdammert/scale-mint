@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import {
   Check,
   ArrowLeft,
+  ArrowRight,
   Megaphone,
   Globe,
   Sparkles,
@@ -47,6 +48,7 @@ const addOns = [
     desc: "Meta Ads, Google PPC, and SEO — built and managed to drive leads straight into your pipeline. No leaky funnels. Every lead lands in your system and gets followed up with automatically.",
     note: "",
     highlight: false,
+    href: "/services/marketing",
   },
   {
     icon: Globe,
@@ -54,6 +56,7 @@ const addOns = [
     desc: "SEO-optimized, fast, built to convert visitors into leads — and every form submission goes directly into your CRM and triggers your follow-up automations. Not a template. Built on Next.js for speed and rankings.",
     note: "",
     highlight: false,
+    href: "/services/ai-websites",
   },
   {
     icon: Sparkles,
@@ -61,6 +64,7 @@ const addOns = [
     desc: "AI voice receptionist, smart chatbot, and 24/7 lead qualification. Answers calls, texts leads back, qualifies them, and books appointments — all while you're on a job site.",
     note: "",
     highlight: false,
+    href: "/services/ai-voice",
   },
 ];
 
@@ -313,9 +317,9 @@ export default function PricingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="card-glass flex flex-col p-6 text-center transition-all duration-300 hover:border-primary/20"
+                className="card-glass flex flex-col p-6 text-center transition-all duration-300 hover:border-primary/30 group"
               >
-                <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 transition-transform duration-300 group-hover:scale-110">
                   <a.icon size={20} className="text-primary" />
                 </div>
                 <h4 className="font-heading text-base font-semibold text-foreground mb-2">
@@ -324,6 +328,13 @@ export default function PricingPage() {
                 <p className="text-xs leading-relaxed text-muted-foreground flex-1">
                   {a.desc}
                 </p>
+                <Link
+                  href={a.href}
+                  className="mt-5 inline-flex items-center justify-center gap-1.5 rounded-lg border border-primary/25 bg-primary/5 px-4 py-2.5 text-xs font-semibold text-primary transition-all duration-200 hover:bg-primary/10 hover:border-primary/40"
+                >
+                  Learn more
+                  <ArrowRight size={13} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+                </Link>
               </motion.div>
             ))}
           </div>
