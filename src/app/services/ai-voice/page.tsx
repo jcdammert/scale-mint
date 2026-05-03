@@ -623,7 +623,7 @@ export default function AIVoicePage() {
                 transition={{ duration: 0.7, delay: 0.3 }}
                 className="mt-8 flex flex-col gap-3 sm:flex-row"
               >
-                <a href="/book" className="block w-full sm:w-auto">
+                <a href="/live-demo" className="block w-full sm:w-auto">
                   <Button variant="hero" size="lg" className="w-full sm:w-auto px-8 py-6 text-base">
                     See It In Action
                   </Button>
