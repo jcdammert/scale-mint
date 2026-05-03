@@ -2,39 +2,79 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 const FinalCTASection = () => {
   const isMobile = useIsMobile();
   return (
-    <section id="final-cta" className="section-padding">
-      <div className="container mx-auto">
-        <motion.div
-          initial={isMobile ? false : { opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 px-8 py-16 text-center md:px-16 md:py-24"
-        >
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
+    <section id="final-cta" className="section-padding section-glow">
+      <div className="container relative z-10 mx-auto">
+        <div className="grid gap-5 lg:grid-cols-5 lg:items-stretch">
+          {/* Left — See It In Action (smaller) */}
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="card-glass relative overflow-hidden p-8 md:p-10 lg:col-span-2 flex flex-col justify-center text-center lg:text-left"
+          >
+            <div className="mx-auto lg:mx-0 mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
+              <Play size={20} className="text-primary ml-0.5" />
+            </div>
+            <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
+              See It <span className="text-gradient">In Action.</span>
+            </h3>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
+              Watch how our AI qualifies your leads and texts you when
+              they&apos;re ready — all on autopilot.
+            </p>
+            <div className="mt-6">
+              <a href="/live-demo" className="block w-full sm:w-auto sm:inline-block">
+                <Button
+                  variant="hero-outline"
+                  size="lg"
+                  className="w-full sm:w-auto px-6 py-5 text-sm"
+                >
+                  View Live Demo
+                  <ArrowRight size={16} />
+                </Button>
+              </a>
+            </div>
+          </motion.div>
 
-          <h2 className="relative font-heading text-3xl font-bold text-foreground md:text-5xl">
-            Stop Losing Leads.
-            <br />
-            <span className="text-gradient">Start Closing More Jobs.</span>
-          </h2>
-          <p className="relative mx-auto mt-6 max-w-xl text-muted-foreground">
-            Book a free strategy call — we&apos;ll show you exactly what your system would look like and build a plan for your business.
-          </p>
-          <div className="relative mt-10">
-            <a href="/book" className="block w-full sm:w-auto">
-              <Button variant="cta" size="lg" className="px-6 py-5 text-sm sm:px-10 sm:py-7 sm:text-lg animate-glow-pulse w-full sm:w-auto">
-                Book Your Free Strategy Call
-                <ArrowRight size={20} />
-              </Button>
-            </a>
-          </div>
-        </motion.div>
+          {/* Right — Final CTA (larger, primary) */}
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="relative overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 px-8 py-12 md:px-12 md:py-14 lg:col-span-3 flex flex-col justify-center text-center"
+          >
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
+
+            <h2 className="relative font-heading text-3xl font-bold text-foreground md:text-4xl lg:text-[2.6rem] leading-[1.1]">
+              Stop Losing Leads.
+              <br />
+              <span className="text-gradient">Start Closing More Jobs.</span>
+            </h2>
+            <p className="relative mx-auto mt-5 max-w-xl text-sm md:text-base text-muted-foreground">
+              Book a free strategy call — we&apos;ll show you exactly what your
+              system would look like and build a plan for your business.
+            </p>
+            <div className="relative mt-7">
+              <a href="/book" className="block w-full sm:w-auto sm:inline-block">
+                <Button
+                  variant="cta"
+                  size="lg"
+                  className="px-8 py-6 text-base animate-glow-pulse w-full sm:w-auto"
+                >
+                  Book Your Free Strategy Call
+                  <ArrowRight size={18} />
+                </Button>
+              </a>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
