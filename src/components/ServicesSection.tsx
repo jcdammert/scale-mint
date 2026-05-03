@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Megaphone,
@@ -204,6 +205,16 @@ function PillarVisual({ idx }: { idx: number }) {
   }
 
   // Pillar 4: Ready to Scale — growth chart + ads toggle
+  return <Pillar4Visual />;
+}
+
+function Pillar4Visual() {
+  const [adsOn, setAdsOn] = useState(true);
+  // Bars dim when ads off
+  const baseBars = [20, 28, 24, 38, 35, 52, 48, 70, 85, 95];
+  const dimBars = [20, 22, 19, 26, 24, 28, 25, 32, 30, 34];
+  const bars = adsOn ? baseBars : dimBars;
+
   return (
     <div className="relative w-full max-w-sm space-y-3">
       <div className="card-glass p-5 shadow-2xl">
@@ -212,21 +223,33 @@ function PillarVisual({ idx }: { idx: number }) {
             <div className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
               This month
             </div>
-            <div className="font-heading text-2xl font-bold text-foreground">
-              $84,200
+            <div className="font-heading text-2xl font-bold text-foreground transition-all">
+              {adsOn ? "$84,200" : "$31,400"}
             </div>
           </div>
-          <div className="flex items-center gap-1.5 rounded-full bg-primary/15 px-2.5 py-1">
-            <TrendingUp size={11} className="text-primary" />
-            <span className="text-[10px] font-bold text-primary">+218%</span>
+          <div
+            className={`flex items-center gap-1.5 rounded-full px-2.5 py-1 transition-all ${
+              adsOn
+                ? "bg-primary/15 text-primary"
+                : "bg-muted/40 text-muted-foreground"
+            }`}
+          >
+            <TrendingUp size={11} />
+            <span className="text-[10px] font-bold">
+              {adsOn ? "+218%" : "+12%"}
+            </span>
           </div>
         </div>
         {/* Mini bar chart */}
         <div className="flex items-end gap-1.5 h-16">
-          {[20, 28, 24, 38, 35, 52, 48, 70, 85, 95].map((h, i) => (
+          {bars.map((h, i) => (
             <div
               key={i}
-              className="flex-1 rounded-t bg-gradient-to-t from-primary/30 to-primary"
+              className={`flex-1 rounded-t transition-all duration-500 ${
+                adsOn
+                  ? "bg-gradient-to-t from-primary/30 to-primary"
+                  : "bg-gradient-to-t from-muted/40 to-muted-foreground/40"
+              }`}
               style={{ height: `${h}%` }}
             />
           ))}
@@ -237,21 +260,53 @@ function PillarVisual({ idx }: { idx: number }) {
           <span>Wk 10</span>
         </div>
       </div>
-      {/* Ads toggle card */}
-      <div className="card-glass flex items-center justify-between p-4 shadow-md">
+      {/* Ads toggle card — clickable */}
+      <button
+        type="button"
+        onClick={() => setAdsOn((v) => !v)}
+        aria-pressed={adsOn}
+        className="card-glass flex w-full items-center justify-between p-4 shadow-md transition-all hover:border-primary/30 cursor-pointer text-left"
+      >
         <div className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15">
-            <Megaphone size={16} className="text-primary" />
+          <div
+            className={`flex h-9 w-9 items-center justify-center rounded-lg transition-colors ${
+              adsOn ? "bg-primary/15" : "bg-muted/30"
+            }`}
+          >
+            <Megaphone
+              size={16}
+              className={adsOn ? "text-primary" : "text-muted-foreground"}
+            />
           </div>
           <div>
-            <div className="text-xs font-semibold text-foreground">Ad campaigns</div>
-            <div className="text-[10px] text-primary">Live · spending $2.4k/wk</div>
+            <div className="text-xs font-semibold text-foreground">
+              Ad campaigns
+            </div>
+            <div
+              className={`text-[10px] transition-colors ${
+                adsOn ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              {adsOn ? "Live · spending $2.4k/wk" : "Paused · click to turn on"}
+            </div>
           </div>
         </div>
-        <div className="relative h-6 w-11 rounded-full bg-primary shadow-[0_0_15px_rgba(74,222,128,0.4)]">
-          <div className="absolute right-0.5 top-0.5 h-5 w-5 rounded-full bg-primary-foreground" />
+        <div
+          className={`relative h-6 w-11 rounded-full transition-all duration-300 ${
+            adsOn
+              ? "bg-primary shadow-[0_0_15px_rgba(74,222,128,0.4)]"
+              : "bg-muted/50"
+          }`}
+        >
+          <div
+            className={`absolute top-0.5 h-5 w-5 rounded-full transition-all duration-300 ${
+              adsOn
+                ? "right-0.5 bg-primary-foreground"
+                : "left-0.5 bg-muted-foreground"
+            }`}
+          />
         </div>
-      </div>
+      </button>
       <div className="absolute -inset-4 -z-10 rounded-2xl bg-primary/5 blur-2xl" />
     </div>
   );
