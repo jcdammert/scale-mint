@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import {
-  Globe,
   ArrowLeft,
   Search,
   Smartphone,
@@ -21,6 +20,8 @@ import {
   CalendarCheck,
   Briefcase,
   Camera,
+  Sparkles,
+  Star,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -111,6 +112,88 @@ const useCases = [
   },
 ];
 
+function BrowserMockup() {
+  return (
+    <div className="relative">
+      {/* Glow behind mockup */}
+      <div className="pointer-events-none absolute -inset-6 rounded-3xl bg-primary/5 blur-[40px]" />
+
+      <div className="card-glass relative rounded-2xl overflow-hidden border border-white/10">
+        {/* Browser chrome */}
+        <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/[0.02]">
+          <div className="flex gap-1.5">
+            <div className="w-3 h-3 rounded-full bg-red-500/50" />
+            <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
+            <div className="w-3 h-3 rounded-full bg-green-500/50" />
+          </div>
+          <div className="flex-1 mx-3 bg-white/5 rounded-full px-4 py-1 text-[11px] text-muted-foreground/40 border border-white/5 text-center">
+            johnsonsplumbing.com
+          </div>
+        </div>
+
+        {/* Fake website content */}
+        <div className="p-6 space-y-4">
+          {/* Nav */}
+          <div className="flex items-center justify-between mb-2">
+            <div className="h-4 w-24 rounded bg-primary/20" />
+            <div className="flex gap-3">
+              <div className="h-3 w-12 rounded bg-white/10" />
+              <div className="h-3 w-12 rounded bg-white/10" />
+              <div className="h-6 w-16 rounded-full bg-primary/30" />
+            </div>
+          </div>
+
+          {/* Hero area */}
+          <div className="rounded-xl bg-white/[0.02] border border-white/5 p-5">
+            <div className="h-3 w-28 rounded bg-primary/20 mb-3" />
+            <div className="h-6 w-4/5 rounded bg-white/10 mb-2" />
+            <div className="h-6 w-3/5 rounded bg-white/10 mb-4" />
+            <div className="h-3 w-full rounded bg-white/5 mb-1.5" />
+            <div className="h-3 w-5/6 rounded bg-white/5 mb-5" />
+            <div className="flex gap-3">
+              <div className="h-9 w-32 rounded-lg bg-primary/40 flex items-center justify-center">
+                <span className="text-[10px] font-semibold text-primary">Book Now →</span>
+              </div>
+              <div className="h-9 w-28 rounded-lg border border-white/10 bg-white/[0.02]" />
+            </div>
+          </div>
+
+          {/* Social proof */}
+          <div className="flex items-center gap-2 pt-1">
+            <div className="flex gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={11} className="fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+            <span className="text-[11px] text-muted-foreground/50">4.9 · 127 Google reviews</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating badges */}
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.6, duration: 0.5 }}
+        className="absolute -bottom-4 -right-4 card-glass flex items-center gap-2 rounded-xl px-3 py-2 border border-primary/20 shadow-[0_0_20px_rgba(74,222,128,0.1)]"
+      >
+        <Zap size={12} className="text-primary" />
+        <span className="text-xs font-medium text-primary">98 PageSpeed</span>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.8, duration: 0.5 }}
+        className="absolute -top-4 -left-4 card-glass flex items-center gap-2 rounded-xl px-3 py-2 border border-primary/20 shadow-[0_0_20px_rgba(74,222,128,0.1)]"
+      >
+        <Search size={12} className="text-primary" />
+        <span className="text-xs font-medium text-primary">#1 on Google</span>
+      </motion.div>
+    </div>
+  );
+}
+
 export default function AIWebsitesPage() {
   const isMobile = useIsMobile();
   return (
@@ -128,81 +211,108 @@ export default function AIWebsitesPage() {
         </Link>
       </div>
 
-      {/* Hero */}
+      {/* Hero — 2-col split with browser mockup */}
       <section className="relative overflow-hidden pt-8 pb-10 md:pb-20">
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
-        <div className="container relative mx-auto px-4 text-center">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10"
-          >
-            <Globe size={40} className="text-primary" />
-          </motion.div>
-          <motion.h1
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
-          >
-            Websites That Actually{" "}
-            <span className="text-gradient">Convert</span>
-          </motion.h1>
-          <motion.p
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
-          >
-            Fast, mobile-first, AI-powered websites designed to turn visitors
-            into paying customers. Not just a pretty site — a revenue-generating
-            machine.
-          </motion.p>
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-10"
-          >
-            <a href="/book" className="block w-full sm:w-auto">
-              <Button variant="hero" size="lg" className="w-full sm:w-auto px-8 py-6 text-base">
-                Get Your AI-Powered Website
-              </Button>
-            </a>
-          </motion.div>
+        <div className="container relative mx-auto px-4">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
 
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.45 }}
-            className="mt-8 md:mt-14 flex flex-wrap justify-center gap-4 md:gap-8"
-          >
-            {[
-              { icon: Zap, text: "Built in Days, Not Months" },
-              { icon: Eye, text: "Designed to Convert" },
-              { icon: MousePointerClick, text: "AI-Enhanced Engagement" },
-            ].map((b) => (
-              <div
-                key={b.text}
-                className="flex items-center gap-2 text-sm text-muted-foreground"
+            {/* Left: text */}
+            <div>
+              <motion.div
+                initial={isMobile ? false : { opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3.5 py-1.5 backdrop-blur-md"
               >
-                <b.icon size={18} className="text-primary" />
-                <span>{b.text}</span>
-              </div>
-            ))}
-          </motion.div>
+                <Sparkles size={12} className="text-primary" />
+                <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+                  AI-Powered Websites
+                </span>
+              </motion.div>
+
+              <motion.h1
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                className="font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-5xl lg:text-6xl"
+              >
+                Websites That Actually{" "}
+                <span className="text-gradient">Convert</span>
+              </motion.h1>
+
+              <motion.p
+                initial={isMobile ? false : { opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.15 }}
+                className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
+              >
+                Fast, mobile-first, AI-powered websites designed to turn visitors
+                into paying customers. Not just a pretty site — a revenue-generating
+                machine.
+              </motion.p>
+
+              <motion.div
+                initial={isMobile ? false : { opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="mt-8 flex flex-col gap-3 sm:flex-row"
+              >
+                <a href="/book" className="block w-full sm:w-auto">
+                  <Button variant="hero" size="lg" className="w-full sm:w-auto px-8 py-6 text-base">
+                    Get Your AI-Powered Website
+                  </Button>
+                </a>
+              </motion.div>
+
+              {/* Trust pills */}
+              <motion.div
+                initial={isMobile ? false : { opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.45 }}
+                className="mt-8"
+              >
+                <div className="card-glass inline-flex flex-col items-start gap-3 px-5 py-4 sm:flex-row sm:items-center sm:gap-0 sm:px-2 sm:py-2">
+                  {[
+                    { icon: Zap, text: "Built in Days, Not Months" },
+                    { icon: Eye, text: "Designed to Convert" },
+                    { icon: MousePointerClick, text: "AI-Enhanced Engagement" },
+                  ].map(({ icon: Icon, text }, i, arr) => (
+                    <div key={text} className="flex items-center gap-2 px-3 py-1 sm:px-5 sm:py-2 relative">
+                      <Icon size={15} className="text-primary shrink-0" />
+                      <span className="text-xs font-medium text-foreground/80 sm:text-sm whitespace-nowrap">
+                        {text}
+                      </span>
+                      {i < arr.length - 1 && (
+                        <span className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 h-4 w-px bg-border/60" />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right: browser mockup */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="lg:pl-4"
+            >
+              <BrowserMockup />
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Features */}
-      <section className="section-padding">
+      {/* Features — 3-col with left-border hover */}
+      <section className="section-padding section-alt">
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-center"
+            className="mx-auto max-w-2xl text-center mb-8 md:mb-14"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
               What Makes Our Sites{" "}
@@ -214,7 +324,7 @@ export default function AIWebsitesPage() {
             </p>
           </motion.div>
 
-          <div className="mt-8 md:mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 md:mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((f, i) => (
               <motion.div
                 key={f.title}
@@ -222,9 +332,9 @@ export default function AIWebsitesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="card-glass p-8 transition-all duration-300 hover:border-primary/30"
+                className="card-glass p-8 transition-all duration-300 border-l-2 border-l-transparent hover:border-l-primary/60 hover:border-primary/20 group"
               >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 transition-all duration-300 group-hover:bg-primary/15">
                   <f.icon size={24} className="text-primary" />
                 </div>
                 <h3 className="mb-3 font-heading text-lg font-semibold text-foreground">
@@ -239,14 +349,14 @@ export default function AIWebsitesPage() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How It Works — Horizontal stepper */}
       <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-center"
+            className="mx-auto max-w-2xl text-center mb-10 md:mb-16"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
               Our <span className="text-gradient">Process</span>
@@ -257,38 +367,44 @@ export default function AIWebsitesPage() {
             </p>
           </motion.div>
 
-          <div className="mt-8 md:mt-14 grid gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {steps.map((s, i) => (
-              <motion.div
-                key={s.step}
-                initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              >
-                <div className="text-5xl font-bold text-primary/40 font-heading">
-                  {s.step}
-                </div>
-                <h3 className="mt-2 font-heading text-lg font-semibold text-foreground">
-                  {s.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {s.description}
-                </p>
-              </motion.div>
-            ))}
+          <div className="relative">
+            {/* Connecting line (desktop) */}
+            <div className="hidden lg:block absolute top-6 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {steps.map((s, i) => (
+                <motion.div
+                  key={s.step}
+                  initial={isMobile ? false : { opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="relative text-center"
+                >
+                  <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-primary/5 font-heading text-sm font-bold text-primary">
+                    {s.step}
+                  </div>
+                  <h3 className="font-heading text-base font-semibold text-foreground">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {s.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Use Cases */}
-      <section className="section-padding">
+      {/* Use Cases — Gradient-border cards */}
+      <section className="section-padding section-alt">
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-center"
+            className="mx-auto max-w-2xl text-center mb-10 md:mb-14"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
               Built For <span className="text-gradient">Your Industry</span>
@@ -299,7 +415,7 @@ export default function AIWebsitesPage() {
             </p>
           </motion.div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-3">
+          <div className="mt-8 grid gap-6 sm:grid-cols-3">
             {useCases.map((uc, i) => (
               <motion.div
                 key={uc.title}
@@ -307,17 +423,19 @@ export default function AIWebsitesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="card-glass p-8 transition-all duration-300 hover:border-primary/30"
+                className="p-px rounded-xl bg-gradient-to-br from-primary/25 via-primary/10 to-transparent"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                  <uc.icon size={20} className="text-primary" />
+                <div className="h-full rounded-[11px] bg-[hsl(230_12%_8%)] p-8 transition-all duration-300 hover:bg-[hsl(230_12%_9%)]">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                    <uc.icon size={20} className="text-primary" />
+                  </div>
+                  <h3 className="mb-2 font-heading text-lg font-semibold text-foreground">
+                    {uc.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {uc.description}
+                  </p>
                 </div>
-                <h3 className="mb-2 font-heading text-lg font-semibold text-foreground">
-                  {uc.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {uc.description}
-                </p>
               </motion.div>
             ))}
           </div>
@@ -331,27 +449,30 @@ export default function AIWebsitesPage() {
             initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
+            className="relative overflow-hidden card-glass mx-auto max-w-4xl p-10 md:p-16 text-center"
           >
-            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Ready for a Website That{" "}
-              <span className="text-gradient">Works</span>?
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              Let&apos;s build you a site that doesn&apos;t just look good — it
-              brings in customers. Book a free strategy call today.
-            </p>
-            <div className="mt-8">
-              <a href="/book" className="block w-full sm:w-auto">
-                <Button
-                  variant="cta"
-                  size="lg"
-                  className="w-full sm:w-auto px-8 py-6 text-base"
-                >
-                  Book a Free Strategy Call
-                  <ArrowRight size={18} />
-                </Button>
-              </a>
+            <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[300px] w-[600px] rounded-full bg-primary/5 blur-[80px]" />
+            <div className="relative">
+              <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
+                Ready for a Website That{" "}
+                <span className="text-gradient">Works</span>?
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
+                Let&apos;s build you a site that doesn&apos;t just look good — it
+                brings in customers. Book a free strategy call today.
+              </p>
+              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                <a href="/book" className="block w-full sm:w-auto">
+                  <Button
+                    variant="cta"
+                    size="lg"
+                    className="w-full sm:w-auto px-8 py-6 text-base"
+                  >
+                    Book a Free Strategy Call
+                    <ArrowRight size={18} />
+                  </Button>
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>
