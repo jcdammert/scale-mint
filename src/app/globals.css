@@ -337,7 +337,7 @@
   position: relative;
   width: 30px;
   height: 30px;
-  animation: rocket-fly 38s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  animation: rocket-fly 42s linear infinite;
   will-change: transform;
 }
 
@@ -373,34 +373,48 @@
   z-index: 1;
 }
 
-/* Curved loop across the viewport with rotation along travel direction */
+/* Curved loop across the viewport.
+   Rotation = (heading clockwise from "up") − 45°, since Lucide's
+   rocket icon points up-right (45° from up) at rotate(0). The
+   rotation values increase monotonically through the loop so the
+   rocket spins one full turn over the course of the flight. */
 @keyframes rocket-fly {
+  /* Bottom-left, heading up-right toward mid-screen */
   0% {
-    transform: translate(-12vw, 88vh) rotate(-45deg);
+    transform: translate(-12vw, 88vh) rotate(3deg);
   }
+  /* Climbing up-right, slightly steeper */
   12% {
-    transform: translate(8vw, 70vh) rotate(-30deg);
+    transform: translate(8vw, 70vh) rotate(-6deg);
   }
+  /* Still climbing up-right */
   25% {
-    transform: translate(28vw, 45vh) rotate(-15deg);
+    transform: translate(28vw, 45vh) rotate(5deg);
   }
+  /* Approaching top, leveling out toward right */
   40% {
-    transform: translate(55vw, 22vh) rotate(10deg);
+    transform: translate(55vw, 22vh) rotate(30deg);
   }
+  /* Top of arc, starting to dive right */
   55% {
-    transform: translate(82vw, 15vh) rotate(45deg);
+    transform: translate(82vw, 15vh) rotate(94deg);
   }
+  /* Off the right edge, heading down */
   68% {
-    transform: translate(102vw, 38vh) rotate(95deg);
+    transform: translate(102vw, 38vh) rotate(158deg);
   }
+  /* Curving down-left across lower portion */
   80% {
-    transform: translate(85vw, 78vh) rotate(160deg);
+    transform: translate(85vw, 78vh) rotate(197deg);
   }
+  /* Lower middle, heading left and slightly up */
   92% {
-    transform: translate(40vw, 102vh) rotate(210deg);
+    transform: translate(40vw, 102vh) rotate(240deg);
   }
+  /* Loop back to start — 363° = 3° visually, but keeps rotation
+     monotonic so there's no snap-back at the loop boundary */
   100% {
-    transform: translate(-12vw, 88vh) rotate(315deg);
+    transform: translate(-12vw, 88vh) rotate(363deg);
   }
 }
 
