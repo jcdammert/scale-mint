@@ -26,6 +26,7 @@ import {
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import HomeStats from "@/components/HomeStats";
+import ScaleMintDashboard from "@/components/ui/ScaleMintDashboard";
 
 const painPoints = [
   {
@@ -212,6 +213,31 @@ export default function BusinessSoftwarePage() {
 
       {/* ─── CLIENT RESULTS ─── */}
       <HomeStats />
+
+      {/* ─── DASHBOARD PREVIEW ─── */}
+      <section className="px-4 pt-6 md:pt-10 pb-12 md:pb-20">
+        <div className="container mx-auto max-w-5xl">
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-2xl text-center mb-8 md:mb-10"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
+              Your Business, Fully Systemized
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+              Here&apos;s What You&apos;re{" "}
+              <span className="text-gradient">Getting Access To.</span>
+            </h2>
+            <p className="mt-3 text-sm text-muted-foreground">
+              A live look at your future dashboard — every lead, every job,
+              every dollar in one place.
+            </p>
+          </motion.div>
+          <ScaleMintDashboard />
+        </div>
+      </section>
 
       {/* ─── THE PROBLEM ─── */}
       <section className="section-padding section-alt">

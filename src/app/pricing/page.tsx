@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import ScaleMintDashboard from "@/components/ui/ScaleMintDashboard";
 
 const starterFeatures = [
   "CRM & sales pipeline",
@@ -109,38 +108,8 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* ─── DASHBOARD PREVIEW ─── */}
-      <section className="px-4 pt-6 md:pt-10 pb-12 md:pb-20">
-        <div className="container mx-auto max-w-5xl">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-center mb-8 md:mb-10"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-              Your Business, Fully Systemized
-            </p>
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-              Here&apos;s What You&apos;re{" "}
-              <span className="text-gradient">Getting Access To.</span>
-            </h2>
-            <p className="mt-3 text-sm text-muted-foreground">
-              A live look at your future dashboard — every lead, every job,
-              every dollar in one place.
-            </p>
-          </motion.div>
-          <ScaleMintDashboard />
-        </div>
-      </section>
-
-      {/* Section divider */}
-      <div className="container mx-auto px-4 max-w-5xl">
-        <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-      </div>
-
       {/* ─── PRICING CARDS ─── */}
-      <section className="px-4 pt-12 md:pt-16 pb-6 md:pb-10">
+      <section className="px-4 pt-6 md:pt-10 pb-6 md:pb-10">
         <div className="container mx-auto max-w-5xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
