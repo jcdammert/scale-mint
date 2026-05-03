@@ -414,18 +414,38 @@ export default function HowItWorksPage() {
             initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-3xl rounded-2xl border border-primary/20 bg-primary/5 p-8 md:p-10"
+            className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 p-7 md:p-10"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <Flame size={24} className="text-primary" />
-              <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-                Why Most Marketing Doesn&apos;t Work for{" "}
-                <span className="text-gradient">Service Businesses.</span>
-              </h2>
+            {/* Decorative glow */}
+            <div className="pointer-events-none absolute -top-20 -right-20 h-56 w-56 rounded-full bg-primary/10 blur-3xl" />
+
+            <div className="relative grid gap-6 md:grid-cols-12 md:gap-10 md:items-start">
+              {/* Left: icon + label */}
+              <div className="md:col-span-3 flex md:flex-col items-center md:items-start gap-3 md:gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/15 border border-primary/30">
+                  <Flame size={22} className="text-primary" />
+                </div>
+                <div>
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+                    The Truth
+                  </div>
+                  <div className="hidden md:block text-xs text-muted-foreground/70 mt-1">
+                    Why ads alone don&apos;t fix it
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: headline + body */}
+              <div className="md:col-span-9">
+                <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl lg:text-[2rem] leading-[1.15]">
+                  Why Most Marketing Doesn&apos;t Work for{" "}
+                  <span className="text-gradient">Service Businesses.</span>
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Here&apos;s the truth: running ads when your backend isn&apos;t ready is like pouring gas on the floor. Leads come in, nobody follows up fast enough, there&apos;s no pipeline, no system — and the money is wasted. That&apos;s why we build the system FIRST. When your sales process is dialed, your online presence is strong, and your follow-up is automatic — THEN marketing works. Because the system catches every lead, nurtures them, and helps you close. That&apos;s the difference between spending money on ads and making money from ads.
+                </p>
+              </div>
             </div>
-            <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              Here&apos;s the truth: running ads when your backend isn&apos;t ready is like pouring gas on the floor. Leads come in, nobody follows up fast enough, there&apos;s no pipeline, no system — and the money is wasted. That&apos;s why we build the system FIRST. When your sales process is dialed, your online presence is strong, and your follow-up is automatic — THEN marketing works. Because the system catches every lead, nurtures them, and helps you close. That&apos;s the difference between spending money on ads and making money from ads.
-            </p>
           </motion.div>
         </div>
       </section>
