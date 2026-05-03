@@ -10,7 +10,6 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import {
   ArrowLeft,
   Shield,
-  MapPin,
   Search,
   BarChart3,
   Target,
@@ -21,7 +20,6 @@ import {
   Zap,
   Clock,
   Share2,
-  BadgeCheck,
   Sparkles,
 } from "lucide-react";
 import Link from "next/link";
@@ -66,47 +64,25 @@ const whyChooseUs = [
   },
 ];
 
-const lsaFeatures = [
-  "Google Guaranteed badge for trust and credibility",
-  "Pay-per-lead model — only pay for real leads",
-  "Top of Google search results placement",
-  "Account setup and verification management",
-  "Ongoing bid and budget optimization",
-  "Review management and generation strategy",
-  "Dispute handling for unqualified leads",
-  "Weekly performance reporting",
+const organicFeatures = [
+  "Google Business Profile optimization & management",
+  "Local citation building (50+ directories)",
+  "Map pack ranking optimization",
+  "On-page SEO & content optimization",
+  "Schema markup & technical SEO",
+  "Backlink & authority building",
+  "Review generation strategy",
+  "Monthly ranking & traffic reporting",
 ];
 
-const lsaIdealFor = [
+const organicIdealFor = [
   "Plumbers",
   "Electricians",
   "HVAC Technicians",
-  "Lawyers",
-  "Locksmiths",
   "Roofers",
-  "Cleaners",
-  "Garage Door Repair",
-];
-
-const gmbFeatures = [
-  "Complete profile optimization and setup",
-  "Weekly post scheduling with engaging content",
-  "Review response automation and management",
-  "Photo optimization and regular uploads",
-  "Q&A management and monitoring",
-  "Google Insights tracking and reporting",
-  "Local SEO boost through citation building",
-  "Map pack ranking optimization",
-];
-
-const gmbIdealFor = [
+  "Pressure Washing",
   "Restaurants",
-  "Retail Stores",
-  "Medical Practices",
   "Auto Shops",
-  "Salons & Spas",
-  "Dental Offices",
-  "Fitness Studios",
   "Any Local Business",
 ];
 
@@ -156,30 +132,17 @@ const googleAdsIdealFor = [
 
 const services = [
   {
-    label: "LSA",
-    fullLabel: "Local Service Ads",
-    icon: BadgeCheck,
-    title: "Google Local Service Ads",
-    titleGradient: "(LSA)",
+    label: "Organic",
+    fullLabel: "Google Organic",
+    icon: TrendingUp,
+    title: "Google Organic",
+    titleGradient: "& Local SEO",
     description: [
-      "Get the coveted Google Guaranteed badge and appear at the very top of Google search results — above traditional ads and organic listings. With LSA, you only pay when a real customer contacts you. It's the most cost-effective way for local service businesses to get high-quality leads from people who are actively searching for their services right now.",
-      "We handle the entire setup process including background checks, license verification, and insurance documentation. Once live, we continuously optimize your bids, manage your reviews, and dispute any unqualified leads to maximize your return.",
+      "Rank in Google's local map pack — the 3 businesses Google shows at the top of every local search. We use a complete local SEO strategy: Google Business Profile optimization, citation building across 50+ directories, on-page SEO, and content optimization to get your business found by people searching for your services in your area.",
+      "Unlike paid ads where you stop showing up the moment you stop paying, organic rankings compound over time. Once you're ranking, every search becomes a free lead. We handle the entire SEO process — citations, backlinks, content, technical SEO, and continuous optimization — so your business climbs the rankings and stays there.",
     ],
-    features: lsaFeatures,
-    idealFor: lsaIdealFor,
-  },
-  {
-    label: "GMB",
-    fullLabel: "Google My Business",
-    icon: MapPin,
-    title: "Google My Business",
-    titleGradient: "(GMB)",
-    description: [
-      "Your Google Business Profile is often the first thing potential customers see. A fully optimized GMB listing dramatically increases your chances of appearing in the local map pack — the 3 businesses Google shows at the top of local searches.",
-      "We don't just set it up and forget it. We actively manage your profile with regular posts, photo uploads, review responses, and Q&A monitoring. Combined with local citation building and SEO optimization, your business becomes the top choice in your area.",
-    ],
-    features: gmbFeatures,
-    idealFor: gmbIdealFor,
+    features: organicFeatures,
+    idealFor: organicIdealFor,
   },
   {
     label: "Meta",
@@ -373,12 +336,8 @@ export default function MarketingPage() {
             viewport={{ once: true }}
             className="mx-auto max-w-2xl text-center mb-10"
           >
-            <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-              Our Services
-            </div>
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Four Channels.{" "}
-              <span className="text-gradient">One Strategy.</span>
+              Our <span className="text-gradient">Marketing Services.</span>
             </h2>
           </motion.div>
 
