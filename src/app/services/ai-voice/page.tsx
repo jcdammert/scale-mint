@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import DualCTA from "@/components/DualCTA";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -15,7 +16,6 @@ import {
   UserCheck,
   Mic,
   BarChart3,
-  ArrowRight,
   Shield,
   TrendingUp,
   PhoneCall,
@@ -677,41 +677,7 @@ export default function AIVoicePage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section-padding">
-        <div className="container mx-auto">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative overflow-hidden card-glass mx-auto max-w-4xl p-10 md:p-16 text-center"
-          >
-            <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[300px] w-[600px] rounded-full bg-primary/5 blur-[80px]" />
-            <div className="relative">
-              <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-                Stop Losing Calls,{" "}
-                <span className="text-gradient">Start Closing Deals</span>
-              </h2>
-              <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
-                Every missed call is a missed customer. Let AI handle your phones
-                so you never lose another lead. Book a free strategy call today.
-              </p>
-              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                <a href="/book" className="block w-full sm:w-auto">
-                  <Button
-                    variant="cta"
-                    size="lg"
-                    className="w-full sm:w-auto px-8 py-6 text-base"
-                  >
-                    Book a Free Strategy Call
-                    <ArrowRight size={18} />
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <DualCTA />
 
       <Footer />
     </div>

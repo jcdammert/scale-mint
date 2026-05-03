@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import DualCTA from "@/components/DualCTA";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -14,7 +15,6 @@ import {
   FileText,
   ImageIcon,
   Plug,
-  ArrowRight,
   Lightbulb,
   Rocket,
   Shield,
@@ -329,38 +329,7 @@ export default function CustomAIPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section-padding">
-        <div className="container mx-auto">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
-          >
-            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Got a <span className="text-gradient">Wild Idea</span>?
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              No idea is too ambitious. Tell us what you&apos;re imagining and
-              we&apos;ll tell you how we can make it real. Book a free strategy
-              call to brainstorm.
-            </p>
-            <div className="mt-8">
-              <a href="/book" className="block w-full sm:w-auto">
-                <Button
-                  variant="cta"
-                  size="lg"
-                  className="w-full sm:w-auto px-8 py-6 text-base"
-                >
-                  Book a Free Strategy Call
-                  <ArrowRight size={18} />
-                </Button>
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <DualCTA />
 
       <Footer />
     </div>

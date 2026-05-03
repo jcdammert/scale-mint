@@ -2,12 +2,12 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import DualCTA from "@/components/DualCTA";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import {
   Check,
   ArrowLeft,
-  ArrowRight,
   Megaphone,
   Globe,
   Sparkles,
@@ -330,34 +330,19 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* ─── BOTTOM CTA ─── */}
-      <section className="px-4 pb-10 md:pb-16">
-        <div className="container mx-auto">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
-          >
-            <p className="text-muted-foreground">
-              Not sure which plan fits? Book a free call — we&apos;ll walk you
-              through it. No pressure.
-            </p>
-            <div className="mt-6">
-              <a href="/book" className="block w-full sm:w-auto sm:inline-block">
-                <Button
-                  variant="cta"
-                  size="lg"
-                  className="w-full sm:w-auto px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
-                >
-                  Book a Free Strategy Call
-                  <ArrowRight size={18} />
-                </Button>
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <DualCTA
+        singleCard
+        heading={
+          <>
+            Not Sure Which <span className="text-gradient">Plan Fits?</span>
+          </>
+        }
+        primary={{
+          title: "We'll walk you through it.",
+          description:
+            "Free 20-minute call — we'll look at your business, recommend the right plan, and answer every question. No pressure, no pitch.",
+        }}
+      />
 
       <Footer />
     </div>

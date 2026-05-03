@@ -3,12 +3,12 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import DualCTA from "@/components/DualCTA";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import {
   ArrowLeft,
-  ArrowRight,
   Shield,
   MapPin,
   Search,
@@ -585,46 +585,7 @@ export default function MarketingPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section id="cta" className="section-padding">
-        <div className="container mx-auto">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative overflow-hidden card-glass mx-auto max-w-4xl p-10 md:p-16 text-center"
-          >
-            <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[300px] w-[600px] rounded-full bg-primary/5 blur-[80px]" />
-            <div className="relative">
-              <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-                Ready to <span className="text-gradient">Grow</span>?
-              </h2>
-              <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Stop wasting money on marketing that doesn&apos;t work. Let us
-                build you a lead generation machine that delivers real customers,
-                real revenue, and real growth. Book a free strategy call — we&apos;ll
-                audit your current marketing and show you exactly where the
-                opportunities are.
-              </p>
-              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                <a href="/book" className="block w-full sm:w-auto">
-                  <Button
-                    variant="cta"
-                    size="lg"
-                    className="w-full sm:w-auto px-8 py-6 text-base"
-                  >
-                    Book a Free Strategy Call
-                    <ArrowRight size={18} />
-                  </Button>
-                </a>
-              </div>
-              <p className="mt-6 text-xs text-muted-foreground">
-                No long-term contracts. No hidden fees. Just results.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <DualCTA />
 
       <Footer />
     </div>

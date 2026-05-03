@@ -2,11 +2,10 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import DualCTA from "@/components/DualCTA";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
-  ArrowRight,
   Wrench,
   Target,
   UserCheck,
@@ -447,40 +446,7 @@ export default function WhyUsPage() {
         </div>
       </section>
 
-      {/* ─── CTA ─── */}
-      <section className="section-padding">
-        <div className="container mx-auto">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 px-8 py-14 md:px-16 md:py-20 text-center max-w-4xl mx-auto"
-          >
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
-            <div className="relative">
-              <h2 className="font-heading text-3xl font-bold text-foreground md:text-5xl leading-[1.1]">
-                Think We Might Be a{" "}
-                <span className="text-gradient">Good Fit?</span>
-              </h2>
-              <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl mx-auto">
-                {"Book a free call. No pitch, no pressure. We'll be straight with you."}
-              </p>
-              <div className="mt-9">
-                <a href="/book" className="block w-full sm:w-auto sm:inline-block">
-                  <Button
-                    variant="cta"
-                    size="lg"
-                    className="w-full sm:w-auto px-10 py-7 text-base animate-glow-pulse"
-                  >
-                    Book a Free Strategy Call
-                    <ArrowRight size={18} />
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <DualCTA />
 
       <Footer />
     </div>
