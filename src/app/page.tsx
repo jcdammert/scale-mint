@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ScaleMintBubbleStats from "@/components/ui/ScaleMintBubbleStats";
+import HomeStats from "@/components/HomeStats";
 import ProblemSection from "@/components/ProblemSection";
 import ServicesSection from "@/components/ServicesSection";
 import PromoBanner from "@/components/PromoBanner";
@@ -23,11 +23,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Navbar />
       <HeroSection />
-      <section className="section-padding">
-        <div className="container mx-auto">
-          <ScaleMintBubbleStats />
-        </div>
-      </section>
+      <HomeStats />
       <ServicesSection />
       <PromoBanner />
       <ProblemSection />
