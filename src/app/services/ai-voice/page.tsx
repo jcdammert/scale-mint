@@ -17,13 +17,14 @@ import {
   ArrowRight,
   Shield,
   TrendingUp,
-  Stethoscope,
-  Scale,
-  Wrench,
-  UtensilsCrossed,
   PhoneCall,
   PhoneForwarded,
   Sparkles,
+  MessageSquare,
+  Zap,
+  RefreshCw,
+  Star,
+  CheckCircle2,
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -73,6 +74,45 @@ const features = [
   },
 ];
 
+const conversationFeatures = [
+  {
+    icon: Zap,
+    title: "Instant Missed Call Text-Back",
+    description:
+      "The moment someone calls and you miss it, they get an automatic text. Most leads book with whoever responds first — now that's always you.",
+  },
+  {
+    icon: MessageSquare,
+    title: "2-Way AI SMS Conversations",
+    description:
+      "The AI holds real conversations over text — answers questions, qualifies the lead, and books appointments without you lifting a finger.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Automated Follow-Up Sequences",
+    description:
+      "If a lead goes cold, a multi-day text sequence fires automatically. Day 1, Day 3, Day 7 — keeping you top of mind until they're ready.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Appointment Reminders",
+    description:
+      "Automated reminder texts go out before every job. Fewer no-shows, fewer last-minute cancellations, more revenue on the books.",
+  },
+  {
+    icon: Star,
+    title: "Post-Job Review Requests",
+    description:
+      "After every completed job, a review request fires automatically. Your Google rating climbs without you ever asking manually.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Lead Nurture Campaigns",
+    description:
+      "Not every lead is ready today. Automated sequences keep your business in front of them so when they're ready to buy, they call you.",
+  },
+];
+
 const steps = [
   {
     step: "01",
@@ -100,43 +140,21 @@ const steps = [
   },
 ];
 
-const useCases = [
-  {
-    icon: Stethoscope,
-    title: "Medical Offices",
-    description:
-      "Handle appointment scheduling, prescription refill requests, and insurance questions — without tying up your front desk staff.",
-  },
-  {
-    icon: Scale,
-    title: "Law Firms",
-    description:
-      "Qualify potential clients, schedule consultations, and handle intake questions. The AI captures case details before the attorney ever picks up.",
-  },
-  {
-    icon: Wrench,
-    title: "Home Service Businesses",
-    description:
-      "Plumbers, electricians, HVAC — capture emergency calls after hours, book service appointments, and provide quotes based on the issue described.",
-  },
-  {
-    icon: UtensilsCrossed,
-    title: "Restaurants",
-    description:
-      "Handle reservations, answer menu questions, provide hours and location info, and take takeout orders — all by phone, all automated.",
-  },
-];
-
 const waveHeights = [6, 14, 22, 16, 10, 20, 26, 18, 12, 24, 16, 8];
+
+const smsThread = [
+  { from: "ai", text: "Hi Mike! Sorry we missed your call — this is Johnson's HVAC. Are you still looking for service today?", time: "2:14 PM" },
+  { from: "user", text: "Yeah, AC went out. Need someone ASAP", time: "2:15 PM" },
+  { from: "ai", text: "Got it! I can get a tech out between 2–4pm today. Want me to lock that in for you?", time: "2:15 PM" },
+  { from: "user", text: "Yes please", time: "2:16 PM" },
+  { from: "ai", text: "Booked! You'll get a confirmation text shortly. See you at 2pm 👍", time: "2:16 PM" },
+];
 
 function CallSimulation() {
   return (
     <div className="relative flex items-center justify-center lg:justify-end">
-      {/* Ambient glow */}
       <div className="pointer-events-none absolute inset-0 rounded-3xl bg-primary/5 blur-[60px]" />
-
       <div className="card-glass relative w-full max-w-sm rounded-2xl overflow-hidden border border-white/10 p-6">
-        {/* Status bar */}
         <div className="flex items-center justify-between mb-5 pb-4 border-b border-white/5">
           <div className="text-[10px] font-semibold uppercase tracking-widest text-primary/60">
             Incoming Call
@@ -146,8 +164,6 @@ function CallSimulation() {
             <span className="text-[10px] text-primary font-medium">Live</span>
           </div>
         </div>
-
-        {/* Caller info */}
         <div className="text-center mb-5">
           <div className="mx-auto mb-3 h-12 w-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
             <Phone size={20} className="text-primary" />
@@ -155,26 +171,17 @@ function CallSimulation() {
           <div className="font-semibold text-foreground text-base">(555) 234-8901</div>
           <div className="text-xs text-muted-foreground mt-0.5">Mike T. — HVAC Emergency</div>
         </div>
-
-        {/* Waveform */}
         <div className="flex items-center justify-center gap-[3px] h-10 my-4 px-4">
           {waveHeights.map((h, i) => (
             <motion.div
               key={i}
               className="w-1 rounded-full bg-primary/60"
               animate={{ height: [h * 0.5, h, h * 0.6, h * 0.8, h * 0.5] }}
-              transition={{
-                duration: 1.4,
-                delay: i * 0.09,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+              transition={{ duration: 1.4, delay: i * 0.09, repeat: Infinity, ease: "easeInOut" }}
               style={{ height: h }}
             />
           ))}
         </div>
-
-        {/* AI transcript bubble */}
         <div className="rounded-xl bg-primary/5 border border-primary/15 p-3.5 mt-3">
           <div className="flex items-center gap-1.5 mb-2">
             <div className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
@@ -186,15 +193,11 @@ function CallSimulation() {
             &ldquo;Hi, thanks for calling Johnson&apos;s HVAC! I see you need emergency service — I can schedule a tech within 2 hours. Can I get your address?&rdquo;
           </p>
         </div>
-
-        {/* Lead captured badge */}
         <div className="mt-4 flex items-center justify-center gap-2">
           <UserCheck size={13} className="text-primary" />
           <span className="text-[11px] text-primary font-medium">Lead captured · Appointment booked</span>
         </div>
       </div>
-
-      {/* Floating stat */}
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
@@ -203,6 +206,78 @@ function CallSimulation() {
       >
         <Clock size={12} className="text-primary" />
         <span className="text-xs font-medium text-primary">Answered in &lt;2s</span>
+      </motion.div>
+    </div>
+  );
+}
+
+function SMSMockup() {
+  return (
+    <div className="relative flex items-center justify-center lg:justify-start">
+      <div className="pointer-events-none absolute inset-0 rounded-3xl bg-primary/5 blur-[60px]" />
+      <div className="card-glass relative w-full max-w-sm rounded-2xl overflow-hidden border border-white/10">
+        {/* Phone header */}
+        <div className="flex items-center gap-3 px-4 py-3 border-b border-white/5 bg-white/[0.02]">
+          <div className="h-8 w-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+            <span className="text-xs font-bold text-primary">JH</span>
+          </div>
+          <div>
+            <div className="text-sm font-medium text-foreground">Johnson&apos;s HVAC</div>
+            <div className="flex items-center gap-1">
+              <div className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+              <span className="text-[10px] text-primary">AI Conversation Active</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Missed call notice */}
+        <div className="mx-4 mt-4 mb-3 flex items-center gap-2 rounded-lg bg-white/[0.03] border border-white/5 px-3 py-2">
+          <PhoneCall size={12} className="text-muted-foreground/50" />
+          <span className="text-[11px] text-muted-foreground/50">Missed call from Mike T. · 2:13 PM</span>
+        </div>
+
+        {/* Messages */}
+        <div className="px-4 pb-4 space-y-3">
+          {smsThread.map((msg, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 8 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.12 }}
+              className={cn("flex", msg.from === "user" ? "justify-end" : "justify-start")}
+            >
+              <div className={cn(
+                "max-w-[80%] rounded-2xl px-3.5 py-2.5",
+                msg.from === "ai"
+                  ? "bg-primary/10 border border-primary/15 rounded-tl-sm"
+                  : "bg-white/[0.07] border border-white/8 rounded-tr-sm"
+              )}>
+                <p className="text-xs text-foreground/85 leading-relaxed">{msg.text}</p>
+                <div className="mt-1 flex items-center justify-end gap-1">
+                  <span className="text-[9px] text-muted-foreground/40">{msg.time}</span>
+                  {msg.from === "user" && <CheckCircle2 size={9} className="text-primary/50" />}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Booked badge */}
+        <div className="mx-4 mb-4 flex items-center justify-center gap-2 rounded-lg bg-primary/5 border border-primary/15 py-2">
+          <CalendarCheck size={13} className="text-primary" />
+          <span className="text-[11px] text-primary font-medium">Appointment booked · No human needed</span>
+        </div>
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: -12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6, duration: 0.5 }}
+        className="absolute -top-4 right-4 card-glass flex items-center gap-2 rounded-xl px-3 py-2 border border-primary/20 shadow-[0_0_20px_rgba(74,222,128,0.1)]"
+      >
+        <Zap size={12} className="text-primary" />
+        <span className="text-xs font-medium text-primary">Auto-replied in &lt;60s</span>
       </motion.div>
     </div>
   );
@@ -224,6 +299,8 @@ export default function AIVoicePage() {
           Back to Home
         </Link>
       </div>
+
+      {/* ═══ PART 1: AI VOICE ═══ */}
 
       {/* Hero — 2-col split with call simulation */}
       <section className="relative overflow-hidden pt-8 pb-10 md:pb-20">
@@ -319,7 +396,7 @@ export default function AIVoicePage() {
         </div>
       </section>
 
-      {/* Features — Masonry grid with pulsing dots */}
+      {/* Voice Features Grid */}
       <section className="section-padding section-alt">
         <div className="container mx-auto">
           <motion.div
@@ -356,7 +433,6 @@ export default function AIVoicePage() {
                   <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 transition-all duration-300 group-hover:bg-primary/15">
                     <f.icon size={22} className="text-primary" />
                   </div>
-                  {/* Pulsing dot badge */}
                   <div className="flex items-center gap-1.5">
                     <div className="h-2 w-2 rounded-full bg-primary/60 animate-pulse" />
                     <span className="text-[10px] font-semibold uppercase tracking-wider text-primary/60">
@@ -396,9 +472,7 @@ export default function AIVoicePage() {
 
           <div className="mx-auto max-w-2xl">
             <div className="relative">
-              {/* Vertical line */}
               <div className="absolute left-6 top-6 bottom-6 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent hidden sm:block" />
-
               <div className="space-y-6">
                 {steps.map((s, i) => (
                   <motion.div
@@ -409,12 +483,9 @@ export default function AIVoicePage() {
                     transition={{ delay: i * 0.1 }}
                     className="flex gap-6 items-start"
                   >
-                    {/* Number circle */}
                     <div className="flex-shrink-0 h-12 w-12 rounded-full border border-primary/30 bg-primary/5 flex items-center justify-center font-heading text-sm font-bold text-primary z-10">
                       {s.step}
                     </div>
-
-                    {/* Content */}
                     <div className="card-glass flex-1 p-6 mt-0.5">
                       <h3 className="font-heading text-base font-semibold text-foreground mb-1">
                         {s.title}
@@ -431,46 +502,134 @@ export default function AIVoicePage() {
         </div>
       </section>
 
-      {/* Use Cases — 2×2 industry grid */}
+      {/* ═══════════════════════════════════════════════
+          DIVIDER
+      ═══════════════════════════════════════════════ */}
+      <div className="container mx-auto px-4">
+        <div className="relative py-4">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+          </div>
+          <div className="relative flex justify-center">
+            <span className="bg-background px-6 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/40">
+              Also included
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* ═══ PART 2: AI CONVERSATION (SMS) ═══ */}
+
+      {/* Conversation Hero — 2-col split */}
+      <section className="relative overflow-hidden pt-10 pb-10 md:pb-20">
+        <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-primary/4 blur-[120px]" />
+        <div className="container relative mx-auto px-4">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+
+            {/* Left: SMS mockup */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1 lg:pr-4"
+            >
+              <SMSMockup />
+            </motion.div>
+
+            {/* Right: text */}
+            <div className="order-1 lg:order-2">
+              <motion.div
+                initial={isMobile ? false : { opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3.5 py-1.5 backdrop-blur-md"
+              >
+                <MessageSquare size={12} className="text-primary" />
+                <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+                  AI Conversation
+                </span>
+              </motion.div>
+
+              <motion.h2
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-5xl"
+              >
+                Text Every Lead.{" "}
+                <span className="text-gradient">Automatically.</span>
+              </motion.h2>
+
+              <motion.p
+                initial={isMobile ? false : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.15 }}
+                className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
+              >
+                While your AI voice agent handles inbound calls, your AI conversation
+                system follows up with every lead over SMS — instantly, automatically,
+                and at scale. No manual texting. No leads falling through the cracks.
+              </motion.p>
+
+              <motion.div
+                initial={isMobile ? false : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="mt-8 flex flex-col gap-3 sm:flex-row"
+              >
+                <a href="/book" className="block w-full sm:w-auto">
+                  <Button variant="hero" size="lg" className="w-full sm:w-auto px-8 py-6 text-base">
+                    See It In Action
+                  </Button>
+                </a>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Conversation Features Grid */}
       <section className="section-padding section-alt">
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-center mb-10 md:mb-14"
+            className="mx-auto max-w-2xl text-center mb-8 md:mb-14"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Perfect For{" "}
-              <span className="text-gradient">Your Industry</span>
+              Your AI Conversation{" "}
+              <span className="text-gradient">Engine</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              AI voice agents are transforming phone operations across every
-              industry.
+              Every lead gets a response. Every job gets a follow-up. All on autopilot.
             </p>
           </motion.div>
 
-          <div className="grid gap-5 sm:grid-cols-2">
-            {useCases.map((uc, i) => (
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {conversationFeatures.map((f, i) => (
               <motion.div
-                key={uc.title}
+                key={f.title}
                 initial={isMobile ? false : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="p-px rounded-xl bg-gradient-to-br from-primary/20 via-primary/8 to-transparent"
+                transition={{ delay: i * 0.08 }}
+                className="card-glass p-8 transition-all duration-300 hover:border-primary/30 group"
               >
-                <div className="h-full rounded-[11px] bg-[hsl(230_12%_8%)] p-8 transition-all duration-300 hover:bg-[hsl(230_12%_9%)]">
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                    <uc.icon size={20} className="text-primary" />
-                  </div>
-                  <h3 className="mb-2 font-heading text-lg font-semibold text-foreground">
-                    {uc.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {uc.description}
-                  </p>
+                <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 transition-all duration-300 group-hover:bg-primary/15">
+                  <f.icon size={22} className="text-primary" />
                 </div>
+                <h3 className="mb-3 font-heading text-lg font-semibold text-foreground">
+                  {f.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {f.description}
+                </p>
               </motion.div>
             ))}
           </div>
