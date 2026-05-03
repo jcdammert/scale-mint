@@ -25,6 +25,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import HomeStats from "@/components/HomeStats";
 
 const painPoints = [
   {
@@ -208,6 +209,9 @@ export default function BusinessSoftwarePage() {
           </motion.div>
         </div>
       </section>
+
+      {/* ─── CLIENT RESULTS ─── */}
+      <HomeStats />
 
       {/* ─── THE PROBLEM ─── */}
       <section className="section-padding section-alt">
