@@ -19,41 +19,11 @@ import {
   MapPin,
   Share2,
   MessageSquarePlus,
-  Brain,
-  Clock,
-  Wrench,
 } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import HomeStats from "@/components/HomeStats";
 import ScaleMintDashboard from "@/components/ui/ScaleMintDashboard";
-
-const painPoints = [
-  {
-    icon: Brain,
-    title: "No real system",
-    description:
-      "You\u2019re keeping track of leads, jobs, and follow-ups in your head \u2014 or maybe a notebook, maybe a notes app. There\u2019s no real system. Things slip through and you don\u2019t even realize it until the job is gone.",
-  },
-  {
-    icon: PhoneOff,
-    title: "Missed calls = missed money",
-    description:
-      "When a lead calls and you\u2019re on a job site, it goes to voicemail. You tell yourself you\u2019ll call back later. Sometimes you do, sometimes you forget. That\u2019s money walking out the door.",
-  },
-  {
-    icon: Wrench,
-    title: "Tools you barely use",
-    description:
-      "You might have an app for scheduling or invoicing, but you\u2019re barely using half of it. It doesn\u2019t handle your follow-ups, your reviews, your marketing \u2014 so you\u2019re still doing most of it manually or just not doing it at all.",
-  },
-  {
-    icon: Clock,
-    title: "Hours lost on admin",
-    description:
-      "You\u2019re spending hours every week on admin \u2014 texting customers back, sending invoices, trying to remember who you need to follow up with \u2014 instead of doing the work that actually makes you money.",
-  },
-];
 
 const features = [
   {
@@ -236,44 +206,6 @@ export default function BusinessSoftwarePage() {
             </p>
           </motion.div>
           <ScaleMintDashboard />
-        </div>
-      </section>
-
-      {/* ─── THE PROBLEM ─── */}
-      <section className="section-padding section-alt">
-        <div className="container mx-auto">
-          <motion.h2
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
-          >
-            Right Now, You&apos;re Running Your Business{" "}
-            <span className="text-gradient">Out of Your Head.</span>
-          </motion.h2>
-
-          <div className="mt-8 md:mt-14 grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
-            {painPoints.map((p, i) => (
-              <motion.div
-                key={i}
-                initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="card-glass p-8"
-              >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <p.icon size={24} className="text-primary" />
-                </div>
-                <h3 className="mb-3 font-heading text-lg font-semibold text-foreground">
-                  {p.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {p.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
