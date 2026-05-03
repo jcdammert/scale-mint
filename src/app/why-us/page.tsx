@@ -11,6 +11,10 @@ import {
   Target,
   UserCheck,
   Handshake,
+  Check,
+  X,
+  Sparkles,
+  Quote,
 } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -42,6 +46,21 @@ const differentiators = [
   },
 ];
 
+// Helper for section labels
+function SectionLabel({ num, label }: { num: string; label: string }) {
+  return (
+    <div className="flex items-center gap-3 mb-5">
+      <span className="font-heading text-sm font-bold text-primary/60 tracking-widest">
+        {num}
+      </span>
+      <span className="h-px flex-1 max-w-[60px] bg-primary/30" />
+      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+        {label}
+      </span>
+    </div>
+  );
+}
+
 export default function WhyUsPage() {
   const isMobile = useIsMobile();
 
@@ -60,15 +79,27 @@ export default function WhyUsPage() {
         </Link>
       </div>
 
-      {/* Hero */}
-      <section className="relative overflow-hidden pt-8 pb-8 md:pb-12">
+      {/* ─── HERO ─── */}
+      <section className="relative overflow-hidden pt-8 pb-12 md:pb-20">
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-primary/5 blur-[120px]" />
         <div className="container relative mx-auto px-4 text-center">
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3.5 py-1.5 backdrop-blur-md"
+          >
+            <Sparkles size={12} className="text-primary" />
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+              From One Operator To Another
+            </span>
+          </motion.div>
+
           <motion.h1
             initial={isMobile ? false : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
+            className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl"
           >
             {"We've Been in "}
             <span className="text-gradient">Your Shoes.</span>
@@ -77,173 +108,394 @@ export default function WhyUsPage() {
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
+            className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
           >
             {"We're not a faceless agency or a SaaS company with a help desk. We're business owners who built this for ourselves first."}
           </motion.p>
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="pb-6 md:pb-10 px-4">
+      {/* ─── 01 / OUR STORY — asymmetric editorial ─── */}
+      <section className="section-padding section-alt">
         <div className="container mx-auto">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="card-glass mx-auto max-w-3xl p-8 md:p-10"
-          >
-            <h2 className="mb-4 font-heading text-2xl font-bold text-foreground md:text-3xl">
-              Our <span className="text-gradient">Story</span>
-            </h2>
-            <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"My name is Johann Dammert. I started my first business at 15 and never stopped. I run multiple local service companies — window tinting, asphalt coatings, pressure washing, junk removal — and I know exactly what it feels like to have bills due and work drying up. Inconsistent jobs, slow months, and doing everything manually just to keep the lights on."}
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"I tried the CRMs. Too complicated, no time to set them up. I hired agencies. They took my money and gave me excuses. So I built the solution myself — the platform, the automations, the entire sales system — for my own businesses. Then I helped friends do the same. And I realized this is what every local service business owner needs: a real growth system AND someone to actually set it up and run it right."}
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"That's why Scale Mint exists."}
-            </p>
-          </motion.div>
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-16 max-w-6xl mx-auto">
+            {/* Left: founder card (sticky on desktop) */}
+            <motion.aside
+              initial={isMobile ? false : { opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start"
+            >
+              <SectionLabel num="01" label="Our Story" />
+
+              {/* Founder card */}
+              <div className="card-glass p-6 relative overflow-hidden">
+                <div className="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-primary/10 blur-2xl" />
+                <div className="relative">
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 border border-primary/20">
+                    <span className="font-heading text-xl font-bold text-primary">JD</span>
+                  </div>
+                  <div className="font-heading text-xl font-bold text-foreground leading-tight">
+                    Johann Dammert
+                  </div>
+                  <div className="text-xs font-medium text-primary/80 mt-1 uppercase tracking-wider">
+                    Founder & Operator
+                  </div>
+                  <div className="mt-5 pt-5 border-t border-white/5 space-y-2">
+                    <div className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/60">
+                      Currently Running
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {["Window Tinting", "Asphalt Coatings", "Pressure Washing", "Junk Removal"].map((b) => (
+                        <span
+                          key={b}
+                          className="inline-flex rounded-full border border-primary/15 bg-primary/5 px-2.5 py-1 text-[11px] font-medium text-primary/85"
+                        >
+                          {b}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.aside>
+
+            {/* Right: story prose */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-8 relative"
+            >
+              {/* Decorative quote mark */}
+              <Quote
+                size={56}
+                className="text-primary/15 absolute -top-2 -left-2 lg:-left-6"
+                strokeWidth={1.5}
+              />
+
+              <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl lg:text-5xl leading-[1.1] mb-8 relative">
+                Our <span className="text-gradient">Story</span>
+              </h2>
+
+              <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg relative">
+                <p className="first-letter:font-heading first-letter:text-5xl first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:mt-1">
+                  {"My name is Johann Dammert. I started my first business at 15 and never stopped. I run multiple local service companies — window tinting, asphalt coatings, pressure washing, junk removal — and I know exactly what it feels like to have bills due and work drying up. Inconsistent jobs, slow months, and doing everything manually just to keep the lights on."}
+                </p>
+                <p>
+                  {"I tried the CRMs. Too complicated, no time to set them up. I hired agencies. They took my money and gave me excuses. So I built the solution myself — the platform, the automations, the entire sales system — for my own businesses. Then I helped friends do the same. And I realized this is what every local service business owner needs: a real growth system AND someone to actually set it up and run it right."}
+                </p>
+                <p className="text-foreground/90 font-medium">
+                  {"That's why Scale Mint exists."}
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Not Just a Platform, Not Just an Agency */}
-      <section className="pb-6 md:pb-10 px-4">
-        <div className="container mx-auto">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="card-glass mx-auto max-w-3xl p-8 md:p-10"
-          >
-            <h2 className="mb-4 font-heading text-2xl font-bold text-foreground md:text-3xl">
-              {"We're Not Just a Platform. We're Not Just an "}
-              <span className="text-gradient">Agency.</span>
-            </h2>
-            <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"SaaS companies give you a login, a knowledge base, and a support ticket. You're on your own to figure it out. Most people never do."}
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"Agencies do work for you but you have no visibility, no system of your own, and no control. When you stop paying, everything disappears."}
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"Scale Mint gives you both. The full platform with every tool you need — AND the team that builds it, configures it, and manages it for you. You own the system. You see everything. And we're in your corner making sure it actually works."}
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* What Makes Us Different */}
-      <section className="pb-6 md:pb-10 px-4">
+      {/* ─── 02 / VS COMPARISON ─── */}
+      <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-center"
+            className="mx-auto max-w-3xl text-center mb-12"
           >
-            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
+            <div className="flex items-center justify-center gap-3 mb-5">
+              <span className="font-heading text-sm font-bold text-primary/60 tracking-widest">02</span>
+              <span className="h-px w-12 bg-primary/30" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+                The Difference
+              </span>
+              <span className="h-px w-12 bg-primary/30" />
+            </div>
+
+            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl lg:text-5xl leading-[1.1]">
+              {"We're Not Just a Platform. We're Not Just an "}
+              <span className="text-gradient">Agency.</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid gap-5 md:grid-cols-3 max-w-5xl mx-auto">
+            {/* SaaS */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="card-glass p-7 relative opacity-80"
+            >
+              <div className="flex items-center gap-2.5 mb-4">
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-red-500/10 border border-red-500/20">
+                  <X size={16} className="text-red-400" />
+                </div>
+                <span className="font-heading text-sm font-bold uppercase tracking-wider text-muted-foreground">
+                  Just a SaaS
+                </span>
+              </div>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {"SaaS companies give you a login, a knowledge base, and a support ticket. You're on your own to figure it out. Most people never do."}
+              </p>
+            </motion.div>
+
+            {/* Agency */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.08 }}
+              className="card-glass p-7 relative opacity-80"
+            >
+              <div className="flex items-center gap-2.5 mb-4">
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-red-500/10 border border-red-500/20">
+                  <X size={16} className="text-red-400" />
+                </div>
+                <span className="font-heading text-sm font-bold uppercase tracking-wider text-muted-foreground">
+                  Just an Agency
+                </span>
+              </div>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {"Agencies do work for you but you have no visibility, no system of your own, and no control. When you stop paying, everything disappears."}
+              </p>
+            </motion.div>
+
+            {/* Scale Mint - highlighted */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.16 }}
+              className="relative p-px rounded-2xl bg-gradient-to-br from-primary/40 via-primary/15 to-transparent shadow-[0_0_40px_rgba(74,222,128,0.12)]"
+            >
+              <div className="rounded-[15px] bg-[hsl(230_12%_8%)] p-7 h-full relative overflow-hidden">
+                <div className="pointer-events-none absolute top-0 right-0 h-32 w-32 bg-primary/5 blur-3xl" />
+                <div className="relative">
+                  <div className="flex items-center gap-2.5 mb-4">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15 border border-primary/30">
+                      <Check size={16} className="text-primary" />
+                    </div>
+                    <span className="font-heading text-sm font-bold uppercase tracking-wider text-primary">
+                      Scale Mint
+                    </span>
+                  </div>
+                  <p className="text-sm leading-relaxed text-foreground/90">
+                    {"Scale Mint gives you both. The full platform with every tool you need — AND the team that builds it, configures it, and manages it for you. You own the system. You see everything. And we're in your corner making sure it actually works."}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 03 / WHAT MAKES US DIFFERENT — Numbered manifesto ─── */}
+      <section className="section-padding section-alt">
+        <div className="container mx-auto max-w-5xl">
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <div className="flex items-center justify-center gap-3 mb-5">
+              <span className="font-heading text-sm font-bold text-primary/60 tracking-widest">03</span>
+              <span className="h-px w-12 bg-primary/30" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+                The Manifesto
+              </span>
+              <span className="h-px w-12 bg-primary/30" />
+            </div>
+            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl lg:text-5xl leading-[1.1]">
               What Makes Us <span className="text-gradient">Different</span>
             </h2>
           </motion.div>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
+          <div className="space-y-3">
             {differentiators.map((d, i) => (
               <motion.div
                 key={d.title}
-                initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={isMobile ? false : { opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="card-glass p-8 transition-all duration-300 hover:border-primary/30"
+                className="group relative card-glass p-6 md:p-8 transition-all duration-300 hover:border-primary/30 overflow-hidden"
               >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <d.icon size={24} className="text-primary" />
+                {/* Big background number */}
+                <div className="pointer-events-none absolute right-4 md:right-8 top-1/2 -translate-y-1/2 font-heading text-7xl md:text-9xl font-black text-primary/[0.06] group-hover:text-primary/10 transition-colors leading-none select-none">
+                  0{i + 1}
                 </div>
-                <h3 className="mb-3 font-heading text-lg font-semibold text-foreground">
-                  {d.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {d.description}
-                </p>
+
+                <div className="relative flex items-start gap-5 md:gap-6">
+                  {/* Icon column */}
+                  <div className="shrink-0 flex flex-col items-center gap-3">
+                    <div className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 transition-all duration-300 group-hover:bg-primary/15 group-hover:border-primary/30">
+                      <d.icon size={22} className="text-primary" />
+                    </div>
+                    <span className="font-heading text-xs font-bold text-primary/40 tracking-widest">
+                      0{i + 1}
+                    </span>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 min-w-0 pt-1">
+                    <h3 className="font-heading text-xl font-bold text-foreground md:text-2xl leading-tight">
+                      {d.title}
+                    </h3>
+                    <p className="mt-3 text-sm md:text-base leading-relaxed text-muted-foreground max-w-2xl">
+                      {d.description}
+                    </p>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Long-Term Vision */}
-      <section className="pb-6 md:pb-10 px-4">
+      {/* ─── 04 / CARE ABOUT GROWTH — Pull quote ─── */}
+      <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="card-glass mx-auto max-w-3xl p-8 md:p-10"
+            className="relative mx-auto max-w-3xl text-center"
           >
-            <h2 className="mb-4 font-heading text-2xl font-bold text-foreground md:text-3xl">
+            <div className="flex items-center justify-center gap-3 mb-8">
+              <span className="font-heading text-sm font-bold text-primary/60 tracking-widest">04</span>
+              <span className="h-px w-12 bg-primary/30" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+                The Promise
+              </span>
+              <span className="h-px w-12 bg-primary/30" />
+            </div>
+
+            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl lg:text-5xl leading-[1.1] mb-10">
               We Actually Care About{" "}
               <span className="text-gradient">Your Growth</span>
             </h2>
-            <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"Our long-term goal isn't just to be your platform provider — it's to become a real partner in the businesses we work with. Every client we take on, we treat like a future partner. That means we're selective, we're honest, and we're invested in your success from day one."}
-            </p>
+
+            {/* Big decorative quote marks */}
+            <div className="relative px-4 md:px-12">
+              <Quote
+                size={72}
+                className="text-primary/15 absolute -top-4 left-0"
+                strokeWidth={1.5}
+              />
+              <Quote
+                size={72}
+                className="text-primary/15 absolute -bottom-4 right-0 rotate-180"
+                strokeWidth={1.5}
+              />
+              <p className="relative text-lg md:text-xl leading-relaxed text-foreground/90 italic font-light">
+                {"Our long-term goal isn't just to be your platform provider — it's to become a real partner in the businesses we work with. Every client we take on, we treat like a future partner. That means we're selective, we're honest, and we're invested in your success from day one."}
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Selective On Purpose */}
-      <section className="pb-6 md:pb-10 px-4">
-        <div className="container mx-auto">
+      {/* ─── 05 / SELECTIVE ON PURPOSE — Two-col compare ─── */}
+      <section className="section-padding section-alt">
+        <div className="container mx-auto max-w-5xl">
           <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 30 }}
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="card-glass mx-auto max-w-3xl p-8 md:p-10"
+            className="text-center mb-12"
           >
-            <h2 className="mb-4 font-heading text-2xl font-bold text-foreground md:text-3xl">
+            <div className="flex items-center justify-center gap-3 mb-5">
+              <span className="font-heading text-sm font-bold text-primary/60 tracking-widest">05</span>
+              <span className="h-px w-12 bg-primary/30" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+                Who We Work With
+              </span>
+              <span className="h-px w-12 bg-primary/30" />
+            </div>
+            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl lg:text-5xl leading-[1.1]">
               {"We're Selective "}
               <span className="text-gradient">On Purpose</span>
             </h2>
-            <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"We don't work with everyone. We look for business owners who are serious about growth, willing to follow through, and ready to invest in building something real. If that's you, we want to work together."}
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              {"If you're looking for a magic fix overnight, we're probably not the right fit — and we'll be upfront about that from the start."}
-            </p>
           </motion.div>
+
+          <div className="grid gap-5 md:grid-cols-2">
+            {/* Right fit */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative p-px rounded-2xl bg-gradient-to-br from-primary/30 via-primary/10 to-transparent"
+            >
+              <div className="rounded-[15px] bg-[hsl(230_12%_8%)] p-7 md:p-8 h-full">
+                <div className="flex items-center gap-2.5 mb-5">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 border border-primary/30">
+                    <Check size={18} className="text-primary" />
+                  </div>
+                  <span className="font-heading text-sm font-bold uppercase tracking-wider text-primary">
+                    Right Fit
+                  </span>
+                </div>
+                <p className="text-sm leading-relaxed text-foreground/85 md:text-base">
+                  {"We don't work with everyone. We look for business owners who are serious about growth, willing to follow through, and ready to invest in building something real. If that's you, we want to work together."}
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Not for you */}
+            <motion.div
+              initial={isMobile ? false : { opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="card-glass p-7 md:p-8"
+            >
+              <div className="flex items-center gap-2.5 mb-5">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-500/10 border border-red-500/20">
+                  <X size={18} className="text-red-400" />
+                </div>
+                <span className="font-heading text-sm font-bold uppercase tracking-wider text-muted-foreground">
+                  Not For You If…
+                </span>
+              </div>
+              <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
+                {"If you're looking for a magic fix overnight, we're probably not the right fit — and we'll be upfront about that from the start."}
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="pb-6 md:pb-10 px-4">
+      {/* ─── CTA ─── */}
+      <section className="section-padding">
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="card-glass mx-auto max-w-3xl p-8 md:p-12 text-center"
+            className="relative overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 px-8 py-14 md:px-16 md:py-20 text-center max-w-4xl mx-auto"
           >
-            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Think We Might Be a{" "}
-              <span className="text-gradient">Good Fit?</span>
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              {"Book a free call. No pitch, no pressure. We'll be straight with you."}
-            </p>
-            <div className="mt-8">
-              <a href="/book" className="block w-full sm:w-auto">
-                <Button
-                  variant="cta"
-                  size="lg"
-                  className="w-full sm:w-auto px-8 py-6 text-base"
-                >
-                  Book a Free Strategy Call
-                  <ArrowRight size={18} />
-                </Button>
-              </a>
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
+            <div className="relative">
+              <h2 className="font-heading text-3xl font-bold text-foreground md:text-5xl leading-[1.1]">
+                Think We Might Be a{" "}
+                <span className="text-gradient">Good Fit?</span>
+              </h2>
+              <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl mx-auto">
+                {"Book a free call. No pitch, no pressure. We'll be straight with you."}
+              </p>
+              <div className="mt-9">
+                <a href="/book" className="block w-full sm:w-auto sm:inline-block">
+                  <Button
+                    variant="cta"
+                    size="lg"
+                    className="w-full sm:w-auto px-10 py-7 text-base animate-glow-pulse"
+                  >
+                    Book a Free Strategy Call
+                    <ArrowRight size={18} />
+                  </Button>
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>
