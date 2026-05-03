@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import ScaleMintDashboard from "@/components/ui/ScaleMintDashboard";
 
 const starterFeatures = [
   "CRM & sales pipeline",
@@ -105,6 +106,16 @@ export default function PricingPage() {
             or you&apos;re ready to build a full growth engine — we set everything
             up, train you, and stay in your corner.
           </motion.p>
+        </div>
+      </section>
+
+      {/* ─── DASHBOARD PREVIEW ─── */}
+      <section className="px-4 pb-6 md:pb-10">
+        <div className="container mx-auto max-w-5xl">
+          <p className="text-center text-xs font-medium uppercase tracking-widest text-muted-foreground mb-4">
+            Your business, fully systemized
+          </p>
+          <ScaleMintDashboard />
         </div>
       </section>
 

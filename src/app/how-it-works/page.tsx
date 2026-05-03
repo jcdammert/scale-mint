@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import ScaleMintSystemStack from "@/components/ui/ScaleMintSystemStack";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -94,6 +95,13 @@ export default function HowItWorksPage() {
           >
             {"We don't hand you a login and say good luck. We build your entire system, train you on it, and stay in your corner every month."}
           </motion.p>
+        </div>
+      </section>
+
+      {/* System Stack visualizer */}
+      <section className="px-4 pb-6 md:pb-10">
+        <div className="container mx-auto max-w-4xl">
+          <ScaleMintSystemStack />
         </div>
       </section>
 
