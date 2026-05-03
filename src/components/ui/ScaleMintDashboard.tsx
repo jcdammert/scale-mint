@@ -165,9 +165,13 @@ export default function ScaleMintDashboard() {
   return (
     <div
       style={{
-        background: "linear-gradient(145deg,#040c06 0%,#071210 55%,#040c06 100%)",
-        borderRadius: 20,
-        padding: 24,
+        background: "hsl(230 12% 10% / 0.6)",
+        border: "1px solid rgba(255,255,255,0.07)",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
+        boxShadow: "0 4px 24px rgba(0,0,0,0.2)",
+        borderRadius: 16,
+        padding: 22,
         overflow: "hidden",
         position: "relative",
         fontFamily: "system-ui, sans-serif",
@@ -177,8 +181,6 @@ export default function ScaleMintDashboard() {
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
         @keyframes fadeUp { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
       `}</style>
-
-      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: "linear-gradient(90deg,transparent,#4ade8055,transparent)" }} />
 
       {/* Header */}
       <div

@@ -110,18 +110,52 @@ export default function PricingPage() {
       </section>
 
       {/* ─── DASHBOARD PREVIEW ─── */}
-      <section className="px-4 pb-6 md:pb-10">
+      <section className="px-4 pt-6 md:pt-10 pb-12 md:pb-20">
         <div className="container mx-auto max-w-5xl">
-          <p className="text-center text-xs font-medium uppercase tracking-widest text-muted-foreground mb-4">
-            Your business, fully systemized
-          </p>
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-2xl text-center mb-8 md:mb-10"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
+              Your Business, Fully Systemized
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+              Here&apos;s What You&apos;re{" "}
+              <span className="text-gradient">Getting Access To.</span>
+            </h2>
+            <p className="mt-3 text-sm text-muted-foreground">
+              A live look at your future dashboard — every lead, every job,
+              every dollar in one place.
+            </p>
+          </motion.div>
           <ScaleMintDashboard />
         </div>
       </section>
 
+      {/* Section divider */}
+      <div className="container mx-auto px-4 max-w-5xl">
+        <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      </div>
+
       {/* ─── PRICING CARDS ─── */}
-      <section className="px-4 pb-6 md:pb-10">
+      <section className="px-4 pt-12 md:pt-16 pb-6 md:pb-10">
         <div className="container mx-auto max-w-5xl">
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-2xl text-center mb-10"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
+              Choose Your Plan
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+              Two Simple Plans.{" "}
+              <span className="text-gradient">No Surprises.</span>
+            </h2>
+          </motion.div>
           <div className="grid gap-6 md:grid-cols-2">
             {/* Starter */}
             <motion.div
@@ -270,8 +304,13 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* Section divider */}
+      <div className="container mx-auto px-4 max-w-4xl pt-6">
+        <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      </div>
+
       {/* ─── ADD-ONS ─── */}
-      <section className="px-4 pb-6 md:pb-10">
+      <section className="px-4 pt-12 md:pt-16 pb-6 md:pb-10">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -279,6 +318,9 @@ export default function PricingPage() {
             viewport={{ once: true }}
             className="text-center mb-10"
           >
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
+              Optional Add-Ons
+            </p>
             <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
               Make Your System Work{" "}
               <span className="text-gradient">Even Harder.</span>
