@@ -277,55 +277,8 @@ export default function MarketingPage() {
         </div>
       </section>
 
-      {/* Why Choose Us — Bento Grid */}
-      <section className="section-padding section-alt">
-        <div className="container mx-auto">
-          <motion.div
-            initial={isMobile ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-center mb-8 md:mb-14"
-          >
-            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Why Operators Run Ads{" "}
-              <span className="text-gradient">With Us.</span>
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              We&apos;re not a generic agency selling ad spend. We run the platform behind the ads — so the leads we generate actually get worked.
-            </p>
-          </motion.div>
-
-          {/* Bento: first 2 items span 2 cols on lg (4-col grid) */}
-          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {whyChooseUs.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className={cn(
-                  "card-glass p-8 transition-all duration-300 hover:border-primary/30",
-                  (i === 0 || i === 1) && "lg:col-span-2"
-                )}
-              >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <item.icon size={24} className="text-primary" />
-                </div>
-                <h3 className="mb-3 font-heading text-lg font-semibold text-foreground">
-                  {item.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Service Tab Switcher */}
-      <section id="services" className="section-padding">
+      <section id="services" className="section-padding section-alt">
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -406,24 +359,56 @@ export default function MarketingPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-8 border-t border-primary/10 pt-6">
-                  <h4 className="mb-3 text-sm font-semibold text-foreground">
-                    Ideal For:
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {active.idealFor.map((item) => (
-                      <span
-                        key={item}
-                        className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </div>
             </motion.div>
           </AnimatePresence>
+        </div>
+      </section>
+
+      {/* Why Operators Run Ads With Us — Bento Grid */}
+      <section className="section-padding">
+        <div className="container mx-auto">
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-2xl text-center mb-8 md:mb-14"
+          >
+            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
+              Why Operators Run Ads{" "}
+              <span className="text-gradient">With Us.</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              We&apos;re not a generic agency selling ad spend. We run the platform behind the ads — so the leads we generate actually get worked.
+            </p>
+          </motion.div>
+
+          {/* Bento: first 2 items span 2 cols on lg (4-col grid) */}
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {whyChooseUs.map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className={cn(
+                  "card-glass p-8 transition-all duration-300 hover:border-primary/30",
+                  (i === 0 || i === 1) && "lg:col-span-2"
+                )}
+              >
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                  <item.icon size={24} className="text-primary" />
+                </div>
+                <h3 className="mb-3 font-heading text-lg font-semibold text-foreground">
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
