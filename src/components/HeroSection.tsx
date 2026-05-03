@@ -15,7 +15,7 @@ const stats = [
 const HeroSection = () => {
   const isMobile = useIsMobile();
   return (
-    <section className="relative overflow-hidden pt-28 pb-12 md:pt-36 md:pb-20">
+    <section className="relative overflow-hidden pt-28 pb-8 md:pt-36 md:pb-10">
       {/* Animated gradient mesh background */}
       <div className="hero-mesh">
         <div className="mesh-blob-1" />

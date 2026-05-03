@@ -315,7 +315,7 @@ function Pillar4Visual() {
 const ServicesSection = () => {
   const isMobile = useIsMobile();
   return (
-    <section id="services" className="px-4 py-10 md:py-20">
+    <section id="services" className="px-4 pt-4 pb-10 md:pt-8 md:pb-20">
       <div className="container mx-auto">
         {/* 4 Pillars — alternating zigzag */}
         <div className="relative max-w-6xl mx-auto space-y-14 md:space-y-24">
