@@ -346,31 +346,34 @@
   position: relative;
   z-index: 2;
   color: hsl(148 95% 60%);
-  opacity: 0.5;
+  opacity: 0.55;
   filter:
-    drop-shadow(0 0 6px hsl(148 95% 60% / 0.85))
-    drop-shadow(0 0 16px hsl(148 95% 60% / 0.45))
-    drop-shadow(0 0 32px hsl(148 95% 60% / 0.2));
+    drop-shadow(0 0 4px hsl(148 95% 60% / 0.9))
+    drop-shadow(0 0 10px hsl(148 95% 60% / 0.5));
 }
 
-/* Glow trail extending back from the rocket */
-.rocket-flight .rocket-trail {
+/* Soft circular halo that travels with the rocket — no orientation,
+   so it looks correct no matter which way the icon is pointing. */
+.rocket-flight .rocket-halo {
   position: absolute;
-  top: 13px;
-  right: 22px;
-  width: 90px;
-  height: 4px;
-  border-radius: 999px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    hsl(148 95% 60% / 0.45) 55%,
-    hsl(148 95% 60% / 0.85)
+  /* Center the halo over the 30px rocket */
+  top: 50%;
+  left: 50%;
+  width: 110px;
+  height: 110px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    hsl(148 95% 60% / 0.35) 0%,
+    hsl(148 95% 60% / 0.18) 30%,
+    hsl(148 95% 60% / 0.06) 55%,
+    transparent 75%
   );
-  filter: blur(3px);
-  opacity: 0.5;
-  animation: rocket-trail-fade 2.6s ease-in-out infinite;
+  filter: blur(6px);
+  animation: rocket-halo-pulse 3.4s ease-in-out infinite;
   z-index: 1;
+  pointer-events: none;
 }
 
 /* Curved loop across the viewport.
@@ -418,9 +421,9 @@
   }
 }
 
-@keyframes rocket-trail-fade {
-  0%, 100% { opacity: 0.6; transform: scaleX(1); }
-  50%      { opacity: 0.3; transform: scaleX(0.85); }
+@keyframes rocket-halo-pulse {
+  0%, 100% { opacity: 0.85; transform: translate(-50%, -50%) scale(1); }
+  50%      { opacity: 0.55; transform: translate(-50%, -50%) scale(0.9); }
 }
 
 @media (prefers-reduced-motion: reduce) {

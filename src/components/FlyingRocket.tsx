@@ -65,7 +65,7 @@ export default function FlyingRocket() {
     >
       <div ref={rocketRef} className="rocket-flight">
         <div className="rocket-traveler">
-          <div className="rocket-trail" />
+          <div className="rocket-halo" />
           <Rocket
             size={30}
             strokeWidth={1.5}
