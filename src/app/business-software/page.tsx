@@ -194,15 +194,15 @@ export default function BusinessSoftwarePage() {
             className="mx-auto max-w-2xl text-center mb-8 md:mb-10"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-              Your Business, Fully Systemized
+              Your Sales Pipeline
             </p>
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-              Here&apos;s What You&apos;re{" "}
-              <span className="text-gradient">Getting Access To.</span>
+              Track Every Customer.{" "}
+              <span className="text-gradient">No Lead Slips Through.</span>
             </h2>
             <p className="mt-3 text-sm text-muted-foreground">
-              A live look at your future dashboard — every lead, every job,
-              every dollar in one place.
+              Every lead in one place — see exactly where each customer is in
+              your sales process, from first call to job booked.
             </p>
           </motion.div>
           <ScaleMintDashboard />

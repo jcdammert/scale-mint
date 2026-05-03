@@ -27,14 +27,14 @@ type Kpi = {
 };
 
 const initialLeads: Lead[] = [
-  { id: 1, name: "Mike T.", service: "Pressure wash", source: "FB Ad", stage: 0, value: 380, time: "2m ago" },
-  { id: 2, name: "Sarah K.", service: "Remodel est.", source: "Google", stage: 0, value: 4200, time: "18m ago" },
-  { id: 3, name: "Dan R.", service: "HVAC quote", source: "Missed call", stage: 0, value: 1100, time: "41m ago" },
-  { id: 4, name: "James L.", service: "Epoxy floor", source: "SMS reply", stage: 1, value: 2800, time: "1h ago" },
-  { id: 5, name: "Lisa M.", service: "Roofing", source: "Seq. day 2", stage: 1, value: 6500, time: "2h ago" },
+  { id: 1, name: "Mike T.", service: "House wash", source: "FB Ad", stage: 0, value: 480, time: "2m ago" },
+  { id: 2, name: "Sarah K.", service: "Driveway clean", source: "Google", stage: 0, value: 320, time: "18m ago" },
+  { id: 3, name: "Dan R.", service: "Roof soft wash", source: "Missed call", stage: 0, value: 1100, time: "41m ago" },
+  { id: 4, name: "James L.", service: "Concrete sealing", source: "SMS reply", stage: 1, value: 1850, time: "1h ago" },
+  { id: 5, name: "Lisa M.", service: "Commercial wash", source: "Seq. day 2", stage: 1, value: 6500, time: "2h ago" },
   { id: 6, name: "Tony B.", service: "Deck wash", source: "Estimate sent", stage: 2, value: 380, time: "3h ago" },
-  { id: 7, name: "Nina W.", service: "Window tint", source: "Estimate sent", stage: 2, value: 210, time: "4h ago" },
-  { id: 8, name: "Carlos M.", service: "Full remodel", source: "Signed", stage: 3, value: 8900, time: "Yesterday" },
+  { id: 7, name: "Nina W.", service: "Patio cleaning", source: "Estimate sent", stage: 2, value: 260, time: "4h ago" },
+  { id: 8, name: "Carlos M.", service: "Fleet + lot wash", source: "Signed", stage: 3, value: 4200, time: "Yesterday" },
 ];
 
 const stages: Stage[] = [
@@ -46,9 +46,8 @@ const stages: Stage[] = [
 
 const kpis: Kpi[] = [
   { label: "New leads", value: "24", sub: "+8 this week", accent: "#4ade80" },
-  { label: "Pipeline", value: "$34k", sub: "active value", accent: "#34d399" },
+  { label: "Active pipeline", value: "$11k", sub: "7 open opportunities", accent: "#34d399" },
   { label: "Jobs booked", value: "11", sub: "+3 vs last week", accent: "#22d3ee" },
-  { label: "Response time", value: "<60s", sub: "avg auto-reply", accent: "#a3e635" },
 ];
 
 function KPICard({ kpi, idx }: { kpi: Kpi; idx: number }) {
@@ -79,9 +78,9 @@ function KPICard({ kpi, idx }: { kpi: Kpi; idx: number }) {
         e.currentTarget.style.boxShadow = "none";
       }}
     >
-      <div style={{ fontSize: 11, color: "#2d6a3a", marginBottom: 4 }}>{kpi.label}</div>
+      <div style={{ fontSize: 11, color: "#7a9989", marginBottom: 4, fontWeight: 500 }}>{kpi.label}</div>
       <div style={{ fontSize: 22, fontWeight: 700, color: kpi.accent, lineHeight: 1 }}>{kpi.value}</div>
-      <div style={{ fontSize: 10, color: "#1f4a2a", marginTop: 4 }}>{kpi.sub}</div>
+      <div style={{ fontSize: 10, color: "#4d7060", marginTop: 4 }}>{kpi.sub}</div>
     </div>
   );
 }
@@ -122,20 +121,20 @@ function LeadCard({ lead, stage, onDragStart }: { lead: Lead; stage: Stage; onDr
           {initials}
         </div>
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ fontSize: 12, fontWeight: 600, color: "#d4fde4", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: "#e8fdf0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
             {lead.name}
           </div>
-          <div style={{ fontSize: 10, color: "#2d6a3a" }}>{lead.service}</div>
+          <div style={{ fontSize: 10, color: "#8aa898" }}>{lead.service}</div>
         </div>
         <div style={{ fontSize: 11, fontWeight: 600, color: stage.accent, flexShrink: 0 }}>
           ${lead.value.toLocaleString()}
         </div>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <span style={{ fontSize: 10, color: "#2d5a3a", background: "rgba(255,255,255,0.04)", padding: "2px 6px", borderRadius: 4 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <span style={{ fontSize: 10, color: "#8aa898", background: "rgba(255,255,255,0.05)", padding: "2px 7px", borderRadius: 4, fontWeight: 500 }}>
           {lead.source}
         </span>
-        <span style={{ fontSize: 10, color: "#1f4a2a" }}>{lead.time}</span>
+        <span style={{ fontSize: 10, color: "#5a7a68" }}>{lead.time}</span>
       </div>
     </div>
   );
@@ -194,7 +193,7 @@ export default function ScaleMintDashboard() {
           <div style={{ fontSize: 10, letterSpacing: "0.12em", color: "#4ade80", fontWeight: 600, marginBottom: 4 }}>
             SCALE MINT BUSINESS OS
           </div>
-          <div style={{ fontSize: 16, fontWeight: 700, color: "#e8fdf0" }}>Johnson Remodeling Co.</div>
+          <div style={{ fontSize: 16, fontWeight: 700, color: "#e8fdf0" }}>Aqua Pro Pressure Washing</div>
         </div>
         <div
           style={{
@@ -212,15 +211,26 @@ export default function ScaleMintDashboard() {
       {/* KPIs */}
       <div style={{
         display: "grid",
-        gridTemplateColumns: isMobile ? "repeat(2, minmax(0,1fr))" : "repeat(4,minmax(0,1fr))",
+        gridTemplateColumns: isMobile ? "repeat(1, minmax(0,1fr))" : "repeat(3,minmax(0,1fr))",
         gap: 8,
         marginBottom: 18,
       }}>
         {kpis.map((k, i) => <KPICard key={i} kpi={k} idx={i} />)}
       </div>
 
-      <div style={{ fontSize: 11, color: "#1f4a2a", marginBottom: 10, paddingLeft: 2 }}>
-        Sales pipeline · drag cards between stages
+      <div style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginBottom: 10,
+        paddingLeft: 2,
+      }}>
+        <span style={{ fontSize: 11, color: "#5a8068", fontWeight: 500 }}>
+          Sales pipeline
+        </span>
+        <span style={{ fontSize: 10, color: "#3d5a48" }}>
+          Drag cards between stages
+        </span>
       </div>
 
       {/* Pipeline columns */}
@@ -252,7 +262,7 @@ export default function ScaleMintDashboard() {
               }}
             >
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
-                <span style={{ fontSize: 10, fontWeight: 600, color: "#2d6a3a", letterSpacing: "0.06em" }}>
+                <span style={{ fontSize: 10, fontWeight: 700, color: "#7a9989", letterSpacing: "0.08em" }}>
                   {stage.label.toUpperCase()}
                 </span>
                 <span
@@ -287,7 +297,7 @@ export default function ScaleMintDashboard() {
           paddingTop: 12, borderTop: "0.5px solid rgba(255,255,255,0.05)",
         }}
       >
-        <span style={{ fontSize: 11, color: "#1f4a2a" }}>Total pipeline value</span>
+        <span style={{ fontSize: 11, color: "#7a9989", fontWeight: 500 }}>Total pipeline value</span>
         <span style={{ fontSize: 14, fontWeight: 700, color: "#4ade80" }}>
           ${totalPipeline.toLocaleString()}
         </span>
