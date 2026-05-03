@@ -314,7 +314,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* System Stack visualizer */}
-      <section className="px-4 pt-2 pb-10 md:pb-16">
+      <section className="px-4 pt-12 md:pt-20 pb-10 md:pb-16">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
