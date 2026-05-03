@@ -338,7 +338,7 @@ export default function AIVoicePage() {
             </p>
           </motion.div>
 
-          {/* Masonry-style: first item spans 2 cols on lg */}
+          {/* Grid: 3+3+1(full-width) */}
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((f, i) => (
               <motion.div
@@ -349,7 +349,7 @@ export default function AIVoicePage() {
                 transition={{ delay: i * 0.07 }}
                 className={cn(
                   "card-glass p-8 transition-all duration-300 hover:border-primary/30 group",
-                  i === 0 && "lg:col-span-2"
+                  i === features.length - 1 && "sm:col-span-2 lg:col-span-3"
                 )}
               >
                 <div className="mb-5 flex items-center gap-3">
@@ -369,7 +369,7 @@ export default function AIVoicePage() {
                 </h3>
                 <p className={cn(
                   "text-sm leading-relaxed text-muted-foreground",
-                  i === 0 && "max-w-xl"
+                  i === features.length - 1 && "max-w-2xl"
                 )}>
                   {f.description}
                 </p>
