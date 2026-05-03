@@ -286,6 +286,16 @@ function SMSMockup() {
 
 type FeatureItem = { icon: React.ElementType; title: string; description: string };
 
+const shortLabels = [
+  "24/7 Answering",
+  "Call Routing",
+  "Voicemail",
+  "Scheduling",
+  "Lead Qual",
+  "Custom Voice",
+  "Analytics",
+];
+
 function VoiceFeatureSelector({ features, isMobile }: { features: FeatureItem[]; isMobile: boolean }) {
   const [active, setActive] = useState(0);
   const f = features[active];
@@ -294,73 +304,57 @@ function VoiceFeatureSelector({ features, isMobile }: { features: FeatureItem[];
       initial={isMobile ? false : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="card-glass overflow-hidden rounded-2xl"
+      className="mx-auto max-w-4xl"
     >
-      <div className="grid lg:grid-cols-[300px_1fr]">
-        {/* Feature list */}
-        <div className="border-b border-white/5 lg:border-b-0 lg:border-r">
-          {features.map((item, i) => (
-            <button
-              key={item.title}
-              onClick={() => setActive(i)}
-              className={cn(
-                "w-full flex items-center gap-3 px-5 py-3.5 text-left transition-all duration-200 relative",
-                i !== features.length - 1 && "border-b border-white/[0.04]",
-                active === i
-                  ? "bg-primary/8 text-foreground"
-                  : "text-muted-foreground hover:text-foreground hover:bg-white/[0.02]"
-              )}
-            >
-              {/* Active bar */}
-              {active === i && (
-                <motion.div
-                  layoutId="activeBar"
-                  className="absolute left-0 top-0 bottom-0 w-[2px] bg-primary rounded-r"
-                />
-              )}
-              <div className={cn(
-                "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-all",
-                active === i ? "bg-primary/15" : "bg-white/[0.04]"
-              )}>
-                <item.icon size={15} className={active === i ? "text-primary" : "text-muted-foreground"} />
-              </div>
-              <span className="text-sm font-medium leading-tight">{item.title}</span>
-              {active === i && (
-                <div className="ml-auto h-1.5 w-1.5 rounded-full bg-primary animate-pulse shrink-0" />
-              )}
-            </button>
-          ))}
-        </div>
+      {/* Horizontal pill tabs */}
+      <div className="flex flex-wrap justify-center gap-2 mb-5">
+        {features.map((item, i) => (
+          <button
+            key={item.title}
+            onClick={() => setActive(i)}
+            className={cn(
+              "inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-xs font-medium transition-all duration-200",
+              active === i
+                ? "border-primary/30 bg-primary/10 text-primary shadow-[0_0_16px_rgba(74,222,128,0.1)]"
+                : "border-white/8 bg-white/[0.02] text-muted-foreground hover:text-foreground hover:border-white/15"
+            )}
+          >
+            <item.icon size={13} className={active === i ? "text-primary" : ""} />
+            <span>{shortLabels[i] ?? item.title}</span>
+          </button>
+        ))}
+      </div>
 
-        {/* Detail panel */}
-        <div className="flex items-center p-8 min-h-[220px]">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={active}
-              initial={{ opacity: 0, x: 16 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -10 }}
-              transition={{ duration: 0.22 }}
-              className="w-full"
-            >
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 border border-primary/20">
-                <f.icon size={28} className="text-primary" />
-              </div>
-              <h3 className="font-heading text-xl font-bold text-foreground mb-3">
-                {f.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-muted-foreground max-w-lg">
-                {f.description}
-              </p>
-              <div className="mt-5 flex items-center gap-2">
-                <div className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-primary/70">
-                  Active on your account
+      {/* Compact inline detail row */}
+      <div className="card-glass rounded-2xl p-5 sm:p-6">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -4 }}
+            transition={{ duration: 0.2 }}
+            className="flex items-start gap-4 sm:gap-5"
+          >
+            <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 border border-primary/20">
+              <f.icon size={22} className="text-primary" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2.5 mb-1.5 flex-wrap">
+                <h3 className="font-heading text-base sm:text-lg font-bold text-foreground">
+                  {f.title}
+                </h3>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-primary">
+                  <span className="h-1 w-1 rounded-full bg-primary animate-pulse" />
+                  Active
                 </span>
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {f.description}
+              </p>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </motion.div>
   );
