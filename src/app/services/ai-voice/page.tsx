@@ -1,9 +1,10 @@
 "use client";
 
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import {
   Phone,
@@ -283,6 +284,88 @@ function SMSMockup() {
   );
 }
 
+type FeatureItem = { icon: React.ElementType; title: string; description: string };
+
+function VoiceFeatureSelector({ features, isMobile }: { features: FeatureItem[]; isMobile: boolean }) {
+  const [active, setActive] = useState(0);
+  const f = features[active];
+  return (
+    <motion.div
+      initial={isMobile ? false : { opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="card-glass overflow-hidden rounded-2xl"
+    >
+      <div className="grid lg:grid-cols-[300px_1fr]">
+        {/* Feature list */}
+        <div className="border-b border-white/5 lg:border-b-0 lg:border-r">
+          {features.map((item, i) => (
+            <button
+              key={item.title}
+              onClick={() => setActive(i)}
+              className={cn(
+                "w-full flex items-center gap-3 px-5 py-3.5 text-left transition-all duration-200 relative",
+                i !== features.length - 1 && "border-b border-white/[0.04]",
+                active === i
+                  ? "bg-primary/8 text-foreground"
+                  : "text-muted-foreground hover:text-foreground hover:bg-white/[0.02]"
+              )}
+            >
+              {/* Active bar */}
+              {active === i && (
+                <motion.div
+                  layoutId="activeBar"
+                  className="absolute left-0 top-0 bottom-0 w-[2px] bg-primary rounded-r"
+                />
+              )}
+              <div className={cn(
+                "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-all",
+                active === i ? "bg-primary/15" : "bg-white/[0.04]"
+              )}>
+                <item.icon size={15} className={active === i ? "text-primary" : "text-muted-foreground"} />
+              </div>
+              <span className="text-sm font-medium leading-tight">{item.title}</span>
+              {active === i && (
+                <div className="ml-auto h-1.5 w-1.5 rounded-full bg-primary animate-pulse shrink-0" />
+              )}
+            </button>
+          ))}
+        </div>
+
+        {/* Detail panel */}
+        <div className="flex items-center p-8 min-h-[220px]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={active}
+              initial={{ opacity: 0, x: 16 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -10 }}
+              transition={{ duration: 0.22 }}
+              className="w-full"
+            >
+              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 border border-primary/20">
+                <f.icon size={28} className="text-primary" />
+              </div>
+              <h3 className="font-heading text-xl font-bold text-foreground mb-3">
+                {f.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-muted-foreground max-w-lg">
+                {f.description}
+              </p>
+              <div className="mt-5 flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-primary/70">
+                  Active on your account
+                </span>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function AIVoicePage() {
   const isMobile = useIsMobile();
   return (
@@ -396,14 +479,14 @@ export default function AIVoicePage() {
         </div>
       </section>
 
-      {/* Voice Features Grid */}
+      {/* Voice Features — Interactive selector */}
       <section className="section-padding section-alt">
         <div className="container mx-auto">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-center mb-8 md:mb-14"
+            className="mx-auto max-w-2xl text-center mb-8 md:mb-12"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
               What Your AI Voice Agent{" "}
@@ -415,43 +498,7 @@ export default function AIVoicePage() {
             </p>
           </motion.div>
 
-          {/* Grid: 3+3+1(full-width) */}
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((f, i) => (
-              <motion.div
-                key={f.title}
-                initial={isMobile ? false : { opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.07 }}
-                className={cn(
-                  "card-glass p-8 transition-all duration-300 hover:border-primary/30 group",
-                  i === features.length - 1 && "sm:col-span-2 lg:col-span-3"
-                )}
-              >
-                <div className="mb-5 flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 transition-all duration-300 group-hover:bg-primary/15">
-                    <f.icon size={22} className="text-primary" />
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <div className="h-2 w-2 rounded-full bg-primary/60 animate-pulse" />
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-primary/60">
-                      Active
-                    </span>
-                  </div>
-                </div>
-                <h3 className="mb-3 font-heading text-lg font-semibold text-foreground">
-                  {f.title}
-                </h3>
-                <p className={cn(
-                  "text-sm leading-relaxed text-muted-foreground",
-                  i === features.length - 1 && "max-w-2xl"
-                )}>
-                  {f.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+          <VoiceFeatureSelector features={features} isMobile={isMobile} />
         </div>
       </section>
 
