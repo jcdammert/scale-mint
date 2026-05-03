@@ -14,7 +14,6 @@ import {
   Check,
   X,
   Sparkles,
-  Quote,
 } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -167,13 +166,6 @@ export default function WhyUsPage() {
               viewport={{ once: true }}
               className="lg:col-span-8 relative"
             >
-              {/* Decorative quote mark */}
-              <Quote
-                size={56}
-                className="text-primary/15 absolute -top-2 -left-2 lg:-left-6"
-                strokeWidth={1.5}
-              />
-
               <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl lg:text-5xl leading-[1.1] mb-8 relative">
                 Our <span className="text-gradient">Story</span>
               </h2>
@@ -376,18 +368,7 @@ export default function WhyUsPage() {
               <span className="text-gradient">Your Growth</span>
             </h2>
 
-            {/* Big decorative quote marks */}
             <div className="relative px-4 md:px-12">
-              <Quote
-                size={72}
-                className="text-primary/15 absolute -top-4 left-0"
-                strokeWidth={1.5}
-              />
-              <Quote
-                size={72}
-                className="text-primary/15 absolute -bottom-4 right-0 rotate-180"
-                strokeWidth={1.5}
-              />
               <p className="relative text-lg md:text-xl leading-relaxed text-foreground/90 italic font-light">
                 {"Our long-term goal isn't just to be your platform provider — it's to become a real partner in the businesses we work with. Every client we take on, we treat like a future partner. That means we're selective, we're honest, and we're invested in your success from day one."}
               </p>
