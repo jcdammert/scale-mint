@@ -8,10 +8,15 @@ const Footer = () => {
           <Image src="/logo.png" alt="ScaleMint" width={1525} height={481} className="h-12 w-auto" />
         </a>
 
-        <div className="flex items-center gap-6 text-sm text-muted-foreground">
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
           <a href="#" className="transition-colors hover:text-foreground">Privacy Policy</a>
           <a href="#" className="transition-colors hover:text-foreground">Terms</a>
-          <a href="mailto:scalemintsolutions@gmail.com" className="transition-colors hover:text-foreground">scalemintsolutions@gmail.com</a>
+          <a
+            href="mailto:scalemintsolutions@gmail.com"
+            className="break-all transition-colors hover:text-foreground"
+          >
+            scalemintsolutions@gmail.com
+          </a>
         </div>
 
         <p className="text-xs text-muted-foreground">

@@ -229,7 +229,7 @@ export default function ScaleMintDashboard() {
           Sales pipeline
         </span>
         <span style={{ fontSize: 10, color: "#3d5a48" }}>
-          Drag cards between stages
+          {isMobile ? "Swipe to see all stages →" : "Drag cards between stages"}
         </span>
       </div>
 
@@ -239,7 +239,9 @@ export default function ScaleMintDashboard() {
         gridTemplateColumns: isMobile ? undefined : "repeat(4,minmax(0,1fr))",
         gap: 8,
         overflowX: isMobile ? "auto" : "visible",
+        WebkitOverflowScrolling: "touch",
         paddingBottom: isMobile ? 8 : 0,
+        scrollSnapType: isMobile ? "x mandatory" : undefined,
       }}>
         {stages.map((stage, si) => {
           const stageLeads = leads.filter(l => l.stage === si);
@@ -256,8 +258,9 @@ export default function ScaleMintDashboard() {
                 padding: "10px 8px",
                 border: `0.5px solid ${isOver ? stage.accent + "44" : "rgba(255,255,255,0.05)"}`,
                 minHeight: 160,
-                minWidth: isMobile ? 140 : undefined,
+                minWidth: isMobile ? 180 : undefined,
                 flexShrink: isMobile ? 0 : undefined,
+                scrollSnapAlign: isMobile ? "start" : undefined,
                 transition: "all 0.2s ease",
               }}
             >

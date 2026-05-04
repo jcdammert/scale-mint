@@ -54,7 +54,7 @@ export default function DualCTA({
   const secondaryConfig = { ...DEFAULT_SECONDARY, ...secondary };
 
   return (
-    <section className="px-4 pt-6 pb-16 md:pt-10 md:pb-24">
+    <section className="px-4 pt-4 pb-12 md:pt-10 md:pb-24">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -170,7 +170,7 @@ function SpotlightCard({
           } as React.CSSProperties
         }
       >
-        <div className="relative p-7 md:p-8 flex flex-col h-full">
+        <div className="relative p-6 sm:p-7 md:p-8 flex flex-col h-full">
           {/* Icon + eyebrow */}
           <div className="flex items-center gap-3 mb-5">
             <div

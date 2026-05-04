@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 type Layer = {
   num: string;
@@ -55,9 +56,10 @@ type LayerProps = {
   idx: number;
   active: number | null;
   setActive: (n: number | null) => void;
+  isMobile: boolean;
 };
 
-function LayerRow({ layer, idx, active, setActive }: LayerProps) {
+function LayerRow({ layer, idx, active, setActive, isMobile }: LayerProps) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -74,7 +76,7 @@ function LayerRow({ layer, idx, active, setActive }: LayerProps) {
         background: open ? layer.dimBg : "rgba(255,255,255,0.02)",
         border: `0.5px solid ${open ? layer.border : "rgba(255,255,255,0.06)"}`,
         borderRadius: 14,
-        padding: "14px 18px",
+        padding: isMobile ? "12px 14px" : "14px 18px",
         cursor: "pointer",
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : "translateY(16px)",
@@ -82,14 +84,72 @@ function LayerRow({ layer, idx, active, setActive }: LayerProps) {
         boxShadow: open ? `0 0 28px ${layer.accent}18` : "none",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
-        <div style={{ fontSize: 11, fontWeight: 700, color: layer.accent, opacity: 0.5, width: 24, flexShrink: 0 }}>
-          {layer.num}
+      {/* Mobile: stacked vertical layout. Desktop: horizontal row. */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: isMobile ? "column" : "row",
+          alignItems: isMobile ? "stretch" : "center",
+          gap: isMobile ? 10 : 14,
+        }}
+      >
+        {/* Top row on mobile: number + label + chevron */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            flex: isMobile ? "none" : "0 0 auto",
+            minWidth: 0,
+          }}
+        >
+          <span
+            style={{
+              fontSize: 11,
+              fontWeight: 700,
+              color: layer.accent,
+              opacity: 0.5,
+              flexShrink: 0,
+            }}
+          >
+            {layer.num}
+          </span>
+          <span
+            style={{
+              fontSize: isMobile ? 14 : 15,
+              fontWeight: 700,
+              color: "#e8fdf0",
+              flex: isMobile ? 1 : "0 0 130px",
+            }}
+          >
+            {layer.label}
+          </span>
+          {isMobile && (
+            <span
+              style={{
+                color: layer.accent,
+                fontSize: 14,
+                transition: "transform 0.25s ease",
+                transform: open ? "rotate(180deg)" : "none",
+                opacity: 0.7,
+                flexShrink: 0,
+              }}
+            >
+              ↓
+            </span>
+          )}
         </div>
-        <div style={{ fontSize: 15, fontWeight: 700, color: "#e8fdf0", flex: "0 0 130px" }}>
-          {layer.label}
-        </div>
-        <div style={{ flex: 1, display: "flex", flexWrap: "wrap", gap: 6, minWidth: 0 }}>
+
+        {/* Pills row */}
+        <div
+          style={{
+            flex: 1,
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 6,
+            minWidth: 0,
+          }}
+        >
           {layer.pills.map((p, i) => (
             <span
               key={i}
@@ -103,6 +163,7 @@ function LayerRow({ layer, idx, active, setActive }: LayerProps) {
                 background: `${layer.accent}18`,
                 color: layer.accent,
                 border: `0.5px solid ${layer.accent}44`,
+                whiteSpace: "nowrap",
                 transition: "transform 0.15s ease",
               }}
               onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
@@ -112,18 +173,21 @@ function LayerRow({ layer, idx, active, setActive }: LayerProps) {
             </span>
           ))}
         </div>
-        <div
-          style={{
-            color: layer.accent,
-            fontSize: 16,
-            transition: "transform 0.25s ease",
-            transform: open ? "rotate(180deg)" : "none",
-            opacity: 0.7,
-            flexShrink: 0,
-          }}
-        >
-          ↓
-        </div>
+
+        {!isMobile && (
+          <span
+            style={{
+              color: layer.accent,
+              fontSize: 16,
+              transition: "transform 0.25s ease",
+              transform: open ? "rotate(180deg)" : "none",
+              opacity: 0.7,
+              flexShrink: 0,
+            }}
+          >
+            ↓
+          </span>
+        )}
       </div>
 
       {open && (
@@ -149,6 +213,7 @@ function LayerRow({ layer, idx, active, setActive }: LayerProps) {
 export default function ScaleMintSystemStack() {
   const [active, setActive] = useState<number | null>(null);
   const [visible, setVisible] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 80);
@@ -160,7 +225,7 @@ export default function ScaleMintSystemStack() {
       style={{
         background: "hsl(230 12% 10% / 0.6)",
         borderRadius: 16,
-        padding: "20px 20px",
+        padding: isMobile ? "16px 14px" : "20px 20px",
         position: "relative",
         fontFamily: "system-ui, sans-serif",
         border: "1px solid rgba(255,255,255,0.07)",
@@ -179,13 +244,20 @@ export default function ScaleMintSystemStack() {
         }}
       >
         <p style={{ fontSize: 11, color: "hsl(148 30% 50%)", margin: 0, letterSpacing: "0.04em" }}>
-          Click any layer to see what it does
+          {isMobile ? "Tap any layer" : "Click any layer to see what it does"}
         </p>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {layers.map((l, i) => (
-          <LayerRow key={i} layer={l} idx={i} active={active} setActive={setActive} />
+          <LayerRow
+            key={i}
+            layer={l}
+            idx={i}
+            active={active}
+            setActive={setActive}
+            isMobile={isMobile}
+          />
         ))}
       </div>
     </div>

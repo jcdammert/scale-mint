@@ -52,6 +52,9 @@
   html {
     background: hsl(var(--background));
     scroll-behavior: smooth;
+    /* Stop accidental horizontal scroll from off-screen decoration
+       (rocket halo, floating badges, blur orbs) on mobile. */
+    overflow-x: hidden;
   }
 
   body {
@@ -59,6 +62,7 @@
     font-family: var(--font-body);
     background: transparent;
     position: relative;
+    overflow-x: hidden;
   }
 
   /* ── Noise texture overlay ── */

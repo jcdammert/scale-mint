@@ -16,7 +16,7 @@ const FinalCTASection = () => {
             initial={isMobile ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="card-glass relative overflow-hidden p-8 md:p-10 lg:col-span-2 flex flex-col justify-center text-center lg:text-left"
+            className="card-glass relative overflow-hidden p-6 sm:p-8 md:p-10 lg:col-span-2 flex flex-col justify-center text-center lg:text-left"
           >
             <div className="mx-auto lg:mx-0 mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
               <Play size={20} className="text-primary ml-0.5" />
@@ -47,7 +47,7 @@ const FinalCTASection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="relative overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 px-8 py-12 md:px-12 md:py-14 lg:col-span-3 flex flex-col justify-center text-center"
+            className="relative overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 px-6 py-10 sm:px-8 sm:py-12 md:px-12 md:py-14 lg:col-span-3 flex flex-col justify-center text-center"
           >
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
 
