@@ -73,7 +73,7 @@ const HeroSection = () => {
               Book a Free Strategy Call
             </Button>
           </a>
-          <a href="#how-it-works" className="block w-full sm:w-auto">
+          <a href="/how-it-works" className="block w-full sm:w-auto">
             <Button variant="hero-outline" size="lg" className="text-base px-8 py-6 w-full sm:w-auto">
               See How It Works
             </Button>
