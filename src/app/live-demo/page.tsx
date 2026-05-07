@@ -2,9 +2,16 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Live Demo — Scale Mint",
+  title: "Live Demo",
   description:
-    "Watch how Scale Mint's AI qualifies your leads and texts you when they're ready — all on autopilot. Interactive demo.",
+    "Walk through a real lead flow — missed call to text-back to booked job. See exactly how Scale Mint runs in the wild. No sign-up.",
+  alternates: { canonical: "/live-demo" },
+  openGraph: {
+    title: "Live Demo | Scale Mint",
+    description:
+      "Walk through a real lead flow — missed call to text-back to booked job. No sign-up.",
+    url: "/live-demo",
+  },
 };
 
 export default function LiveDemoPage() {

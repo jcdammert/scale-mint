@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Scale Mint — Here's What We Do and How It Works",
   description:
     "A walkthrough of every service — what it is, how it works, and what it looks like for your business.",
+  robots: { index: false, follow: false },
+  alternates: { canonical: "/demo" },
   openGraph: {
     title: "Scale Mint — Here's What We Do and How It Works",
     description:
