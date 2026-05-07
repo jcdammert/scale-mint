@@ -11,7 +11,8 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function BookPage() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     companyName: "",
     phone: "",
     email: "",
@@ -39,7 +40,7 @@ export default function BookPage() {
 
       if (!res.ok) throw new Error("Request failed");
       setStatus("success");
-      setFormData({ name: "", companyName: "", phone: "", email: "", message: "" });
+      setFormData({ firstName: "", lastName: "", companyName: "", phone: "", email: "", message: "" });
     } catch {
       setStatus("error");
     }
@@ -96,23 +97,43 @@ export default function BookPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="card-glass space-y-5 p-8">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="mb-1.5 block text-sm font-medium text-foreground"
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="John Smith"
-                    className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
-                  />
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      htmlFor="firstName"
+                      className="mb-1.5 block text-sm font-medium text-foreground"
+                    >
+                      First Name
+                    </label>
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      required
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder="John"
+                      className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="lastName"
+                      className="mb-1.5 block text-sm font-medium text-foreground"
+                    >
+                      Last Name
+                    </label>
+                    <input
+                      id="lastName"
+                      name="lastName"
+                      type="text"
+                      required
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      placeholder="Smith"
+                      className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
+                    />
+                  </div>
                 </div>
 
                 <div>
