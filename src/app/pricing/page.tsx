@@ -52,15 +52,11 @@ const addOns = [
   {
     icon: Megaphone,
     title: "Meta Ads Management",
-    price: "20% of ad spend",
-    min: "$300/mo minimum",
     desc: "We build, manage, and optimize your Facebook and Instagram ad campaigns. Before/after creative, lead forms, retargeting — all done for you.",
   },
   {
     icon: Search,
     title: "Google Ads Management",
-    price: "20% of ad spend",
-    min: "$400/mo minimum",
     desc: "We run your Google search and Local Services Ads so you show up when homeowners are actively searching for your service.",
   },
 ];
@@ -146,6 +142,9 @@ export default function PricingPage() {
                 </span>
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
+              <p className="mt-1 text-xs text-muted-foreground">
+                + one-time setup fee
+              </p>
 
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 We build it out completely — you run it yourself. Same powerful platform, no management fees. Perfect if you want full control without the agency price tag.
@@ -199,6 +198,9 @@ export default function PricingPage() {
                 </span>
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
+              <p className="mt-1 text-xs text-muted-foreground">
+                + one-time setup fee
+              </p>
 
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 Everything in Starter, plus we manage it for you. We handle the automations, follow-ups, and optimizations so you can stay on the truck.
@@ -248,6 +250,9 @@ export default function PricingPage() {
                 </span>
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
+              <p className="mt-1 text-xs text-muted-foreground">
+                + one-time setup fee
+              </p>
 
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 Everything in Growth, plus we make you the #1 contractor in your area through SEO, Google Business Profile management, and local authority building.
@@ -323,15 +328,6 @@ export default function PricingPage() {
                     {a.title}
                   </h4>
                 </div>
-
-                <div className="mb-4 flex items-baseline gap-2">
-                  <span className="font-heading text-2xl font-bold text-foreground">
-                    {a.price}
-                  </span>
-                </div>
-                <p className="text-xs text-muted-foreground mb-4 -mt-3">
-                  {a.min}
-                </p>
 
                 <p className="text-sm leading-relaxed text-muted-foreground flex-1">
                   {a.desc}
