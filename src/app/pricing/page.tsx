@@ -146,9 +146,6 @@ export default function PricingPage() {
                 </span>
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
-              <p className="mt-1 text-xs text-muted-foreground">
-                + $300 one-time setup
-              </p>
 
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 We build it out completely — you run it yourself. Same powerful platform, no management fees. Perfect if you want full control without the agency price tag.
@@ -202,9 +199,6 @@ export default function PricingPage() {
                 </span>
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
-              <p className="mt-1 text-xs text-muted-foreground">
-                + $500 one-time setup
-              </p>
 
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 Everything in Starter, plus we manage it for you. We handle the automations, follow-ups, and optimizations so you can stay on the truck.
@@ -254,9 +248,6 @@ export default function PricingPage() {
                 </span>
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
-              <p className="mt-1 text-xs text-muted-foreground">
-                + $800 one-time setup
-              </p>
 
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 Everything in Growth, plus we make you the #1 contractor in your area through SEO, Google Business Profile management, and local authority building.
@@ -285,20 +276,6 @@ export default function PricingPage() {
               </p>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* ─── SETUP FEE NOTE ─── */}
-      <section className="px-4 pb-6 md:pb-10">
-        <div className="container mx-auto max-w-3xl">
-          <motion.p
-            initial={isMobile ? false : { opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-sm text-muted-foreground text-center"
-          >
-            Setup runs 5–10 days depending on the plan. You&apos;ll know the exact scope and timeline before you commit — nothing hidden.
-          </motion.p>
         </div>
       </section>
 
