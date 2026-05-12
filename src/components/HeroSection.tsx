@@ -79,7 +79,7 @@ const HeroSection = () => {
               alt="NVIDIA Inception, Microsoft for Startups, Google for Startups"
               width={400}
               height={50}
-              className="h-7 w-auto object-contain"
+              className="h-14 w-auto object-contain"
             />
           </div>
         </motion.div>
