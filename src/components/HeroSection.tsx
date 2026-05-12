@@ -7,12 +7,6 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import Particles from "@/components/Particles";
 import Image from "next/image";
 
-const partners = [
-  { src: "/nvidia-inception.png", alt: "NVIDIA Inception Program", width: 110, height: 40 },
-  { src: "/microsoft-startups.png", alt: "Microsoft for Startups", width: 110, height: 40 },
-  { src: "/google-startups.png", alt: "Google for Startups", width: 110, height: 40 },
-];
-
 const stats = [
   { icon: Clock, text: "Live in 5–10 Days" },
   { icon: UserCheck, text: "No Tech Skills Required" },
@@ -79,18 +73,14 @@ const HeroSection = () => {
           <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground/50">
             Backed by
           </span>
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
-            {partners.map((p) => (
-              <div key={p.alt} className="opacity-50 hover:opacity-70 transition-opacity duration-300 grayscale">
-                <Image
-                  src={p.src}
-                  alt={p.alt}
-                  width={p.width}
-                  height={p.height}
-                  className="h-7 w-auto object-contain"
-                />
-              </div>
-            ))}
+          <div className="opacity-50 hover:opacity-70 transition-opacity duration-300">
+            <Image
+              src="/partners.webp"
+              alt="NVIDIA Inception, Microsoft for Startups, Google for Startups"
+              width={400}
+              height={50}
+              className="h-7 w-auto object-contain"
+            />
           </div>
         </motion.div>
 
