@@ -172,11 +172,6 @@ export default function PricingPage() {
                   Get Started
                 </Button>
               </a>
-              <a href="/book" className="mt-3 block">
-                <Button variant="hero-outline" className="w-full">
-                  Book a Strategy Call
-                </Button>
-              </a>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
                 Best for solo operators who want a professional system built for them and are comfortable running it themselves.
@@ -238,11 +233,6 @@ export default function PricingPage() {
                   Get Started
                 </Button>
               </a>
-              <a href="/book" className="mt-3 block">
-                <Button variant="hero-outline" className="w-full">
-                  Book a Strategy Call
-                </Button>
-              </a>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
                 Best for established operators getting leads but losing them to slow follow-up. We run the system so nothing falls through the cracks.
@@ -298,11 +288,6 @@ export default function PricingPage() {
               >
                 <Button variant="cta" className="w-full">
                   Get Started
-                </Button>
-              </a>
-              <a href="/book" className="mt-3 block">
-                <Button variant="hero-outline" className="w-full">
-                  Book a Strategy Call
                 </Button>
               </a>
 
