@@ -162,7 +162,17 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <a href="/book" className="mt-8 block">
+              <a
+                href="https://buy.stripe.com/fZucN58nsf5j4j65i92Nq05"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 block"
+              >
+                <Button variant="cta" className="w-full">
+                  Get Started
+                </Button>
+              </a>
+              <a href="/book" className="mt-3 block">
                 <Button variant="hero-outline" className="w-full">
                   Book a Strategy Call
                 </Button>
@@ -218,8 +228,18 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <a href="/book" className="mt-8 block">
-                <Button variant="hero" className="w-full">
+              <a
+                href="https://buy.stripe.com/4gMbJ18ns3mB8zmdOF2Nq04"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 block"
+              >
+                <Button variant="cta" className="w-full animate-glow-pulse">
+                  Get Started
+                </Button>
+              </a>
+              <a href="/book" className="mt-3 block">
+                <Button variant="hero-outline" className="w-full">
                   Book a Strategy Call
                 </Button>
               </a>
@@ -270,7 +290,17 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <a href="/book" className="mt-8 block">
+              <a
+                href="https://buy.stripe.com/bJeaEX1Z4cXbdTGdOF2Nq03"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 block"
+              >
+                <Button variant="cta" className="w-full">
+                  Get Started
+                </Button>
+              </a>
+              <a href="/book" className="mt-3 block">
                 <Button variant="hero-outline" className="w-full">
                   Book a Strategy Call
                 </Button>
