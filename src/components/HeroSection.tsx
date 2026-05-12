@@ -5,6 +5,13 @@ import { motion } from "framer-motion";
 import { Clock, UserCheck, HeartHandshake, Sparkles } from "lucide-react";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import Particles from "@/components/Particles";
+import Image from "next/image";
+
+const partners = [
+  { src: "/nvidia-inception.png", alt: "NVIDIA Inception Program", width: 110, height: 40 },
+  { src: "/microsoft-startups.png", alt: "Microsoft for Startups", width: 110, height: 40 },
+  { src: "/google-startups.png", alt: "Google for Startups", width: 110, height: 40 },
+];
 
 const stats = [
   { icon: Clock, text: "Live in 5–10 Days" },
@@ -61,6 +68,31 @@ const HeroSection = () => {
         >
           We install the pipeline, automations, and online presence that turn inbound leads into booked jobs — built and managed for how your crew actually runs. When you&apos;re ready to add ads, the system&apos;s already there to catch the volume.
         </motion.p>
+
+        {/* Partner logos */}
+        <motion.div
+          initial={isMobile ? false : { opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="mt-8 flex flex-col items-center gap-3"
+        >
+          <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground/50">
+            Backed by
+          </span>
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+            {partners.map((p) => (
+              <div key={p.alt} className="opacity-50 hover:opacity-70 transition-opacity duration-300 grayscale">
+                <Image
+                  src={p.src}
+                  alt={p.alt}
+                  width={p.width}
+                  height={p.height}
+                  className="h-7 w-auto object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </motion.div>
 
         <motion.div
           initial={isMobile ? false : { opacity: 0, y: 20 }}
