@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import FlyingRocket from "@/components/FlyingRocket";
 import {
   SITE_URL,
   organizationSchema,
@@ -89,7 +88,6 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <FlyingRocket />
         <div className="relative z-10">{children}</div>
       </body>
     </html>
