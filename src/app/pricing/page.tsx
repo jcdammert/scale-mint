@@ -163,7 +163,7 @@ export default function PricingPage() {
               </ul>
 
               <a
-                href="https://buy.stripe.com/fZucN58nsf5j4j65i92Nq05"
+                href="https://buy.stripe.com/28E7sLcDIe1fbLybGx2Nq06"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 block"
