@@ -138,7 +138,7 @@ export default function PricingPage() {
 
               <div className="mt-4 flex items-baseline gap-2">
                 <span className="font-heading text-4xl font-bold text-foreground">
-                  $97
+                  $147
                 </span>
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
