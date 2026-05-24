@@ -139,21 +139,6 @@ export default function WhyUsPage() {
                   <div className="text-xs font-medium text-primary/80 mt-1 uppercase tracking-wider">
                     Founder & Operator
                   </div>
-                  <div className="mt-5 pt-5 border-t border-white/5 space-y-2">
-                    <div className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/60">
-                      Currently Running
-                    </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {["Window Tinting", "Asphalt Coatings", "Pressure Washing", "Junk Removal"].map((b) => (
-                        <span
-                          key={b}
-                          className="inline-flex rounded-full border border-primary/15 bg-primary/5 px-2.5 py-1 text-[11px] font-medium text-primary/85"
-                        >
-                          {b}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </div>
             </motion.aside>
