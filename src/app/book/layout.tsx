@@ -4,13 +4,13 @@ import { jsonLd, breadcrumbSchema } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Book a Strategy Call",
   description:
-    "Free 20-minute call. We walk through your sales process, show you how the system runs, and tell you straight if it's a fit. No pitch, no pressure.",
+    "20-minute call. We walk through your sales process, show you how the system runs, and tell you straight if it's a fit. No pitch, no pressure.",
   alternates: { canonical: "/book" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Book a Strategy Call | Scale Mint",
     description:
-      "Free 20-minute call to map out your follow-up system and what it would cost.",
+      "20-minute call to map out your follow-up system and what it would cost.",
     url: "/book",
   },
 };

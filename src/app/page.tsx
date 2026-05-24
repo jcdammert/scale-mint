@@ -42,7 +42,7 @@ const HOME_FAQS = [
   {
     question: "How much does it cost?",
     answer:
-      "There's a one-time setup and a flat monthly. Exact numbers depend on volume and what's included. See the pricing page or book a free 20-minute call and we'll lay it out.",
+      "There's a one-time setup and a flat monthly. Exact numbers depend on volume and what's included. See the pricing page or book a 20-minute call and we'll lay it out.",
   },
 ];
 

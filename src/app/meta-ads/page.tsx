@@ -229,7 +229,7 @@ export default function MetaAdsPage() {
               Ready to Fill <span className="text-gradient">Your Pipeline?</span>
             </h2>
             <p className="text-muted-foreground mb-8">
-              Free 20-minute call. We map out the campaign, show you what it would look like for your market, and tell you straight if it&apos;s a fit.
+              20-minute call. We map out the campaign, show you what it would look like for your market, and tell you straight if it&apos;s a fit.
             </p>
             <a href="/book">
               <Button variant="cta" size="lg" className="px-8 py-6 text-base animate-glow-pulse">

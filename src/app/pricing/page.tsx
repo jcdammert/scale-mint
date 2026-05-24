@@ -298,7 +298,7 @@ export default function PricingPage() {
         primary={{
           title: "We'll walk you through it.",
           description:
-            "Free 20-minute call. We look at your business, recommend the right plan, and answer every question. No pressure, no pitch.",
+            "20-minute call. We look at your business, recommend the right plan, and answer every question. No pressure, no pitch.",
         }}
       />
 

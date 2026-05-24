@@ -227,7 +227,7 @@ export default function SeoPage() {
               Ready to Own <span className="text-gradient">Your Market?</span>
             </h2>
             <p className="text-muted-foreground mb-8">
-              Free 20-minute call. We look at your market, show you where the ranking opportunities are, and map out exactly what it would take.
+              20-minute call. We look at your market, show you where the ranking opportunities are, and map out exactly what it would take.
             </p>
             <a href="/book">
               <Button variant="cta" size="lg" className="px-8 py-6 text-base animate-glow-pulse">

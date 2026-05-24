@@ -56,7 +56,7 @@ const FinalCTASection = () => {
               <span className="text-gradient">Slow Follow-Up.</span>
             </h2>
             <p className="relative mx-auto mt-5 max-w-xl text-sm md:text-base text-muted-foreground">
-              Free 20-minute call. We map out what your system would look like, what it would cost, and whether it&apos;s a fit. No pitch.
+              20-minute call. We map out what your system would look like, what it would cost, and whether it&apos;s a fit. No pitch.
             </p>
             <div className="relative mt-7">
               <a href="/book" className="block w-full sm:w-auto sm:inline-block">

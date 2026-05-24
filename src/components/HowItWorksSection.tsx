@@ -8,7 +8,7 @@ const steps = [
     num: "01",
     title: "We Talk",
     description:
-      "Free 20-minute call. You tell us how the business runs day to day — where leads come in, where they fall through, what eats your time. We tell you straight if it's a fit.",
+      "20-minute call. You tell us how the business runs day to day — where leads come in, where they fall through, what eats your time. We tell you straight if it's a fit.",
   },
   {
     num: "02",
