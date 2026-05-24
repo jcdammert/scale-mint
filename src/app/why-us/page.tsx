@@ -155,7 +155,7 @@ export default function WhyUsPage() {
               </h2>
 
               <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg relative">
-                <p className="first-letter:font-heading first-letter:text-5xl first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:mt-1">
+                <p>
                   {"My name is Johann Dammert. I started my first business at 15 and never stopped. I ran multiple local service companies."}
                 </p>
                 <p>
