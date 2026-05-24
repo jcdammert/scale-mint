@@ -14,6 +14,7 @@ import {
   Phone,
   MapPin,
   Rocket,
+  Share2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -31,7 +32,7 @@ const pillars = [
     icon: Search,
     title: "An Online Presence That Looks Like a Real Business.",
     description:
-      "We post on your Google profile, Facebook, and Instagram every week. Your Business Profile gets fully built out. Your site is real and built to convert. When a homeowner Googles you after a referral, they see a company that looks established — not a phone number on a Facebook page.",
+      "When a homeowner Googles you after a referral, they find a professional website, real reviews, and a business that looks established. The system handles your online presence automatically — so you look like the obvious choice without lifting a finger.",
   },
   {
     num: "03",
@@ -51,11 +52,20 @@ const pillars = [
 
 const addOns = [
   {
-    icon: Megaphone,
-    title: "Marketing",
+    icon: Share2,
+    title: "Meta Ads",
     description:
-      "Meta, Google, and local SEO — managed end to end. Leads land in the pipeline we already built.",
+      "Facebook and Instagram campaigns built on top of your system. Every lead lands directly in your pipeline and triggers automatic follow-up.",
     note: "Custom quoted.",
+    href: "/meta-ads",
+  },
+  {
+    icon: TrendingUp,
+    title: "Omnipresence SEO",
+    description:
+      "Show up on Google, Maps, AI search engines, and every local directory in your area. Built on top of your system so every inbound lead is captured automatically.",
+    note: "Custom quoted.",
+    href: "/seo",
   },
   {
     icon: Globe,
@@ -63,13 +73,15 @@ const addOns = [
     description:
       "Built to rank and built to convert. Every form submission drops straight into your CRM and triggers follow-up.",
     note: "Custom quoted.",
+    href: "/services/ai-websites",
   },
   {
     icon: Sparkles,
     title: "AI Employee",
     description:
       "Answers your phone, replies to texts, qualifies the lead, and books the job — even when you're on a roof at 7pm.",
-    note: "Available with Growth plan. Custom quoted.",
+    note: "Custom quoted.",
+    href: "/services/ai-voice",
   },
 ];
 
@@ -395,27 +407,31 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        <div className="mt-8 grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto">
+        <div className="mt-8 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
           {addOns.map((a, i) => (
-            <motion.div
+            <motion.a
               key={a.title}
+              href={a.href}
               initial={isMobile ? false : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="card-glass p-6 transition-all duration-300 hover:border-primary/30"
+              className="card-glass p-6 flex flex-col transition-all duration-300 hover:border-primary/30 group cursor-pointer"
             >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 transition-transform duration-300 group-hover:scale-110">
                 <a.icon size={20} className="text-primary" />
               </div>
               <h4 className="mb-2 font-heading text-base font-semibold text-foreground">
                 {a.title}
               </h4>
-              <p className="text-sm leading-relaxed text-muted-foreground mb-3">
+              <p className="text-sm leading-relaxed text-muted-foreground mb-3 flex-1">
                 {a.description}
               </p>
-              <p className="text-xs font-medium text-primary">{a.note}</p>
-            </motion.div>
+              <div className="flex items-center justify-between mt-auto">
+                <p className="text-xs font-medium text-primary">{a.note}</p>
+                <ArrowRight size={14} className="text-primary/50 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-primary" />
+              </div>
+            </motion.a>
           ))}
         </div>
       </div>
