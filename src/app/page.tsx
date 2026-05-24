@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
 import ServicesSection from "@/components/ServicesSection";
-import PromoBanner from "@/components/PromoBanner";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
@@ -57,7 +56,6 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <ServicesSection />
-      <PromoBanner />
       <ProblemSection />
       <HowItWorksSection />
       <TestimonialsSection />
