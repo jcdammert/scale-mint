@@ -117,7 +117,8 @@ export default function PricingPage() {
               viewport={{ once: true }}
               className="card-glass relative flex flex-col p-8 transition-all duration-300 hover:border-primary/20"
             >
-              <h3 className="font-heading text-xl font-semibold text-foreground">
+              <h3 className="font-heading text-2xl font-bold"
+                style={{ background: "linear-gradient(135deg, #FAFAFA 0%, #C8C8C8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                 Core
               </h3>
 
@@ -132,7 +133,7 @@ export default function PricingPage() {
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
               <p className="mt-1 text-xs text-muted-foreground">
-                + $500 one-time setup fee
+                + one-time setup fee
               </p>
 
               <ul className="mt-6 flex-1 space-y-3">
@@ -168,11 +169,8 @@ export default function PricingPage() {
               transition={{ delay: 0.1 }}
               className="card-glass card-glow-green relative flex flex-col p-8 transition-all duration-300 border-primary/40 md:scale-[1.02]"
             >
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground whitespace-nowrap">
-                Recommended
-              </span>
-
-              <h3 className="font-heading text-xl font-semibold text-foreground">
+              <h3 className="font-heading text-2xl font-bold"
+                style={{ background: "linear-gradient(135deg, #FAFAFA 0%, #C8C8C8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                 Scale
               </h3>
 
@@ -187,7 +185,7 @@ export default function PricingPage() {
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
               <p className="mt-1 text-xs text-muted-foreground">
-                + $800 one-time setup fee
+                + one-time setup fee
               </p>
 
               <ul className="mt-6 flex-1 space-y-3">
