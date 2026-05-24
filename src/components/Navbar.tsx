@@ -2,12 +2,13 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Workflow, Globe, Phone, Megaphone } from "lucide-react";
+import { Menu, X, ChevronDown, Workflow, Globe, Phone, Megaphone, TrendingUp } from "lucide-react";
 import Image from "next/image";
 
 const serviceLinks = [
   { label: "Business OS", href: "/business-software", icon: Workflow },
-  { label: "Marketing", href: "/services/marketing", icon: Megaphone },
+  { label: "Meta Ads", href: "/meta-ads", icon: Megaphone },
+  { label: "SEO", href: "/seo", icon: TrendingUp },
   { label: "Custom Websites", href: "/services/ai-websites", icon: Globe },
   { label: "AI Employee", href: "/services/ai-voice", icon: Phone },
 ];

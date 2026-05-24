@@ -5,12 +5,7 @@ import Footer from "@/components/Footer";
 import DualCTA from "@/components/DualCTA";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import {
-  Check,
-  ArrowLeft,
-  Megaphone,
-  Search,
-} from "lucide-react";
+import { Check, ArrowLeft, Megaphone, TrendingUp, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
@@ -26,7 +21,7 @@ const starterFeatures = [
   "Training & onboarding call",
 ];
 
-const growthFeatures = [
+const scaleFeatures = [
   "Everything in Starter",
   "Full website (10–20 pages)",
   "Custom sales & follow-up automations",
@@ -38,26 +33,18 @@ const growthFeatures = [
   "Priority support",
 ];
 
-const dominateFeatures = [
-  "Everything in Growth",
-  "Advanced on-site SEO (full keyword strategy, monthly optimization)",
-  "Google Business Profile full management + posting",
-  "Local citation building (Yelp, Angi, BBB, etc.)",
-  "Backlink campaign",
-  "Quarterly SEO performance reports",
-  "Dedicated account manager",
-];
-
 const addOns = [
   {
     icon: Megaphone,
     title: "Meta Ads Management",
     desc: "We build, manage, and optimize your Facebook and Instagram ad campaigns. Before/after creative, lead forms, retargeting — all done for you.",
+    learnHref: "/meta-ads",
   },
   {
-    icon: Search,
-    title: "Google Ads Management",
-    desc: "We run your Google search and Local Services Ads so you show up when homeowners are actively searching for your service.",
+    icon: TrendingUp,
+    title: "Omnipresence SEO",
+    desc: "We put you everywhere — Google, Maps, AI search engines, and every local directory — so you're the obvious choice before they even pick up the phone.",
+    learnHref: "/seo",
   },
 ];
 
@@ -98,14 +85,14 @@ export default function PricingPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            Three plans depending on where the business is right now. We set everything up, train you, and keep it running every month.
+            Two plans depending on where the business is right now. We set everything up, train you, and keep it running every month.
           </motion.p>
         </div>
       </section>
 
       {/* ─── PRICING CARDS ─── */}
       <section className="px-4 pt-6 md:pt-10 pb-6 md:pb-10">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -121,7 +108,7 @@ export default function PricingPage() {
             </h2>
           </motion.div>
 
-          <div className="grid gap-6 md:grid-cols-3 items-stretch">
+          <div className="grid gap-6 md:grid-cols-2 items-stretch">
             {/* ─── STARTER ─── */}
             <motion.div
               initial={isMobile ? false : { opacity: 0, y: 30 }}
@@ -152,10 +139,7 @@ export default function PricingPage() {
 
               <ul className="mt-6 flex-1 space-y-3">
                 {starterFeatures.map((f) => (
-                  <li
-                    key={f}
-                    className="flex items-start gap-3 text-sm text-muted-foreground"
-                  >
+                  <li key={f} className="flex items-start gap-3 text-sm text-muted-foreground">
                     <Check size={16} className="mt-0.5 shrink-0 text-primary" />
                     {f}
                   </li>
@@ -178,7 +162,7 @@ export default function PricingPage() {
               </p>
             </motion.div>
 
-            {/* ─── GROWTH (Recommended) ─── */}
+            {/* ─── SCALE (Recommended) ─── */}
             <motion.div
               initial={isMobile ? false : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -191,7 +175,7 @@ export default function PricingPage() {
               </span>
 
               <h3 className="font-heading text-xl font-semibold text-foreground">
-                Growth
+                Scale
               </h3>
               <p className="mt-1 text-sm font-medium text-primary">
                 Your system, our hands.
@@ -212,11 +196,8 @@ export default function PricingPage() {
               </p>
 
               <ul className="mt-6 flex-1 space-y-3">
-                {growthFeatures.map((f) => (
-                  <li
-                    key={f}
-                    className="flex items-start gap-3 text-sm text-muted-foreground"
-                  >
+                {scaleFeatures.map((f) => (
+                  <li key={f} className="flex items-start gap-3 text-sm text-muted-foreground">
                     <Check size={16} className="mt-0.5 shrink-0 text-primary" />
                     {f}
                   </li>
@@ -238,63 +219,6 @@ export default function PricingPage() {
                 Best for established operators getting leads but losing them to slow follow-up. We run the system so nothing falls through the cracks.
               </p>
             </motion.div>
-
-            {/* ─── DOMINATE ─── */}
-            <motion.div
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="card-glass relative flex flex-col p-8 transition-all duration-300 hover:border-primary/20"
-            >
-              <h3 className="font-heading text-xl font-semibold text-foreground">
-                Dominate
-              </h3>
-              <p className="mt-1 text-sm font-medium text-primary">
-                Your system, our hands, plus you own your market.
-              </p>
-
-              <div className="mt-4 flex items-baseline gap-2">
-                <span className="font-heading text-4xl font-bold text-foreground">
-                  $597
-                </span>
-                <span className="text-sm text-muted-foreground">/month</span>
-              </div>
-              <p className="mt-1 text-xs text-muted-foreground">
-                + one-time setup fee
-              </p>
-
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Everything in Growth, plus we make you the #1 contractor in your area through SEO, Google Business Profile management, and local authority building.
-              </p>
-
-              <ul className="mt-6 flex-1 space-y-3">
-                {dominateFeatures.map((f) => (
-                  <li
-                    key={f}
-                    className="flex items-start gap-3 text-sm text-muted-foreground"
-                  >
-                    <Check size={16} className="mt-0.5 shrink-0 text-primary" />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href="https://buy.stripe.com/bJeaEX1Z4cXbdTGdOF2Nq03"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 block"
-              >
-                <Button variant="cta" className="w-full">
-                  Get Started
-                </Button>
-              </a>
-
-              <p className="mt-3 text-xs text-muted-foreground text-center">
-                Best for serious operators who want to dominate local search and become the go-to contractor in their market long term.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -311,7 +235,7 @@ export default function PricingPage() {
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-10"
+            className="text-center mb-6"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
               Optional Add-Ons
@@ -321,9 +245,18 @@ export default function PricingPage() {
               <span className="text-gradient">Your Plan.</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Stack paid traffic on top of your system for maximum lead flow.
+              Stack more firepower on top of your system. Custom quoted based on your market and goals.
             </p>
           </motion.div>
+
+          <motion.p
+            initial={isMobile ? false : { opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center text-xs font-semibold uppercase tracking-[0.14em] text-primary/70 mb-8"
+          >
+            Add-ons are available exclusively for Scale plan clients.
+          </motion.p>
 
           <div className="grid gap-6 sm:grid-cols-2">
             {addOns.map((a, i) => (
@@ -335,7 +268,7 @@ export default function PricingPage() {
                 transition={{ delay: i * 0.08 }}
                 className="card-glass flex flex-col p-7 transition-all duration-300 hover:border-primary/30 group"
               >
-                <div className="mb-5 flex items-center gap-3">
+                <div className="mb-4 flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 transition-transform duration-300 group-hover:scale-110">
                     <a.icon size={20} className="text-primary" />
                   </div>
@@ -344,21 +277,28 @@ export default function PricingPage() {
                   </h4>
                 </div>
 
-                <p className="text-sm leading-relaxed text-muted-foreground flex-1">
+                <p className="text-sm leading-relaxed text-muted-foreground flex-1 mb-6">
                   {a.desc}
                 </p>
+
+                <div className="flex gap-3">
+                  <Link
+                    href={a.learnHref}
+                    className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg border border-primary/25 bg-primary/5 px-4 py-2.5 text-xs font-semibold text-primary transition-all duration-200 hover:bg-primary/10 hover:border-primary/40"
+                  >
+                    Learn More
+                    <ArrowRight size={13} />
+                  </Link>
+                  <Link
+                    href="/book"
+                    className="flex-1 inline-flex items-center justify-center rounded-lg border border-border bg-white/[0.03] px-4 py-2.5 text-xs font-semibold text-muted-foreground transition-all duration-200 hover:bg-white/[0.06] hover:text-foreground"
+                  >
+                    Book a Call
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>
-
-          <motion.p
-            initial={isMobile ? false : { opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground"
-          >
-            Add-ons work with any plan but are recommended on Growth and Dominate for maximum results — those plans have the full automation system to capture and convert every lead.
-          </motion.p>
         </div>
       </section>
 

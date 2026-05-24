@@ -125,7 +125,8 @@ export function jsonLd(data: object): string {
 export const ALL_ROUTES = [
   { path: "/", priority: 1.0, changeFrequency: "weekly" as const },
   { path: "/business-software", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/services/marketing", priority: 0.9, changeFrequency: "monthly" as const },
+  { path: "/meta-ads", priority: 0.9, changeFrequency: "monthly" as const },
+  { path: "/seo", priority: 0.9, changeFrequency: "monthly" as const },
   { path: "/services/ai-voice", priority: 0.9, changeFrequency: "monthly" as const },
   { path: "/services/ai-websites", priority: 0.9, changeFrequency: "monthly" as const },
   { path: "/services/custom-ai", priority: 0.8, changeFrequency: "monthly" as const },
