@@ -119,9 +119,6 @@ export default function PricingPage() {
               <h3 className="font-heading text-xl font-semibold text-foreground">
                 Starter
               </h3>
-              <p className="mt-1 text-sm font-medium text-primary">
-                Your system, your hands.
-              </p>
 
               <div className="mt-4 flex items-baseline gap-2">
                 <span className="font-heading text-4xl font-bold text-foreground">
@@ -131,10 +128,6 @@ export default function PricingPage() {
               </div>
               <p className="mt-1 text-xs text-muted-foreground">
                 + one-time setup fee
-              </p>
-
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                We build it out completely — you run it yourself. Same powerful platform, no management fees. Perfect if you want full control without the agency price tag.
               </p>
 
               <ul className="mt-6 flex-1 space-y-3">
@@ -177,9 +170,6 @@ export default function PricingPage() {
               <h3 className="font-heading text-xl font-semibold text-foreground">
                 Scale
               </h3>
-              <p className="mt-1 text-sm font-medium text-primary">
-                Your system, our hands.
-              </p>
 
               <div className="mt-4 flex items-baseline gap-2">
                 <span className="font-heading text-4xl font-bold text-foreground">
@@ -189,10 +179,6 @@ export default function PricingPage() {
               </div>
               <p className="mt-1 text-xs text-muted-foreground">
                 + one-time setup fee
-              </p>
-
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Everything in Starter, plus we manage it for you. We handle the automations, follow-ups, and optimizations so you can stay on the truck.
               </p>
 
               <ul className="mt-6 flex-1 space-y-3">
