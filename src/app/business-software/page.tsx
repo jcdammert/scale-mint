@@ -90,7 +90,7 @@ const features = [
     icon: Share2,
     title: "Weekly Social Posting",
     description:
-      "We post on Facebook, Instagram, and your Google profile every week so your business looks active.",
+      "A full posting schedule built out for Facebook, Instagram, and your Google Business Profile. Content planned, written, and ready to go — you just hit publish.",
   },
   {
     icon: MessageSquarePlus,
