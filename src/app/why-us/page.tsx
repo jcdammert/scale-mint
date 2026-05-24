@@ -171,10 +171,10 @@ export default function WhyUsPage() {
 
               <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg relative">
                 <p className="first-letter:font-heading first-letter:text-5xl first-letter:font-bold first-letter:text-primary first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:mt-1">
-                  {"My name is Johann Dammert. I started my first business at 15 and never stopped. I run multiple local service companies — window tinting, asphalt coatings, pressure washing, junk removal — and I know what it feels like to have bills due and the phone not ringing. Inconsistent jobs, slow months, and doing everything off your phone just to keep crews paid."}
+                  {"My name is Johann Dammert. I started my first business at 15 and never stopped. I ran multiple local service companies."}
                 </p>
                 <p>
-                  {"I tried the CRMs. Too complicated, no time to actually set them up. I hired agencies. They took the money and sent reports. So I built the system myself — the platform, the automations, the follow-up — for my own crews. Then I helped friends do the same. What every service operator actually needs is the system AND someone who'll set it up and run it right."}
+                  {"I tried the CRMs. No time to actually set them up. I hired agencies. They took the money and sent reports. So I built the system myself — the platform, the automations, the sales systems. Then I helped friends do the same. What every service operator actually needs is the system AND someone who'll set it up and run it right."}
                 </p>
                 <p className="text-foreground/90 font-medium">
                   {"That's why Scale Mint exists."}
