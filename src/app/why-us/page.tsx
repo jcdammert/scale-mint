@@ -297,10 +297,6 @@ export default function WhyUsPage() {
                 transition={{ delay: i * 0.08 }}
                 className="group relative card-glass p-6 md:p-8 transition-all duration-300 hover:border-primary/30 overflow-hidden"
               >
-                {/* Big background number */}
-                <div className="pointer-events-none absolute right-4 md:right-8 top-1/2 -translate-y-1/2 font-heading text-7xl md:text-9xl font-black text-primary/[0.06] group-hover:text-primary/10 transition-colors leading-none select-none">
-                  0{i + 1}
-                </div>
 
                 <div className="relative flex items-start gap-5 md:gap-6">
                   {/* Icon column */}
