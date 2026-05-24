@@ -426,7 +426,7 @@ export default function AIVoicePage() {
               >
                 <a href="/book" className="block w-full sm:w-auto">
                   <Button variant="hero" size="lg" className="w-full sm:w-auto px-8 py-6 text-base">
-                    Book a Free Strategy Call
+                    Book a Strategy Call
                   </Button>
                 </a>
               </motion.div>

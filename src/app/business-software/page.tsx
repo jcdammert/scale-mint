@@ -172,7 +172,7 @@ export default function BusinessSoftwarePage() {
                 size="lg"
                 className="w-full sm:w-auto px-8 py-6 text-base"
               >
-                Book a Free Strategy Call
+                Book a Strategy Call
               </Button>
             </a>
           </motion.div>

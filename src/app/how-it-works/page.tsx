@@ -84,7 +84,7 @@ function StepVisual({ stepNum }: { stepNum: number }) {
         <div className="absolute bottom-2 right-0 card-glass px-4 py-2 text-xs text-foreground shadow-xl rotate-3">
           <div className="flex items-center gap-2">
             <MessageSquare size={12} className="text-primary" />
-            <span className="text-muted-foreground">Free strategy call</span>
+            <span className="text-muted-foreground">Strategy call</span>
           </div>
         </div>
         <div className="absolute top-2 left-0 card-glass px-4 py-2 text-xs text-foreground shadow-xl -rotate-3">
