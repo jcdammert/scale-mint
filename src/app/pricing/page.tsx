@@ -144,11 +144,16 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <Link href="/book" className="mt-8 block">
+              <a
+                href="https://buy.stripe.com/4gMbJ18ns3mB8zmdOF2Nq04"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 block"
+              >
                 <Button variant="cta" className="w-full">
                   Get Started
                 </Button>
-              </Link>
+              </a>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
                 Best for operators who want a professional foundation to run a profitable business — the website, the system, and the automations that make you look and operate better than every competitor in your market.
@@ -194,11 +199,16 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <Link href="/book" className="mt-8 block">
+              <a
+                href="https://buy.stripe.com/bJeaEX1Z4cXbdTGdOF2Nq03"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 block"
+              >
                 <Button variant="cta" className="w-full animate-glow-pulse">
                   Get Started
                 </Button>
-              </Link>
+              </a>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
                 Best for operators who are ready to aggressively scale — a fully active system that runs in the background, handles your leads, manages your online presence, and keeps your business growing while you stay focused on the work.
