@@ -9,28 +9,29 @@ import { Check, ArrowLeft, Megaphone, TrendingUp, ArrowRight } from "lucide-reac
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
-const starterFeatures = [
-  "Custom website (5–7 pages)",
+const coreFeatures = [
+  "Custom website (10–20 pages) + on-page SEO",
   "CRM & sales pipeline",
   "2-way text & email",
   "Missed call text-back",
+  "Speed-to-lead response",
   "Review request automation",
-  "Appointment scheduling",
   "Invoicing & estimates",
   "Contracts & e-signatures",
-  "Training & onboarding call",
+  "Appointment scheduling",
+  "Onboarding & training call",
 ];
 
 const scaleFeatures = [
-  "Everything in Starter",
-  "Full website (10–20 pages)",
-  "Custom sales & follow-up automations",
+  "Everything in Core",
+  "Custom automations tailored to your business",
   "Lead nurturing sequences",
-  "Speed-to-lead workflows",
+  "Multi-step follow-up campaigns",
   "Advanced pipeline automations",
   "AI conversation bot (text + web chat)",
-  "Monthly content updates",
-  "Priority support",
+  "Weekly content posting — Facebook, Instagram & Google Business Profile",
+  "Dedicated account manager",
+  "Monthly strategy call",
 ];
 
 const addOns = [
@@ -109,7 +110,7 @@ export default function PricingPage() {
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 items-stretch">
-            {/* ─── STARTER ─── */}
+            {/* ─── CORE ─── */}
             <motion.div
               initial={isMobile ? false : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -117,21 +118,25 @@ export default function PricingPage() {
               className="card-glass relative flex flex-col p-8 transition-all duration-300 hover:border-primary/20"
             >
               <h3 className="font-heading text-xl font-semibold text-foreground">
-                Starter
+                Core
               </h3>
 
-              <div className="mt-4 flex items-baseline gap-2">
+              <p className="mt-2 text-sm text-muted-foreground leading-snug">
+                The foundation every serious home service operator needs to compete and win locally.
+              </p>
+
+              <div className="mt-5 flex items-baseline gap-2">
                 <span className="font-heading text-4xl font-bold text-foreground">
-                  $147
+                  $347
                 </span>
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
               <p className="mt-1 text-xs text-muted-foreground">
-                + one-time setup fee
+                + $500 one-time setup fee
               </p>
 
               <ul className="mt-6 flex-1 space-y-3">
-                {starterFeatures.map((f) => (
+                {coreFeatures.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-sm text-muted-foreground">
                     <Check size={16} className="mt-0.5 shrink-0 text-primary" />
                     {f}
@@ -139,19 +144,14 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <a
-                href="https://buy.stripe.com/28E7sLcDIe1fbLybGx2Nq06"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 block"
-              >
+              <Link href="/book" className="mt-8 block">
                 <Button variant="cta" className="w-full">
                   Get Started
                 </Button>
-              </a>
+              </Link>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
-                Best for solo operators who want a professional system built for them and are comfortable running it themselves.
+                Best for operators who want a professional foundation to run a profitable business — the website, the system, and the automations that make you look and operate better than every competitor in your market.
               </p>
             </motion.div>
 
@@ -171,14 +171,18 @@ export default function PricingPage() {
                 Scale
               </h3>
 
-              <div className="mt-4 flex items-baseline gap-2">
+              <p className="mt-2 text-sm text-muted-foreground leading-snug">
+                The complete operation for operators ready to dominate their market.
+              </p>
+
+              <div className="mt-5 flex items-baseline gap-2">
                 <span className="font-heading text-4xl font-bold text-foreground">
-                  $347
+                  $597
                 </span>
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
               <p className="mt-1 text-xs text-muted-foreground">
-                + one-time setup fee
+                + $800 one-time setup fee
               </p>
 
               <ul className="mt-6 flex-1 space-y-3">
@@ -190,19 +194,14 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <a
-                href="https://buy.stripe.com/4gMbJ18ns3mB8zmdOF2Nq04"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 block"
-              >
+              <Link href="/book" className="mt-8 block">
                 <Button variant="cta" className="w-full animate-glow-pulse">
                   Get Started
                 </Button>
-              </a>
+              </Link>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
-                Best for established operators getting leads but losing them to slow follow-up. We run the system so nothing falls through the cracks.
+                Best for operators who are ready to aggressively scale — a fully active system that runs in the background, handles your leads, manages your online presence, and keeps your business growing while you stay focused on the work.
               </p>
             </motion.div>
           </div>
