@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import DualCTA from "@/components/DualCTA";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Check, ArrowLeft, Megaphone, TrendingUp, ArrowRight } from "lucide-react";
+import { Check, ArrowLeft, Megaphone, TrendingUp, ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
@@ -22,16 +22,16 @@ const coreFeatures = [
   "Onboarding & training call",
 ];
 
-const scaleFeatures = [
-  "Everything in Core",
-  "Referral tracking & automation",
+const fullBuildFeatures = [
+  "Everything in Core Build",
+  "Custom automations tailored to your business",
+  "Multi-touch follow-up sequences",
   "Database reactivation campaigns",
+  "Cold quote follow-up automation",
+  "Lead nurturing sequences",
+  "Advanced pipeline automations",
   "Repeat customer reminders",
-  "Cold quote follow-up",
-  "24/7 AI chatbot",
-  "Weekly content posting",
-  "Dedicated account manager",
-  "Monthly strategy call",
+  "Full sales backend configured and optimized",
 ];
 
 const addOns = [
@@ -46,6 +46,12 @@ const addOns = [
     title: "Omnipresence SEO",
     desc: "We put you everywhere — Google, Maps, AI search engines, and every local directory — so you're the obvious choice before they even pick up the phone.",
     learnHref: "/seo",
+  },
+  {
+    icon: Sparkles,
+    title: "AI Employee",
+    desc: "A 24/7 AI receptionist that answers calls, qualifies leads, books appointments, and follows up — so nothing slips while you're on the job.",
+    learnHref: "/ai-employee",
   },
 ];
 
@@ -119,11 +125,11 @@ export default function PricingPage() {
             >
               <h3 className="font-heading text-2xl font-bold"
                 style={{ background: "linear-gradient(135deg, #FAFAFA 0%, #C8C8C8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                Core
+                Core Build
               </h3>
 
               <p className="mt-2 text-sm text-muted-foreground leading-snug">
-                The foundation every serious home service operator needs to compete and win locally.
+                The complete system built and ready to run.
               </p>
 
               <div className="mt-5 flex items-baseline gap-2">
@@ -133,7 +139,7 @@ export default function PricingPage() {
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
               <p className="mt-1 text-xs text-muted-foreground">
-                + one-time setup fee
+                + one-time setup fee ($500)
               </p>
 
               <ul className="mt-6 flex-1 space-y-3">
@@ -157,11 +163,11 @@ export default function PricingPage() {
               </a>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
-                Best for operators who want a professional foundation to run a profitable business — the website, the system, and the automations that make you look and operate better than every competitor in your market.
+                Best for operators who want the full system built and ready to run from day one.
               </p>
             </motion.div>
 
-            {/* ─── SCALE (Recommended) ─── */}
+            {/* ─── FULL BUILD ─── */}
             <motion.div
               initial={isMobile ? false : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -171,25 +177,25 @@ export default function PricingPage() {
             >
               <h3 className="font-heading text-2xl font-bold"
                 style={{ background: "linear-gradient(135deg, #FAFAFA 0%, #C8C8C8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                Scale
+                Full Build
               </h3>
 
               <p className="mt-2 text-sm text-muted-foreground leading-snug">
-                For operators who want their sales backend actively run for them — not just set up.
+                Everything in Core, plus your sales system built on steroids.
               </p>
 
               <div className="mt-5 flex items-baseline gap-2">
                 <span className="font-heading text-4xl font-bold text-foreground">
-                  $597
+                  $347
                 </span>
                 <span className="text-sm text-muted-foreground">/month</span>
               </div>
               <p className="mt-1 text-xs text-muted-foreground">
-                + one-time setup fee
+                + one-time setup fee ($1200)
               </p>
 
               <ul className="mt-6 flex-1 space-y-3">
-                {scaleFeatures.map((f) => (
+                {fullBuildFeatures.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-sm text-muted-foreground">
                     <Check size={16} className="mt-0.5 shrink-0 text-primary" />
                     {f}
@@ -197,19 +203,14 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <a
-                href="https://buy.stripe.com/bJeaEX1Z4cXbdTGdOF2Nq03"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 block"
-              >
+              <Link href="/book" className="mt-8 block">
                 <Button variant="cta" className="w-full animate-glow-pulse">
                   Get Started
                 </Button>
-              </a>
+              </Link>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
-                Best for operators who are ready to aggressively scale — a fully active system that runs in the background, handles your leads, manages your online presence, and keeps your business growing while you stay focused on the work.
+                Best for operators who want the whole backend handled — every lead worked, every opportunity followed up, nothing left on the table.
               </p>
             </motion.div>
           </div>
@@ -248,10 +249,10 @@ export default function PricingPage() {
             viewport={{ once: true }}
             className="text-center text-xs font-semibold uppercase tracking-[0.14em] text-primary/70 mb-8"
           >
-            Add-ons are available exclusively for Scale plan clients.
+            Add-ons are available exclusively for active plan clients.
           </motion.p>
 
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {addOns.map((a, i) => (
               <motion.div
                 key={a.title}
@@ -292,6 +293,31 @@ export default function PricingPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ─── NEED SOMETHING BIGGER? ─── */}
+      <section className="px-4 pt-12 md:pt-16 pb-6 md:pb-10">
+        <div className="container mx-auto max-w-3xl">
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="card-glass p-8 md:p-10 text-center"
+          >
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+              Need Something{" "}
+              <span className="text-gradient">Bigger?</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-sm md:text-base leading-relaxed text-muted-foreground">
+              For larger teams or businesses with specific requirements, we build custom automation systems tailored to your operation.
+            </p>
+            <Link href="/book" className="mt-7 inline-block">
+              <Button variant="cta" className="px-8">
+                Book a Call
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
