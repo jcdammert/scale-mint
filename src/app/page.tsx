@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title:
     "Scale Mint — Sales & Follow-Up Systems for Home Service Businesses",
   description:
-    "Install the platform, follow-up automations, and AI voice that turn missed calls into booked jobs. Built and managed for roofing, HVAC, pressure washing, epoxy, and remodeling crews.",
+    "Install the platform, follow-up automations, and AI Employee that turn missed calls into booked jobs. Built and managed for roofing, HVAC, pressure washing, epoxy, and remodeling crews.",
   alternates: { canonical: "/" },
 };
 
@@ -22,7 +22,7 @@ const HOME_FAQS = [
   {
     question: "What does Scale Mint actually do?",
     answer:
-      "We install and run the sales follow-up system for home service businesses — CRM, pipeline, missed-call text-back, AI voice, marketing, and automations. You stop losing leads to slow follow-up, and you stop juggling tools.",
+      "We install and run the sales follow-up system for home service businesses — CRM, pipeline, missed-call text-back, AI Employee, marketing, and automations. You stop losing leads to slow follow-up, and you stop juggling tools.",
   },
   {
     question: "Who is this built for?",

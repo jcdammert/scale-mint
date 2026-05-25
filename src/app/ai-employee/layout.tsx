@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import { jsonLd, serviceSchema, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI Voice Receptionist for Contractors",
+  title: "AI Employee for Contractors",
   description:
-    "Stop losing jobs to missed calls. Our AI voice answers 24/7, qualifies the lead, books the estimate, and sends every detail to your CRM in real time.",
-  alternates: { canonical: "/services/ai-voice" },
+    "Stop losing jobs to missed calls. Our AI Employee answers 24/7, qualifies the lead, books the estimate, and sends every detail to your CRM in real time.",
+  alternates: { canonical: "/ai-employee" },
   openGraph: {
-    title: "AI Voice Receptionist for Contractors | Scale Mint",
+    title: "AI Employee for Contractors | Scale Mint",
     description:
-      "AI voice that answers, qualifies, and books — 24/7, in your business voice.",
-    url: "/services/ai-voice",
+      "An AI Employee that answers, qualifies, and books — 24/7, in your business voice.",
+    url: "/ai-employee",
   },
 };
 
@@ -22,11 +22,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         dangerouslySetInnerHTML={{
           __html: jsonLd(
             serviceSchema({
-              name: "AI Voice Receptionist for Contractors",
+              name: "AI Employee for Contractors",
               description:
-                "AI voice answering and booking system for home service businesses — 24/7 lead capture and qualification.",
-              url: "/services/ai-voice",
-              serviceType: "AI Voice",
+                "AI Employee answering and booking system for home service businesses — 24/7 lead capture and qualification.",
+              url: "/ai-employee",
+              serviceType: "AI Employee",
             })
           ),
         }}
@@ -38,7 +38,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             breadcrumbSchema([
               { name: "Home", url: "/" },
               { name: "Services", url: "/" },
-              { name: "AI Voice", url: "/services/ai-voice" },
+              { name: "AI Employee", url: "/ai-employee" },
             ])
           ),
         }}

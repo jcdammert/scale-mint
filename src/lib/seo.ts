@@ -23,7 +23,7 @@ export const organizationSchema = {
   email: BUSINESS_EMAIL,
   telephone: BUSINESS_PHONE,
   description:
-    "Scale Mint installs sales follow-up, AI voice, marketing, and business software systems for home service contractors — roofing, HVAC, pressure washing, epoxy, junk removal, remodeling, and more.",
+    "Scale Mint installs sales follow-up, AI Employee, marketing, and business software systems for home service contractors — roofing, HVAC, pressure washing, epoxy, junk removal, remodeling, and more.",
   address: {
     "@type": "PostalAddress",
     addressLocality: BUSINESS_LOCATION.city,
@@ -38,7 +38,7 @@ export const organizationSchema = {
   knowsAbout: [
     "Lead follow-up automation",
     "Missed-call text-back",
-    "AI voice receptionist",
+    "AI Employee receptionist",
     "Local service marketing",
     "Google Ads for contractors",
     "Meta Ads for contractors",
@@ -48,7 +48,7 @@ export const organizationSchema = {
   serviceType: [
     "Business Software",
     "Marketing",
-    "AI Voice",
+    "AI Employee",
     "Custom AI",
     "Workflow Automation",
     "Custom Websites",
@@ -127,7 +127,7 @@ export const ALL_ROUTES = [
   { path: "/business-software", priority: 0.9, changeFrequency: "monthly" as const },
   { path: "/meta-ads", priority: 0.9, changeFrequency: "monthly" as const },
   { path: "/seo", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/services/ai-voice", priority: 0.9, changeFrequency: "monthly" as const },
+  { path: "/ai-employee", priority: 0.9, changeFrequency: "monthly" as const },
   { path: "/services/ai-websites", priority: 0.9, changeFrequency: "monthly" as const },
   { path: "/services/custom-ai", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/services/smart-assistants", priority: 0.8, changeFrequency: "monthly" as const },

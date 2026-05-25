@@ -81,7 +81,7 @@ const addOns = [
     description:
       "Answers your phone, replies to texts, qualifies the lead, and books the job — even when you're on a roof at 7pm.",
     note: "Custom quoted.",
-    href: "/services/ai-voice",
+    href: "/ai-employee",
   },
 ];
 

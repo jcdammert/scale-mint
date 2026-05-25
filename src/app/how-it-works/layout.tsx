@@ -49,7 +49,7 @@ const howToSchema = {
       "@type": "HowToStep",
       position: 2,
       name: "Build",
-      text: "We install the CRM, pipelines, follow-up sequences, AI voice, and integrations — fully configured for your business.",
+      text: "We install the CRM, pipelines, follow-up sequences, AI Employee, and integrations — fully configured for your business.",
     },
     {
       "@type": "HowToStep",

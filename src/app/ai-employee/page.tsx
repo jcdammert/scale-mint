@@ -395,7 +395,7 @@ export default function AIVoicePage() {
               >
                 <Sparkles size={12} className="text-primary" />
                 <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-                  AI Voice Agents
+                  AI Employee
                 </span>
               </motion.div>
 
@@ -415,7 +415,7 @@ export default function AIVoicePage() {
                 transition={{ duration: 0.7, delay: 0.15 }}
                 className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
               >
-                AI voice agents that pick up when you can&apos;t — qualify the lead, book the appointment, and route the call. 24 hours a day, 7 days a week. The customer thinks they&apos;re talking to your front desk.
+                An AI Employee that picks up when you can&apos;t — qualifies the lead, books the appointment, and routes the call. 24 hours a day, 7 days a week. The customer thinks they&apos;re talking to your front desk.
               </motion.p>
 
               <motion.div

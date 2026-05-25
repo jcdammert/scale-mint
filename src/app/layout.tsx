@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     template: "%s | Scale Mint",
   },
   description:
-    "Scale Mint installs the platform, follow-up, marketing, and AI voice systems that turn missed calls into booked jobs for roofing, HVAC, pressure washing, epoxy, remodeling, and other home service crews.",
+    "Scale Mint installs the platform, follow-up, marketing, and AI Employee systems that turn missed calls into booked jobs for roofing, HVAC, pressure washing, epoxy, remodeling, and other home service crews.",
   keywords: [
     "home service marketing",
     "contractor CRM",
     "missed call text back",
-    "AI voice for contractors",
+    "AI Employee for contractors",
     "lead follow-up automation",
     "Google Ads for contractors",
     "Meta Ads for home services",

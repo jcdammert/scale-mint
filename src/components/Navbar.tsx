@@ -10,7 +10,7 @@ const serviceLinks = [
   { label: "Meta Ads", href: "/meta-ads", icon: Megaphone },
   { label: "SEO", href: "/seo", icon: TrendingUp },
   { label: "Custom Websites", href: "/services/ai-websites", icon: Globe },
-  { label: "AI Employee", href: "/services/ai-voice", icon: Phone },
+  { label: "AI Employee", href: "/ai-employee", icon: Phone },
 ];
 
 const navLinks = [

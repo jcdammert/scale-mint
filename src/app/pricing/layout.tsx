@@ -28,7 +28,7 @@ const FAQS = [
   {
     question: "Are there usage fees?",
     answer:
-      "SMS and AI voice usage are billed at cost. Everything else is included in the flat monthly.",
+      "SMS and AI Employee usage are billed at cost. Everything else is included in the flat monthly.",
   },
 ];
 

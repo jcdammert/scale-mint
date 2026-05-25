@@ -691,13 +691,13 @@ export default function DemoPage() {
 
       <div className="w-full h-px bg-white/5" />
 
-      {/* -- 12. AI Voice Assistant ------------------------------------------- */}
+      {/* -- 12. AI Employee ------------------------------------------- */}
       <SectionWrapper>
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-3">
             <CategoryBadge type="ai" />
             <h2 className="font-heading text-2xl font-bold text-white">
-              AI Voice Assistant
+              AI Employee
             </h2>
             <p className="text-zinc-400 text-sm leading-relaxed">
               A real-sounding AI that answers your phones — handles inbound
@@ -796,7 +796,7 @@ export default function DemoPage() {
                   items: [
                     { label: "Automated Follow-Up Sequences", included: true },
                     { label: "Review Automation", included: true },
-                    { label: "AI Voice Assistant", included: false },
+                    { label: "AI Employee", included: false },
                     { label: "AI Text Assistant", included: false },
                   ],
                 },
@@ -884,7 +884,7 @@ export default function DemoPage() {
                   items: [
                     { label: "Automated Follow-Up Sequences", included: true },
                     { label: "Review Automation", included: true },
-                    { label: "AI Voice Assistant", included: true },
+                    { label: "AI Employee", included: true },
                     { label: "AI Text Assistant", included: true },
                   ],
                 },
@@ -992,7 +992,7 @@ export default function DemoPage() {
                 <span className="text-purple-300 font-semibold">
                   Add-On — AI Employee:{" "}
                 </span>
-                Full AI voice + text assistant stack. Handles inbound calls,
+                Full AI Employee + text assistant stack. Handles inbound calls,
                 texts, qualifies leads, and books appointments. From
                 $297/mo added to any Business OS plan.
               </p>
