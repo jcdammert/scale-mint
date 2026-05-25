@@ -99,7 +99,7 @@ export default function PricingPage() {
 
       {/* ─── PRICING CARDS ─── */}
       <section className="px-4 pt-6 md:pt-10 pb-6 md:pb-10">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-5xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +115,7 @@ export default function PricingPage() {
             </h2>
           </motion.div>
 
-          <div className="grid gap-6 md:grid-cols-2 items-stretch">
+          <div className="grid gap-8 md:grid-cols-2 items-stretch">
             {/* ─── CORE ─── */}
             <motion.div
               initial={isMobile ? false : { opacity: 0, y: 30 }}
@@ -132,15 +132,20 @@ export default function PricingPage() {
                 The complete system built and ready to run.
               </p>
 
-              <div className="mt-5 flex items-baseline gap-2">
-                <span className="font-heading text-4xl font-bold text-foreground">
-                  $347
-                </span>
-                <span className="text-sm text-muted-foreground">/month</span>
+              <div className="mt-5 rounded-xl border border-border/40 bg-white/[0.02] p-5">
+                <div className="flex items-baseline gap-2">
+                  <span className="font-heading text-4xl md:text-5xl font-bold text-foreground">
+                    $347
+                  </span>
+                  <span className="text-sm text-muted-foreground">/month</span>
+                </div>
+                <div className="mt-3 pt-3 border-t border-border/40 flex items-baseline gap-2">
+                  <span className="font-heading text-2xl font-bold text-foreground/90">
+                    + $500
+                  </span>
+                  <span className="text-sm text-muted-foreground">one-time build-out fee</span>
+                </div>
               </div>
-              <p className="mt-1 text-xs text-muted-foreground">
-                + one-time setup fee ($500)
-              </p>
 
               <ul className="mt-6 flex-1 space-y-3">
                 {coreFeatures.map((f) => (
@@ -184,15 +189,20 @@ export default function PricingPage() {
                 Everything in Core, plus your sales system built on steroids.
               </p>
 
-              <div className="mt-5 flex items-baseline gap-2">
-                <span className="font-heading text-4xl font-bold text-foreground">
-                  $347
-                </span>
-                <span className="text-sm text-muted-foreground">/month</span>
+              <div className="mt-5 rounded-xl border border-primary/20 bg-primary/[0.04] p-5">
+                <div className="flex items-baseline gap-2">
+                  <span className="font-heading text-4xl md:text-5xl font-bold text-foreground">
+                    $347
+                  </span>
+                  <span className="text-sm text-muted-foreground">/month</span>
+                </div>
+                <div className="mt-3 pt-3 border-t border-primary/15 flex items-baseline gap-2">
+                  <span className="font-heading text-2xl font-bold text-foreground/90">
+                    + $1,200
+                  </span>
+                  <span className="text-sm text-muted-foreground">one-time build-out fee</span>
+                </div>
               </div>
-              <p className="mt-1 text-xs text-muted-foreground">
-                + one-time setup fee ($1200)
-              </p>
 
               <ul className="mt-6 flex-1 space-y-3">
                 {fullBuildFeatures.map((f) => (
