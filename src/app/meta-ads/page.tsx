@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowLeft, Check, Megaphone, Video, Settings, BarChart3, Phone } from "lucide-react";
+import { ArrowLeft, Check, Megaphone, Video, Settings, BarChart3, Phone, Users, TrendingUp, DollarSign, Clock } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
@@ -33,6 +33,42 @@ const steps = [
     title: "You answer the phone and close the jobs.",
     desc: "Leads come in. Your follow-up system picks them up automatically. You show up and close.",
   },
+];
+
+const stats = [
+  {
+    icon: Users,
+    value: "3.07B",
+    label: "monthly active users across Meta platforms",
+    source: "Meta, Q1 2024",
+  },
+  {
+    icon: Clock,
+    value: "77%",
+    label: "of U.S. adults use Facebook or Instagram every day",
+    source: "Pew Research, 2024",
+  },
+  {
+    icon: DollarSign,
+    value: "5×",
+    label: "average ROAS for home service Meta campaigns",
+    source: "WordStream benchmarks, 2024",
+  },
+  {
+    icon: TrendingUp,
+    value: "70%",
+    label: "of homeowners check social before hiring a contractor",
+    source: "HomeAdvisor consumer report, 2023",
+  },
+];
+
+const cplByIndustry = [
+  { industry: "Remodeling", cpl: 105, max: 120 },
+  { industry: "Roofing", cpl: 85, max: 120 },
+  { industry: "HVAC", cpl: 68, max: 120 },
+  { industry: "Epoxy Floors", cpl: 48, max: 120 },
+  { industry: "Pressure Washing", cpl: 32, max: 120 },
+  { industry: "Junk Removal", cpl: 28, max: 120 },
 ];
 
 const included = [
@@ -110,6 +146,111 @@ export default function MetaAdsPage() {
                 Book a Strategy Call
               </Button>
             </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── BY THE NUMBERS ─── */}
+      <section className="section-padding">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-10"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
+              By the Numbers
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+              Where Your Customers <span className="text-gradient">Actually Are.</span>
+            </h2>
+          </motion.div>
+
+          {/* Stat cards */}
+          <div className="mx-auto max-w-6xl grid gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-10 md:mb-14">
+            {stats.map((s, i) => (
+              <motion.div
+                key={s.label}
+                initial={isMobile ? false : { opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="card-glass p-6 relative overflow-hidden"
+              >
+                <div className="pointer-events-none absolute -top-8 -right-8 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
+                <div className="relative">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 border border-primary/20">
+                    <s.icon size={18} className="text-primary" />
+                  </div>
+                  <div className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+                    {s.value}
+                  </div>
+                  <p className="mt-2 text-sm leading-snug text-muted-foreground">
+                    {s.label}
+                  </p>
+                  <p className="mt-3 text-[10px] uppercase tracking-wider text-muted-foreground/60">
+                    {s.source}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* CPL Chart */}
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-5xl card-glass p-7 md:p-10 relative overflow-hidden"
+          >
+            <div className="pointer-events-none absolute -top-20 -right-20 h-56 w-56 rounded-full bg-primary/10 blur-3xl" />
+            <div className="relative">
+              <div className="flex flex-wrap items-end justify-between gap-4 mb-7">
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary mb-2">
+                    Live Industry Data
+                  </p>
+                  <h3 className="font-heading text-xl md:text-2xl font-bold text-foreground">
+                    Avg. Cost Per Lead on Meta — by Industry
+                  </h3>
+                </div>
+                <span className="text-[11px] text-muted-foreground/70">
+                  Source: WordStream + AdEspresso benchmarks
+                </span>
+              </div>
+
+              <div className="space-y-4 md:space-y-5">
+                {cplByIndustry.map((row, i) => {
+                  const pct = (row.cpl / row.max) * 100;
+                  return (
+                    <div key={row.industry}>
+                      <div className="flex items-baseline justify-between mb-1.5">
+                        <span className="text-sm font-medium text-foreground">
+                          {row.industry}
+                        </span>
+                        <span className="font-heading text-sm font-bold text-primary">
+                          ${row.cpl}
+                        </span>
+                      </div>
+                      <div className="h-2.5 w-full overflow-hidden rounded-full bg-white/[0.04] border border-border/30">
+                        <motion.div
+                          initial={isMobile ? { width: `${pct}%` } : { width: 0 }}
+                          whileInView={{ width: `${pct}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1.1, delay: 0.1 + i * 0.08, ease: "easeOut" }}
+                          className="h-full rounded-full bg-gradient-to-r from-primary/70 to-primary shadow-[0_0_20px_rgba(74,222,128,0.4)]"
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <p className="mt-7 text-xs leading-relaxed text-muted-foreground/80">
+                Home service contractors on Meta consistently see lower cost-per-lead than direct mail ($125+) or local TV ($200+). Lower-ticket services see CPLs under $40, while higher-ticket trades like remodeling and roofing run higher.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
