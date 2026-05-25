@@ -228,13 +228,13 @@ export default function PricingPage() {
       </section>
 
       {/* Section divider */}
-      <div className="container mx-auto px-4 max-w-4xl pt-6">
+      <div className="container mx-auto px-4 max-w-5xl pt-6">
         <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       </div>
 
       {/* ─── ADD-ONS ─── */}
       <section className="px-4 pt-12 md:pt-16 pb-6 md:pb-10">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-5xl">
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
