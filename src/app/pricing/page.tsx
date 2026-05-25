@@ -24,12 +24,12 @@ const coreFeatures = [
 
 const scaleFeatures = [
   "Everything in Core",
-  "Custom automations tailored to your business",
-  "Lead nurturing sequences",
-  "Multi-step follow-up campaigns",
-  "Advanced pipeline automations",
-  "AI conversation bot (text + web chat)",
-  "Weekly content posting — Facebook, Instagram & Google Business Profile",
+  "Referral tracking & automation",
+  "Database reactivation campaigns",
+  "Repeat customer reminders",
+  "Cold quote follow-up",
+  "24/7 AI chatbot",
+  "Weekly content posting",
   "Dedicated account manager",
   "Monthly strategy call",
 ];
@@ -175,7 +175,7 @@ export default function PricingPage() {
               </h3>
 
               <p className="mt-2 text-sm text-muted-foreground leading-snug">
-                The complete operation for operators ready to dominate their market.
+                For operators who want their sales backend actively run for them — not just set up.
               </p>
 
               <div className="mt-5 flex items-baseline gap-2">
