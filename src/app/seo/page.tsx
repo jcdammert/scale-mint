@@ -130,7 +130,7 @@ export default function SeoPage() {
             </p>
           </motion.div>
 
-          <div className="mx-auto max-w-4xl grid gap-6 sm:grid-cols-2">
+          <div className="mx-auto max-w-6xl grid gap-6 sm:grid-cols-2">
             {whatIsItems.map((item, i) => (
               <motion.div
                 key={item.title}
@@ -176,9 +176,9 @@ export default function SeoPage() {
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl card-glass p-8 md:p-10"
+            className="mx-auto max-w-5xl card-glass p-8 md:p-10"
           >
-            <ul className="space-y-4">
+            <ul className="grid gap-x-10 gap-y-4 md:grid-cols-2">
               {included.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check size={16} className="mt-0.5 shrink-0 text-primary" />
@@ -197,7 +197,7 @@ export default function SeoPage() {
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-center"
+            className="mx-auto max-w-3xl text-center"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
               Who It&apos;s For
@@ -205,7 +205,7 @@ export default function SeoPage() {
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
               Built for Operators <span className="text-gradient">Thinking Long Term.</span>
             </h2>
-            <div className="card-glass p-8">
+            <div className="card-glass p-8 md:p-10">
               <p className="text-base leading-relaxed text-muted-foreground">
                 Scale plan clients thinking long term. SEO takes 3–6 months to show real results, but once it kicks in it&apos;s the most consistent and lowest cost lead source you&apos;ll ever have.
               </p>

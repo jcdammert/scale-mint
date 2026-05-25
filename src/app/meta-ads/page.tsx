@@ -131,7 +131,7 @@ export default function MetaAdsPage() {
             </h2>
           </motion.div>
 
-          <div className="mx-auto max-w-4xl grid gap-6 md:grid-cols-2">
+          <div className="mx-auto max-w-6xl grid gap-6 md:grid-cols-2">
             {steps.map((s, i) => (
               <motion.div
                 key={s.step}
@@ -178,9 +178,9 @@ export default function MetaAdsPage() {
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl card-glass p-8 md:p-10"
+            className="mx-auto max-w-5xl card-glass p-8 md:p-10"
           >
-            <ul className="space-y-4">
+            <ul className="grid gap-x-10 gap-y-4 md:grid-cols-2">
               {included.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Check size={16} className="mt-0.5 shrink-0 text-primary" />
@@ -199,7 +199,7 @@ export default function MetaAdsPage() {
             initial={isMobile ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-center"
+            className="mx-auto max-w-3xl text-center"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
               Who It&apos;s For
@@ -207,7 +207,7 @@ export default function MetaAdsPage() {
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">
               Built for Operators <span className="text-gradient">Ready to Pour Fuel.</span>
             </h2>
-            <div className="card-glass p-8">
+            <div className="card-glass p-8 md:p-10">
               <p className="text-base leading-relaxed text-muted-foreground">
                 Scale plan clients who are already getting some leads and want to pour fuel on the fire. <span className="text-foreground font-medium">Minimum $1,000/mo ad spend recommended.</span>
               </p>
