@@ -187,21 +187,14 @@ export default function HowItWorksPage() {
               className="card-glass flex flex-col p-8 transition-all duration-300 hover:border-primary/30"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-                The System
+                The Foundation
               </p>
               <h3 className="font-heading text-3xl font-bold text-foreground">
-                $347<span className="text-base font-normal text-muted-foreground">/mo</span>
+                The System
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground flex-1">
-                Everything your business needs to look professional, capture every lead, and follow up automatically. Pick your build based on how deep you want to go.
+                The software that runs your business — website, CRM, pipeline, follow-up automations, scheduling, contracts, reviews. Everything you need to look professional, capture every lead, and follow up automatically. Built for you, configured around how your business actually operates.
               </p>
-              <Link
-                href="/pricing"
-                className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/10 px-5 py-3 text-sm font-semibold text-primary transition-all duration-200 hover:bg-primary/15 hover:border-primary/50"
-              >
-                See Pricing
-                <ArrowRight size={14} />
-              </Link>
             </motion.div>
 
             {/* ADD-ONS */}
@@ -213,21 +206,14 @@ export default function HowItWorksPage() {
               className="card-glass flex flex-col p-8 transition-all duration-300 hover:border-primary/30"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-                Add-Ons
+                Add Fuel to the Fire
               </p>
               <h3 className="font-heading text-3xl font-bold text-foreground">
-                Custom Quoted
+                The Add-Ons
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground flex-1">
-                When you&apos;re ready to grow faster — Meta Ads, SEO, or an AI Employee on top of your system. Run them yourself or have us manage everything. Your choice.
+                Once the system is in place and capturing every lead, this is how you pour fuel on it — Meta Ads to bring in new customers, SEO to dominate your local market, or an AI Employee to handle every call 24/7. Stack on whichever ones fit where you&apos;re trying to go.
               </p>
-              <Link
-                href="/pricing"
-                className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/10 px-5 py-3 text-sm font-semibold text-primary transition-all duration-200 hover:bg-primary/15 hover:border-primary/50"
-              >
-                Learn More
-                <ArrowRight size={14} />
-              </Link>
             </motion.div>
           </div>
         </div>
