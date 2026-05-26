@@ -350,7 +350,7 @@ export default function MetaAdsPage() {
             </h2>
             <div className="card-glass p-8 md:p-10">
               <p className="text-base leading-relaxed text-muted-foreground">
-                Scale plan clients who are already getting some leads and want to pour fuel on the fire. <span className="text-foreground font-medium">Minimum $1,000/mo ad spend recommended.</span>
+                Scale plan clients who are already getting some leads and want to pour fuel on the fire. <span className="text-foreground font-medium">Minimum $500/mo ad spend recommended.</span>
               </p>
             </div>
           </motion.div>
