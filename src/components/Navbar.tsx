@@ -111,7 +111,7 @@ const Navbar = () => {
             onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
             className="flex w-full items-center justify-between py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            Services
+            Platform
             <ChevronDown size={14} className={`transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
           </button>
           {mobileServicesOpen && (

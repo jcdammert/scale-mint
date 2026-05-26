@@ -139,11 +139,13 @@ export default function PricingPage() {
                   </span>
                   <span className="text-sm text-muted-foreground">/month</span>
                 </div>
-                <div className="mt-3 pt-3 border-t border-border/40 flex items-baseline gap-2">
-                  <span className="font-heading text-2xl font-bold text-foreground/90">
+                <div className="mt-3 pt-3 border-t border-border/40 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                  <span className="font-heading text-2xl font-bold text-foreground/90 whitespace-nowrap">
                     + $500
                   </span>
-                  <span className="text-sm text-muted-foreground">one-time build-out fee</span>
+                  <span className="text-sm text-muted-foreground whitespace-nowrap">
+                    one-time build-out fee
+                  </span>
                 </div>
               </div>
 
@@ -196,11 +198,13 @@ export default function PricingPage() {
                   </span>
                   <span className="text-sm text-muted-foreground">/month</span>
                 </div>
-                <div className="mt-3 pt-3 border-t border-primary/15 flex items-baseline gap-2">
-                  <span className="font-heading text-2xl font-bold text-foreground/90">
+                <div className="mt-3 pt-3 border-t border-primary/15 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                  <span className="font-heading text-2xl font-bold text-foreground/90 whitespace-nowrap">
                     + $1,200
                   </span>
-                  <span className="text-sm text-muted-foreground">one-time build-out fee</span>
+                  <span className="text-sm text-muted-foreground whitespace-nowrap">
+                    one-time build-out fee
+                  </span>
                 </div>
               </div>
 
