@@ -213,11 +213,16 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <Link href="/book" className="mt-8 block">
+              <a
+                href="https://buy.stripe.com/9B6bJ10V0g9n16U8ul2Nq07"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 block"
+              >
                 <Button variant="cta" className="w-full animate-glow-pulse">
                   Get Started
                 </Button>
-              </Link>
+              </a>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
                 Best for operators who want the whole backend handled — every lead worked, every opportunity followed up, nothing left on the table.
