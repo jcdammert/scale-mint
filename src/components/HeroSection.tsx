@@ -95,9 +95,9 @@ const HeroSection = () => {
               Book a Strategy Call
             </Button>
           </a>
-          <a href="/how-it-works" className="block w-full sm:w-auto">
+          <a href="/pricing" className="block w-full sm:w-auto">
             <Button variant="hero-outline" size="lg" className="text-base px-8 py-6 w-full sm:w-auto">
-              See How It Works
+              See Pricing
             </Button>
           </a>
         </motion.div>
