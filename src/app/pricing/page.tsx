@@ -9,21 +9,21 @@ import { Check, ArrowLeft, Megaphone, TrendingUp, ArrowRight, Sparkles } from "l
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
-const coreFeatures = [
-  "Custom website (10–20 pages) + on-page SEO",
-  "CRM & sales pipeline",
+const starterFeatures = [
+  "Basic website",
+  "CRM & contact management",
   "2-way text & email",
-  "Missed call text-back",
-  "Speed-to-lead response",
-  "Review request automation",
+  "Booking & appointment scheduling",
   "Invoicing & estimates",
-  "Contracts & e-signatures",
-  "Appointment scheduling",
-  "Onboarding & training call",
+  "Missed call text-back",
+  "Review request automation",
+  "Access to Meta Ads Playbook and resources",
 ];
 
-const fullBuildFeatures = [
-  "Everything in Core Build",
+const scaleFeatures = [
+  "Everything in Starter",
+  "Custom website (10–20 pages) + on-page SEO",
+  "CRM & sales pipeline",
   "Custom automations tailored to your business",
   "Multi-touch follow-up sequences",
   "Database reactivation campaigns",
@@ -32,6 +32,7 @@ const fullBuildFeatures = [
   "Advanced pipeline automations",
   "Repeat customer reminders",
   "Full sales backend configured and optimized",
+  "Onboarding & training call",
 ];
 
 const addOns = [
@@ -116,7 +117,7 @@ export default function PricingPage() {
           </motion.div>
 
           <div className="grid gap-8 md:grid-cols-2 items-stretch">
-            {/* ─── CORE ─── */}
+            {/* ─── STARTER ─── */}
             <motion.div
               initial={isMobile ? false : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -125,32 +126,29 @@ export default function PricingPage() {
             >
               <h3 className="font-heading text-2xl font-bold"
                 style={{ background: "linear-gradient(135deg, #FAFAFA 0%, #C8C8C8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                Core Build
+                Starter
               </h3>
 
               <p className="mt-2 text-sm text-muted-foreground leading-snug">
-                The complete system built and ready to run.
+                New or smaller businesses that want to get online and organized without a big upfront investment.
               </p>
 
               <div className="mt-5 rounded-xl border border-border/40 bg-white/[0.02] p-5">
                 <div className="flex items-baseline gap-2">
                   <span className="font-heading text-4xl md:text-5xl font-bold text-foreground">
-                    $347
+                    $197
                   </span>
                   <span className="text-sm text-muted-foreground">/month</span>
                 </div>
-                <div className="mt-3 pt-3 border-t border-border/40 flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                  <span className="font-heading text-2xl font-bold text-foreground/90 whitespace-nowrap">
-                    + $500
-                  </span>
-                  <span className="text-sm text-muted-foreground whitespace-nowrap">
-                    one-time build-out fee
+                <div className="mt-3 pt-3 border-t border-border/40">
+                  <span className="text-sm text-muted-foreground">
+                    No setup fee
                   </span>
                 </div>
               </div>
 
               <ul className="mt-6 flex-1 space-y-3">
-                {coreFeatures.map((f) => (
+                {starterFeatures.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-sm text-muted-foreground">
                     <Check size={16} className="mt-0.5 shrink-0 text-primary" />
                     {f}
@@ -159,9 +157,7 @@ export default function PricingPage() {
               </ul>
 
               <a
-                href="https://buy.stripe.com/4gMbJ18ns3mB8zmdOF2Nq04"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/book"
                 className="mt-8 block"
               >
                 <Button variant="cta" className="w-full">
@@ -170,11 +166,11 @@ export default function PricingPage() {
               </a>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
-                Best for operators who want the full system built and ready to run from day one.
+                Best for new or smaller businesses getting online and organized.
               </p>
             </motion.div>
 
-            {/* ─── FULL BUILD ─── */}
+            {/* ─── SCALE ─── */}
             <motion.div
               initial={isMobile ? false : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -184,11 +180,11 @@ export default function PricingPage() {
             >
               <h3 className="font-heading text-2xl font-bold"
                 style={{ background: "linear-gradient(135deg, #FAFAFA 0%, #C8C8C8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                Full Build
+                Scale
               </h3>
 
               <p className="mt-2 text-sm text-muted-foreground leading-snug">
-                Everything in Core, plus your sales system built on steroids.
+                Businesses that are off the ground and ready to push to the next level with a full system behind them.
               </p>
 
               <div className="mt-5 rounded-xl border border-primary/20 bg-primary/[0.04] p-5">
@@ -200,16 +196,16 @@ export default function PricingPage() {
                 </div>
                 <div className="mt-3 pt-3 border-t border-primary/15 flex flex-wrap items-baseline gap-x-2 gap-y-1">
                   <span className="font-heading text-2xl font-bold text-foreground/90 whitespace-nowrap">
-                    + $1,200
+                    + $800
                   </span>
                   <span className="text-sm text-muted-foreground whitespace-nowrap">
-                    one-time build-out fee
+                    one-time setup fee
                   </span>
                 </div>
               </div>
 
               <ul className="mt-6 flex-1 space-y-3">
-                {fullBuildFeatures.map((f) => (
+                {scaleFeatures.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-sm text-muted-foreground">
                     <Check size={16} className="mt-0.5 shrink-0 text-primary" />
                     {f}
@@ -218,9 +214,7 @@ export default function PricingPage() {
               </ul>
 
               <a
-                href="https://buy.stripe.com/9B6bJ10V0g9n16U8ul2Nq07"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/book"
                 className="mt-8 block"
               >
                 <Button variant="cta" className="w-full animate-glow-pulse">
@@ -229,7 +223,7 @@ export default function PricingPage() {
               </a>
 
               <p className="mt-3 text-xs text-muted-foreground text-center">
-                Best for operators who want the whole backend handled — every lead worked, every opportunity followed up, nothing left on the table.
+                Best for businesses ready to push to the next level with the full system behind them.
               </p>
             </motion.div>
           </div>
