@@ -112,7 +112,7 @@ export default function BookPage() {
                       required
                       value={formData.firstName}
                       onChange={handleChange}
-                      placeholder="John"
+                      placeholder=""
                       className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
                     />
                   </div>
@@ -130,7 +130,7 @@ export default function BookPage() {
                       required
                       value={formData.lastName}
                       onChange={handleChange}
-                      placeholder="Smith"
+                      placeholder=""
                       className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
                     />
                   </div>
@@ -150,7 +150,7 @@ export default function BookPage() {
                     required
                     value={formData.companyName}
                     onChange={handleChange}
-                    placeholder="Smith's Plumbing LLC"
+                    placeholder=""
                     className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
                   />
                 </div>
@@ -169,7 +169,7 @@ export default function BookPage() {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="(555) 123-4567"
+                    placeholder=""
                     className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
                   />
                 </div>
@@ -188,7 +188,7 @@ export default function BookPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@smithplumbing.com"
+                    placeholder=""
                     className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
                   />
                 </div>
@@ -207,7 +207,7 @@ export default function BookPage() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us what's eating up your time or where you want to grow..."
+                    placeholder=""
                     className="w-full rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors resize-none"
                   />
                 </div>
