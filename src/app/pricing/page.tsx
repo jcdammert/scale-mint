@@ -199,7 +199,9 @@ export default function PricingPage() {
               </ul>
 
               <a
-                href="/book"
+                href={isAnnual ? "https://buy.stripe.com/eVq3cv338bT702QfWN2Nq0f" : "https://buy.stripe.com/dRm8wP6fk7CR7vi4e52Nq0d"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 block"
               >
                 <Button variant="cta" className="w-full">
@@ -269,7 +271,9 @@ export default function PricingPage() {
               </ul>
 
               <a
-                href="/book"
+                href={isAnnual ? "https://buy.stripe.com/dRmdR99rw0apdTG7qh2Nq0e" : "https://buy.stripe.com/9B67sLdHM5uJ8zmbGx2Nq0c"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 block"
               >
                 <Button variant="cta" className="w-full animate-glow-pulse">
