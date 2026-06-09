@@ -65,7 +65,7 @@ const FinalCTASection = () => {
                   size="lg"
                   className="px-8 py-6 text-base animate-glow-pulse w-full sm:w-auto"
                 >
-                  Book Your Strategy Call
+                  Request My Demo
                   <ArrowRight size={18} />
                 </Button>
               </a>
