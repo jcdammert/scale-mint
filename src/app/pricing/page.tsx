@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DualCTA from "@/components/DualCTA";
@@ -58,6 +59,7 @@ const addOns = [
 
 export default function PricingPage() {
   const isMobile = useIsMobile();
+  const [isAnnual, setIsAnnual] = useState(false);
 
   return (
     <div className="min-h-screen">
@@ -114,6 +116,30 @@ export default function PricingPage() {
               Pick Where You Are{" "}
               <span className="text-gradient">Right Now.</span>
             </h2>
+
+            {/* Billing toggle */}
+            <div className="mt-6 inline-flex items-center rounded-full border border-border/50 bg-white/[0.03] p-1">
+              <button
+                onClick={() => setIsAnnual(false)}
+                className={`rounded-full px-5 py-1.5 text-sm font-semibold transition-all duration-200 ${
+                  !isAnnual
+                    ? "bg-white/10 text-foreground shadow-sm"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Monthly
+              </button>
+              <button
+                onClick={() => setIsAnnual(true)}
+                className={`rounded-full px-5 py-1.5 text-sm font-semibold transition-all duration-200 ${
+                  isAnnual
+                    ? "bg-white/10 text-foreground shadow-sm"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Annual
+              </button>
+            </div>
           </motion.div>
 
           <div className="grid gap-8 md:grid-cols-2 items-stretch">
@@ -136,14 +162,30 @@ export default function PricingPage() {
               <div className="mt-5 rounded-xl border border-border/40 bg-white/[0.02] p-5">
                 <div className="flex items-baseline gap-2">
                   <span className="font-heading text-4xl md:text-5xl font-bold text-foreground">
-                    $197
+                    {isAnnual ? "$1,970" : "$197"}
                   </span>
-                  <span className="text-sm text-muted-foreground">/month</span>
+                  <span className="text-sm text-muted-foreground">
+                    {isAnnual ? "/year" : "/month"}
+                  </span>
                 </div>
                 <div className="mt-3 pt-3 border-t border-border/40">
-                  <span className="text-sm text-muted-foreground">
-                    No setup fee
-                  </span>
+                  {isAnnual ? (
+                    <span
+                      className="inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold"
+                      style={{ background: "rgba(0,223,137,0.12)", color: "#00df89", border: "1px solid rgba(0,223,137,0.25)" }}
+                    >
+                      Setup fee waived ✓
+                    </span>
+                  ) : (
+                    <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                      <span className="font-heading text-2xl font-bold text-foreground/90 whitespace-nowrap">
+                        + $400
+                      </span>
+                      <span className="text-sm text-muted-foreground whitespace-nowrap">
+                        one-time setup fee
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -190,17 +232,30 @@ export default function PricingPage() {
               <div className="mt-5 rounded-xl border border-primary/20 bg-primary/[0.04] p-5">
                 <div className="flex items-baseline gap-2">
                   <span className="font-heading text-4xl md:text-5xl font-bold text-foreground">
-                    $347
+                    {isAnnual ? "$3,470" : "$347"}
                   </span>
-                  <span className="text-sm text-muted-foreground">/month</span>
+                  <span className="text-sm text-muted-foreground">
+                    {isAnnual ? "/year" : "/month"}
+                  </span>
                 </div>
-                <div className="mt-3 pt-3 border-t border-primary/15 flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                  <span className="font-heading text-2xl font-bold text-foreground/90 whitespace-nowrap">
-                    + $800
-                  </span>
-                  <span className="text-sm text-muted-foreground whitespace-nowrap">
-                    one-time setup fee
-                  </span>
+                <div className="mt-3 pt-3 border-t border-primary/15">
+                  {isAnnual ? (
+                    <span
+                      className="inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold"
+                      style={{ background: "rgba(0,223,137,0.12)", color: "#00df89", border: "1px solid rgba(0,223,137,0.25)" }}
+                    >
+                      Setup fee waived ✓
+                    </span>
+                  ) : (
+                    <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                      <span className="font-heading text-2xl font-bold text-foreground/90 whitespace-nowrap">
+                        + $800
+                      </span>
+                      <span className="text-sm text-muted-foreground whitespace-nowrap">
+                        one-time setup fee
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
 
