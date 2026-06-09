@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { jsonLd, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Book a Strategy Call",
+  title: "Request My Demo",
   description:
     "20-minute call. We walk through your sales process, show you how the system runs, and tell you straight if it's a fit. No pitch, no pressure.",
   alternates: { canonical: "/book" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Book a Strategy Call | Scale Mint",
+    title: "Request My Demo | Scale Mint",
     description:
       "20-minute call to map out your follow-up system and what it would cost.",
     url: "/book",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Book a Strategy Call",
+  name: "Request My Demo",
   url: "https://scalemintsolutions.com/book",
   about: { "@id": "https://scalemintsolutions.com/#organization" },
 };

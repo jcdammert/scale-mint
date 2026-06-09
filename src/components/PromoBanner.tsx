@@ -22,7 +22,7 @@ const PromoBanner = () => {
           </p>
           <a href="/book" className="block w-full sm:w-auto sm:ml-auto shrink-0">
             <Button variant="hero" size="sm" className="w-full sm:w-auto">
-              Book a Call
+              Request My Demo
             </Button>
           </a>
         </motion.div>

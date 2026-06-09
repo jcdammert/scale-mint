@@ -29,7 +29,7 @@ const DEFAULT_PRIMARY: CardConfig = {
   title: "See how it works for your business.",
   description:
     "20-minute call. We walk through your sales process, show you how the system runs, and tell you straight if it fits.",
-  cta: "Book a Strategy Call",
+  cta: "Request My Demo",
   href: "/book",
 };
 

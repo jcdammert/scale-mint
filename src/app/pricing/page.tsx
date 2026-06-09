@@ -374,7 +374,7 @@ export default function PricingPage() {
               href="/book"
               className="font-semibold text-primary hover:underline underline-offset-4"
             >
-              Book a call
+              Request my demo
             </Link>{" "}
             and we&apos;ll build something custom for you.
           </motion.p>

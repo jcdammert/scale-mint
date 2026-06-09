@@ -144,7 +144,7 @@ export default function SeoPage() {
           >
             <a href="/book">
               <Button variant="cta" size="lg" className="px-8 py-6 text-base animate-glow-pulse">
-                Book a Strategy Call
+                Request My Demo
               </Button>
             </a>
           </motion.div>
@@ -394,7 +394,7 @@ export default function SeoPage() {
             </p>
             <a href="/book">
               <Button variant="cta" size="lg" className="px-8 py-6 text-base animate-glow-pulse">
-                Book a Strategy Call
+                Request My Demo
               </Button>
             </a>
           </motion.div>

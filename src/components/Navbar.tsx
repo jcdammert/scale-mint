@@ -92,7 +92,7 @@ const Navbar = () => {
             Log in
           </a>
           <a href="/book">
-            <Button variant="hero" size="sm">Book a Call</Button>
+            <Button variant="hero" size="sm">Request My Demo</Button>
           </a>
         </div>
 
@@ -150,7 +150,7 @@ const Navbar = () => {
             Log in
           </a>
           <a href="/book" onClick={() => setMobileOpen(false)}>
-            <Button variant="hero" size="sm" className="mt-2 w-full">Book a Call</Button>
+            <Button variant="hero" size="sm" className="mt-2 w-full">Request My Demo</Button>
           </a>
         </div>
       )}

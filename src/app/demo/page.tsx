@@ -1183,7 +1183,7 @@ export default function DemoPage() {
               href="#"
               className="flex items-center justify-center min-h-12 w-full rounded-xl bg-primary text-black font-bold text-base hover:bg-primary/90 transition-colors"
             >
-              Book a Call
+              Request My Demo
             </a>
             <a
               href="sms:+1"

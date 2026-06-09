@@ -234,7 +234,7 @@ export default function BookPage() {
                 >
                   {status === "submitting"
                     ? "Sending..."
-                    : "Book My Strategy Call"}
+                    : "Request My Demo"}
                 </Button>
 
                 <p className="text-center text-xs text-muted-foreground">
