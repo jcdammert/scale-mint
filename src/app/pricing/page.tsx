@@ -199,7 +199,7 @@ export default function PricingPage() {
               </ul>
 
               <a
-                href={isAnnual ? "https://buy.stripe.com/eVq3cv338bT702QfWN2Nq0f" : "https://buy.stripe.com/dRm8wP6fk7CR7vi4e52Nq0d"}
+                href={isAnnual ? "https://links.scalemintsolutions.com/payment-link/6a2850e103b17c94f5715636" : "https://links.scalemintsolutions.com/payment-link/6a33e6e871a0aa761e465669"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 block"
@@ -271,7 +271,7 @@ export default function PricingPage() {
               </ul>
 
               <a
-                href={isAnnual ? "https://buy.stripe.com/dRmdR99rw0apdTG7qh2Nq0e" : "https://buy.stripe.com/9B67sLdHM5uJ8zmbGx2Nq0c"}
+                href={isAnnual ? "https://links.scalemintsolutions.com/payment-link/6a417aa5390a6e280643b10c" : "https://links.scalemintsolutions.com/payment-link/6a36948ceaa0b5cf5db56650"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 block"
