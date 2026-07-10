@@ -198,26 +198,26 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <a href="/book" className="mt-8 block">
-                <Button variant="hero-outline" className="w-full">
-                  Book a Call
-                </Button>
-              </a>
-
-              <a
-                href={isAnnual ? "https://links.scalemintsolutions.com/payment-link/6a2850e103b17c94f5715636" : "https://links.scalemintsolutions.com/payment-link/6a33e6e871a0aa761e465669"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 block"
-              >
-                <Button variant="cta" className="w-full">
-                  Get Started
-                </Button>
-              </a>
-
-              <p className="mt-3 text-xs text-muted-foreground text-center">
-                Best for new or smaller businesses getting online and organized.
-              </p>
+              <div className="mt-auto pt-8 space-y-3">
+                <a href="/book" className="block">
+                  <Button variant="hero-outline" className="w-full">
+                    Book a Call
+                  </Button>
+                </a>
+                <a
+                  href={isAnnual ? "https://links.scalemintsolutions.com/payment-link/6a2850e103b17c94f5715636" : "https://links.scalemintsolutions.com/payment-link/6a33e6e871a0aa761e465669"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button variant="cta" className="w-full">
+                    Get Started
+                  </Button>
+                </a>
+                <p className="text-xs text-muted-foreground text-center">
+                  Best for new or smaller businesses getting online and organized.
+                </p>
+              </div>
             </motion.div>
 
             {/* ─── SCALE ─── */}
@@ -276,26 +276,26 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <a href="/book" className="mt-8 block">
-                <Button variant="hero-outline" className="w-full">
-                  Book a Call
-                </Button>
-              </a>
-
-              <a
-                href={isAnnual ? "https://links.scalemintsolutions.com/payment-link/6a417aa5390a6e280643b10c" : "https://links.scalemintsolutions.com/payment-link/6a36948ceaa0b5cf5db56650"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 block"
-              >
-                <Button variant="cta" className="w-full animate-glow-pulse">
-                  Get Started
-                </Button>
-              </a>
-
-              <p className="mt-3 text-xs text-muted-foreground text-center">
-                Best for businesses ready to push to the next level with the full system behind them.
-              </p>
+              <div className="mt-auto pt-8 space-y-3">
+                <a href="/book" className="block">
+                  <Button variant="hero-outline" className="w-full">
+                    Book a Call
+                  </Button>
+                </a>
+                <a
+                  href={isAnnual ? "https://links.scalemintsolutions.com/payment-link/6a417aa5390a6e280643b10c" : "https://links.scalemintsolutions.com/payment-link/6a36948ceaa0b5cf5db56650"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button variant="cta" className="w-full animate-glow-pulse">
+                    Get Started
+                  </Button>
+                </a>
+                <p className="text-xs text-muted-foreground text-center">
+                  Best for businesses ready to push to the next level with the full system behind them.
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
