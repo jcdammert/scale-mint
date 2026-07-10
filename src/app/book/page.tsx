@@ -1,50 +1,15 @@
 "use client";
 
-import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { CheckCircle, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Script from "next/script";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function BookPage() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    companyName: "",
-    phone: "",
-    email: "",
-    message: "",
-  });
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const isMobile = useIsMobile();
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("submitting");
-
-    try {
-      const res = await fetch("/api/submit-lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (!res.ok) throw new Error("Request failed");
-      setStatus("success");
-      setFormData({ firstName: "", lastName: "", companyName: "", phone: "", email: "", message: "" });
-    } catch {
-      setStatus("error");
-    }
-  };
 
   return (
     <div className="min-h-screen">
@@ -83,165 +48,18 @@ export default function BookPage() {
             initial={isMobile ? false : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="mx-auto mt-12 max-w-xl"
+            className="mx-auto mt-12 max-w-3xl"
           >
-            {status === "success" ? (
-              <div className="card-glass p-10 text-center">
-                <CheckCircle size={48} className="mx-auto text-primary" />
-                <h2 className="mt-6 font-heading text-2xl font-bold text-foreground">
-                  Got it.
-                </h2>
-                <p className="mt-3 text-muted-foreground">
-                  We&apos;ll reach out within 24 hours to set up the call.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="card-glass space-y-5 p-8">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      htmlFor="firstName"
-                      className="mb-1.5 block text-sm font-medium text-foreground"
-                    >
-                      First Name
-                    </label>
-                    <input
-                      id="firstName"
-                      name="firstName"
-                      type="text"
-                      required
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      placeholder=""
-                      className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="lastName"
-                      className="mb-1.5 block text-sm font-medium text-foreground"
-                    >
-                      Last Name
-                    </label>
-                    <input
-                      id="lastName"
-                      name="lastName"
-                      type="text"
-                      required
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      placeholder=""
-                      className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="companyName"
-                    className="mb-1.5 block text-sm font-medium text-foreground"
-                  >
-                    Business Name
-                  </label>
-                  <input
-                    id="companyName"
-                    name="companyName"
-                    type="text"
-                    required
-                    value={formData.companyName}
-                    onChange={handleChange}
-                    placeholder=""
-                    className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="mb-1.5 block text-sm font-medium text-foreground"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    required
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder=""
-                    className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="mb-1.5 block text-sm font-medium text-foreground"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder=""
-                    className="h-11 w-full rounded-lg border border-border bg-secondary px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="mb-1.5 block text-sm font-medium text-foreground"
-                  >
-                    What do you need the most help with?
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder=""
-                    className="w-full rounded-lg border border-border bg-secondary px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors resize-none"
-                  />
-                </div>
-
-                {status === "error" && (
-                  <p className="text-sm text-destructive">
-                    Something went wrong — try again or email us at{" "}
-                    <a
-                      href="mailto:scalemintsolutions@gmail.com"
-                      className="underline"
-                    >
-                      scalemintsolutions@gmail.com
-                    </a>
-                    .
-                  </p>
-                )}
-
-                <Button
-                  type="submit"
-                  variant="cta"
-                  size="lg"
-                  className="w-full py-6 text-base"
-                  disabled={status === "submitting"}
-                >
-                  {status === "submitting"
-                    ? "Sending..."
-                    : "Request My Demo"}
-                </Button>
-
-                <p className="text-center text-xs text-muted-foreground">
-                  100% free — we just want to see if we&apos;re a good fit.
-                </p>
-              </form>
-            )}
+            <iframe
+              src="https://links.scalemintsolutions.com/widget/booking/ZGnUiOO77z156k5CjxTQ"
+              style={{ width: "100%", border: "none", overflow: "hidden" }}
+              scrolling="no"
+              id="ZGnUiOO77z156k5CjxTQ_1783706155345"
+            />
+            <Script
+              src="https://links.scalemintsolutions.com/js/form_embed.js"
+              strategy="lazyOnload"
+            />
           </motion.div>
         </div>
       </section>
