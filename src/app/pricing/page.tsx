@@ -11,7 +11,7 @@ import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 const starterFeatures = [
-  "Basic website",
+  "Professional website",
   "CRM & contact management",
   "2-way text & email",
   "Booking & appointment scheduling",
@@ -19,6 +19,7 @@ const starterFeatures = [
   "Missed call text-back",
   "Review request automation",
   "Access to Meta Ads Playbook and resources",
+  "Up to 5 team members",
 ];
 
 const scaleFeatures = [
@@ -33,7 +34,7 @@ const scaleFeatures = [
   "Advanced pipeline automations",
   "Repeat customer reminders",
   "Full sales backend configured and optimized",
-  "Onboarding & training call",
+  "Monthly strategy call",
 ];
 
 const addOns = [
