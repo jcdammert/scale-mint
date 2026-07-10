@@ -36,11 +36,11 @@ export default function BookPage() {
             className="mx-auto max-w-2xl text-center"
           >
             <h1 className="font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl">
-              Let&apos;s Find{" "}
-              <span className="text-gradient">a Time.</span>
+              Book Your{" "}
+              <span className="text-gradient">Demo Call.</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground md:text-xl">
-              Pick a slot below. 30 minutes — we walk you through the system, answer your questions, and tell you straight if it&apos;s a fit.
+              Pick a time that works. We&apos;ll walk you through the system, answer your questions, and see if it&apos;s a fit for your business.
             </p>
           </motion.div>
 
