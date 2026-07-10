@@ -31,9 +31,8 @@ const scaleFeatures = [
   "Database reactivation campaigns",
   "Cold quote follow-up automation",
   "Lead nurturing sequences",
-  "Advanced pipeline automations",
-  "Repeat customer reminders",
   "Full sales backend configured and optimized",
+  "Unlimited team members",
   "Monthly strategy call",
 ];
 
