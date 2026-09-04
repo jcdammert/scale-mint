@@ -6,6 +6,7 @@ import {
   websiteSchema,
   jsonLd,
 } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -89,6 +90,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <div className="relative z-10">{children}</div>
+        <Analytics />
       </body>
     </html>
   );
