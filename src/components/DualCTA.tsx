@@ -39,8 +39,8 @@ const DEFAULT_SECONDARY: CardConfig = {
   title: "See what it costs.",
   description:
     "Plans, what's included, and what setup runs. No hidden fees.",
-  cta: "See Pricing",
-  href: "/pricing",
+  cta: "Request My Demo",
+  href: "/book",
 };
 
 export default function DualCTA({

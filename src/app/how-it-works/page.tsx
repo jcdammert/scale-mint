@@ -411,9 +411,9 @@ export default function HowItWorksPage() {
               Ready to get your{" "}
               <span className="text-gradient">system built?</span>
             </h2>
-            <Link href="/pricing" className="mt-8 inline-block">
+            <Link href="/book" className="mt-8 inline-block">
               <Button variant="cta" size="lg" className="px-8 animate-glow-pulse">
-                See Pricing
+                Request My Demo
               </Button>
             </Link>
           </motion.div>

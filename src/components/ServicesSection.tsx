@@ -379,13 +379,13 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <a href="/pricing">
+          <a href="/book">
             <Button
               variant="hero"
               size="lg"
               className="px-6 py-5 text-sm sm:px-8 sm:py-6 sm:text-base"
             >
-              See Plans & Pricing
+              Request My Demo
               <ArrowRight size={18} />
             </Button>
           </a>

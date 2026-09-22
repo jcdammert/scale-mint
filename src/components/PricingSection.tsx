@@ -99,10 +99,10 @@ const PricingSection = () => {
             Bundle multiple services and save on your setup investment.
           </p>
           <a
-            href="/pricing"
+            href="/book"
             className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
           >
-            View full pricing details
+            Request My Demo
             <ArrowRight size={16} />
           </a>
         </motion.div>

@@ -73,9 +73,9 @@ const HeroSection = () => {
               Request My Demo
             </Button>
           </a>
-          <a href="/pricing" className="block w-full sm:w-auto">
+          <a href="/book" className="block w-full sm:w-auto">
             <Button variant="hero-outline" size="lg" className="text-base px-8 py-6 w-full sm:w-auto">
-              See Pricing
+              See How It Works
             </Button>
           </a>
         </motion.div>
