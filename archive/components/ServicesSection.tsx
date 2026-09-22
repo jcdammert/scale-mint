@@ -44,9 +44,9 @@ const pillars = [
   {
     num: "04",
     icon: Rocket,
-    title: "Ads Work Because the Sales Process Is Ready.",
+    title: "Add Ads When You're Ready. Not Before.",
     description:
-      "When we add Meta ads, Google, or SEO, every lead lands in a follow-up engine that's already running — instant text-back, automated sequences, a pipeline that works the lead until it books or says no. Traffic without that behind it is money that walks out the door. We don't run ads for businesses whose sales process isn't ready. When it is, we turn them on and the volume gets absorbed.",
+      "Once the pipeline catches every lead and the follow-up runs without you, ads actually pay off. Plug in Meta, Google, or local SEO and the system absorbs the volume. We don't sell ads to businesses whose backend isn't ready — that's how operators waste money on traffic that never converts.",
   },
 ];
 
@@ -403,7 +403,7 @@ const ServicesSection = () => {
             <span className="text-gradient">the System.</span>
           </h3>
           <p className="mt-3 text-sm text-muted-foreground">
-            Sales process first. When you&apos;re ready for more reach, these plug into the same follow-up engine so every lead gets worked the same way, whether it came from a referral or a paid ad.
+            The platform is the foundation. When you&apos;re ready for more, these connect into the same system instead of running on the side.
           </p>
         </motion.div>
 

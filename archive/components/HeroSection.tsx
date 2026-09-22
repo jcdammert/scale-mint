@@ -5,11 +5,12 @@ import { motion } from "framer-motion";
 import { Clock, UserCheck, HeartHandshake, Sparkles } from "lucide-react";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import Particles from "@/components/Particles";
+import Image from "next/image";
 
 const stats = [
-  { icon: Clock, text: "Live in 5 to 10 Days" },
+  { icon: Clock, text: "Live in 5–10 Days" },
   { icon: UserCheck, text: "No Tech Skills Required" },
-  { icon: HeartHandshake, text: "Marketing and Sales Process, Done For You" },
+  { icon: HeartHandshake, text: "Platform + Done-For-You Setup" },
 ];
 
 const HeroSection = () => {
@@ -49,8 +50,8 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-5xl font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl"
         >
-          More Booked Jobs.{" "}
-          <span className="text-gradient">Not Just More Leads.</span>
+          The Sales System Your Business{" "}
+          <span className="text-gradient">Doesn&apos;t Have Yet.</span>
         </motion.h1>
 
         <motion.p
@@ -59,13 +60,34 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mx-auto mt-7 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg"
         >
-          We run the marketing that brings work in — ads, SEO, and a website built to convert. Then we own the follow-up: automated text-back, lead sequences, and a sales process so nothing goes cold while you&apos;re on the job.
+          We install the pipeline, automations, and online presence that turn inbound leads into booked jobs — built and managed for how your crew actually runs. When you&apos;re ready to add ads, the system&apos;s already there to catch the volume.
         </motion.p>
+
+        {/* Partner logos */}
+        <motion.div
+          initial={isMobile ? false : { opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="mt-8 flex flex-col items-center gap-3"
+        >
+          <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground/50">
+            Backed by
+          </span>
+          <div className="opacity-50 hover:opacity-70 transition-opacity duration-300">
+            <Image
+              src="/partners.webp"
+              alt="NVIDIA Inception, Microsoft for Startups, Google for Startups"
+              width={400}
+              height={50}
+              className="h-14 w-auto object-contain"
+            />
+          </div>
+        </motion.div>
 
         <motion.div
           initial={isMobile ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.25 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4"
         >
           <a href="/book" className="block w-full sm:w-auto">

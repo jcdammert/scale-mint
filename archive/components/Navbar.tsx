@@ -50,7 +50,7 @@ const Navbar = () => {
               onClick={() => setServicesOpen(!servicesOpen)}
               className="flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              Services
+              Platform
               <ChevronDown size={14} className={`transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
 
@@ -83,6 +83,14 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex md:items-center md:gap-3">
+          <a
+            href="https://app.scalemintsolutions.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Log in
+          </a>
           <a href="/book">
             <Button variant="hero" size="sm">Request My Demo</Button>
           </a>
@@ -103,7 +111,7 @@ const Navbar = () => {
             onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
             className="flex w-full items-center justify-between py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            Services
+            Platform
             <ChevronDown size={14} className={`transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
           </button>
           {mobileServicesOpen && (
@@ -132,6 +140,15 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          <a
+            href="https://app.scalemintsolutions.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            onClick={() => setMobileOpen(false)}
+          >
+            Log in
+          </a>
           <a href="/book" onClick={() => setMobileOpen(false)}>
             <Button variant="hero" size="sm" className="mt-2 w-full">Request My Demo</Button>
           </a>

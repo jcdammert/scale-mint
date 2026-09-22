@@ -11,20 +11,20 @@ import {
 
 const faqs = [
   {
-    q: "What exactly does Scale Mint do for me?",
-    a: "We build and run your full marketing and sales follow-up operation: pipeline, missed-call text-back, two-way SMS, follow-up sequences, automated review requests, and your online presence across Google, Facebook, and Instagram. We configure everything for how your crew runs, train you on it, and keep it running every month. The marketing and the team behind it.",
+    q: "What exactly does Scale Mint build for me?",
+    a: "Your full sales and follow-up system on one platform: pipeline, missed-call text-back, two-way SMS, follow-up sequences, automated review requests, weekly Google/Facebook/Instagram posts, and your Google Business Profile. We configure all of it for how your crew runs, train you on it, and keep it running every month. The platform plus the team behind it.",
   },
   {
-    q: "Are you a marketing agency or a piece of software?",
-    a: "Neither exactly, and that's the point. Agencies run ads and send a report. Software gives you a login and a help center. We do both sides: we run the marketing — ads, SEO, and website — and we own the sales process that turns those leads into booked jobs. Automated follow-up, missed call text-back, and either a trained AI setter, a plugged-in sales rep, or your own team trained to close. Marketing without a sales process behind it is just expensive noise. That combination is the actual offer.",
+    q: "How is this different from Jobber or Housecall Pro?",
+    a: "Those are job-management tools. They give you a login and a help center. You're on your own to set it up and actually use the features. We build the whole sales engine for you — pipeline stages, automations, follow-up sequences, online presence — and we keep it running. Job scheduling and invoicing are part of the platform, not the whole thing.",
   },
   {
     q: "How is this different from hiring a marketing agency?",
-    a: "Agencies run ads and send a monthly report. The day you stop paying, the leads stop and you have nothing left. With Scale Mint, you own the pipeline, the follow-up sequences, and the contacts. When you're ready to add ads, they feed straight into the sales process we already built.",
+    a: "Agencies run ads and send a monthly report. The day you stop paying, the leads stop and you have nothing left. With Scale Mint, you own the system. Every lead, every follow-up, every pipeline stage stays in your account. When you're ready to add ads, they feed straight into the system we already built.",
   },
   {
     q: "How fast can I get up and running?",
-    a: "5 to 10 business days for most clients. We move fast because we've built this for multiple service businesses and know what to configure first.",
+    a: "5–10 business days for most clients. We move fast because we've built this for multiple service businesses and know what to configure first.",
   },
   {
     q: "Do I need any technical knowledge?",
@@ -32,11 +32,11 @@ const faqs = [
   },
   {
     q: "What does the monthly fee cover?",
-    a: "Everything we built for you — CRM, automations, follow-up sequences, review engine, and online presence — plus ongoing support and our team adjusting things as your business changes. A fraction of what a part-time ops hire would cost, and it runs 24/7.",
+    a: "Platform access, hosting, weekly social posts, ongoing support, and our team configuring and adjusting things as your business changes. A fraction of what a part-time ops hire would cost — and the system runs 24/7.",
   },
   {
     q: "Can I cancel anytime?",
-    a: "Yes. Month-to-month, no long-term contract. We keep clients because the results are there, not because of fine print.",
+    a: "Yes. Month-to-month, no long-term contract. We keep clients because the system works, not because of fine print.",
   },
 ];
 
