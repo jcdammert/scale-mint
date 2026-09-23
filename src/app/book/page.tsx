@@ -52,13 +52,13 @@ export default function BookPage() {
           >
             <iframe
               src="https://links.scalemintsolutions.com/widget/booking/ZGnUiOO77z156k5CjxTQ"
-              style={{ width: "100%", border: "none", overflow: "hidden" }}
+              style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "700px" }}
               scrolling="no"
               id="ZGnUiOO77z156k5CjxTQ_1783706155345"
             />
             <Script
               src="https://links.scalemintsolutions.com/js/form_embed.js"
-              strategy="lazyOnload"
+              strategy="afterInteractive"
             />
           </motion.div>
         </div>
