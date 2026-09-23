@@ -28,7 +28,7 @@ const DEFAULT_PRIMARY: CardConfig = {
   eyebrow: "Talk to us",
   title: "See how it works for your business.",
   description:
-    "20-minute call. We walk through your sales process, show you how the system runs, and tell you straight if it fits.",
+    "20-minute call. We walk through your business, show you exactly what we'd run, and tell you straight if it fits.",
   cta: "Request My Demo",
   href: "/book",
 };

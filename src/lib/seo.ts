@@ -23,7 +23,7 @@ export const organizationSchema = {
   email: BUSINESS_EMAIL,
   telephone: BUSINESS_PHONE,
   description:
-    "Scale Mint installs sales follow-up, AI Employee, marketing, and business software systems for home service contractors — roofing, HVAC, pressure washing, epoxy, junk removal, remodeling, and more.",
+    "Scale Mint runs the marketing and sales process for home service contractors — ads, SEO, follow-up, pipeline, and CRM — fully built and managed.",
   address: {
     "@type": "PostalAddress",
     addressLocality: BUSINESS_LOCATION.city,
@@ -43,10 +43,10 @@ export const organizationSchema = {
     "Google Ads for contractors",
     "Meta Ads for contractors",
     "CRM for home services",
-    "Sales pipeline software",
+    "Sales pipeline management",
   ],
   serviceType: [
-    "Business Software",
+    "Marketing Agency",
     "Marketing",
     "AI Employee",
     "Custom AI",

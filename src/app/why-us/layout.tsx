@@ -4,7 +4,7 @@ import { jsonLd, breadcrumbSchema } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Why Scale Mint",
   description:
-    "We don't sell software. We install and run the sales follow-up system that turns missed calls into booked jobs for home service crews. See what makes us different.",
+    "We don't sell software. We run the marketing and own the sales process that turns leads into booked jobs for home service contractors.",
   alternates: { canonical: "/why-us" },
   openGraph: {
     title: "Why Scale Mint",

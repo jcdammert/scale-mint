@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Scale Mint — Sales & Follow-Up Systems for Home Service Businesses",
+      "Scale Mint — Marketing & Sales Process for Home Service Contractors",
     template: "%s | Scale Mint",
   },
   description:
-    "Scale Mint installs the platform, follow-up, marketing, and AI Employee systems that turn missed calls into booked jobs for roofing, HVAC, pressure washing, epoxy, remodeling, and other home service crews.",
+    "Scale Mint runs the marketing and sales process for home service contractors — ads, SEO, follow-up, and a pipeline that works every lead until it books.",
   keywords: [
     "home service marketing",
     "contractor CRM",
@@ -49,25 +49,25 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Scale Mint",
     title:
-      "Scale Mint — Sales & Follow-Up Systems for Home Service Businesses",
+      "Scale Mint — Marketing & Sales Process for Home Service Contractors",
     description:
-      "Install the platform that turns missed calls into booked jobs. Built and managed for home service crews.",
+      "We run the marketing. We own the follow-up. Built for home service contractors.",
     locale: "en_US",
     images: [{ url: "/logo.png", width: 1525, height: 481, alt: "Scale Mint" }],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Scale Mint — Sales & Follow-Up Systems for Home Service Businesses",
+      "Scale Mint — Marketing & Sales Process for Home Service Contractors",
     description:
-      "Install the platform that turns missed calls into booked jobs. Built and managed for home service crews.",
+      "We run the marketing. We own the follow-up. Built for home service contractors.",
     images: ["/logo.png"],
   },
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",
   },
-  category: "Business Software",
+  category: "Marketing Agency",
 };
 
 export default function RootLayout({

@@ -233,7 +233,7 @@ export default function PricingPage() {
               </h3>
 
               <p className="mt-2 text-sm text-muted-foreground leading-snug">
-                Businesses that are off the ground and ready to push to the next level with a full system behind them.
+                Businesses that are off the ground and ready to push to the next level with a full operation behind them.
               </p>
 
               <div className="mt-5 rounded-xl border border-primary/20 bg-primary/[0.04] p-5">
@@ -292,7 +292,7 @@ export default function PricingPage() {
                   </Button>
                 </a>
                 <p className="text-xs text-muted-foreground text-center">
-                  Best for businesses ready to push to the next level with the full system behind them.
+                  Best for businesses ready to push to the next level with the full operation behind them.
                 </p>
               </div>
             </motion.div>
@@ -322,7 +322,7 @@ export default function PricingPage() {
               <span className="text-gradient">Your Plan.</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Stack more firepower on top of your system. Custom quoted based on your market and goals.
+              Stack more firepower on top of your marketing and sales process. Custom quoted based on your market and goals.
             </p>
           </motion.div>
 

@@ -40,7 +40,7 @@ const whyChooseUs = [
   },
   {
     icon: Zap,
-    title: "Plugged into your CRM.",
+    title: "Connected to your CRM.",
     description:
       "Leads from the ads land in your pipeline and trigger your follow-up — instead of getting emailed to you and forgotten.",
   },
@@ -207,7 +207,7 @@ export default function MarketingPage() {
           >
             <Sparkles size={12} className="text-primary" />
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-              Marketing That Plugs Into the System
+              Marketing We Run for You
             </span>
           </motion.div>
 
@@ -227,7 +227,7 @@ export default function MarketingPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
           >
-            Meta, Google, and local SEO — managed by us, plugged straight into the system that catches every lead and follows up automatically. The leads land where they get worked, not in some inbox you&apos;ll check Monday.
+            Meta, Google, and local SEO — managed by us, connected to the same follow-up engine that catches every lead and follows up automatically. The leads land where they get worked, not in some inbox you&apos;ll check Monday.
           </motion.p>
 
           <motion.div
@@ -258,7 +258,7 @@ export default function MarketingPage() {
             <div className="card-glass mx-auto inline-flex max-w-full flex-col items-center justify-center gap-3 px-5 py-4 sm:flex-row sm:gap-0 sm:px-2 sm:py-2">
               {[
                 { icon: DollarSign, text: "Transparent Pricing" },
-                { icon: TrendingUp, text: "Plugged Into Your CRM" },
+                { icon: TrendingUp, text: "Connected to Your CRM" },
                 { icon: Shield, text: "Month-to-Month" },
                 { icon: BarChart3, text: "Weekly Reporting" },
               ].map(({ icon: Icon, text }, i, arr) => (
@@ -379,7 +379,7 @@ export default function MarketingPage() {
               <span className="text-gradient">With Us.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              We&apos;re not a generic agency selling ad spend. We run the platform behind the ads — so the leads we generate actually get worked.
+              We&apos;re not a generic agency selling ad spend. We run the marketing and the sales process behind the ads — so the leads we generate actually get worked.
             </p>
           </motion.div>
 
@@ -426,7 +426,7 @@ export default function MarketingPage() {
               <span className="text-gradient">Actually Runs.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Same playbook every time. Audit, launch, adjust, scale.
+              Same process every time. Audit, launch, adjust, scale.
             </p>
           </motion.div>
 

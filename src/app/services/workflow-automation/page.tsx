@@ -90,7 +90,7 @@ const steps = [
   },
   {
     step: "02",
-    title: "Design Your System",
+    title: "Design Your Automations",
     description:
       "We architect a custom automation and CRM system built around how your business actually works — your pipeline stages, your tools, your team.",
   },

@@ -40,7 +40,7 @@ export default function BookPage() {
               <span className="text-gradient">Demo Call.</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground md:text-xl">
-              Pick a time that works. We&apos;ll walk you through the system, answer your questions, and see if it&apos;s a fit for your business.
+              Pick a time that works. We&apos;ll walk you through what we do, answer your questions, and see if it&apos;s a fit for your business.
             </p>
           </motion.div>
 

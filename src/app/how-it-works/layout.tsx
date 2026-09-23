@@ -4,12 +4,12 @@ import { jsonLd, breadcrumbSchema, faqSchema } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "How It Works",
   description:
-    "From kickoff to booked jobs — the exact build process Scale Mint runs to install your sales and follow-up system. Discovery, build, launch, and ongoing optimization.",
+    "From kickoff to booked jobs — the exact process Scale Mint runs: we build the marketing, own the follow-up, and keep it running every month.",
   alternates: { canonical: "/how-it-works" },
   openGraph: {
     title: "How It Works | Scale Mint",
     description:
-      "The exact build process — discovery, build, launch, and ongoing optimization.",
+      "The exact build process — discovery, build, launch, and ongoing management.",
     url: "/how-it-works",
   },
 };
@@ -23,7 +23,7 @@ const FAQS = [
   {
     question: "What do I have to do during setup?",
     answer:
-      "Two short calls — kickoff and walkthrough — and we handle the rest. We pull data from your existing tools, build the system, and train your team.",
+      "Two short calls — kickoff and walkthrough — and we handle the rest. We pull data from your existing tools, handle the build, and train your team.",
   },
   {
     question: "Do you keep optimizing it after launch?",
@@ -35,9 +35,9 @@ const FAQS = [
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "How Scale Mint installs your sales and follow-up system",
+  name: "How Scale Mint builds and runs your marketing and sales process",
   description:
-    "Four-step process to install the platform that turns missed calls into booked jobs.",
+    "Five-step process to build and run your marketing and sales operation.",
   step: [
     {
       "@type": "HowToStep",
@@ -49,13 +49,13 @@ const howToSchema = {
       "@type": "HowToStep",
       position: 2,
       name: "Build",
-      text: "We install the CRM, pipelines, follow-up sequences, AI Employee, and integrations — fully configured for your business.",
+      text: "We build the website, configure the CRM, set up follow-up sequences, and wire in integrations — fully configured for your business.",
     },
     {
       "@type": "HowToStep",
       position: 3,
       name: "Launch",
-      text: "We migrate your data, train your team, and turn the system on. First leads start hitting the new flow within 48 hours.",
+      text: "We migrate your data, train your team, and go live. First leads start hitting the new flow within 48 hours.",
     },
     {
       "@type": "HowToStep",

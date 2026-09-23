@@ -12,15 +12,15 @@ const steps = [
   },
   {
     num: "02",
-    title: "We Build the System",
+    title: "We Build It",
     description:
-      "We configure the whole platform around how your crew actually operates — pipeline, follow-up sequences, website, GBP, social posting. You don't touch a setting. Live in 5–10 business days.",
+      "We configure everything around how your crew actually operates — pipeline, follow-up sequences, website, GBP, social posting. You don't touch a setting. Live in 5–10 business days.",
   },
   {
     num: "03",
     title: "You Run the Jobs",
     description:
-      "Leads get caught. Follow-ups go out. Reviews come in. You show up and do the work. When you're ready to add ads or scale crews, the system absorbs the volume.",
+      "Leads get caught. Follow-ups go out. Reviews come in. You show up and do the work. When you're ready to add ads or scale crews, we handle the added volume.",
   },
 ];
 
@@ -35,7 +35,7 @@ const HowItWorksSection = () => {
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
-          From First Call to Live System{" "}
+          From First Call to Live{" "}
           <span className="text-gradient">in 5–10 Days.</span>
         </motion.h2>
 

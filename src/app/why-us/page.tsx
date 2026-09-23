@@ -26,13 +26,13 @@ const differentiators = [
   },
   {
     icon: Target,
-    title: "We build the system, not a feature list.",
+    title: "We run the whole operation, not just one piece.",
     description:
-      "We don't sell you a CRM and walk away. Pipeline, follow-up, online presence, reviews — built around how your business actually runs and connected on one platform.",
+      "We don't sell you a CRM and walk away. Pipeline, follow-up, online presence, reviews — all run for you, connected, and adjusted as your business changes.",
   },
   {
     icon: UserCheck,
-    title: "You own the system. You see everything.",
+    title: "You own the results. You see everything.",
     description:
       "We build it, configure it, and hand you the keys. Every lead, every follow-up, every pipeline stage stays in your account. The day you leave, you keep it all.",
   },
@@ -40,7 +40,7 @@ const differentiators = [
     icon: Handshake,
     title: "Month-to-month. No long contracts.",
     description:
-      "Cancel anytime. We keep clients because the system works — not because of fine print.",
+      "Cancel anytime. We keep clients because the results are there — not because of fine print.",
   },
 ];
 
@@ -156,7 +156,7 @@ export default function WhyUsPage() {
 
               <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg relative">
                 <p>
-                  {"My name is Johann Dammert. I started my first business at 15 and never stopped. I ran multiple local service companies. I tried the CRMs. No time to actually set them up. I hired agencies. They took the money and sent reports. So I built the system myself — the platform, the automations, the sales systems. Then I helped friends do the same. What every service operator actually needs is the system AND someone who'll set it up and run it right."}
+                  {"My name is Johann Dammert. I started my first business at 15 and never stopped. I ran multiple local service companies. I tried the CRMs. No time to actually set them up. I hired agencies. They took the money and sent reports. So I built it myself — the automations, the pipelines, the sales process. Then I helped friends do the same. What every service operator actually needs is the marketing and sales process AND someone who'll build it and run it right."}
                 </p>
                 <p className="text-foreground/90 font-medium">
                   {"That's why Scale Mint exists."}
@@ -186,7 +186,7 @@ export default function WhyUsPage() {
             </div>
 
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl lg:text-5xl leading-[1.1]">
-              {"We're Not Just a Platform. We're Not Just an "}
+              {"We're Not Just a SaaS. We're Not Just an "}
               <span className="text-gradient">Agency.</span>
             </h2>
           </motion.div>
@@ -253,7 +253,7 @@ export default function WhyUsPage() {
                     </span>
                   </div>
                   <p className="text-sm leading-relaxed text-foreground/90">
-                    {"Both. The full platform on your account, plus the team that builds it, configures it, and adjusts it as your business changes. You see every lead and every follow-up. The system stays yours."}
+                    {"Both. Your entire marketing and sales operation — ads, follow-up, pipeline — plus the team that builds it, runs it, and adjusts it as your business changes. You see every lead and every follow-up. Everything stays in your account."}
                   </p>
                 </div>
               </div>
@@ -395,7 +395,7 @@ export default function WhyUsPage() {
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed text-foreground/85 md:text-base">
-                  {"Owners who are serious about growth, willing to actually use the system, and ready to invest in building something that lasts. If that's you, we want to work together."}
+                  {"Owners who are serious about growth, committed to the process, and ready to invest in building something that lasts. If that's you, we want to work together."}
                 </p>
               </div>
             </motion.div>
@@ -417,7 +417,7 @@ export default function WhyUsPage() {
                 </span>
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-                {"You want a magic fix in 30 days. The system works, but it's a real build — not a switch you flip. We'd rather tell you that up front than waste your money."}
+                {"You want a magic fix in 30 days. It works, but it's a real build — not a switch you flip. We'd rather tell you that up front than waste your money."}
               </p>
             </motion.div>
           </div>

@@ -247,7 +247,7 @@ export default function AIWebsitesPage() {
                 transition={{ duration: 0.7, delay: 0.15 }}
                 className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
               >
-                Fast, built to rank, and wired into your CRM. Every form submission triggers your follow-up. Not a brochure — a piece of the system that actually closes leads.
+                Fast, built to rank, and wired into your CRM. Every form submission triggers your follow-up. Not a brochure — built to rank, convert, and feed leads into your follow-up automatically.
               </motion.p>
 
               <motion.div
@@ -359,7 +359,7 @@ export default function AIWebsitesPage() {
               How We <span className="text-gradient">Build It.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              From first call to launch — same playbook every time. You stay in the loop, not stuck doing the work.
+              From first call to launch — same process every time. You stay in the loop, not stuck doing the work.
             </p>
           </motion.div>
 

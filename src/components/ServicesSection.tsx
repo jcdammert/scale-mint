@@ -32,7 +32,7 @@ const pillars = [
     icon: Search,
     title: "An Online Presence That Looks Like a Real Business.",
     description:
-      "When a homeowner Googles you after a referral, they find a professional website, real reviews, and a business that looks established. The system handles your online presence automatically — so you look like the obvious choice without lifting a finger.",
+      "When a homeowner Googles you after a referral, they find a professional website, real reviews, and a business that looks established. We handle your online presence automatically — so you look like the obvious choice without lifting a finger.",
   },
   {
     num: "03",
@@ -55,7 +55,7 @@ const addOns = [
     icon: Share2,
     title: "Meta Ads",
     description:
-      "Facebook and Instagram campaigns built on top of your system. Every lead lands directly in your pipeline and triggers automatic follow-up.",
+      "Facebook and Instagram campaigns run for you. Every lead lands directly in your pipeline and triggers automatic follow-up.",
     note: "Custom quoted.",
     href: "/meta-ads",
   },
@@ -63,7 +63,7 @@ const addOns = [
     icon: TrendingUp,
     title: "Omnipresence SEO",
     description:
-      "Show up on Google, Maps, AI search engines, and every local directory in your area. Built on top of your system so every inbound lead is captured automatically.",
+      "Show up on Google, Maps, AI search engines, and every local directory in your area. Every inbound lead captured automatically.",
     note: "Custom quoted.",
     href: "/seo",
   },

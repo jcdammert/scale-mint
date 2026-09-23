@@ -78,7 +78,7 @@ const features = [
     icon: Star,
     title: "Review Management",
     description:
-      "All your Google reviews in one place. Respond from the platform. See what's coming in week to week.",
+      "All your Google reviews in one place. Respond from your account. See what's coming in week to week.",
   },
   {
     icon: MapPin,
@@ -109,7 +109,7 @@ const steps = [
   },
   {
     num: "02",
-    title: "We build the system",
+    title: "We build it for you",
     description:
       "Pipeline, automations, templates, GBP \u2014 all configured around your business. Live in 5\u201310 business days.",
   },
@@ -158,7 +158,7 @@ export default function BusinessSoftwarePage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            Stop running the business off your phone and a stack of texts. CRM, invoicing, scheduling, automations, contracts — built on one platform, configured for your crew, and managed for you.
+            Stop running the business off your phone and a stack of texts. CRM, invoicing, scheduling, automations, contracts — all configured for your crew and managed for you.
           </motion.p>
           <motion.div
             initial={isMobile ? false : { opacity: 0, y: 20 }}
