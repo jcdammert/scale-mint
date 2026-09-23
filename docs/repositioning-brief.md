@@ -32,6 +32,18 @@ remain part of the marketing side, not a separate thing.
   Startups" badges from the homepage entirely for now — startup/SaaS
   signaling works against this positioning.
 
+## Important: why "system" and self-serve language must go
+The original site was built to sell a self-serve model: clients would "plug
+into the system" and run their own ads/marketing using the platform. That
+model didn't work well, so Scale Mint moved to running the marketing FOR
+clients (full-service agency), keeping the CRM/follow-up backend as part of
+the delivery, not as a DIY tool. Because of this history, be aggressive about
+finding and rewriting any language that implies the client operates something
+themselves: "plug into," "the system," "you configure," "you set it up,"
+"do it yourself," self-serve playbooks/resources framed as replacing our work,
+etc. The correct framing everywhere is: we do the marketing, we do the sales
+process, you run the jobs.
+
 ## Tone
 Direct, clean, natural. No hyphens in public-facing copy. Avoid
 AI-sounding, overly wordy language.

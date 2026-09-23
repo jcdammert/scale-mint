@@ -399,11 +399,11 @@ const ServicesSection = () => {
           className="mt-20 mx-auto max-w-2xl text-center"
         >
           <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
-            Add-Ons That Plug Into{" "}
-            <span className="text-gradient">the System.</span>
+            More Marketing{" "}
+            <span className="text-gradient">We Run for You.</span>
           </h3>
           <p className="mt-3 text-sm text-muted-foreground">
-            Sales process first. When you&apos;re ready for more reach, these plug into the same follow-up engine so every lead gets worked the same way, whether it came from a referral or a paid ad.
+            Sales process comes first. Once yours is dialed in, these are the additional marketing services we layer on top — more reach, more leads, all running through the same follow-up engine.
           </p>
         </motion.div>
 

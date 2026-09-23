@@ -18,7 +18,6 @@ const starterFeatures = [
   "Invoicing & estimates",
   "Missed call text-back",
   "Review request automation",
-  "Access to Meta Ads Playbook and resources",
   "Up to 5 team members",
 ];
 

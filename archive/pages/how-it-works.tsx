@@ -29,28 +29,28 @@ const pillars = [
     icon: Globe,
     title: "Your Online Presence",
     description:
-      "We build a professional website, set up your Google Business Profile, and handle on-page SEO. When someone searches for your service or Googles you after a referral — they find a real business with real reviews.",
+      "Professional website, Google Business Profile, on-page SEO. When someone searches for your service or Googles you after a referral — they find a real business.",
   },
   {
     num: "02",
     icon: MessageSquare,
-    title: "Every Lead Followed Up",
+    title: "Every Lead Captured",
     description:
-      "We set up missed call text-back that fires in seconds and a speed-to-lead response that goes out instantly. Two-way SMS and email sequences run automatically until the lead books or says no.",
+      "Missed call text-back fires in seconds. Speed-to-lead response goes out instantly. 2-way SMS and email keeps the conversation alive automatically.",
   },
   {
     num: "03",
     icon: CalendarCheck,
     title: "Close and Book",
     description:
-      "We track every lead in the CRM pipeline and configure estimates, invoices, contracts, and scheduling in one place. Nothing falls through the cracks while you're on the job.",
+      "CRM pipeline tracks every lead. Estimates, invoices, contracts, and scheduling all in one place. Nothing falls through the cracks.",
   },
   {
     num: "04",
     icon: Star,
     title: "Reputation on Autopilot",
     description:
-      "We set up review requests that fire automatically after every completed job. Your Google rating climbs without you chasing a single customer for a review.",
+      "Review requests fire automatically after every job. Your Google rating climbs without you asking a single customer manually.",
   },
 ];
 
@@ -66,10 +66,10 @@ const steps = [
   {
     num: "02",
     icon: Hammer,
-    title: "We Build It for Your Business",
+    title: "We Build Your System",
     timing: "5–10 days",
     description:
-      "We build your website, configure your CRM, set up every automation, and customize everything around how your business actually operates.",
+      "We build your website, configure your CRM, set up every automation, and customize the system around how your business actually operates.",
   },
   {
     num: "03",
@@ -77,7 +77,7 @@ const steps = [
     title: "We Walk You Through It",
     timing: "1 hour",
     description:
-      "Full onboarding call. We show you exactly what we built, how to use what you need to, and what we're handling for you automatically.",
+      "Full onboarding call. We show you exactly how everything works, where to find things, and what the system is doing for you automatically.",
   },
   {
     num: "04",
@@ -85,7 +85,7 @@ const steps = [
     title: "You Go Live",
     timing: "Day one",
     description:
-      "Everything is live. Leads start getting captured and followed up automatically. You focus on the work.",
+      "Your system is live. Leads start getting captured and followed up automatically. You focus on the work.",
   },
   {
     num: "05",
@@ -97,7 +97,7 @@ const steps = [
   },
 ];
 
-const moreServices = [
+const addOns = [
   {
     icon: Megaphone,
     title: "Meta Ads",
@@ -146,8 +146,8 @@ export default function HowItWorksPage() {
             transition={{ duration: 0.7 }}
             className="mx-auto max-w-4xl font-heading text-4xl font-bold leading-tight text-foreground md:text-6xl"
           >
-            {"We Run the Marketing. "}
-            <span className="text-gradient">We Own the Follow-Up.</span>
+            {"From First Call to "}
+            <span className="text-gradient">Live System.</span>
           </motion.h1>
           <motion.p
             initial={isMobile ? false : { opacity: 0, y: 20 }}
@@ -155,12 +155,12 @@ export default function HowItWorksPage() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            {"We don't hand you a login and say good luck. We build and run the whole operation — marketing, follow-up, and the sales process — and keep it live every month."}
+            {"We don't hand you a login and say good luck. We build the entire system for your business, train you on it, and keep it running every month."}
           </motion.p>
         </div>
       </section>
 
-      {/* ─── SECTION 1: WHAT WE DO ─── */}
+      {/* ─── SECTION 1: WHAT YOU'RE GETTING ─── */}
       <section className="px-4 pt-10 md:pt-14 pb-6 md:pb-10">
         <div className="container mx-auto max-w-5xl">
           <motion.div
@@ -170,16 +170,16 @@ export default function HowItWorksPage() {
             className="mx-auto max-w-2xl text-center mb-10"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-              What We Do
+              What You&apos;re Getting
             </p>
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-              Marketing In.{" "}
-              <span className="text-gradient">Sales Process Out.</span>
+              The System,{" "}
+              <span className="text-gradient">Plus What&apos;s On Top.</span>
             </h2>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 items-stretch">
-            {/* THE MARKETING */}
+            {/* THE SYSTEM */}
             <motion.div
               initial={isMobile ? false : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -187,17 +187,17 @@ export default function HowItWorksPage() {
               className="card-glass flex flex-col p-8 transition-all duration-300 hover:border-primary/30"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-                The Marketing
+                The Foundation
               </p>
               <h3 className="font-heading text-3xl font-bold text-foreground">
-                Ads, SEO &amp; Website
+                The System
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground flex-1">
-                We run the marketing that brings work in — ads, SEO, and a website built to convert. We build it, we run it, and we keep it optimized so new leads are coming in from the channels that make sense for your market.
+                The software that runs your business — website, CRM, pipeline, follow-up automations, scheduling, contracts, reviews. Everything you need to look professional, capture every lead, and follow up automatically. Built for you, configured around how your business actually operates.
               </p>
             </motion.div>
 
-            {/* THE SALES PROCESS */}
+            {/* ADD-ONS */}
             <motion.div
               initial={isMobile ? false : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -206,13 +206,13 @@ export default function HowItWorksPage() {
               className="card-glass flex flex-col p-8 transition-all duration-300 hover:border-primary/30"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-                The Sales Process
+                Add Fuel to the Fire
               </p>
               <h3 className="font-heading text-3xl font-bold text-foreground">
-                Follow-Up &amp; Pipeline
+                The Add-Ons
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground flex-1">
-                Every lead that comes in gets worked until it books or says no — instant text-back, automated follow-up sequences, a pipeline we track, and reviews that stack up after every job. Marketing without this behind it just generates leads that go cold.
+                Once the system is in place and capturing every lead, this is how you pour fuel on it — Meta Ads to bring in new customers, SEO to dominate your local market, or an AI Employee to handle every call 24/7. Stack on whichever ones fit where you&apos;re trying to go.
               </p>
             </motion.div>
           </div>
@@ -224,7 +224,7 @@ export default function HowItWorksPage() {
         <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       </div>
 
-      {/* ─── SECTION 2: WHAT WE RUN FOR YOU ─── */}
+      {/* ─── SECTION 2: HOW THE SYSTEM WORKS ─── */}
       <section className="px-4 pt-12 md:pt-16 pb-6 md:pb-10">
         <div className="container mx-auto max-w-5xl">
           <motion.div
@@ -234,14 +234,14 @@ export default function HowItWorksPage() {
             className="mx-auto max-w-2xl text-center mb-10"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-              What We Run for You
+              How the System Works
             </p>
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-              Four Parts.{" "}
-              <span className="text-gradient">One Connected Service.</span>
+              Four Pillars.{" "}
+              <span className="text-gradient">One Connected Operation.</span>
             </h2>
             <p className="mt-3 text-sm text-muted-foreground">
-              Every part feeds into the next.
+              Every part of the system feeds into the next.
             </p>
           </motion.div>
 
@@ -294,7 +294,7 @@ export default function HowItWorksPage() {
             </p>
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
               From First Call to{" "}
-              <span className="text-gradient">Live.</span>
+              <span className="text-gradient">Live System.</span>
             </h2>
           </motion.div>
 
@@ -345,7 +345,7 @@ export default function HowItWorksPage() {
         <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       </div>
 
-      {/* ─── SECTION 4: MORE SERVICES ─── */}
+      {/* ─── SECTION 4: ADD MORE FIREPOWER ─── */}
       <section className="px-4 pt-12 md:pt-16 pb-6 md:pb-10">
         <div className="container mx-auto max-w-5xl">
           <motion.div
@@ -355,19 +355,19 @@ export default function HowItWorksPage() {
             className="mx-auto max-w-2xl text-center mb-10"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-3">
-              More Services
+              Optional Add-Ons
             </p>
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-              More Marketing{" "}
-              <span className="text-gradient">We Run for You.</span>
+              Stack More on Top{" "}
+              <span className="text-gradient">When You&apos;re Ready.</span>
             </h2>
             <p className="mt-3 text-sm text-muted-foreground">
-              Available for active plan clients. Custom quoted.
+              Available exclusively for active plan clients. Custom quoted.
             </p>
           </motion.div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {moreServices.map((a, i) => (
+            {addOns.map((a, i) => (
               <motion.a
                 key={a.title}
                 href={a.href}
@@ -408,8 +408,8 @@ export default function HowItWorksPage() {
             className="card-glass card-glow-green p-8 md:p-12 text-center border-primary/40"
           >
             <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
-              Ready to get{" "}
-              <span className="text-gradient">started?</span>
+              Ready to get your{" "}
+              <span className="text-gradient">system built?</span>
             </h2>
             <Link href="/book" className="mt-8 inline-block">
               <Button variant="cta" size="lg" className="px-8 animate-glow-pulse">
