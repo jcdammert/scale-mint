@@ -59,7 +59,7 @@ const steps = [
     num: "01",
     icon: PhoneCall,
     title: "We Get on a Call",
-    timing: "15 min",
+    timing: "20 min",
     description:
       "You tell us how your business runs — where leads come in, where they fall through, what's eating your time. We figure out which build is right for you.",
   },
