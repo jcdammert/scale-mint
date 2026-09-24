@@ -47,7 +47,7 @@ export default function DualCTA({
   heading,
   primary,
   secondary,
-  singleCard = false,
+  singleCard = true,
 }: DualCTAProps) {
   const isMobile = useIsMobile();
   const primaryConfig = { ...DEFAULT_PRIMARY, ...primary };
@@ -56,24 +56,22 @@ export default function DualCTA({
   return (
     <section className="px-4 pt-4 pb-12 md:pt-10 md:pb-24">
       <div className="container mx-auto max-w-5xl">
-        <motion.div
-          initial={isMobile ? false : { opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-8 md:mb-10"
-        >
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-            {heading ?? (
-              <>
-                Pick Your <span className="text-gradient">Next Move</span>
-              </>
-            )}
-          </h2>
-        </motion.div>
+        {heading && (
+          <motion.div
+            initial={isMobile ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8 md:mb-10"
+          >
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+              {heading}
+            </h2>
+          </motion.div>
+        )}
 
         <div
           className={`grid gap-5 ${
-            singleCard ? "max-w-xl mx-auto" : "md:grid-cols-2"
+            singleCard ? "max-w-2xl mx-auto" : "md:grid-cols-2"
           }`}
         >
           <SpotlightCard
