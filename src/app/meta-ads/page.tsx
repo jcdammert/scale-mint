@@ -12,8 +12,8 @@ const steps = [
   {
     icon: Video,
     step: "01",
-    title: "You film a short video on your phone.",
-    desc: "We give you the exact script and shot list. Takes 10 minutes. You don't need equipment, lighting, or editing skills.",
+    title: "We get the creative together.",
+    desc: "We work with what you have. That could be a short phone video — we give you the script and shot list, takes 10 minutes. Or we run picture ads using photos you already have. Or we use existing content. You don't need a production budget.",
   },
   {
     icon: Settings,
