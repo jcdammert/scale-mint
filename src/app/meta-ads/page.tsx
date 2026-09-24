@@ -12,8 +12,8 @@ const steps = [
   {
     icon: Video,
     step: "01",
-    title: "We get the creative together.",
-    desc: "We work with what you have. That could be a short phone video — we give you the script and shot list, takes 10 minutes. Or we run picture ads using photos you already have. Or we use existing content. You don't need a production budget.",
+    title: "We handle the creative.",
+    desc: "Depending on your offer, your angle, and your industry, we decide what format works best — video ads, picture ads, or we bring in content creators to make it for you. You don't figure that out. We do.",
   },
   {
     icon: Settings,
