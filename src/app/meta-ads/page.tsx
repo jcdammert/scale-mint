@@ -13,7 +13,7 @@ const steps = [
     icon: Video,
     step: "01",
     title: "We handle the creative.",
-    desc: "Depending on your offer, your angle, and your industry, we decide what format works best — video ads, picture ads, or we bring in content creators to make it for you. You don't figure that out. We do.",
+    desc: "Video, photo, or hired creators — we pick the format that fits your business and build it. You don't touch a thing.",
   },
   {
     icon: Settings,
