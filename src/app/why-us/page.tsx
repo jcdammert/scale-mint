@@ -28,7 +28,7 @@ const differentiators = [
     icon: Target,
     title: "We run the whole operation, not just one piece.",
     description:
-      "We don't sell you a CRM and walk away. Pipeline, follow-up, online presence, reviews — all run for you, connected, and adjusted as your business changes.",
+      "We don't sell you leads and walk away. Pipeline, follow-up, online presence, reviews — all run for you, connected, and adjusted as your business changes.",
   },
   {
     icon: UserCheck,
@@ -40,7 +40,7 @@ const differentiators = [
     icon: Handshake,
     title: "Month-to-month. No long contracts.",
     description:
-      "Cancel anytime. We keep clients because the results are there — not because of fine print.",
+      "Cancel anytime. We keep clients because the results are there — not because of fine print. If we don't make you money, we don't expect money from you. That's how we operate.",
   },
 ];
 
