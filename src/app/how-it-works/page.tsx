@@ -67,7 +67,7 @@ const steps = [
     num: "02",
     icon: Hammer,
     title: "We Build It for Your Business",
-    timing: "5–10 days",
+    timing: "3–5 days",
     description:
       "We build your website, configure your CRM, set up every automation, and customize everything around how your business actually operates.",
   },

@@ -14,7 +14,7 @@ const steps = [
     num: "02",
     title: "We Build It",
     description:
-      "We configure everything around how your crew actually operates — pipeline, follow-up sequences, website, GBP, social posting. You don't touch a setting. Live in 5–10 business days.",
+      "We configure everything around how your crew actually operates — pipeline, follow-up sequences, website, GBP, social posting. You don't touch a setting. Live in 3–5 days.",
   },
   {
     num: "03",
@@ -36,7 +36,7 @@ const HowItWorksSection = () => {
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
           From First Call to Live{" "}
-          <span className="text-gradient">in 5–10 Days.</span>
+          <span className="text-gradient">in 3–5 Days.</span>
         </motion.h2>
 
         <div className="relative mt-16 grid gap-8 md:grid-cols-3">

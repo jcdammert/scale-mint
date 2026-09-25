@@ -7,7 +7,7 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import Particles from "@/components/Particles";
 
 const stats = [
-  { icon: Clock, text: "Live in 5 to 10 Days" },
+  { icon: Clock, text: "Live in 3 to 5 Days" },
   { icon: UserCheck, text: "No Tech Skills Required" },
   { icon: HeartHandshake, text: "Marketing and Sales Process, Done For You" },
 ];

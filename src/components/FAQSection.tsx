@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: "How fast can I get up and running?",
-    a: "5 to 10 business days for most clients. We move fast because we've built this for multiple service businesses and know what to configure first.",
+    a: "3–5 days for most clients. We move fast because we've built this for multiple service businesses and know what to configure first.",
   },
   {
     q: "Do I need any technical knowledge?",
