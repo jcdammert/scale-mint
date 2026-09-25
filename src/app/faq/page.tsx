@@ -39,11 +39,6 @@ const FAQS = [
       "No. We set everything up, record a training call walking you through it, and you can text or call when you have a question. If you can send a text, you can use this.",
   },
   {
-    question: "What does the monthly fee cover?",
-    answer:
-      "Everything we built for you — CRM, automations, follow-up sequences, review engine, and online presence — plus ongoing support and our team adjusting things as your business changes. A fraction of what a part-time ops hire would cost, and it runs 24/7.",
-  },
-  {
     question: "Can I cancel anytime?",
     answer:
       "Yes. Month-to-month, no long-term contract. We keep clients because the results are there, not because of fine print.",
