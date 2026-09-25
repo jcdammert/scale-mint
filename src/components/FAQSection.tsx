@@ -51,8 +51,7 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl"
         >
-          The Questions Operators{" "}
-          <span className="text-gradient">Actually Ask.</span>
+          <span className="text-gradient">FAQs.</span>
         </motion.h2>
 
         <motion.div
