@@ -58,6 +58,7 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema(FAQS)) }}
       />
       <Navbar />
+      <div className="pt-24" />
       <FAQSection />
       <DualCTA />
       <Footer />
