@@ -403,10 +403,10 @@ export default function AIWebsitesPage() {
             className="mx-auto max-w-2xl text-center mb-10 md:mb-14"
           >
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              Built For <span className="text-gradient">Your Trade.</span>
+              Built For <span className="text-gradient">Your Business.</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              We build sites for the trades that show up to homes — different services need different page structures, different keywords, different proof.
+              We build sites for local service businesses — every industry needs different page structures, different keywords, different proof.
             </p>
           </motion.div>
 
