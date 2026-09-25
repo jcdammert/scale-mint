@@ -237,8 +237,8 @@ export default function AIWebsitesPage() {
                 transition={{ duration: 0.7 }}
                 className="font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-5xl lg:text-6xl"
               >
-                A Website That Actually{" "}
-                <span className="text-gradient">Books Jobs.</span>
+                A Website That Looks Legit{" "}
+                <span className="text-gradient">and Closes.</span>
               </motion.h1>
 
               <motion.p
