@@ -38,6 +38,22 @@ const faqs = [
     q: "Can I cancel anytime?",
     a: "Yes. Month-to-month, no long-term contract. We keep clients because the results are there, not because of fine print.",
   },
+  {
+    q: "How much time does this actually take on my end?",
+    a: "Not much. Follow-up, reminders, and review requests all run automatically once we build it. Your job is to answer the phone and show up to the job. Ours is to make sure it keeps ringing.",
+  },
+  {
+    q: "Do I have to sign up for all of your services?",
+    a: "No. We start with what makes sense for where you are. Some clients begin with just the CRM and follow-up, then add ads or SEO once the foundation is solid. We'd rather do three things well than sell you six and do none of them right.",
+  },
+  {
+    q: "Do you guarantee a certain number of leads?",
+    a: "No, and be skeptical of anyone who does. Lead volume depends on your budget, your market, and what you charge. What we do is give you a realistic range on the call and show you the actual numbers behind it.",
+  },
+  {
+    q: "What happens if I don't see results?",
+    a: "You don't pay us. We're not going to keep taking money from someone we're not making money for. That's not how we operate.",
+  },
 ];
 
 const FAQSection = () => {

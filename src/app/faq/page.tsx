@@ -48,6 +48,26 @@ const FAQS = [
     answer:
       "Yes. Month-to-month, no long-term contract. We keep clients because the results are there, not because of fine print.",
   },
+  {
+    question: "How much time does this actually take on my end?",
+    answer:
+      "Not much. Follow-up, reminders, and review requests all run automatically once we build it. Your job is to answer the phone and show up to the job. Ours is to make sure it keeps ringing.",
+  },
+  {
+    question: "Do I have to sign up for all of your services?",
+    answer:
+      "No. We start with what makes sense for where you are. Some clients begin with just the CRM and follow-up, then add ads or SEO once the foundation is solid. We'd rather do three things well than sell you six and do none of them right.",
+  },
+  {
+    question: "Do you guarantee a certain number of leads?",
+    answer:
+      "No, and be skeptical of anyone who does. Lead volume depends on your budget, your market, and what you charge. What we do is give you a realistic range on the call and show you the actual numbers behind it.",
+  },
+  {
+    question: "What happens if I don't see results?",
+    answer:
+      "You don't pay us. We're not going to keep taking money from someone we're not making money for. That's not how we operate.",
+  },
 ];
 
 export default function FAQPage() {
