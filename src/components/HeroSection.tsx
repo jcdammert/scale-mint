@@ -39,7 +39,7 @@ const HeroSection = () => {
         >
           <Sparkles size={12} className="text-primary" />
           <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-            Built for Home Service Operators
+            Built for Local Service Businesses
           </span>
         </motion.div>
 
@@ -49,7 +49,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-5xl font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl"
         >
-          More Booked Jobs.{" "}
+          More Revenue Booked.{" "}
           <span className="text-gradient">Not Just More Leads.</span>
         </motion.h1>
 
