@@ -4,8 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowLeft, Check, Megaphone, Video, Settings, BarChart3, Phone, Users, TrendingUp, DollarSign, Clock } from "lucide-react";
-import Link from "next/link";
+import { Check, Megaphone, Video, Settings, BarChart3, Phone, Users, TrendingUp, DollarSign, Clock } from "lucide-react";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 const steps = [
@@ -90,15 +89,7 @@ export default function MetaAdsPage() {
     <div className="min-h-screen">
       <Navbar />
 
-      <div className="container mx-auto px-4 pt-28">
-        <Link
-          href="/pricing"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-        >
-          <ArrowLeft size={16} />
-          Back to Pricing
-        </Link>
-      </div>
+      <div className="pt-28" />
 
       {/* ─── HERO ─── */}
       <section className="relative overflow-hidden pt-8 pb-10 md:pb-16">
