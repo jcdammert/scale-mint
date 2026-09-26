@@ -105,7 +105,7 @@ function PillarVisual({ idx }: { idx: number }) {
             </div>
             <div className="text-[10px] text-muted-foreground text-right">Sent in 12s</div>
             <div className="max-w-[80%] rounded-2xl rounded-bl-sm bg-secondary/40 px-3 py-2 text-xs text-foreground">
-              I get off work in a few hours
+              I get off at 6. You can call me after that.
             </div>
           </div>
         </div>
