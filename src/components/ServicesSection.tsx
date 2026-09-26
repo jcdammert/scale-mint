@@ -29,24 +29,17 @@ const pillars = [
   },
   {
     num: "02",
-    icon: Search,
-    title: "An Online Presence That Looks Like a Real Business.",
-    description:
-      "When a homeowner Googles you after a referral, they find a professional website, real reviews, and a business that looks established. We handle your online presence automatically — so you look like the obvious choice without lifting a finger.",
-  },
-  {
-    num: "03",
-    icon: Star,
-    title: "Reviews That Stack Up After Every Job.",
-    description:
-      "When a job is marked complete, a review request goes out by text. Most clients pick up 5–10 new Google reviews in the first 60 days. Higher review count means higher local rankings — and homeowners pick the company with more 5-stars before they ever call.",
-  },
-  {
-    num: "04",
     icon: Rocket,
     title: "Ads Work Because the Sales Process Is Ready.",
     description:
-      "When we add Meta ads, Google, or SEO, every lead lands in a follow-up engine that's already running — instant text-back, automated sequences, a pipeline that works the lead until it books or says no. Traffic without that behind it is money that walks out the door. We don't run ads for businesses whose sales process isn't ready. When it is, we turn them on and the volume gets absorbed.",
+      "When we turn on Meta or Google ads, every lead lands in a follow up engine that's already running: instant text back, automated sequences, a pipeline that works the lead until it books or says no. Traffic without that behind it is money that walks out the door. We don't run ads for businesses whose sales process isn't ready. When it is, we turn them on and the volume gets absorbed.",
+  },
+  {
+    num: "03",
+    icon: Search,
+    title: "An Online Presence That Builds Up Behind It.",
+    description:
+      "When someone Googles you after a referral, they find a professional website and real, recent reviews, not a business that looks like it's been sitting untouched for years. Every completed job triggers an automatic review request by text, so the proof keeps stacking up without you asking for it.",
   },
 ];
 
@@ -127,97 +120,48 @@ function PillarVisual({ idx }: { idx: number }) {
   }
 
   if (idx === 1) {
-    // Pillar 2: Online Presence — Google search result mockup
-    return (
-      <div className="relative w-full max-w-sm">
-        <div className="card-glass p-5 shadow-2xl">
-          {/* Search bar */}
-          <div className="mb-4 flex items-center gap-2 rounded-full border border-border/60 bg-secondary/30 px-3 py-2">
-            <Search size={12} className="text-muted-foreground" />
-            <span className="text-[11px] text-muted-foreground">pressure washing near me</span>
-          </div>
-          {/* GBP card */}
-          <div className="rounded-lg border border-primary/20 bg-primary/5 p-3.5">
-            <div className="flex items-start gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary/60">
-                <MapPin size={18} className="text-primary-foreground" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="text-sm font-semibold text-foreground">Premier Pressure Washing</div>
-                <div className="mt-1 flex items-center gap-1">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={10} className="fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <span className="text-[10px] text-muted-foreground">5.0 · 142 reviews</span>
+    // Pillar 2: Ads — growth chart + toggle
+    return <Pillar4Visual />;
+  }
+
+  // Pillar 3: Online Presence — Google search result mockup
+  return (
+    <div className="relative w-full max-w-sm">
+      <div className="card-glass p-5 shadow-2xl">
+        {/* Search bar */}
+        <div className="mb-4 flex items-center gap-2 rounded-full border border-border/60 bg-secondary/30 px-3 py-2">
+          <Search size={12} className="text-muted-foreground" />
+          <span className="text-[11px] text-muted-foreground">pressure washing near me</span>
+        </div>
+        {/* GBP card */}
+        <div className="rounded-lg border border-primary/20 bg-primary/5 p-3.5">
+          <div className="flex items-start gap-3">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary/60">
+              <MapPin size={18} className="text-primary-foreground" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="text-sm font-semibold text-foreground">Premier Pressure Washing</div>
+              <div className="mt-1 flex items-center gap-1">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={10} className="fill-primary text-primary" />
+                  ))}
                 </div>
-                <div className="mt-1 text-[10px] text-muted-foreground">Open · Closes 6 PM</div>
+                <span className="text-[10px] text-muted-foreground">5.0 · 142 reviews</span>
               </div>
+              <div className="mt-1 text-[10px] text-muted-foreground">Open · Closes 6 PM</div>
             </div>
-            {/* Latest post indicator */}
-            <div className="mt-3 flex items-center gap-2 rounded-md bg-secondary/40 px-2 py-1.5">
-              <div className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-              <span className="text-[10px] text-foreground">Posted today: &quot;New driveway special&quot;</span>
-            </div>
+          </div>
+          {/* Latest post indicator */}
+          <div className="mt-3 flex items-center gap-2 rounded-md bg-secondary/40 px-2 py-1.5">
+            <div className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+            <span className="text-[10px] text-foreground">Posted today: &quot;New driveway special&quot;</span>
           </div>
         </div>
-        <div className="absolute -inset-4 -z-10 rounded-2xl bg-primary/5 blur-2xl" />
       </div>
-    );
-  }
-
-  if (idx === 2) {
-    // Pillar 3: Reputation — stacking 5-star reviews
-    return (
-      <div className="relative w-full max-w-sm space-y-3">
-        {/* Top notification */}
-        <div className="card-glass relative overflow-hidden p-3.5 shadow-xl">
-          <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/20">
-              <Star size={16} className="fill-primary text-primary" />
-            </div>
-            <div className="flex-1">
-              <div className="text-xs font-semibold text-foreground">New 5-star review</div>
-              <div className="text-[10px] text-muted-foreground">Sarah K. · 2 minutes ago</div>
-            </div>
-            <span className="rounded-full bg-primary/15 px-2 py-0.5 text-[9px] font-bold text-primary">
-              +1
-            </span>
-          </div>
-          {/* Glow line */}
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-        </div>
-        {/* Stacked review cards */}
-        {[
-          { name: "Mike J.", text: "Best service in town. Booked again next month.", days: "yesterday" },
-          { name: "Lisa T.", text: "Crew was professional and on time. 10/10.", days: "2 days ago" },
-          { name: "Carlos R.", text: "Fair pricing, great work. Highly recommend.", days: "5 days ago" },
-        ].map((r, i) => (
-          <div
-            key={r.name}
-            className="card-glass p-3.5 shadow-md"
-            style={{ marginLeft: `${(i + 1) * 12}px`, opacity: 1 - i * 0.15 }}
-          >
-            <div className="mb-1 flex items-center gap-2">
-              <div className="flex">
-                {[...Array(5)].map((_, j) => (
-                  <Star key={j} size={9} className="fill-primary text-primary" />
-                ))}
-              </div>
-              <span className="text-[10px] font-semibold text-foreground">{r.name}</span>
-              <span className="ml-auto text-[9px] text-muted-foreground">{r.days}</span>
-            </div>
-            <p className="text-[11px] text-muted-foreground line-clamp-1">{r.text}</p>
-          </div>
-        ))}
-        <div className="absolute -inset-4 -z-10 rounded-2xl bg-primary/5 blur-2xl" />
-      </div>
-    );
-  }
-
-  // Pillar 4: Ready to Scale — growth chart + ads toggle
-  return <Pillar4Visual />;
+      <div className="absolute -inset-4 -z-10 rounded-2xl bg-primary/5 blur-2xl" />
+    </div>
+  );
 }
 
 function Pillar4Visual() {
@@ -329,7 +273,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="px-4 pt-4 pb-10 md:pt-8 md:pb-20">
       <div className="container mx-auto">
-        {/* 4 Pillars — alternating zigzag */}
+        {/* 3 Pillars — alternating zigzag */}
         <div className="relative max-w-6xl mx-auto space-y-14 md:space-y-24">
           {/* Vertical line on desktop */}
           <div className="pointer-events-none absolute left-1/2 top-0 bottom-0 hidden w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-primary/15 to-transparent md:block" />
