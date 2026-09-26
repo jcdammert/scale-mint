@@ -11,22 +11,21 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Scale Mint — Marketing & Sales Process for Home Service Contractors",
+      "Scale Mint — Marketing & Sales Process for Local Service Businesses",
     template: "%s | Scale Mint",
   },
   description:
-    "Scale Mint runs the marketing and sales process for home service contractors — ads, SEO, follow-up, and a pipeline that works every lead until it books.",
+    "Scale Mint runs the marketing and sales process for local service businesses — ads, SEO, follow-up, and a pipeline that works every lead until it books.",
   keywords: [
-    "home service marketing",
-    "contractor CRM",
+    "local service business marketing",
+    "service business CRM",
     "missed call text back",
-    "AI Employee for contractors",
+    "AI Employee for local businesses",
     "lead follow-up automation",
-    "Google Ads for contractors",
-    "Meta Ads for home services",
-    "roofing CRM",
-    "HVAC software",
-    "pressure washing leads",
+    "Google Ads for local businesses",
+    "Meta Ads for local services",
+    "local business SEO",
+    "follow-up automation",
     "Scale Mint",
   ],
   authors: [{ name: "Scale Mint" }],
@@ -49,18 +48,18 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Scale Mint",
     title:
-      "Scale Mint — Marketing & Sales Process for Home Service Contractors",
+      "Scale Mint — Marketing & Sales Process for Local Service Businesses",
     description:
-      "We run the marketing. We own the follow-up. Built for home service contractors.",
+      "We run the marketing. We own the follow-up. Built for local service businesses.",
     locale: "en_US",
     images: [{ url: "/logo.png", width: 1525, height: 481, alt: "Scale Mint" }],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Scale Mint — Marketing & Sales Process for Home Service Contractors",
+      "Scale Mint — Marketing & Sales Process for Local Service Businesses",
     description:
-      "We run the marketing. We own the follow-up. Built for home service contractors.",
+      "We run the marketing. We own the follow-up. Built for local service businesses.",
     images: ["/logo.png"],
   },
   icons: {

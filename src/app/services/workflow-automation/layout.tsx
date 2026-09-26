@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { jsonLd, serviceSchema, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Workflow Automation for Home Service Businesses",
+  title: "Workflow Automation for Local Service Businesses",
   description:
     "Stop doing repetitive work twice. We automate the handoffs between your CRM, calendar, payments, and field tools so leads, jobs, and invoices flow without anyone touching them.",
   alternates: { canonical: "/services/workflow-automation" },
   openGraph: {
-    title: "Workflow Automation for Home Service Businesses | Scale Mint",
+    title: "Workflow Automation for Local Service Businesses | Scale Mint",
     description:
       "Automate the handoffs between your CRM, calendar, payments, and field tools.",
     url: "/services/workflow-automation",
@@ -22,9 +22,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         dangerouslySetInnerHTML={{
           __html: jsonLd(
             serviceSchema({
-              name: "Workflow Automation for Home Service Businesses",
+              name: "Workflow Automation for Local Service Businesses",
               description:
-                "Custom workflow automation between CRM, calendar, payments, and field tools for home service crews.",
+                "Custom workflow automation between CRM, calendar, payments, and field tools for local service businesses.",
               url: "/services/workflow-automation",
               serviceType: "Workflow Automation",
             })

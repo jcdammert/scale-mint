@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { jsonLd, serviceSchema, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Smart Assistants for Home Service Crews",
+  title: "Smart Assistants for Local Service Businesses",
   description:
     "AI-powered assistants that answer the inbox, draft replies, write quotes, and keep your customer follow-up tight — all without adding headcount.",
   alternates: { canonical: "/services/smart-assistants" },
   openGraph: {
-    title: "Smart Assistants for Home Service Crews | Scale Mint",
+    title: "Smart Assistants for Local Service Businesses | Scale Mint",
     description:
       "AI assistants that handle inbox, replies, quotes, and customer follow-up.",
     url: "/services/smart-assistants",
@@ -22,9 +22,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         dangerouslySetInnerHTML={{
           __html: jsonLd(
             serviceSchema({
-              name: "Smart Assistants for Home Service Crews",
+              name: "Smart Assistants for Local Service Businesses",
               description:
-                "AI-powered assistants for inbox, replies, quotes, and customer follow-up.",
+                "AI-powered assistants for local service businesses — inbox, replies, quotes, and customer follow-up.",
               url: "/services/smart-assistants",
               serviceType: "Smart Assistants",
             })

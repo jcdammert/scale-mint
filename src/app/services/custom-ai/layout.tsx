@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { jsonLd, serviceSchema, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Custom AI Employees for Contractors",
+  title: "Custom AI Employees for Local Service Businesses",
   description:
     "Purpose-built AI agents that handle the repetitive work in your business — quoting, dispatch, scheduling, follow-up. Trained on your process, wired into your stack.",
   alternates: { canonical: "/services/custom-ai" },
   openGraph: {
-    title: "Custom AI Employees for Contractors | Scale Mint",
+    title: "Custom AI Employees for Local Service Businesses | Scale Mint",
     description:
-      "Purpose-built AI agents for home service businesses — quoting, dispatch, scheduling, follow-up.",
+      "Purpose-built AI agents for local service businesses — quoting, dispatch, scheduling, follow-up.",
     url: "/services/custom-ai",
   },
 };
@@ -22,9 +22,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         dangerouslySetInnerHTML={{
           __html: jsonLd(
             serviceSchema({
-              name: "Custom AI Employees for Contractors",
+              name: "Custom AI Employees for Local Service Businesses",
               description:
-                "Custom-built AI agents for home service businesses, trained on your process and integrated with your tools.",
+                "Custom-built AI agents for local service businesses, trained on your process and integrated with your tools.",
               url: "/services/custom-ai",
               serviceType: "Custom AI",
             })

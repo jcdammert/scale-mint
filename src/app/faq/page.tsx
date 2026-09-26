@@ -8,7 +8,7 @@ import DualCTA from "@/components/DualCTA";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "The questions operators actually ask about Scale Mint — what we do, how fast it works, what it costs, and whether you can cancel anytime.",
+    "The questions local service business owners actually ask about Scale Mint — what we do, how fast it works, what it costs, and whether you can cancel anytime.",
   alternates: { canonical: "/faq" },
 };
 

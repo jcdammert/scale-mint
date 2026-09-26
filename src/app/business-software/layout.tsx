@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { jsonLd, serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Business Software for Home Service Contractors",
+  title: "Business Software for Local Service Businesses",
   description:
-    "Replace the patchwork of CRMs, calendars, and inboxes with one platform built for home service crews. Pipeline, follow-up, calendar, SMS, email, invoicing, and reporting in one login.",
+    "Replace the patchwork of CRMs, calendars, and inboxes with one setup built for local service businesses. Pipeline, follow-up, calendar, SMS, email, invoicing, and reporting in one login.",
   alternates: { canonical: "/business-software" },
   openGraph: {
-    title: "Business Software for Home Service Contractors | Scale Mint",
+    title: "Business Software for Local Service Businesses | Scale Mint",
     description:
-      "One platform for pipeline, follow-up, calendar, SMS, email, invoicing, and reporting — built for home service crews.",
+      "One setup for pipeline, follow-up, calendar, SMS, email, invoicing, and reporting — built for local service businesses.",
     url: "/business-software",
   },
 };
@@ -44,9 +44,9 @@ export default function BusinessSoftwareLayout({
         dangerouslySetInnerHTML={{
           __html: jsonLd(
             serviceSchema({
-              name: "Business Software for Home Service Contractors",
+              name: "Business Software for Local Service Businesses",
               description:
-                "All-in-one CRM, pipeline, follow-up, calendar, SMS, email, and reporting platform built for home service businesses.",
+                "All-in-one CRM, pipeline, follow-up, calendar, SMS, email, and reporting built for local service businesses.",
               url: "/business-software",
               serviceType: "Business Software",
             })

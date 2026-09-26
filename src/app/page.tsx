@@ -9,9 +9,9 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title:
-    "Scale Mint — Marketing and Sales Systems for Home Service Businesses",
+    "Scale Mint — Marketing and Sales Process for Local Service Businesses",
   description:
-    "We run the marketing that brings work in and own the sales process that turns leads into booked jobs. Ads, SEO, website, and automated follow-up — built and managed for home service contractors.",
+    "We run the marketing that brings work in and own the sales process that turns leads into booked jobs. Ads, SEO, website, and automated follow-up — built and managed for local service businesses.",
   alternates: { canonical: "/" },
 };
 

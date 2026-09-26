@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Omnipresence SEO for Home Service Contractors",
+  title: "Omnipresence SEO for Local Service Businesses",
   description:
-    "We put you everywhere — Google, Maps, AI search engines, and every local directory — so you're the obvious choice before homeowners even pick up the phone.",
+    "We put you everywhere — Google, Maps, AI search engines, and every local directory — so you're the obvious choice before customers even pick up the phone.",
   alternates: { canonical: "/seo" },
 };
 

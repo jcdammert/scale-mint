@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Meta Ads Management for Home Service Contractors",
+  title: "Meta Ads Management for Local Service Businesses",
   description:
-    "We run your Facebook and Instagram campaigns so your phone keeps ringing — without you touching a single thing. Built and managed for home service crews.",
+    "We run your Facebook and Instagram campaigns so your phone keeps ringing — without you touching a single thing. Built and managed for local service businesses.",
   alternates: { canonical: "/meta-ads" },
 };
 
