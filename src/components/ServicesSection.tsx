@@ -39,7 +39,7 @@ const pillars = [
     icon: Search,
     title: "An Online Presence That Builds Up Behind It.",
     description:
-      "When someone Googles you after a referral, they find a professional website and real, recent reviews, not a business that looks like it's been sitting untouched for years. Every completed job triggers an automatic review request by text, so the proof keeps stacking up without you asking for it.",
+      "When someone Googles you after seeing your ad, they find a professional website and real, recent reviews, not a business that looks like it's been sitting untouched for years. Every completed job triggers an automatic review request by text, so the proof keeps stacking up without you asking for it.",
   },
 ];
 
